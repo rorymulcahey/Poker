@@ -21,6 +21,7 @@ s : spades
 Code:
 place suit first, then number for card arrays
 
+test change
 '''
 
 
