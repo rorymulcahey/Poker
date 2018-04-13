@@ -183,18 +183,21 @@ def check_trips():
 def check_fullhouse():
     array = cards_number_array(preflop1.card,preflop2.card,flop1.card,flop2.card,flop3.card,turn.card,river.card)
     #fullhouse = False
-    trips = False
-    pair = False
+    havetrips = False
+    havepair = False
     for x in range(0, 14):
         if array[x] == 3:
-            print("Trip", get_card(x) + 's')
-            trips = True
-    for x in range(0, 14):
-        if array[x] == 2:
-            pair = True
-    if pair and trips:
-        print("You have a full house!")
-    return True
+            trips = x
+            havetrips = True
+    for y in range(0, 14):
+        if array[y] >= 2 and y != trips:
+            pair = y
+            havepair = True
+    if havepair and havetrips:
+        print("You have", get_card(trips) + "s", "full of", get_card(pair) + "s!")
+        return True
+    else:
+        return False
 
 
 
@@ -221,12 +224,12 @@ def check_straight_flush():
 
 #Cards in play:
 preflop1 = preflop('c',1)
-preflop2 = preflop('h', 13)
+preflop2 = preflop('h', 10)
 flop1 = community_card('d', 1)
 flop2 = community_card('d', 1)
 flop3 = community_card('d', 11)
-turn = community_card('d', 10)
-river = community_card('d', 13)
+turn = community_card('d', 11)
+river = community_card('d', 11)
 
 
 
