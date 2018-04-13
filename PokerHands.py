@@ -1,5 +1,5 @@
 '''
-Notation
+Input Notation
 c : clubs
 d : diamonds
 h : hearts
@@ -48,7 +48,7 @@ def preflop_hand(suit1, num1, suit2, num2):
     if num1 == num2:
         print("You are paired!")
     if num1 == num2 + 1 or num1 == num2 - 1:
-       print("You are connected!")
+        print("You are connected!")
 
 
 
@@ -58,9 +58,39 @@ def cards_number_array(card1,card2,card3,card4,card5,card6,card7):
     array = [0] * 14
     for y in range(0, 7):
         array[allcards[y][1]-1] += 1
-        if array[allcards[y][1]-1] == array[0]:
+        if allcards[y][1]-1 == 0:
             array[13] += 1
     return array
+
+
+
+def get_card (card_number):
+    if card_number == 0 or card_number == 13:
+        return "Ace"
+    elif card_number == 1:
+        return "Two"
+    elif card_number == 2:
+        return "Three"
+    elif card_number == 3:
+        return "Four"
+    elif card_number == 4:
+        return "Five"
+    elif card_number == 5:
+        return "Six"
+    elif card_number == 6:
+        return "Seven"
+    elif card_number == 7:
+        return "Eight"
+    elif card_number == 8:
+        return "Nine"
+    elif card_number == 9:
+        return "Ten"
+    elif card_number == 10:
+        return "Jack"
+    elif card_number == 11:
+        return "Queen"
+    elif card_number == 12:
+        return "King"
 
 
 
@@ -102,6 +132,15 @@ def check_straight():
 
 
 
+def check_high_card():
+    array = cards_number_array(preflop1.card,preflop2.card,flop1.card,flop2.card,flop3.card,turn.card,river.card)
+    high_card = False
+    if high_card:
+        print("You have a high card!")
+    return True
+
+
+
 def check_pair():
     array = cards_number_array(preflop1.card,preflop2.card,flop1.card,flop2.card,flop3.card,turn.card,river.card)
     pair = False
@@ -110,15 +149,6 @@ def check_pair():
             pair = True
     if pair:
         print("You have a pair!")
-    return True
-
-
-
-def check_high_card():
-    array = cards_number_array(preflop1.card,preflop2.card,flop1.card,flop2.card,flop3.card,turn.card,river.card)
-    high_card = False
-    if high_card:
-        print("You have a high card!")
     return True
 
 
@@ -150,12 +180,20 @@ def check_trips():
 
 
 
-#incomplete
 def check_fullhouse():
     array = cards_number_array(preflop1.card,preflop2.card,flop1.card,flop2.card,flop3.card,turn.card,river.card)
-    fullhouse = False
-    if fullhouse:
-        print("You have a fullhouse!")
+    #fullhouse = False
+    trips = False
+    pair = False
+    for x in range(0, 14):
+        if array[x] == 3:
+            print("Trip", get_card(x) + 's')
+            trips = True
+    for x in range(0, 14):
+        if array[x] == 2:
+            pair = True
+    if pair and trips:
+        print("You have a full house!")
     return True
 
 
@@ -182,13 +220,15 @@ def check_straight_flush():
 
 
 #Cards in play:
-preflop1 = preflop('c', 1)
-preflop2 = preflop('h', 1)
-flop1 = community_card('d', 10)
-flop2 = community_card('d', 10)
-flop3 = community_card('d', 10)
+preflop1 = preflop('c',1)
+preflop2 = preflop('h', 13)
+flop1 = community_card('d', 1)
+flop2 = community_card('d', 1)
+flop3 = community_card('d', 11)
 turn = community_card('d', 10)
 river = community_card('d', 13)
+
+
 
 #Functions to check hand combinations:
 preflop_hand(preflop1.card[0], preflop1.card[1], preflop2.card[0], preflop2.card[1])
@@ -198,6 +238,7 @@ check_pair()
 check_two_pair()
 check_trips()
 check_quads()
+check_fullhouse()
 
 
 
