@@ -60,7 +60,7 @@ def cards_number_array(card1,card2,card3,card4,card5,card6,card7):
     array = [0] * 14
     for y in range(0, 7):
         if allcards[y][1]:
-            array[allcards[y][1]-1] = 1
+            array[allcards[y][1]-1] += 1
             if array[allcards[y][1]-1] == 1:
                 array[13] = 1
     return array
