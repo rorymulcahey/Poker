@@ -89,13 +89,16 @@ def get_card (card_number):
 
 
 # incomplete
+# Need to store index values for high cards of all hand types
 # want to create a list of the 5 high cards in order
 # need to consider ways to omit pairs, trips, quads; solution: only accept values of 1 from array
 # consider how we will compare high cards between hands
 def check_high_card(array):
-    high_card = False
-    if high_card:
-        print("You have a high card!")
+    for x in range(13, 0, -1):
+        print(x)
+        high_card = False
+        if high_card:
+            print("You have a high card!")
     return True
 
 
@@ -191,7 +194,7 @@ def check_fullhouse(array):
 
 def check_quads(array):
     quads = False
-    for x in range(0, 14):
+    for x in range(1, 14):
         if array[x] == 4:
             quads = True
             break
@@ -202,7 +205,6 @@ def check_quads(array):
         return False
 
 
-# incomplete
 def check_straight_flush(array, have_straight, have_flush, suit):
     straight_flush = False
     if have_straight and have_flush:
@@ -212,14 +214,11 @@ def check_straight_flush(array, have_straight, have_flush, suit):
                 suited_array[array[x][1]-1] = 1
                 if array[x][1] == 1:
                     suited_array[array[x][1] + 12] = 1
-                #print(suited_array)
         if check_straight(suited_array):
-            print("check for straight flush")
-    if straight_flush:
-        print("You have a straight flush!")
-        return True
-    else:
-        return False
+            print("You have a straight flush!")
+            return True
+        else:
+            return False
 
 
 # Cards in play:
@@ -228,23 +227,24 @@ preflop2 = preflop('c', 10)
 flop1 = community_card('d', 10)
 flop2 = community_card('d', 11)
 flop3 = community_card('d', 12)
-turn = community_card('d', 13)
+turn = community_card('d', 1)
 river = community_card('d', 1)
 
 
 def main():
     # Functions to check hand combinations:
-    cards_array = cards_number_array(preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card)
-    cards = preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card
+    number_array = cards_number_array(preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card)
+    cards_array = preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card
     preflop_hand(preflop1.card[0], preflop1.card[1], preflop2.card[0], preflop2.card[1])
+    check_high_card(number_array)
+    check_pair(number_array)
+    check_two_pair(number_array)
+    check_trips(number_array)
+    straight_boolean = check_straight(number_array)
     flush_boolean, flush_suit = check_flush(cards_array)
-    straight_boolean = check_straight(cards_array)
-    check_pair(cards_array)
-    check_two_pair(cards_array)
-    check_trips(cards_array)
-    check_quads(cards_array)
-    check_fullhouse(cards_array)
-    check_straight_flush(cards, straight_boolean, flush_boolean, flush_suit)
+    check_quads(number_array)
+    check_fullhouse(number_array)
+    check_straight_flush(cards_array, straight_boolean, flush_boolean, flush_suit)
     return
 
 
