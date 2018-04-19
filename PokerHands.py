@@ -105,6 +105,9 @@ def get_all_cards(all_cards, hand_cards, high_cards):
                 high_cards[y] = 0
             if all_cards[z][1] - 1 == high_cards[y] and high_cards:
                 final_cards.append(all_cards[z])
+            if len(final_cards) == 5:
+                print(final_cards)
+                return final_cards
     print(final_cards)
     return final_cards
 
@@ -182,7 +185,8 @@ def check_two_pair(array):
             break
     tie_breaker_cards = check_high_card(array, 1)
     if two_pair:
-        print(tie_breaker_cards)
+        # print(tie_breaker_cards)
+        pass
     return two_pair, two_pair_cards, tie_breaker_cards
 
 
@@ -195,8 +199,10 @@ def check_trips(array):
             trips = True
             break
     tie_breaker_cards = check_high_card(array, 2)
-    print(trips_card)
-    print(tie_breaker_cards)
+    if trips:
+        pass
+        # print(trips_card)
+        # print(tie_breaker_cards)
     return trips, trips_card, tie_breaker_cards
 
 
@@ -210,7 +216,6 @@ def check_straight(array):
                 if x-y < 14 and array[x-y] >= 1:
                     number += 1
                     straight_cards.append(x-y)
-                    print(straight_cards)
                 else:
                     break
             if number == 5:
@@ -222,10 +227,10 @@ def check_straight(array):
 
 
 # assign values of 1 or more for suit cards in play and zeros for cards not in play, returns true if suit >= 5:
-def check_flush(all_cards, index):
+def check_flush(all_cards):
     array = [0] * 4
     suits = ['c', 'd', 'h', 's']
-    for y in range(0, index):
+    for y in range(0, len(all_cards)):
         if all_cards[y][0] == 'c':
             array[0] += 1
         elif all_cards[y][0] == 'd':
@@ -250,33 +255,31 @@ def get_cards_flush(array, suit, index):
             if array[x][1] == 1:
                 suited_array[13] = 1
     i = 1
-    high_card = {}
+    high_card = []
     for y in range(13, 0, -1):
         if suited_array[y] == 1:
-            high_card["rank{0}".format(i)] = y
+            high_card.append(y)
             i += 1
             if i > 5:
                 break
     return high_card
 
 
-def check_fullhouse(array):
+def check_full_house(array):
     have_trips = False
     have_pair = False
-    for x in range(1, 14):
+    trips_card = []
+    pair_card = []
+    for x in range(13, 0, -1):
         if array[x] == 3:
-            trips = x
+            trips_card.append(x)
             have_trips = True
-            for y in range(1, 14):
-                if 1 < array[y] < 4 and y != trips:
-                    pair = y
+            for y in range(13, 0, -1):
+                if 1 < array[y] < 4 and y != trips_card[0]:
+                    pair_card.append(y)
                     have_pair = True
-                    break
-            if have_pair and have_trips:
-                print("You have", get_card(trips) + "s", "full of", get_card(pair) + "s!")
-                return True
-            else:
-                return False
+                    return have_pair and have_trips, trips_card, pair_card
+    return have_pair and have_trips, trips_card, pair_card
 
 
 # Check hand for four of a kind
@@ -328,19 +331,22 @@ def check_hand_strength():
     check_trips_boolean, trips_card, trips_high_cards = check_trips(number_array)
     if check_trips_boolean:
         current_hand = possible_hands[3]
-        get_all_cards(cards_array, trips_card, trips_high_cards)
+        # get_all_cards(cards_array, trips_card, trips_high_cards)
 
     straight_boolean, straight_cards = check_straight(number_array)
     if straight_boolean:
         current_hand = possible_hands[4]
         get_all_cards(cards_array, straight_cards, empty)
 
-    flush_boolean, flush_suit = check_flush(cards_array, number_of_cards)
-    if check_flush(cards_array, number_of_cards)[0]:
-        get_cards_flush(cards_array, flush_suit, number_of_cards)
+    flush_boolean, flush_suit = check_flush(cards_array)
+    if check_flush(cards_array)[0]:
+        flush_cards = get_cards_flush(cards_array, flush_suit, len(cards_array))
+        get_all_cards(cards_array, flush_cards, empty)
         current_hand = possible_hands[5]
 
-    if check_fullhouse(number_array):
+    check_full_house_boolean, trips_card, pair_card = check_full_house(number_array)
+    if check_full_house_boolean:
+        get_all_cards(cards_array, trips_card, pair_card)
         current_hand = possible_hands[6]
 
     if check_quads(number_array)[0]:
@@ -355,12 +361,12 @@ def check_hand_strength():
 
 # Cards in play:
 preflop1 = preflop('c', 8)
-preflop2 = preflop('c', 10)
+preflop2 = preflop('c', 8)
 flop1 = community_card('d', 1)
-flop2 = community_card('d', 11)
-flop3 = community_card('d', 9)
-turn = community_card('c', 13)
-river = community_card('d', 7)
+flop2 = community_card('d', 1)
+flop3 = community_card('d', None)
+turn = community_card('d', 1)
+river = community_card('d', 8)
 #  river = community_card(None, None)
 possible_cards_array = preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card
 cards_list = list(possible_cards_array)
