@@ -25,7 +25,7 @@ Format:
 Numbers Array:
 index - 1 = card number; Ace has two values
 eg: Two = 1; Ace = 0 or 13
-changes
+
 =================================================================================
 To do list:
     Show the 5 best cards with the type of hand
