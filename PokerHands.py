@@ -25,8 +25,8 @@ Format:
 Numbers Array:
 index - 1 = card number; Ace has two values
 eg: Two = 1; Ace = 0 or 13
-
-================================================================================
+changes
+=================================================================================
 To do list:
     Show the 5 best cards with the type of hand
         - Reference the original 7 cards for the final hand by reformatting get_all_cards function
@@ -41,7 +41,7 @@ Notes:
     Use better return statements (like quads)** Done
     Remove None value from a list without removing the 0 value **Done
     Goal: Try to use any number of cards (preflop, flop, turn, river)** Done
-================================================================================
+=================================================================================
 
 '''
 
