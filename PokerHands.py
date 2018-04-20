@@ -370,6 +370,10 @@ def check_hand_strength():
     return current_hand
 
 
+def compare_hand_strength(*args):
+    pass
+
+
 # Cards in play:
 preflop1 = preflop('c', 8)
 preflop2 = preflop('c', None)
@@ -390,6 +394,8 @@ number_array = cards_number_array(cards_array)
 def main():
     # Functions to check hand combinations:
     check_hand_strength()
+    args =
+    compare_hand_strength()
 
 
 if __name__ == "__main__":
