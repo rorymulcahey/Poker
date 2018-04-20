@@ -28,15 +28,15 @@ eg: Two = 1; Ace = 0 or 13
 
 =================================================================================
 To do list:
-    Show the 5 best cards with the type of hand
-        - Reference the original 7 cards for the final hand by reformatting get_all_cards function
-        - Work on straight flush func
     Accept two hands as input and then compare the two
         - Need to accept multiple hands and store them.
     Build GUI to facilitate hand comparison
     Include percentages to show hand strength from current community board
 
 Notes:
+    Show the 5 best cards with the type of hand** Done
+    - Reference the original 7 cards for the final hand by reformatting get_all_cards function
+    - Work on straight flush func
     Write "get" functions if check function is true**
     Consolidate cards_array** Done
     Use better return statements (like quads)** Done
@@ -134,7 +134,7 @@ def possible_cards(all_cards):
         index += 1
     print(all_cards)
     # return all_cards, index + 1
-    return all_cards, index
+    return all_cards
 
 
 # assign values of 1 or more for numerical cards in play and zeros for cards not in play
@@ -305,16 +305,14 @@ def check_quads(array):
 
 
 # Check hand for straight flush
-def check_straight_flush(array, have_straight, have_flush, suit, index):
-    if have_straight and have_flush:
-        # straight_flush = False
-        suited_array = [0]*14
-        for x in range(0, index):
-            if array[x][0] == suit:
-                suited_array[array[x][1]-1] = 1
-                if array[x][1] == 1:
-                    suited_array[array[x][1] + 12] = 1
-        return check_straight(suited_array)
+def check_straight_flush(array, suit, index):
+    suited_array = [0]*14
+    for x in range(0, index):
+        if array[x][0] == suit:
+            suited_array[array[x][1]-1] = 1
+            if array[x][1] == 1:
+                suited_array[array[x][1] + 12] = 1
+    return check_straight(suited_array)
 
 
 # Check for all possible hands and return the current best possible
@@ -364,7 +362,8 @@ def check_hand_strength():
         get_all_cards(cards_array, quads_card, high_card)
         current_hand = possible_hands[7]
 
-    if check_straight_flush(cards_array, straight_boolean, flush_boolean, flush_suit, number_of_cards):
+    if straight_boolean and flush_boolean:
+        check_straight_flush(cards_array, flush_suit, len(cards_array))
         current_hand = possible_hands[8]
 
     print(current_hand)
@@ -384,7 +383,7 @@ possible_cards_array = preflop1.card, preflop2.card, flop1.card, flop2.card, flo
 cards_list = list(possible_cards_array)
 
 # send cards_array into a function, return the array while eliminating None values, and include index # of cards
-cards_array, number_of_cards = possible_cards(cards_list)
+cards_array = possible_cards(cards_list)
 number_array = cards_number_array(cards_array)
 
 
