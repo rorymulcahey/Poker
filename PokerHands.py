@@ -30,6 +30,7 @@ eg: Two = 1; Ace = 0 or 13
 To do list:
     Show the 5 best cards with the type of hand
         - Reference the original 7 cards for the final hand by reformatting get_all_cards function
+        - Work on straight flush func
     Accept two hands as input and then compare the two
         - Need to accept multiple hands and store them.
     Build GUI to facilitate hand comparison
@@ -95,21 +96,28 @@ def get_all_cards(all_cards, hand_cards, high_cards):
     final_cards = []
     for z in range(0, len(all_cards)):
         for x in range(0, len(hand_cards)):
+            # print(hand_cards)
             # need to include Ace into this function (it cant read 13, needs to read 0)
             if hand_cards[x] == 13:
                 hand_cards[x] = 0
+                # print(hand_cards)
             if all_cards[z][1] - 1 == hand_cards[x]:
                 final_cards.append(all_cards[z])
+                # print(len(final_cards))
+            if len(final_cards) == 5:
+                print(final_cards)
+                return final_cards
         for y in range(0, len(high_cards)):
             if high_cards[y] == 13:
                 high_cards[y] = 0
             if all_cards[z][1] - 1 == high_cards[y] and high_cards:
                 final_cards.append(all_cards[z])
+                # print(len(final_cards))
             if len(final_cards) == 5:
                 print(final_cards)
                 return final_cards
-    print(final_cards)
-    return final_cards
+    print("Error with get_all_cards")
+    return True
 
 
 # Remove None values from the cards array
@@ -274,24 +282,26 @@ def check_full_house(array):
         if array[x] == 3:
             trips_card.append(x)
             have_trips = True
-            for y in range(13, 0, -1):
-                if 1 < array[y] < 4 and y != trips_card[0]:
-                    pair_card.append(y)
-                    have_pair = True
-                    return have_pair and have_trips, trips_card, pair_card
+            break
+    for y in range(13, 0, -1):
+        if have_trips and 1 < array[y] < 4 and y != trips_card[0]:
+            pair_card.append(y)
+            have_pair = True
+            break
     return have_pair and have_trips, trips_card, pair_card
 
 
 # Check hand for four of a kind
 def check_quads(array):
     quads = False
+    quads_card = []
     for x in range(1, 14):
         if array[x] == 4:
             quads = True
-            print("You have quads!")
+            quads_card.append(x)
             break
     tie_breaker_cards = check_high_card(array, 1)
-    return quads, tie_breaker_cards
+    return quads, quads_card, tie_breaker_cards
 
 
 # Check hand for straight flush
@@ -331,7 +341,7 @@ def check_hand_strength():
     check_trips_boolean, trips_card, trips_high_cards = check_trips(number_array)
     if check_trips_boolean:
         current_hand = possible_hands[3]
-        # get_all_cards(cards_array, trips_card, trips_high_cards)
+        get_all_cards(cards_array, trips_card, trips_high_cards)
 
     straight_boolean, straight_cards = check_straight(number_array)
     if straight_boolean:
@@ -349,7 +359,9 @@ def check_hand_strength():
         get_all_cards(cards_array, trips_card, pair_card)
         current_hand = possible_hands[6]
 
-    if check_quads(number_array)[0]:
+    check_quads_boolean, quads_card, high_card = check_quads(number_array)
+    if check_quads_boolean:
+        get_all_cards(cards_array, quads_card, high_card)
         current_hand = possible_hands[7]
 
     if check_straight_flush(cards_array, straight_boolean, flush_boolean, flush_suit, number_of_cards):
@@ -361,12 +373,12 @@ def check_hand_strength():
 
 # Cards in play:
 preflop1 = preflop('c', 8)
-preflop2 = preflop('c', 8)
-flop1 = community_card('d', 1)
+preflop2 = preflop('c', None)
+flop1 = community_card('h', 1)
 flop2 = community_card('d', 1)
-flop3 = community_card('d', None)
+flop3 = community_card('d', 1)
 turn = community_card('d', 1)
-river = community_card('d', 8)
+river = community_card('d', 7)
 #  river = community_card(None, None)
 possible_cards_array = preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card
 cards_list = list(possible_cards_array)
