@@ -1,3 +1,5 @@
+import pprint
+
 '''
 Input Notation
 c : clubs
@@ -30,8 +32,11 @@ eg: Two = 1; Ace = 0 or 13
 To do list:
     Accept two hands as input and then compare the two
         - Need to accept multiple hands and store them.
+        - Consider using *args or **kwargs
+        - May want to store number of hands in play, use "If hand is None:" to eliminate empty seat positions
+        - Use the classes to create arrays
     Build GUI to facilitate hand comparison
-    Include percentages to show hand strength from current community board
+    Include chance to win percentages to show hand strength from current community board
 
 Notes:
     Show the 5 best cards with the type of hand** Done
@@ -122,18 +127,15 @@ def get_all_cards(all_cards, hand_cards, high_cards):
 
 # Remove None values from the cards array
 def possible_cards(all_cards):
-    # index = -1
     index = 0
     array_length = 7
     while index < array_length and all_cards:
-        # index += 1
         if all_cards[index][1] is None:
             del all_cards[index]
             array_length -= 1
             index -= 1
         index += 1
     print(all_cards)
-    # return all_cards, index + 1
     return all_cards
 
 
@@ -151,7 +153,6 @@ def cards_number_array(all_cards):
 # consider how we will compare high cards between hands
 def check_high_card(array, index):
     i = 1
-    # high_card = {}
     high_card = []
     for x in range(13, 0, -1):
         if array[x] == 1:
@@ -375,20 +376,50 @@ def compare_hand_strength(*args):
 
 
 # Cards in play:
+# Find way to build these with a loop, making an array of (2 (# of cards), 2 (suit, number), 10(seat position))
+preflop_hands = [[[None for k in range(2)] for j in range(2)] for i in range(10)]
+pprint.pprint(preflop_hands)
 preflop1 = preflop('c', 8)
-preflop2 = preflop('c', None)
-flop1 = community_card('h', 1)
-flop2 = community_card('d', 1)
-flop3 = community_card('d', 1)
-turn = community_card('d', 1)
-river = community_card('d', 7)
+preflop2 = preflop('c', 3)
+preflop3 = preflop('s', 3)
+preflop4 = preflop('h', 7)
+hand2 = [(None, None), (None, None)]
+
+preflop5 = preflop(None, None)
+preflop6 = preflop(None, None)
+preflop7 = preflop(None, None)
+preflop8 = preflop(None, None)
+preflop9 = preflop(None, None)
+preflop10 = preflop(None, None)
+preflop11 = preflop(None, None)
+preflop12 = preflop(None, None)
+preflop13 = preflop(None, None)
+preflop14 = preflop(None, None)
+preflop15 = preflop(None, None)
+preflop16 = preflop(None, None)
+preflop17 = preflop(None, None)
+preflop18 = preflop(None, None)
+preflop19 = preflop(None, None)
+preflop20 = preflop(None, None)
+
+
+
+flop1 = community_card('s', 2)
+flop2 = community_card('d', 11)
+flop3 = community_card('s', 9)
+turn = community_card('d', 13)
+river = community_card('d', 8)
 #  river = community_card(None, None)
 possible_cards_array = preflop1.card, preflop2.card, flop1.card, flop2.card, flop3.card, turn.card, river.card
+possible_cards_array1 = preflop3.card, preflop4.card, flop1.card, flop2.card, flop3.card, turn.card, river.card
 cards_list = list(possible_cards_array)
+cards_list1 = list(possible_cards_array1)
 
-# send cards_array into a function, return the array while eliminating None values, and include index # of cards
+# send cards_array into a function, return the array while eliminating None values
 cards_array = possible_cards(cards_list)
 number_array = cards_number_array(cards_array)
+cards_array1 = possible_cards(cards_list1)
+number_array1 = cards_number_array(cards_array1)
 
 
 def main():
