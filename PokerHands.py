@@ -394,7 +394,7 @@ number_array = cards_number_array(cards_array)
 def main():
     # Functions to check hand combinations:
     check_hand_strength()
-    args =
+    # args =
     compare_hand_strength()
 
 
