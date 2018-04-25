@@ -50,8 +50,6 @@ Notes:
 
 '''
 
-import pprint
-
 
 def get_card(card_number):
     if card_number == 0 or card_number == 13:
@@ -121,7 +119,7 @@ def possible_cards(all_cards):
             array_length -= 1
             index -= 1
         index += 1
-    print(all_cards)
+    # print(all_cards)
     return all_cards
 
 
@@ -139,15 +137,15 @@ def cards_number_array(all_cards):
 # consider how we will compare high cards between hands
 def check_high_card(array, index):
     i = 1
-    high_card = []
+    high_cards = []
     for x in range(13, 0, -1):
         if array[x] == 1:
             # high_card["rank{0}".format(i)] = x
-            high_card.append(x)
+            high_cards.append(x)
             i += 1
             if i > index:
                 break
-    return high_card
+    return high_cards
 
 
 def check_pair(array):
@@ -161,9 +159,6 @@ def check_pair(array):
     tie_breaker_cards = check_high_card(array, 3)
     if pair:
         pass
-        # print(pair_card)
-        # print(get_card(pair_card[0]))
-        # print(tie_breaker_cards)
     return pair, pair_card, tie_breaker_cards
 
 
@@ -208,7 +203,7 @@ def check_straight(array):
         if array[x] >= 1:
             number = 0
             for y in range(0, 5):
-                if x-y < 14 and array[x-y] >= 1:
+                if 0 <= x-y < 14 and array[x-y] >= 1:
                     number += 1
                     straight_cards.append(x-y)
                 else:
@@ -307,9 +302,9 @@ def check_hand_strength(number_array, cards_array):
     # 9 possible hands
     possible_hands = ['High Card', 'Pair', 'Two Pair', 'Trips', 'Straight', 'Flush', 'Full House', 'Quads',
                       'Straight Flush']
-    check_high_card(number_array, 5)
     current_hand = possible_hands[0]
     empty = []
+
     # check hand for pair and return 5 cards for final hand
     check_pair_boolean, paired_card, pair_high_cards = check_pair(number_array)
     if check_pair_boolean:
@@ -353,6 +348,10 @@ def check_hand_strength(number_array, cards_array):
         check_straight_flush(cards_array, flush_suit, len(cards_array))
         current_hand = possible_hands[8]
 
+    if current_hand == possible_hands[0]:
+        high_cards = check_high_card(number_array, 5)
+        get_all_cards(cards_array, high_cards, empty)
+
     print(current_hand)
     return current_hand
 
@@ -380,12 +379,11 @@ def create_player_hands(hand_array, community_cards, index):
             array[z].append(hand_array[z][x])
         for y in range(0, 5):
             array[z].append(community_cards[y])
-        print(array[z])
-    print(array)
     return array
 
 
 def compare_hand_strength(*args):
+    find_tie_break()
     pass
 
 
@@ -398,7 +396,7 @@ def main():
     # Cards in play:
     hand1 = [('c', 8,), ('d', 3)]
     hand2 = [('s', 3), ('h', 7)]
-    hand3 = [(None, None), (None, None)]
+    hand3 = [('d', 1), ('s', 12)]
     hand4 = [(None, None), (None, None)]
     hand5 = [(None, None), (None, None)]
     hand6 = [(None, None), (None, None)]
@@ -409,7 +407,7 @@ def main():
     hands = [hand1, hand2, hand3, hand4, hand5, hand6, hand6, hand7, hand8, hand9, hand10]
     flop1 = ('s', 2)
     flop2 = ('d', 11)
-    flop3 = ('s', 9)
+    flop3 = ('s', 10)
     turn = ('d', 13)
     river = ('d', 8)
     community_cards = [flop1, flop2, flop3, turn, river]
@@ -421,7 +419,17 @@ def main():
     while number_of_hands > index:
         index += 1
         hand_strength = [0] * number_of_hands
+        for x in range(0, number_of_hands):
+            # send cards_array into a function, return the array while eliminating None values
+            cards_array = possible_cards(player_hands[x])
+            number_array = cards_number_array(cards_array)
+            check_hand_strength(number_array, cards_array)
+            pass
         # print(hand_strength)
+
+        # Functions to check hand combinations:
+        compare_hand_strength(number_array, cards_array)
+        # args =
 
         # send in array index value for each hand, get the hand strength, work on tie breakers last
         # send player_hands[index] into possible cards and eliminate null community cards
@@ -429,17 +437,11 @@ def main():
         # Use check_hand_strength for each player_hands[index] value
         break
 
-    possible_cards_array = [hand1[0], hand1[1], flop1, flop2, flop3, turn, river]
 
-    # send cards_array into a function, return the array while eliminating None values
-    cards_array = possible_cards(possible_cards_array)
-    number_array = cards_number_array(cards_array)
 
-    # Functions to check hand combinations:
-    check_hand_strength(number_array, cards_array)
-    # args =
-    compare_hand_strength()
-    find_tie_break()
+
+
+
 
 
 if __name__ == "__main__":
