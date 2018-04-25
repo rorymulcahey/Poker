@@ -371,23 +371,24 @@ def all_hands(hands):
             array_length -= 1
             index -= 1
         index += 1
+    # print(hands)
     return hands, index
 
 
 # 'pop' the first two cards and create an array ready for check hand strength
 # goal: output should be an array that include the community cards with the hand
-def create_player_hands(hand_array, community_cards):
+def create_player_hands(hand_array, community_cards, index):
     array = []
-    for x in range(0, 2):
-        # need to store the card value for later
-        temp = hand_array[0].pop(0)
-        array.append(temp)
-        pass
-    for y in range(0, 5):
-        array.append(community_cards[y])
-        pass
-    # append flop turn river
-    print(array)
+    for z in range(0, index):
+        array.append([])
+        for x in range(0, 2):
+            # need to edit pop command, probably better to not use pop
+            temp = hand_array[z][x]
+            array[z].append(temp)
+        for y in range(0, 5):
+            array[z].append(community_cards[y])
+        print(array[z])
+    return array
 
 
 def main():
@@ -417,13 +418,16 @@ def main():
     river = ('d', 8)
     community_cards = [flop1, flop2, flop3, turn, river]
 
-    while all_preflop_hands:
+    player_hands = create_player_hands(all_preflop_hands, community_cards, number_of_hands)
+    index = 0
+    while number_of_hands < index:
+        index += 1
         hand_strength = [0] * number_of_hands
-        print(hand_strength)
-        create_player_hands(all_preflop_hands, community_cards)
+        # print(hand_strength)
+
         break
 
-    print(hand1)
+    # print(hand1)
     # required because of pop
     hand1 = [('c', 8,), ('d', 3)]
     possible_cards_array = [hand1[0], hand1[1], flop1, flop2, flop3, turn, river]
