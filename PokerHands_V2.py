@@ -357,13 +357,10 @@ def check_hand_strength(number_array, cards_array):
     return current_hand
 
 
-def compare_hand_strength(*args):
-    pass
-
-
 # remove 'None' hands from array
 def all_hands(hands):
     index = 0
+    # check array_length for debugs
     array_length = 11
     while index < array_length and hands:
         if hands[index][0][0] is None or hands[index][1][0] is None:
@@ -371,31 +368,32 @@ def all_hands(hands):
             array_length -= 1
             index -= 1
         index += 1
-    # print(hands)
     return hands, index
 
 
-# 'pop' the first two cards and create an array ready for check hand strength
 # goal: output should be an array that include the community cards with the hand
 def create_player_hands(hand_array, community_cards, index):
     array = []
     for z in range(0, index):
         array.append([])
         for x in range(0, 2):
-            # need to edit pop command, probably better to not use pop
-            temp = hand_array[z][x]
-            array[z].append(temp)
+            array[z].append(hand_array[z][x])
         for y in range(0, 5):
             array[z].append(community_cards[y])
         print(array[z])
+    print(array)
     return array
 
 
-def main():
-    # Find way to build these with a loop, making an array of (2 (# of cards), 2 (suit, number), 10(seat position))
+def compare_hand_strength(*args):
+    pass
 
-    # preflop_hands = [[[None for k in range(2)] for j in range(2)] for i in range(10)]
-    # pprint.pprint(preflop_hands)
+
+def find_tie_break(*args):
+    pass
+
+
+def main():
 
     # Cards in play:
     hand1 = [('c', 8,), ('d', 3)]
@@ -409,8 +407,6 @@ def main():
     hand9 = [(None, None), (None, None)]
     hand10 = [(None, None), (None, None)]
     hands = [hand1, hand2, hand3, hand4, hand5, hand6, hand6, hand7, hand8, hand9, hand10]
-    all_preflop_hands, number_of_hands = all_hands(hands)
-
     flop1 = ('s', 2)
     flop2 = ('d', 11)
     flop3 = ('s', 9)
@@ -418,18 +414,21 @@ def main():
     river = ('d', 8)
     community_cards = [flop1, flop2, flop3, turn, river]
 
+    all_preflop_hands, number_of_hands = all_hands(hands)
     player_hands = create_player_hands(all_preflop_hands, community_cards, number_of_hands)
+
     index = 0
-    while number_of_hands < index:
+    while number_of_hands > index:
         index += 1
         hand_strength = [0] * number_of_hands
         # print(hand_strength)
 
+        # send in array index value for each hand, get the hand strength, work on tie breakers last
+        # send player_hands[index] into possible cards and eliminate null community cards
+        # then send that hand through all the previous procedures
+        # Use check_hand_strength for each player_hands[index] value
         break
 
-    # print(hand1)
-    # required because of pop
-    hand1 = [('c', 8,), ('d', 3)]
     possible_cards_array = [hand1[0], hand1[1], flop1, flop2, flop3, turn, river]
 
     # send cards_array into a function, return the array while eliminating None values
@@ -440,6 +439,7 @@ def main():
     check_hand_strength(number_array, cards_array)
     # args =
     compare_hand_strength()
+    find_tie_break()
 
 
 if __name__ == "__main__":
@@ -550,6 +550,7 @@ print(str)
 print(x)
 
 
-
+preflop_hands = [[[None for k in range(2)] for j in range(2)] for i in range(10)]
+pprint.pprint(preflop_hands)
 
 '''
