@@ -175,7 +175,6 @@ def check_two_pair(array):
             break
     tie_breaker_cards = check_high_card(array, 1)
     if two_pair:
-        # print(tie_breaker_cards)
         pass
     return two_pair, two_pair_cards, tie_breaker_cards
 
@@ -297,6 +296,7 @@ def check_straight_flush(array, suit, index):
     return check_straight(suited_array)
 
 
+# move get all cards to the end, so it is run only once
 # Check for all possible hands and return the current best possible
 def check_hand_strength(number_array, cards_array):
     # 9 possible hands
@@ -304,56 +304,78 @@ def check_hand_strength(number_array, cards_array):
                       'Straight Flush']
     current_hand = possible_hands[0]
     empty = []
+    final_hand_cards = []
+    final_high_cards = []
+    current_hand_strength = 0
 
     # check hand for pair and return 5 cards for final hand
     check_pair_boolean, paired_card, pair_high_cards = check_pair(number_array)
     if check_pair_boolean:
         current_hand = possible_hands[1]
-        get_all_cards(cards_array, paired_card, pair_high_cards)
+        final_hand_cards = paired_card
+        final_high_cards = pair_high_cards
+        current_hand_strength = 1
 
     # check hand for pair and return 5 cards for final hand
-    check_two_pair_boolean, two_paired_cards, two_paired_high_cards = check_two_pair(number_array)
+    check_two_pair_boolean, two_paired_cards, two_paired_high_card = check_two_pair(number_array)
     if check_two_pair_boolean:
         current_hand = possible_hands[2]
-        get_all_cards(cards_array, two_paired_cards, two_paired_high_cards)
+        final_hand_cards = two_paired_cards
+        final_high_cards = two_paired_high_card
+        current_hand_strength = 2
 
     # check hand for pair and return 5 cards for final hand
     check_trips_boolean, trips_card, trips_high_cards = check_trips(number_array)
     if check_trips_boolean:
         current_hand = possible_hands[3]
-        get_all_cards(cards_array, trips_card, trips_high_cards)
+        final_hand_cards = trips_card
+        final_high_cards = trips_high_cards
+        current_hand_strength = 3
 
     straight_boolean, straight_cards = check_straight(number_array)
     if straight_boolean:
         current_hand = possible_hands[4]
-        get_all_cards(cards_array, straight_cards, empty)
+        final_hand_cards = straight_cards
+        final_high_cards = empty
+        current_hand_strength = 4
 
     flush_boolean, flush_suit = check_flush(cards_array)
     if check_flush(cards_array)[0]:
         flush_cards = get_cards_flush(cards_array, flush_suit, len(cards_array))
-        get_all_cards(cards_array, flush_cards, empty)
+        final_hand_cards = flush_cards
+        final_high_cards = empty
         current_hand = possible_hands[5]
+        current_hand_strength = 5
 
     check_full_house_boolean, trips_card, pair_card = check_full_house(number_array)
     if check_full_house_boolean:
-        get_all_cards(cards_array, trips_card, pair_card)
+        final_hand_cards = trips_card
+        final_high_cards = pair_card
         current_hand = possible_hands[6]
+        current_hand_strength = 6
 
     check_quads_boolean, quads_card, high_card = check_quads(number_array)
     if check_quads_boolean:
-        get_all_cards(cards_array, quads_card, high_card)
+        final_hand_cards = quads_card
+        final_high_cards = high_card
         current_hand = possible_hands[7]
+        current_hand_strength = 7
 
     if straight_boolean and flush_boolean:
-        check_straight_flush(cards_array, flush_suit, len(cards_array))
+        straight_flush_boolean, straight_flush_cards = check_straight_flush(cards_array, flush_suit, len(cards_array))
         current_hand = possible_hands[8]
+        if straight_flush_boolean:
+            final_hand_cards = straight_flush_cards
+            final_high_cards = empty
+            current_hand_strength = 8
 
     if current_hand == possible_hands[0]:
-        high_cards = check_high_card(number_array, 5)
-        get_all_cards(cards_array, high_cards, empty)
+        final_hand_cards = check_high_card(number_array, 5)
+        final_high_cards = empty
 
+    get_all_cards(cards_array, final_hand_cards, final_high_cards)
     print(current_hand)
-    return current_hand
+    return current_hand, current_hand_strength
 
 
 # remove 'None' hands from array
@@ -395,8 +417,8 @@ def main():
 
     # Cards in play:
     hand1 = [('c', 8,), ('d', 3)]
-    hand2 = [('s', 3), ('h', 7)]
-    hand3 = [('d', 1), ('s', 12)]
+    hand2 = [('s', 2), ('h', 7)]
+    hand3 = [('s', 1), ('s', 12)]
     hand4 = [(None, None), (None, None)]
     hand5 = [(None, None), (None, None)]
     hand6 = [(None, None), (None, None)]
@@ -405,27 +427,32 @@ def main():
     hand9 = [(None, None), (None, None)]
     hand10 = [(None, None), (None, None)]
     hands = [hand1, hand2, hand3, hand4, hand5, hand6, hand6, hand7, hand8, hand9, hand10]
-    flop1 = ('s', 2)
-    flop2 = ('d', 11)
+    flop1 = ('s', 3)
+    flop2 = ('s', 11)
     flop3 = ('s', 10)
-    turn = ('d', 13)
+    turn = ('s', 13)
     river = ('d', 8)
+    # river = (None, None)
     community_cards = [flop1, flop2, flop3, turn, river]
 
     all_preflop_hands, number_of_hands = all_hands(hands)
     player_hands = create_player_hands(all_preflop_hands, community_cards, number_of_hands)
-
     index = 0
     while number_of_hands > index:
         index += 1
-        hand_strength = [0] * number_of_hands
+        #hand_strength = [0] * number_of_hands
+        hand_strength = []
         for x in range(0, number_of_hands):
             # send cards_array into a function, return the array while eliminating None values
             cards_array = possible_cards(player_hands[x])
             number_array = cards_number_array(cards_array)
-            check_hand_strength(number_array, cards_array)
-            pass
-        # print(hand_strength)
+            hand_strength.append([check_hand_strength(number_array, cards_array)[1], player_hands])
+            # player_hands[x].append([])
+            # player_hands[x].append(hand_strength[x])
+            # print(player_hands[x][7])
+            # print(player_hands)
+        print('\n')
+        print(hand_strength)
 
         # Functions to check hand combinations:
         compare_hand_strength(number_array, cards_array)
