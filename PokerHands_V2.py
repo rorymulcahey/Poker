@@ -443,10 +443,12 @@ def main():
         #hand_strength = [0] * number_of_hands
         hand_strength = []
         for x in range(0, number_of_hands):
+            hand_strength.append([])
             # send cards_array into a function, return the array while eliminating None values
             cards_array = possible_cards(player_hands[x])
             number_array = cards_number_array(cards_array)
-            hand_strength.append([check_hand_strength(number_array, cards_array)[1], player_hands])
+            hand_strength[x].append(check_hand_strength(number_array, cards_array)[1])
+            hand_strength[x].append(player_hands[x])
             # player_hands[x].append([])
             # player_hands[x].append(hand_strength[x])
             # print(player_hands[x][7])
