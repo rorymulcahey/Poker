@@ -203,9 +203,12 @@ def check_straight(array):
             number = 0
             for y in range(0, 5):
                 if 0 <= x-y < 14 and array[x-y] >= 1:
+                    #print(x-y)
                     number += 1
                     straight_cards.append(x-y)
                 else:
+                    #print("break")
+                    #print(number)
                     break
             if number == 5:
                 straight = True
@@ -296,7 +299,6 @@ def check_straight_flush(array, suit, index):
     return check_straight(suited_array)
 
 
-# move get all cards to the end, so it is run only once
 # Check for all possible hands and return the current best possible
 def check_hand_strength(number_array, cards_array):
     # 9 possible hands
@@ -363,8 +365,8 @@ def check_hand_strength(number_array, cards_array):
 
     if straight_boolean and flush_boolean:
         straight_flush_boolean, straight_flush_cards = check_straight_flush(cards_array, flush_suit, len(cards_array))
-        current_hand = possible_hands[8]
         if straight_flush_boolean:
+            current_hand = possible_hands[8]
             final_hand_cards = straight_flush_cards
             final_high_cards = empty
             current_hand_strength = 8
@@ -404,7 +406,12 @@ def create_player_hands(hand_array, community_cards, index):
     return array
 
 
-def compare_hand_strength(*args):
+def compare_hand_strength(hand_strength):
+    best_hand = 0
+    for x in range(0, len(hand_strength)):
+        if hand_strength[x][0] > best_hand:
+            best_hand = hand_strength[x][0]
+    print(best_hand)
     find_tie_break()
     pass
 
@@ -427,9 +434,9 @@ def main():
     hand9 = [(None, None), (None, None)]
     hand10 = [(None, None), (None, None)]
     hands = [hand1, hand2, hand3, hand4, hand5, hand6, hand6, hand7, hand8, hand9, hand10]
-    flop1 = ('s', 3)
+    flop1 = ('s', 8)
     flop2 = ('s', 11)
-    flop3 = ('s', 10)
+    flop3 = ('d', 10)
     turn = ('s', 13)
     river = ('d', 8)
     # river = (None, None)
@@ -437,40 +444,20 @@ def main():
 
     all_preflop_hands, number_of_hands = all_hands(hands)
     player_hands = create_player_hands(all_preflop_hands, community_cards, number_of_hands)
-    index = 0
-    while number_of_hands > index:
-        index += 1
-        #hand_strength = [0] * number_of_hands
-        hand_strength = []
-        for x in range(0, number_of_hands):
-            hand_strength.append([])
-            # send cards_array into a function, return the array while eliminating None values
-            cards_array = possible_cards(player_hands[x])
-            number_array = cards_number_array(cards_array)
-            hand_strength[x].append(check_hand_strength(number_array, cards_array)[1])
-            hand_strength[x].append(player_hands[x])
-            # player_hands[x].append([])
-            # player_hands[x].append(hand_strength[x])
-            # print(player_hands[x][7])
-            # print(player_hands)
-        print('\n')
-        print(hand_strength)
+    hand_strength = []
+    for x in range(0, number_of_hands):
+        hand_strength.append([])
+        cards_array = possible_cards(player_hands[x])
+        number_array = cards_number_array(cards_array)
+        # hand strength is located with print(hand_strength[x][0])
+        # hand cards are located with print(hand_strength[x][1])
+        hand_strength[x].append(check_hand_strength(number_array, cards_array)[1])
+        hand_strength[x].append(player_hands[x])
 
-        # Functions to check hand combinations:
-        compare_hand_strength(number_array, cards_array)
-        # args =
-
-        # send in array index value for each hand, get the hand strength, work on tie breakers last
-        # send player_hands[index] into possible cards and eliminate null community cards
-        # then send that hand through all the previous procedures
-        # Use check_hand_strength for each player_hands[index] value
-        break
-
-
-
-
-
-
+    # Functions to check hand combinations:
+    compare_hand_strength(hand_strength)
+    # args =
+    # send in array index value for each hand, get the hand strength, work on tie breakers last
 
 
 if __name__ == "__main__":
