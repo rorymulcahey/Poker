@@ -412,10 +412,9 @@ def compare_hand_strength(hand_details):
     for x in range(1, len(hand_details)):
         if hand_details[x][0] == best_hand[0]:
             print('tied hand')
-            # create list that include both hands and type of hand
+            # create list that include both hands and type of hand index: [0] = strength, [1] and [2] = hands
             find_tie_break(tied_hands)  # set equal to best hand
         if hand_details[x][0] > best_hand[0]:
-            print('better hand')
             best_hand = hand_details[x]
     print(best_hand)
     return best_hand
@@ -427,6 +426,9 @@ def find_tie_break(tied_hands):
     # develop a method to send hands into the check_hand function that fits
     # compare the high cards and see which hand wins
     # return the winning hand
+    if tied_hands[0] == 0:
+        hand1 = cards_array(tied_hands[1])
+        hand2 = cards_array(tied_hands[2])
     return winning_hand
 
 
