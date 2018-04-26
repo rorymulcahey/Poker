@@ -375,9 +375,9 @@ def check_hand_strength(number_array, cards_array):
         final_hand_cards = check_high_card(number_array, 5)
         final_high_cards = empty
 
-    get_all_cards(cards_array, final_hand_cards, final_high_cards)
+    final_cards = get_all_cards(cards_array, final_hand_cards, final_high_cards)
     print(current_hand)
-    return current_hand, current_hand_strength
+    return current_hand_strength, final_cards
 
 
 # remove 'None' hands from array
@@ -406,18 +406,28 @@ def create_player_hands(hand_array, community_cards, index):
     return array
 
 
-def compare_hand_strength(hand_strength):
-    best_hand = 0
-    for x in range(0, len(hand_strength)):
-        if hand_strength[x][0] > best_hand:
-            best_hand = hand_strength[x][0]
+def compare_hand_strength(hand_details):
+    best_hand = hand_details[0]
+    tied_hands = [0, 0]
+    for x in range(1, len(hand_details)):
+        if hand_details[x][0] == best_hand[0]:
+            print('tied hand')
+            # create list that include both hands and type of hand
+            find_tie_break(tied_hands)  # set equal to best hand
+        if hand_details[x][0] > best_hand[0]:
+            print('better hand')
+            best_hand = hand_details[x]
     print(best_hand)
-    find_tie_break()
-    pass
+    return best_hand
 
 
-def find_tie_break(*args):
-    pass
+def find_tie_break(tied_hands):
+    winning_hand = [0, 0]
+    print('tied breaker engaged')
+    # develop a method to send hands into the check_hand function that fits
+    # compare the high cards and see which hand wins
+    # return the winning hand
+    return winning_hand
 
 
 def main():
@@ -449,15 +459,15 @@ def main():
         hand_strength.append([])
         cards_array = possible_cards(player_hands[x])
         number_array = cards_number_array(cards_array)
+
         # hand strength is located with print(hand_strength[x][0])
         # hand cards are located with print(hand_strength[x][1])
-        hand_strength[x].append(check_hand_strength(number_array, cards_array)[1])
-        hand_strength[x].append(player_hands[x])
+        idx = check_hand_strength(number_array, cards_array)
+        hand_strength[x].append(idx[0])
+        hand_strength[x].append(idx[1])
 
     # Functions to check hand combinations:
     compare_hand_strength(hand_strength)
-    # args =
-    # send in array index value for each hand, get the hand strength, work on tie breakers last
 
 
 if __name__ == "__main__":
