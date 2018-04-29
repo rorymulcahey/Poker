@@ -14,11 +14,31 @@ class Window(QtGui.QMainWindow):
         extractAction.setStatusTip('Leave The App')
         extractAction.triggered.connect(self.close_application)
 
+        openEditor = QtGui.QAction("&Editor", self)
+        openEditor.setShortcut("Ctrl+E")
+        openEditor.setStatusTip('Open Editor')
+        openEditor.triggered.connect(self.editor)
+
+        openFile = QtGui.QAction("&Open File", self)
+        openFile.setShortcut("Ctrl+O")
+        openFile.setStatusTip('Open File')
+        openFile.triggered.connect(self.file_open)
+
+        saveFile = QtGui.QAction("&Save File", self)
+        saveFile.setShortcut("Ctrl+S")
+        saveFile.setStatusTip('Save File')
+        saveFile.triggered.connect(self.file_save)
+
         self.statusBar()
 
         mainMenu = self.menuBar()
         fileMenu = mainMenu.addMenu('&File')
         fileMenu.addAction(extractAction)
+        fileMenu.addAction(openFile)
+        fileMenu.addAction(saveFile)
+
+        editorMenu = mainMenu.addMenu("&Editor")
+        editorMenu.addAction(openEditor)
 
         self.home()
 
@@ -30,9 +50,22 @@ class Window(QtGui.QMainWindow):
 
         extractAction = QtGui.QAction(QtGui.QIcon(), 'Quit', self)
         extractAction.triggered.connect(self.close_application)
-
         self.toolBar = self.addToolBar("Extraction")
         self.toolBar.addAction(extractAction)
+
+        fontChoice = QtGui.QAction('Font', self)
+        fontChoice.triggered.connect(self.font_choice)
+        self.toolBar = self.addToolBar("Font")
+        self.toolBar.addAction(fontChoice)
+
+        color = QtGui.QColor(0, 0, 0)
+
+        fontColor = QtGui.QAction('Font bg Color', self)
+        fontColor.triggered.connect(self.color_picker)
+
+        self.toolBar.addAction(fontColor)
+
+
 
         checkBox = QtGui.QCheckBox('Enlarge Window', self)
         checkBox.move(100, 50)
@@ -45,7 +78,7 @@ class Window(QtGui.QMainWindow):
         self.btn.move(200, 120)
         self.btn.clicked.connect(self.download)
 
-        print(self.style().objectName())
+        #print(self.style().objectName())
         self.styleChoice = QtGui.QLabel("Windows Vista", self)
 
         comboBox = QtGui.QComboBox(self)
@@ -60,14 +93,45 @@ class Window(QtGui.QMainWindow):
         self.styleChoice.move(50, 150)
         comboBox.activated[str].connect(self.style_choice)
 
+        cal = QtGui.QCalendarWidget(self)
+        cal.move(500, 200)
+        cal.resize(200, 200)
 
         self.show()
 
+    def file_open(self):
+        name = QtGui.QFileDialog.getOpenFileName(self, 'Open File')
+        file = open(name, 'r')
+
+        self.editor()
+
+        with file:
+            text = file.read()
+            self.textEdit.setText(text)
+
+    def file_save(self):
+        name = QtGui.QFileDialog.getSaveFileName(self, 'Save File')
+        file = open(name, 'w')
+        text = self.textEdit.toPlainText()
+        file.write(text)
+        file.close()
+
+    def color_picker(self):
+        color = QtGui.QColorDialog.getColor()
+        self.styleChoice.setStyleSheet("QWidget { background-color: %s}" % color.name())
+
+    def editor(self):
+        self.textEdit = QtGui.QTextEdit()
+        self.setCentralWidget(self.textEdit)
+
+    def font_choice(self):
+        font, valid = QtGui.QFontDialog.getFont()
+        if valid:
+            self.styleChoice.setFont(font)
 
     def style_choice(self, text):
         self.styleChoice.setText(text)
         QtGui.QApplication.setStyle(QtGui.QStyleFactory.create(text))
-
 
     def download(self):
         self.completed = 0
@@ -75,7 +139,6 @@ class Window(QtGui.QMainWindow):
         while self.completed < 100:
             self.completed += 0.0001
             self.progress.setValue(self.completed)
-
 
     def enlarge_window(self, state):
         if state == QtCore.Qt.Checked:
@@ -88,6 +151,7 @@ class Window(QtGui.QMainWindow):
                                             QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
         if choice == QtGui.QMessageBox.Yes:
             print("Exiting")
+            print(self.style().objectName())
             sys.exit()
         else:
             pass
