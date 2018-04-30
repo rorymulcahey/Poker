@@ -51,7 +51,7 @@ Notes:
 """
 
 
-# remove 'None' hands from array
+# remove 'None' hands from pre flop cards array
 def all_hands(hands):
     hand_position = [0] * 10
     for x in range(0, 10):
@@ -69,7 +69,21 @@ def all_hands(hands):
     return hands, index, hand_position
 
 
-# goal: output should be an array that include the community cards with the hand
+# Remove None values from the community cards
+def possible_cards(all_cards):
+    index = 0
+    array_length = 7
+    while index < array_length and all_cards:
+        if all_cards[index][1] is None:
+            del all_cards[index]
+            array_length -= 1
+            index -= 1
+        index += 1
+    # print(all_cards)
+    return all_cards
+
+
+# Output is an array that include the community cards with the hand
 def create_player_hands(hand_array, community_cards, index):
     array = []
     for z in range(0, index):
@@ -103,20 +117,6 @@ def get_all_cards(all_cards, hand_cards, high_cards):
                 return final_cards
     print("Error with get_all_cards")
     return True
-
-
-# Remove None values from the cards array
-def possible_cards(all_cards):
-    index = 0
-    array_length = 7
-    while index < array_length and all_cards:
-        if all_cards[index][1] is None:
-            del all_cards[index]
-            array_length -= 1
-            index -= 1
-        index += 1
-    # print(all_cards)
-    return all_cards
 
 
 # assign values of 1 or more for numerical cards in play and zeros for cards not in play
@@ -385,7 +385,6 @@ def compare_hand_strength(all_hand_details, hand_strength):
     elif hand_occurrences > 2:
         pass
         # this statement is used to break more than 1 tie
-        # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
     print(best_hand)
     return best_hand
 
@@ -393,12 +392,11 @@ def compare_hand_strength(all_hand_details, hand_strength):
 def find_tie_break(tied_hands):
     winning_hand = [tied_hands[0]]
     # need to determine how to announce more than one tie breaking winner
+    # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
     if tied_hands[0] != 1 and tied_hands[0] != 2 and tied_hands[0] != 3 and tied_hands[0] != 7:
         print('tied breaker engaged')
         hand1 = cards_number_array(tied_hands[1])
         hand2 = cards_number_array(tied_hands[2])
-        # print(hand1)
-        # print(hand2)
         for x in range(13, 0, -1):
             if hand1[x] > hand2[x]:
                 winning_hand.append(tied_hands[1])
@@ -449,7 +447,6 @@ def main():
         # hand cards are located with print(all_hand_details[x][1])
         hand_details = check_hand_strength(number_array, cards_array)
         only_strengths.append(hand_details[0])
-        print(only_strengths)
         all_hand_details[x].append(hand_details[0])
         all_hand_details[x].append(hand_details[1])
 
@@ -464,6 +461,22 @@ if __name__ == "__main__":
 '''
 old code:
 
+
+class community_card:
+    def __init__(self, suit, num):
+        self.suit = suit
+        self.num = num
+        # num = str(num)
+        self.card = suit, num
+
+
+class preflop:
+    def __init__(self, suit, num):
+        self.suit = ""
+        self.num = 0
+        self.card = suit, num
+        
+    
 
 def get_card(card_number):
     if card_number == 0 or card_number == 13:
