@@ -1,5 +1,7 @@
 import sys
 from PyQt4 import QtGui, QtCore
+from PokerHands_V2 import *
+# from PokerHands import *
 
 
 class Window(QtGui.QMainWindow):
@@ -43,8 +45,13 @@ class Window(QtGui.QMainWindow):
         self.home()
 
     def home(self):
-        btn = QtGui.QPushButton("Quit button", self)
-        btn.clicked.connect(self.close_application)
+        # btn = QtGui.QPushButton("Quit button", self)
+        # btn.clicked.connect(self.close_application)
+        # btn.resize(btn.minimumSizeHint())
+        # btn.move(450, 270)
+
+        btn = QtGui.QPushButton("Run", self)
+        btn.clicked.connect(main)
         btn.resize(btn.minimumSizeHint())
         btn.move(450, 270)
 
@@ -64,8 +71,6 @@ class Window(QtGui.QMainWindow):
         fontColor.triggered.connect(self.color_picker)
 
         self.toolBar.addAction(fontColor)
-
-
 
         checkBox = QtGui.QCheckBox('Enlarge Window', self)
         checkBox.move(100, 50)
