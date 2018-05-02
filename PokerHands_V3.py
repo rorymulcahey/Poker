@@ -52,9 +52,9 @@ Notes:
 
 
 class Card:
-    def __init__(self, suit, num):
+    def __init__(self, suit, number):
         self.suit = suit
-        self.num = num
+        self.num = number
 
     def __repr__(self):
         return self.suit + str(self.num)
@@ -83,7 +83,7 @@ class Hand:
     def possible_cards(self):
         index = 0
         array_length = len(self.pre_cards) + len(self.comm_cards)
-        print(array_length)
+        # print(array_length)
         self.cards = self.create_player_hand()
         while index < array_length and self.cards:
             #if self.cards[index].suit is None or self.cards[index].num is None:
@@ -92,7 +92,7 @@ class Hand:
                 array_length -= 1
                 index -= 1
             index += 1
-        print(self.cards)
+        # print(self.cards)
         return self.cards
 
     # assign values of 1 or more for numerical cards in play and zeros for cards not in play
@@ -100,93 +100,91 @@ class Hand:
         array = [0] * 14
         self.cards = self.possible_cards()
         for y in range(0, len(self.cards)):
-            array[self.cards[y][1] - 1] += 1
+            array[self.cards[y].num - 1] += 1
             # Increment first and last element of array for aces
-            if self.cards[y][1] == 1:
+            if self.cards[y].num == 1:
                 array[13] += 1
         return array
 
 
-card1 = Card('c', 4)
-card2 = Card('s', 3)
-preflop1 = [card1, card2]
-flop1 = Card('s', 8)
-flop2 = Card('s', 11)
-flop3 = Card('d', 10)
-turn = Card('s', 13)
-# river = Card('d', 8)
-river = None
-community = [flop1, flop2, flop3, turn, river]
-hand1 = Hand(preflop1, community)
-print(hand1.possible_cards())
-
-'''
 class HandType:
+    def __init__(self, number_array, cards_array):
+        self.num_array = number_array
+        self.cards = cards_array
+        self.index = len(cards_array)
+        self.hc_index = []
+        self.straight_array = number_array
 
+    # def __repr__(self):
+    #   return self.suit + str(self.num)
 
-    def check_high_card(array, index):
+    def check_high_card(self, index):
         i = 1
         high_cards = []
         for x in range(13, 0, -1):
-            if array[x] == 1:
+            if self.num_array[x] == 1:
                 high_cards.append(x)
                 i += 1
                 if i > index:
                     break
+            if index == 1:
+                if self.num_array[x] == 2:
+                    high_cards.append(x)
+                    break
         return high_cards
 
-    def check_pair(array):
+    def check_pair(self):
         pair = False
         pair_card = []
         for x in range(1, 14):
-            if array[x] == 2:
+            if self.num_array[x] == 2:
                 pair_card.append(x)
                 pair = True
                 break
-        tie_breaker_cards = check_high_card(array, 3)
+        tie_breaker_cards = self.check_high_card(3)
         if pair:
             pass
         return pair, pair_card, tie_breaker_cards
 
-    def check_two_pair(array):
+    def check_two_pair(self):
         two_pair = False
         number = 0
         two_pair_cards = []
         for x in range(13, 0, -1):
-            if array[x] == 2:
+            if self.num_array[x] == 2:
                 number += 1
                 two_pair_cards.append(x)
             if number == 2:
                 two_pair = True
                 break
-        tie_breaker_cards = check_high_card(array, 1)
+        tie_breaker_cards = self.check_high_card(1)
         if two_pair:
             pass
         return two_pair, two_pair_cards, tie_breaker_cards
 
-    def check_trips(array):
+    def check_trips(self):
         trips = False
         trips_card = []
         for x in range(1, 14):
-            if array[x] == 3:
+            if self.num_array[x] == 3:
                 trips_card.append(x)
                 trips = True
                 break
-        tie_breaker_cards = check_high_card(array, 2)
+        tie_breaker_cards = self.check_high_card(2)
         if trips:
             pass
             # print(trips_card)
             # print(tie_breaker_cards)
         return trips, trips_card, tie_breaker_cards
 
-    def check_straight(array):
+    def check_straight(self):
         straight = False
         straight_cards = []
         for x in range(13, 0, -1):
-            if array[x] >= 1:
+            if self.straight_array[x] >= 1:
                 number = 0
                 for y in range(0, 5):
-                    if 0 <= x-y < 14 and array[x-y] >= 1:
+                    if 0 <= x-y < 14 and self.straight_array[x - y] >= 1:
                         number += 1
                         straight_cards.append(x-y)
                     else:
@@ -198,31 +196,32 @@ class HandType:
                     straight_cards = []
         return straight, straight_cards
 
-    def check_flush(all_cards):
+    def check_flush(self):
         array = [0] * 4
         suits = ['c', 'd', 'h', 's']
-        for y in range(0, len(all_cards)):
-            if all_cards[y][0] == 'c':
+        for y in range(0, len(self.cards)):
+            if self.cards[y].suit == 'c':
                 array[0] += 1
-            elif all_cards[y][0] == 'd':
+            elif self.cards[y].suit == 'd':
                 array[1] += 1
-            elif all_cards[y][0] == 'h':
+            elif self.cards[y].suit == 'h':
                 array[2] += 1
-            elif all_cards[y][0] == 's':
+            elif self.cards[y].suit == 's':
                 array[3] += 1
         for x in range(0, 4):
             if array[x] >= 5:
                 current_suit = suits[x]
+                self.get_cards_flush(current_suit)
                 return True, current_suit
         return False, None
 
     # returns the cards for the flush:
-    def get_cards_flush(array, suit, index):
+    def get_cards_flush(self, suit):
         suited_array = [0] * 14
-        for x in range(0, index):
-            if array[x][0] == suit:
-                suited_array[array[x][1]-1] = 1
-                if array[x][1] == 1:
+        for x in range(0, self.index):
+            if self.cards[x].suit == suit:
+                suited_array[self.cards[x].num - 1] = 1
+                if self.cards[x].num == 1:
                     suited_array[13] = 1
         i = 1
         high_card = []
@@ -234,60 +233,62 @@ class HandType:
                     break
         return high_card
 
-    def check_full_house(array):
+    def check_full_house(self):
         have_trips = False
         have_pair = False
         trips_card = []
         pair_card = []
         for x in range(13, 0, -1):
-            if array[x] == 3:
+            if self.num_array[x] == 3:
                 trips_card.append(x)
                 have_trips = True
                 break
         for y in range(13, 0, -1):
-            if have_trips and 1 < array[y] < 4 and y != trips_card[0]:
+            if have_trips and 1 < self.num_array[y] < 4 and y != trips_card[0]:
                 pair_card.append(y)
                 have_pair = True
                 break
         return have_pair and have_trips, trips_card, pair_card
 
-    def check_quads(array):
+    def check_quads(self):
         quads = False
         quads_card = []
         for x in range(1, 14):
-            if array[x] == 4:
+            if self.num_array[x] == 4:
                 quads = True
                 quads_card.append(x)
                 break
-        tie_breaker_cards = check_high_card(array, 1)
+        tie_breaker_cards = self.check_high_card(1)
         return quads, quads_card, tie_breaker_cards
 
-    def check_straight_flush(array, suit, index):
+    def check_straight_flush(self, suit):
         suited_array = [0]*14
-        for x in range(0, index):
-            if array[x][0] == suit:
-                suited_array[array[x][1]-1] = 1
-                if array[x][1] == 1:
-                    suited_array[array[x][1] + 12] = 1
-        return check_straight(suited_array)
+        for x in range(0, self.index):
+            if self.cards[x].suit == suit:
+                suited_array[self.cards[x][1]-1] = 1
+                if self.cards[x].num == 1:
+                    suited_array[13] = 1
+        return self.check_straight(suited_array)
 
     # Return final 5 cards for the hand. Be sure to send in lists as arguments
-    def get_all_cards(all_cards, hand_cards, high_cards):
+    def get_all_cards(self, hand_cards, high_cards):
         final_cards = []
-        for z in range(0, len(all_cards)):
+        for z in range(0, self.index):
             for x in range(0, len(hand_cards)):
+                print('test')
                 if hand_cards[x] == 13:
                     hand_cards[x] = 0
-                if all_cards[z][1] - 1 == hand_cards[x]:
-                    final_cards.append(all_cards[z])
+                if self.cards[z].num - 1 == hand_cards[x]:
+                    final_cards.append(self.cards[z])
                 if len(final_cards) == 5:
                     print(final_cards)
                     return final_cards
             for y in range(0, len(high_cards)):
+                print('test2')
                 if high_cards[y] == 13:
                     high_cards[y] = 0
-                if all_cards[z][1] - 1 == high_cards[y] and high_cards:
-                    final_cards.append(all_cards[z])
+                if self.cards[z].num - 1 == high_cards[y] and high_cards:
+                    final_cards.append(self.cards[z])
                 if len(final_cards) == 5:
                     print(final_cards)
                     return final_cards
@@ -295,7 +296,7 @@ class HandType:
         return True
 
     # Check for all possible hands and return the current best possible
-    def check_hand_strength(number_array, cards_array):
+    def check_hand_strength(self):
         # 9 possible hands
         possible_hands = ['High Card', 'Pair', 'Two Pair', 'Trips', 'Straight', 'Flush', 'Full House', 'Quads',
                           'Straight Flush']
@@ -306,7 +307,7 @@ class HandType:
         current_hand_strength = 0
 
         # check hand for pair and return 5 cards for final hand
-        check_pair_boolean, paired_card, pair_high_cards = check_pair(number_array)
+        check_pair_boolean, paired_card, pair_high_cards = self.check_pair()
         if check_pair_boolean:
             current_hand = possible_hands[1]
             final_hand_cards = paired_card
@@ -314,7 +315,7 @@ class HandType:
             current_hand_strength = 1
 
         # check hand for pair and return 5 cards for final hand
-        check_two_pair_boolean, two_paired_cards, two_paired_high_card = check_two_pair(number_array)
+        check_two_pair_boolean, two_paired_cards, two_paired_high_card = self.check_two_pair()
         if check_two_pair_boolean:
             current_hand = possible_hands[2]
             final_hand_cards = two_paired_cards
@@ -322,36 +323,36 @@ class HandType:
             current_hand_strength = 2
 
         # check hand for pair and return 5 cards for final hand
-        check_trips_boolean, trips_card, trips_high_cards = check_trips(number_array)
+        check_trips_boolean, trips_card, trips_high_cards = self.check_trips()
         if check_trips_boolean:
             current_hand = possible_hands[3]
             final_hand_cards = trips_card
             final_high_cards = trips_high_cards
             current_hand_strength = 3
 
-        straight_boolean, straight_cards = check_straight(number_array)
+        straight_boolean, straight_cards = self.check_straight()
         if straight_boolean:
             current_hand = possible_hands[4]
             final_hand_cards = straight_cards
             final_high_cards = empty
             current_hand_strength = 4
 
-        flush_boolean, flush_suit = check_flush(cards_array)
-        if check_flush(cards_array)[0]:
-            flush_cards = get_cards_flush(cards_array, flush_suit, len(cards_array))
+        flush_boolean, flush_suit = self.check_flush()
+        if self.check_flush()[0]:
+            flush_cards = self.get_cards_flush(flush_suit)
             final_hand_cards = flush_cards
             final_high_cards = empty
             current_hand = possible_hands[5]
             current_hand_strength = 5
 
-        check_full_house_boolean, trips_card, pair_card = check_full_house(number_array)
+        check_full_house_boolean, trips_card, pair_card = self.check_full_house()
         if check_full_house_boolean:
             final_hand_cards = trips_card
             final_high_cards = pair_card
             current_hand = possible_hands[6]
             current_hand_strength = 6
 
-        check_quads_boolean, quads_card, high_card = check_quads(number_array)
+        check_quads_boolean, quads_card, high_card = self.check_quads()
         if check_quads_boolean:
             final_hand_cards = quads_card
             final_high_cards = high_card
@@ -359,7 +360,7 @@ class HandType:
             current_hand_strength = 7
 
         if straight_boolean and flush_boolean:
-            straight_flush_boolean, straight_flush_cards = check_straight_flush(cards_array, flush_suit, len(cards_array))
+            straight_flush_boolean, straight_flush_cards = self.check_straight_flush(flush_suit)
             if straight_flush_boolean:
                 current_hand = possible_hands[8]
                 final_hand_cards = straight_flush_cards
@@ -367,13 +368,31 @@ class HandType:
                 current_hand_strength = 8
 
         if current_hand == possible_hands[0]:
-            final_hand_cards = check_high_card(number_array, 5)
+            final_hand_cards = self.check_high_card(5)
             final_high_cards = empty
 
-        final_cards = get_all_cards(cards_array, final_hand_cards, final_high_cards)
+        final_cards = self.get_all_cards(final_hand_cards, final_high_cards)
         print(current_hand)
         return current_hand_strength, final_cards
 
+# get all cards not functioning as intended
+card1 = Card('c', 4)
+card2 = Card('d', 4)
+preflop1 = [card1, card2]
+flop1 = Card('s', 13)
+flop2 = Card('d', 13)
+flop3 = Card('c', 13)
+turn = Card('h', 13)
+# river = Card('d', 8)
+river = None
+community = [flop1, flop2, flop3, turn, river]
+hand1 = Hand(preflop1, community)
+hand_strength1 = HandType(hand1.cards_number_array(), hand1.possible_cards())
+print(hand_strength1.check_hand_strength())
+# print(hand1.possible_cards())
+# print(hand1.create_player_hand())
+
+'''
 class HandCompare:
     def __init__(self, suit, num):
         self.card = suit, num
@@ -395,7 +414,7 @@ class HandCompare:
             index += 1
         return hands, index, hand_position
 
-    def compare_hand_strength(all_hand_details, hand_strength):
+    def compare_hand_strength(self, all_hand_details, hand_strength):
         hand_type = max(hand_strength)
         hand_occurrences = hand_strength.count(hand_type)
         best_hand = []
@@ -415,8 +434,7 @@ class HandCompare:
         print(best_hand)
         return best_hand
 
-
-    def find_tie_break(tied_hands):
+    def find_tie_break(self, tied_hands):
         winning_hand = [tied_hands[0]]
         # need to determine how to announce more than one tie breaking winner
         # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
