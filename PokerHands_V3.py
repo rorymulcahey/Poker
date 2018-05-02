@@ -59,8 +59,8 @@ class Card:
     def __repr__(self):
         return self.suit + str(self.num)
 
-    def __str__(self):
-        return self.suit + str(self.num)
+    #def __str__(self):
+    #    return self.suit + str(self.num)
 
 
 class Hand:
@@ -69,8 +69,6 @@ class Hand:
         self.comm_cards = community_cards
         #self.index = len(preflop_cards) + len(community_cards)
         self.cards = []
-
-
 
     # Output is an array that include the community cards with the hand
     def create_player_hand(self):
@@ -84,10 +82,12 @@ class Hand:
     # Remove None values from the card list
     def possible_cards(self):
         index = 0
-        array_length = 7
+        array_length = len(self.pre_cards) + len(self.comm_cards)
+        print(array_length)
         self.cards = self.create_player_hand()
         while index < array_length and self.cards:
-            if self.cards[index].suit is None or self.cards[index].num is None:
+            #if self.cards[index].suit is None or self.cards[index].num is None:
+            if self.cards[index] is None:
                 del self.cards[index]
                 array_length -= 1
                 index -= 1
@@ -114,8 +114,8 @@ flop1 = Card('s', 8)
 flop2 = Card('s', 11)
 flop3 = Card('d', 10)
 turn = Card('s', 13)
-river = Card('d', 8)
-river = Card(None, None)
+# river = Card('d', 8)
+river = None
 community = [flop1, flop2, flop3, turn, river]
 hand1 = Hand(preflop1, community)
 print(hand1.possible_cards())
