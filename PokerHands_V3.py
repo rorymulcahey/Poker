@@ -71,11 +71,14 @@ class Hand:
         # self.index = len(preflop_cards) + len(community_cards)
         self.cards = self.possible_cards()
         self.num_array = [0] * 14
+        self.hand_position = []
 
     # Output is an array that include the community cards with the hand
     def create_player_hand(self):
         array = []
         for x in range(0, 2):
+            if self.pre_cards[x] is None:
+                return None
             array.append(self.pre_cards[x])
         for y in range(0, 5):
             array.append(self.comm_cards[y])
@@ -405,42 +408,32 @@ class HandType:
 
 
 class HandCompare:
-    def __init__(self, hands, hand_details):
-        self.hands = hands
-        self.hand_details = [hand_details]
-        self.hand_strength = [hand_details[0]]
+    def __init__(self, hand_details):
+
+        self.hand_details = hand_details
+        self.hand_strength_list = []
+        self.hand_strength = []
         self.tied_hands = []
         self.hand_position = [0] * 10
 
-    # remove 'None' hands from pre flop cards array
-    def all_hands(self):
-        for x in range(0, 10):
-            if self.hands[x] is not None:
-                self.hand_position[x] = 1
-        index = 0
-        # check array_length for debugs
-        array_length = 11
-        while index < array_length and self.hands:
-            if self.hands[index] is None:
-                del self.hands[index]
-                array_length -= 1
-                index -= 1
-            index += 1
-        return self.hands, index, self.hand_position
+    def only_hand_strength(self):
+        for x in range(0, len(self.hand_details)):
+            self.hand_strength_list.append(self.hand_details[x][0])
 
+    # max hand strength is not working as intended. grabbing hand and strength
     def compare_hand_strength(self):
-        hand_type = max(self.hand_strength)
-        hand_occurrences = self.hand_strength.count(hand_type)
+        self.only_hand_strength()
+        self.hand_strength = max(self.hand_strength_list)
+        hand_occurrences = self.hand_strength_list.count(max(self.hand_strength_list))
         best_hand = []
         if hand_occurrences == 1:
-            for x in range(0, len(self.hand_strength)):
-                if hand_type == self.hand_details[x][0]:
-                    best_hand = self.hand_details[x]
+            for x in range(0, len(self.hand_details)):
+                if self.hand_strength == self.hand_details[x][0]:
+                    best_hand = self.hand_details[x][1]
         elif hand_occurrences == 2:
-            tied_hands = hand_type
-            for y in range(0, len(self.hand_strength)):
-                if hand_type == self.hand_details[y][0]:
-                    tied_hands.append(self.hand_details[y][1])
+            for y in range(0, len(self.hand_details)):
+                if self.hand_strength == self.hand_details[y][0]:
+                    self.tied_hands.append(self.hand_details[y][1])
             best_hand = self.find_tie_break()
         elif hand_occurrences > 2:
             pass
@@ -448,65 +441,80 @@ class HandCompare:
         # print(best_hand)
         return best_hand
 
+    # index 0: takes hand strength, index 1 and 2 take the two hands and compares them
     def find_tie_break(self):
-        self.tied_hands = self.compare_hand_strength()
-        print(self.tied_hands)
-        best_hand = self.tied_hands[0]
+        best_hand = []
         # need to determine how to announce more than one tie breaking winner
         # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
-        if self.tied_hands[0] != 1 and self.tied_hands[0] != 2 and self.tied_hands[0] != 3 and self.tied_hands[0] != 7:
+        if self.hand_strength != 1 and self.hand_strength != 2 and self.hand_strength != 3 and self.hand_strength != 7:
             print('tied breaker engaged')
             # super().cards_number_array(self.tied_hand[1])
             hand_to_compare1 = Hand.cards_number_array(self.tied_hands[0])
             # print(self.tied_hands[2])
-            if self.tied_hands[2]:
+            if self.tied_hands[1]:
                 hand_to_compare2 = Hand.cards_number_array(self.tied_hands[1])
                 for x in range(13, 0, -1):
                     if hand_to_compare1[x] > hand_to_compare2[x]:
                         best_hand.append(self.tied_hands[1])
                         return best_hand
                     if hand_to_compare2[x] > hand_to_compare1[x]:
-                        best_hand.append(self.tied_hands[2])
+                        best_hand.append(self.tied_hands[1])
                     return best_hand
         # return both hands if tie is not broken
         # could also consider using tie_broken_boolean
+        best_hand.append(self.tied_hands[0])
         best_hand.append(self.tied_hands[1])
-        best_hand.append(self.tied_hands[2])
         return best_hand
 
 
 def main():
     # Cards in play:
     preflophand1 = [Card('s', 9,), Card('s', 3)]
-    preflophand2 = [Card('s', 2), Card('h', 7)]
-    preflophand3 = [Card('s', 1), Card('s', 12)]
+    preflophand2 = [Card('d', 2), Card('h', 7)]
+    preflophand3 = None
     preflophand4 = None
-    preflophand5 = [None, None]
-    preflophand6 = [None, None]
-    preflophand7 = [None, None]
-    preflophand8 = [None, None]
-    preflophand9 = [None, None]
-    preflophand10 = [None, None]
+    preflophand5 = [Card('s', 1), Card('s', 12)]
+    preflophand6 = None
+    preflophand7 = None
+    preflophand8 = None
+    preflophand9 = None
+    preflophand10 = None
     preflophands = [preflophand1, preflophand2, preflophand3, preflophand4, preflophand5,
                     preflophand6, preflophand7, preflophand8, preflophand9, preflophand10]
+    hand_position = [0] * 10
+
+    # remove 'None' hands from pre flop cards array
+    # consider using this with create_player_hand to remove empty preflop hands and store position
+    for x in range(0, 10):
+        if preflophands[x] is not None:
+            hand_position[x] = 1
+    print(hand_position)
+    index = 0
+    array_length = 10
+    while index < array_length and preflophands:
+        if preflophands[index] is None:
+            del preflophands[index]
+            array_length -= 1
+            index -= 1
+        index += 1
 
     flop1 = Card('s', 8)
     flop2 = Card('s', 11)
-    flop3 = Card('d', 10)
+    flop3 = Card('s', 10)
     turn = Card('s', 13)
-    river = Card('d', 8)
+    river = None
     # river = (None, None)
     community_cards = [flop1, flop2, flop3, turn, river]
 
     hands = []
     hand_strengths = []
     all_hand_details = []
-    for x in range(0, 10):
+    for x in range(0, index):
         hands.append(Hand(preflophands[x], community_cards))
         hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
         all_hand_details.append(hand_strengths[x].check_hand_strength())
-    winning_hand = HandCompare(hands, all_hand_details)
-    print(winning_hand.compare_hand_strength())
+    winning_hand = HandCompare(all_hand_details)
+    print("Winning hand is:", winning_hand.compare_hand_strength())
 
     # all_preflop_hands, number_of_hands, hand_positions = all_hands(hands)
     # may not need hand positions #
