@@ -60,9 +60,6 @@ class Card:
     def __repr__(self):
         return self.suit + str(self.num)
 
-    # def __str__(self):
-    #    return self.suit + str(self.num)
-
 
 class Hand:
     def __init__(self, preflop_cards, community_cards):
@@ -97,17 +94,6 @@ class Hand:
                 index -= 1
             index += 1
         return self.cards
-
-    # assign values of 1 or more for numerical cards in play and zeros for cards not in play
-    # @staticmethod
-    # def cards_number_array(cards):
-    #     num_array = [0] * 14
-    #     for y in range(0, len(cards)):
-    #         num_array[cards[y].num - 1] += 1
-    #         # Increment first and last element of array for aces
-    #         if cards[y].num == 1:
-    #             num_array[13] += 1
-    #     return num_array
 
     # assign values of 1 or more for numerical cards in play and zeros for cards not in play
     @staticmethod
@@ -334,7 +320,7 @@ class HandType:
         final_high_cards = []
         current_hand_strength = 0
 
-        # check hand for pair and return 5 cards for final hand
+        # check hand for pair, two pair, etc.. and return final hand w/ high cards
         check_pair_boolean, paired_card, pair_high_cards = self.check_pair()
         if check_pair_boolean:
             self.name = possible_hands[1]
@@ -342,7 +328,6 @@ class HandType:
             final_high_cards = pair_high_cards
             current_hand_strength = 1
 
-        # check hand for pair and return 5 cards for final hand
         check_two_pair_boolean, two_paired_cards, two_paired_high_card = self.check_two_pair()
         if check_two_pair_boolean:
             self.name = possible_hands[2]
@@ -350,7 +335,6 @@ class HandType:
             final_high_cards = two_paired_high_card
             current_hand_strength = 2
 
-        # check hand for pair and return 5 cards for final hand
         check_trips_boolean, trips_card, trips_high_cards = self.check_trips()
         if check_trips_boolean:
             self.name = possible_hands[3]
@@ -420,7 +404,6 @@ class HandCompare:
         for x in range(0, len(self.hand_details)):
             self.hand_strength_list.append(self.hand_details[x][0])
 
-    # max hand strength is not working as intended. grabbing hand and strength
     def compare_hand_strength(self):
         self.only_hand_strength()
         self.hand_strength = max(self.hand_strength_list)
@@ -441,7 +424,6 @@ class HandCompare:
         # print(best_hand)
         return best_hand
 
-    # index 0: takes hand strength, index 1 and 2 take the two hands and compares them
     def find_tie_break(self):
         best_hand = []
         # need to determine how to announce more than one tie breaking winner
@@ -483,8 +465,10 @@ def main():
                     preflophand6, preflophand7, preflophand8, preflophand9, preflophand10]
     hand_position = [0] * 10
 
-    # remove 'None' hands from pre flop cards array
+    # remove 'None' hands from preflop cards list
     # consider using this with create_player_hand to remove empty preflop hands and store position
+    # all_preflop_hands, number_of_hands, hand_positions = all_hands(hands)
+    # hands are numerically ordered in accordance with their seat position #
     for x in range(0, 10):
         if preflophands[x] is not None:
             hand_position[x] = 1
@@ -503,7 +487,6 @@ def main():
     flop3 = Card('s', 10)
     turn = Card('s', 13)
     river = None
-    # river = (None, None)
     community_cards = [flop1, flop2, flop3, turn, river]
 
     hands = []
@@ -515,15 +498,6 @@ def main():
         all_hand_details.append(hand_strengths[x].check_hand_strength())
     winning_hand = HandCompare(all_hand_details)
     print("Winning hand is:", winning_hand.compare_hand_strength())
-
-    # all_preflop_hands, number_of_hands, hand_positions = all_hands(hands)
-    # may not need hand positions #
-    # hands are numerically ordered in accordance with their seat position #
-    # this can be used to match winner with seat position #
-    # player_hands = create_player_hand(all_preflop_hands, community_cards, number_of_hands)
-
-    # Functions to check hand combinations:
-    # compare_hand_strength(all_hand_details, only_strengths)
 
 
 if __name__ == "__main__":
