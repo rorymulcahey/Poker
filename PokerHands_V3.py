@@ -240,7 +240,6 @@ class HandType:
                 i += 1
                 if i > 5:
                     break
-        print(flush_cards)
         return flush_cards
 
     def check_full_house(self):
@@ -286,6 +285,16 @@ class HandType:
     def get_final_cards(self, hand_cards, high_cards):
         final_cards = []
         index = 0
+        if self.name == 'Flush' or 'Straight Flush':
+            for z in range(0, self.index):
+                for x in range(0, len(hand_cards)):
+                    if hand_cards[x] == 13:
+                        hand_cards[x] = 0
+                    if self.cards[z].num - 1 == hand_cards[x] and self.cards[z].suit == self.flush_suit:
+                        final_cards.append(self.cards[z])
+                    if len(final_cards) == 5:
+                        print(final_cards)
+                        return final_cards
         for z in range(0, self.index):
             for x in range(0, len(hand_cards)):
                 if hand_cards[x] == 13:
@@ -391,6 +400,9 @@ class HandType:
     def get_hand_details(self):
         return self.check_hand_strength(), self.get_final_cards
 
+    def get_name(self):
+        return self.name
+
 
 class HandCompare:
     def __init__(self, hand_details):
@@ -454,14 +466,18 @@ class HandCompare:
         # best_hand.append(self.tied_hands[1])
         return best_hand
 
+    # @staticmethod
+    # def get_winning_hand(self):
+    #    return HandType.get_name(self.num_array, self.cards)
+
 
 def main():
     # Cards in play:
     preflophand1 = [Card('s', 4), Card('s', 3)]
-    preflophand2 = [Card('s', 7), Card('h', 7)]
+    preflophand2 = [Card('s', 1), Card('h', 7)]
     preflophand3 = None
     preflophand4 = None
-    preflophand5 = [Card('s', 9), Card('s', 2)]
+    preflophand5 = [Card('h', 13), Card('c', 13)]
     preflophand6 = None
     preflophand7 = None
     preflophand8 = None
@@ -488,11 +504,11 @@ def main():
             index -= 1
         index += 1
 
-    flop1 = Card('s', 8)
+    flop1 = Card('d', 13)
     flop2 = Card('s', 11)
     flop3 = Card('s', 10)
-    turn = Card('s', 13)
-    river = None
+    turn = Card('s', 12)
+    river = Card('s', 13)
     community_cards = [flop1, flop2, flop3, turn, river]
 
     hands = []
@@ -503,7 +519,7 @@ def main():
         hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
         all_hand_details.append(hand_strengths[x].check_hand_strength())
     winning_hand = HandCompare(all_hand_details)
-    print("Winning hand is:", winning_hand.compare_hand_strength())
+    print("Winning hand is:", hand_strengths.get_name(), winning_hand.compare_hand_strength())
 
 
 if __name__ == "__main__":
