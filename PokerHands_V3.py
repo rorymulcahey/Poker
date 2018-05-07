@@ -65,7 +65,6 @@ class Hand:
     def __init__(self, preflop_cards, community_cards):
         self.pre_cards = preflop_cards
         self.comm_cards = community_cards
-        # self.index = len(preflop_cards) + len(community_cards)
         self.cards = self.possible_cards()
         self.num_array = [0] * 14
         self.hand_position = []
@@ -224,7 +223,8 @@ class HandType:
                 return True, self.flush_suit
         return False, None
 
-    # returns the cards for the flush:
+    # returns the cards for the flush
+    # needs to actually return cards for the flush because its sending non flush cards to final hand
     def get_cards_flush(self, suit):
         suited_array = [0] * 14
         for x in range(0, self.index):
@@ -233,14 +233,15 @@ class HandType:
                 if self.cards[x].num == 1:
                     suited_array[13] = 1
         i = 1
-        high_card = []
+        flush_cards = []
         for y in range(13, 0, -1):
             if suited_array[y] == 1:
-                high_card.append(y)
+                flush_cards.append(y)
                 i += 1
                 if i > 5:
                     break
-        return high_card
+        print(flush_cards)
+        return flush_cards
 
     def check_full_house(self):
         have_trips = False
@@ -413,49 +414,54 @@ class HandCompare:
             for x in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[x][0]:
                     best_hand = self.hand_details[x][1]
-        elif hand_occurrences == 2:
+        elif hand_occurrences >= 2:
             for y in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[y][0]:
                     self.tied_hands.append(self.hand_details[y][1])
             best_hand = self.find_tie_break()
-        elif hand_occurrences > 2:
-            pass
-            # this statement is used to break more than 1 tie
-        # print(best_hand)
         return best_hand
 
     def find_tie_break(self):
         best_hand = []
+        # write the method to break ties of extreme examples
         # need to determine how to announce more than one tie breaking winner
         # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
         if self.hand_strength != 1 and self.hand_strength != 2 and self.hand_strength != 3 and self.hand_strength != 7:
             print('tied breaker engaged')
-            # super().cards_number_array(self.tied_hand[1])
-            hand_to_compare1 = Hand.cards_number_array(self.tied_hands[0])
-            # print(self.tied_hands[2])
-            if self.tied_hands[1]:
+            index = 0
+            while index < len(self.tied_hands):
+                hand_to_compare1 = Hand.cards_number_array(self.tied_hands[0])
                 hand_to_compare2 = Hand.cards_number_array(self.tied_hands[1])
+                # print(index)
                 for x in range(13, 0, -1):
                     if hand_to_compare1[x] > hand_to_compare2[x]:
+                        best_hand.append(self.tied_hands[0])
+                        print(x)
+                        del self.tied_hands[1]
+                        index += 1
+                        break
+                    elif hand_to_compare2[x] > hand_to_compare1[x]:
                         best_hand.append(self.tied_hands[1])
-                        return best_hand
-                    if hand_to_compare2[x] > hand_to_compare1[x]:
-                        best_hand.append(self.tied_hands[1])
-                    return best_hand
+                        del self.tied_hands[0]
+                        index += 1
+                        break
+                    else:
+                        pass
+                print("index incremented")
         # return both hands if tie is not broken
         # could also consider using tie_broken_boolean
-        best_hand.append(self.tied_hands[0])
-        best_hand.append(self.tied_hands[1])
+        # best_hand.append(self.tied_hands[0])
+        # best_hand.append(self.tied_hands[1])
         return best_hand
 
 
 def main():
     # Cards in play:
-    preflophand1 = [Card('s', 9,), Card('s', 3)]
-    preflophand2 = [Card('d', 2), Card('h', 7)]
+    preflophand1 = [Card('s', 4), Card('s', 3)]
+    preflophand2 = [Card('s', 7), Card('h', 7)]
     preflophand3 = None
     preflophand4 = None
-    preflophand5 = [Card('s', 1), Card('s', 12)]
+    preflophand5 = [Card('s', 9), Card('s', 2)]
     preflophand6 = None
     preflophand7 = None
     preflophand8 = None
@@ -474,11 +480,11 @@ def main():
             hand_position[x] = 1
     print(hand_position)
     index = 0
-    array_length = 10
-    while index < array_length and preflophands:
+    number_of_hands = 10
+    while index < number_of_hands and preflophands:
         if preflophands[index] is None:
             del preflophands[index]
-            array_length -= 1
+            number_of_hands -= 1
             index -= 1
         index += 1
 
@@ -502,4 +508,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
