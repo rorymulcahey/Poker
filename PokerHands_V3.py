@@ -466,10 +466,7 @@ class HandCompare:
         # best_hand.append(self.tied_hands[1])
         return best_hand
 
-    # @staticmethod
-    # def get_winning_hand(self):
-    #    return HandType.get_name(self.num_array, self.cards)
-
+    # consider moving get hands to here
 
 def main():
     # Cards in play:
