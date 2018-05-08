@@ -400,26 +400,25 @@ class HandType:
     def get_hand_details(self):
         return self.check_hand_strength(), self.get_final_cards
 
-    def get_name(self):
-        return self.name
-
 
 class HandCompare:
     def __init__(self, hand_details):
-
         self.hand_details = hand_details
         self.hand_strength_list = []
-        self.hand_strength = []
+        self.hand_strength = 0
         self.tied_hands = []
         self.hand_position = [0] * 10
+        self.name = []
 
-    def only_hand_strength(self):
+    def best_hand_strength(self):
         for x in range(0, len(self.hand_details)):
             self.hand_strength_list.append(self.hand_details[x][0])
+        self.hand_strength = max(self.hand_strength_list)
 
     def compare_hand_strength(self):
-        self.only_hand_strength()
-        self.hand_strength = max(self.hand_strength_list)
+        self.best_hand_strength()
+        possible_hands = ['High Card', 'Pair', 'Two Pair', 'Trips', 'Straight',
+                          'Flush', 'Full House', 'Quads', 'Straight Flush']
         hand_occurrences = self.hand_strength_list.count(max(self.hand_strength_list))
         best_hand = []
         if hand_occurrences == 1:
@@ -431,7 +430,7 @@ class HandCompare:
                 if self.hand_strength == self.hand_details[y][0]:
                     self.tied_hands.append(self.hand_details[y][1])
             best_hand = self.find_tie_break()
-        return best_hand
+        return possible_hands[self.hand_strength], best_hand
 
     def find_tie_break(self):
         best_hand = []
@@ -466,7 +465,6 @@ class HandCompare:
         # best_hand.append(self.tied_hands[1])
         return best_hand
 
-    # consider moving get hands to here
 
 def main():
     # Cards in play:
@@ -516,7 +514,7 @@ def main():
         hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
         all_hand_details.append(hand_strengths[x].check_hand_strength())
     winning_hand = HandCompare(all_hand_details)
-    print("Winning hand is:", hand_strengths.get_name(), winning_hand.compare_hand_strength())
+    print("Winning hand is:", winning_hand.compare_hand_strength())
 
 
 if __name__ == "__main__":
