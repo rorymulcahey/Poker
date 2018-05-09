@@ -1,17 +1,18 @@
-from math import*
 from PyQt4 import QtCore, QtGui
-from projectile_ui import Ui_Form
+from Poker_ui import Ui_Form
+from PokerHands_solve import *
 
 constants = {
-    'Sun': (0, 0),
-    'Mercury': (0, 0),
-    'Venus': (0, 0),
-    'Earth': (6.4*10**6, 9.81),
-    'Mars': (0, 0),
-    'Jupiter': (0, 0),
-    'Saturn': (0, 0),
-    'Uranus': (0, 0),
-    'Neptune': (0, 0),
+    'hand1': (0, 0),
+    'hand2': (0, 0),
+    'hand3': (0, 0),
+    'hand4': (6.4*10**6, 9.81),
+    'hand5': (0, 0),
+    'hand6': (0, 0),
+    'hand7': (0, 0),
+    'hand8': (0, 0),
+    'hand9': (0, 0),
+    'hand10': (0, 0)
     }
 
 class MyForm(QtGui.QMainWindow, Ui_Form):
@@ -19,56 +20,68 @@ class MyForm(QtGui.QMainWindow, Ui_Form):
         QtGui.QMainWindow.__init__(self, parent)
         self.setupUi(self)
         self.radioButtons = QtGui.QButtonGroup(self)
-        self.radioButtons.addButton(self.Sun)
-        self.radioButtons.addButton(self.Mercury)
-        self.radioButtons.addButton(self.Venus)
-        self.radioButtons.addButton(self.Earth)
-        self.radioButtons.addButton(self.Mars)
-        self.radioButtons.addButton(self.Jupiter)
-        self.radioButtons.addButton(self.Saturn)
-        self.radioButtons.addButton(self.Uranus)
-        self.radioButtons.addButton(self.Neptune)
-        self.pushButton.clicked.connect(self.handleCalculate)
+        self.radioButtons.addButton(self.hand1)
+        self.radioButtons.addButton(self.hand2)
+        self.radioButtons.addButton(self.hand3)
+        self.radioButtons.addButton(self.hand4)
+        self.radioButtons.addButton(self.hand5)
+        self.radioButtons.addButton(self.hand6)
+        self.radioButtons.addButton(self.hand7)
+        self.radioButtons.addButton(self.hand8)
+        self.radioButtons.addButton(self.hand9)
+        self.radioButtons.addButton(self.hand10)
+        self.pushButton.clicked.connect(self.main)
 
-    def handleCalculate(self):
-        loopiterations = int()
+    def main(self):
+        # Cards in play:
+        self.hand1 = [Card('s', 4), Card('s', 3)]
+        self.hand2 = [Card('s', 1), Card('h', 7)]
+        self.hand3 = None
+        self.hand4 = None
+        self.hand5 = [Card('h', 13), Card('c', 13)]
+        self.hand6 = None
+        self.hand7 = None
+        self.hand8 = None
+        self.hand9 = None
+        self.hand10 = None
+        preflophands = [self.hand1, self.hand2, self.hand3, self.hand4, self.hand5,
+                        self.hand6, self.hand7, self.hand8, self.hand9, self.hand10]
+        hand_position = [0] * 10
 
-        dt = self.dt.value() # time step
+        # remove 'None' hands from preflop cards list
+        # consider using this with create_player_hand to remove empty preflop hands and store position
+        # all_preflop_hands, number_of_hands, hand_positions = all_hands(hands)
+        # hands are numerically ordered in accordance with their seat position #
+        for x in range(0, 10):
+            if preflophands[x] is not None:
+                hand_position[x] = 1
+        print(hand_position)
+        index = 0
+        number_of_hands = 10
+        while index < number_of_hands and preflophands:
+            if preflophands[index] is None:
+                del preflophands[index]
+                number_of_hands -= 1
+                index -= 1
+            index += 1
 
-        Vo = self.Vo.value()
-        xo = 0
-        yo = 0
-        angle = self.angle.value()
-        angle = angle * (pi / 180)
-        Vox = Vo * cos(angle)
-        Voy = Vo * sin(angle)
-        y =  (yo + Voy * dt)
+        flop1 = Card('d', 13)
+        flop2 = Card('s', 11)
+        flop3 = Card('s', 10)
+        turn = Card('s', 12)
+        river = Card('s', 13)
+        community_cards = [flop1, flop2, flop3, turn, river]
 
-        iterations = y = r = g = 0
+        hands = []
+        hand_strengths = []
+        all_hand_details = []
+        for x in range(0, index):
+            hands.append(Hand(preflophands[x], community_cards))
+            hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
+            all_hand_details.append(hand_strengths[x].check_hand_strength())
+        winning_hand = HandCompare(all_hand_details)
+        print("Winning hand is:", winning_hand.compare_hand_strength())
 
-        button = self.radioButtons.checkedButton()
-
-        if button is not None:
-            # r= 6.4*10**6 for earth, g= m/s **2
-            r, g = constants[str(button.objectName())]
-
-            Vy=Voy - g * dt
-
-            if r > 0 and g > 0:
-
-                while not (Vy < 0):
-                    y =  (yo + Voy * dt)
-                    Vy= (Voy - g * dt)
-                    x = (xo + Vox * dt)
-                    Vx = Vox
-                    iterations = iterations + 1
-                    yo = y
-                    xo = x
-                    Vox = Vx
-                    Voy = Vy
-
-        self.LCDheight.display(y)
-        self.lcdTotaltime.display(iterations)
 
 if __name__ == "__main__":
 
