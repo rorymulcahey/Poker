@@ -81,7 +81,7 @@ class MyForm(QtGui.QMainWindow, Ui_Form):
             all_hand_details.append(hand_strengths[x].check_hand_strength())
         winning_hand = HandCompare(all_hand_details)
         print("Winning hand is:", winning_hand.compare_hand_strength())
-
+        self.lcdTotaltime.display(winning_hand.compare_hand_strength()[0])
 
 if __name__ == "__main__":
 
