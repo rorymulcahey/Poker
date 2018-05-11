@@ -66,9 +66,10 @@ class PuzzleWidget(QtGui.QWidget):
         self.highlightedRect = QtCore.QRect()
         self.inPlace = 0
 
+        # pixel dimensions of cards image to be used
         self.setAcceptDrops(True)
-        self.setMinimumSize(400, 400)
-        self.setMaximumSize(400, 400)
+        self.setMinimumSize(665, 281)
+        self.setMaximumSize(665, 281)
 
     def clear(self):
         self.pieceLocations = []
@@ -122,6 +123,7 @@ class PuzzleWidget(QtGui.QWidget):
             event.setDropAction(QtCore.Qt.MoveAction)
             event.accept()
 
+            # not needed for poker
             if location == QtCore.QPoint(square.x() / 80, square.y() / 80):
                 self.inPlace += 1
                 if self.inPlace == 25:
@@ -150,6 +152,7 @@ class PuzzleWidget(QtGui.QWidget):
         del self.piecePixmaps[found]
         del self.pieceRects[found]
 
+        # not needed for poker
         if location == QtCore.QPoint(square.x() + 80, square.y() + 80):
             self.inPlace -= 1
 
@@ -174,6 +177,7 @@ class PuzzleWidget(QtGui.QWidget):
             self.pieceRects.insert(found, square)
             self.update(self.targetSquare(event.pos()))
 
+            # not needed for poker
             if location == QtCore.QPoint(square.x() / 80, square.y() / 80):
                 self.inPlace += 1
 
@@ -192,8 +196,9 @@ class PuzzleWidget(QtGui.QWidget):
 
         painter.end()
 
+    # creates dropping grid of correct size
     def targetSquare(self, position):
-        return QtCore.QRect(position.x() // 80 * 80, position.y() // 80 * 80, 80, 80)
+        return QtCore.QRect(position.x() // 51 * 51, position.y() // 72 * 72, 51, 72)
 
 
 class PiecesModel(QtCore.QAbstractListModel):
@@ -324,9 +329,11 @@ class PiecesModel(QtCore.QAbstractListModel):
         self.locations = []
         self.endRemoveRows()
 
-        for y in range(5):
-            for x in range(5):
-                pieceImage = pixmap.copy(x*80, y*80, 80, 80)
+        # creates 52 cards that can be selected on the left
+        # important** probably used to create variable assignments
+        for y in range(4):
+            for x in range(13):
+                pieceImage = pixmap.copy(x*(43+8.25), y*(64+8), (43+8.25), (64+8))
                 self.addPiece(pieceImage, QtCore.QPoint(x, y))
 
 
@@ -368,11 +375,15 @@ class MainWindow(QtGui.QMainWindow):
         self.setupPuzzle()
 
     def setupPuzzle(self):
+        # size = min(self.puzzleImage.width(), self.puzzleImage.height())
+        # self.puzzleImage = self.puzzleImage.copy((self.puzzleImage.width()-size)/2,
+        #         (self.puzzleImage.height() - size)/2, size, size).scaled(400,
+        #                 400, QtCore.Qt.IgnoreAspectRatio,
+        #                 QtCore.Qt.SmoothTransformation)
+
         size = min(self.puzzleImage.width(), self.puzzleImage.height())
-        self.puzzleImage = self.puzzleImage.copy((self.puzzleImage.width()-size)/12.5,
-                (self.puzzleImage.height() - size)/25, size, size).scaled(400,
-                        400, QtCore.Qt.IgnoreAspectRatio,
-                        QtCore.Qt.SmoothTransformation)
+        self.puzzleImage = self.puzzleImage.copy(0,
+                0, 665, 281)
 
         random.seed(QtGui.QCursor.pos().x() ^ QtGui.QCursor.pos().y())
 
@@ -403,9 +414,9 @@ class MainWindow(QtGui.QMainWindow):
         self.piecesList = QtGui.QListView()
         self.piecesList.setDragEnabled(True)
         self.piecesList.setViewMode(QtGui.QListView.IconMode)
-        self.piecesList.setIconSize(QtCore.QSize(60, 60))
-        self.piecesList.setGridSize(QtCore.QSize(80, 80))
-        self.piecesList.setSpacing(10)
+        self.piecesList.setIconSize(QtCore.QSize(43, 64))
+        self.piecesList.setGridSize(QtCore.QSize(43, 64))
+        self.piecesList.setSpacing(1)
         self.piecesList.setMovement(QtGui.QListView.Snap)
         self.piecesList.setAcceptDrops(True)
         self.piecesList.setDropIndicatorShown(True)
