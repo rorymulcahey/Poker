@@ -440,6 +440,7 @@ if __name__ == '__main__':
 
     app = QtGui.QApplication(sys.argv)
     window = MainWindow()
-    window.openImage('c:/Users/rmulcahey/PycharmProjects/puzzle/example.png')
+    # window.openImage('c:/Users/rmulcahey/PycharmProjects/puzzle/example.png')
+    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/example.png')
     window.show()
     sys.exit(app.exec_())
