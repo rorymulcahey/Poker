@@ -2,6 +2,11 @@ from PyQt4 import QtCore, QtGui
 from Poker_ui import Ui_Form
 from PokerHands_solve import *
 
+try:
+    from PyQt4.QtCore import QString
+except ImportError:
+    QString = str
+
 constants = {
     'hand1': (0, 0),
     'hand2': (0, 0),
@@ -81,7 +86,10 @@ class MyForm(QtGui.QMainWindow, Ui_Form):
             all_hand_details.append(hand_strengths[x].check_hand_strength())
         winning_hand = HandCompare(all_hand_details)
         print("Winning hand is:", winning_hand.compare_hand_strength())
-        self.lcdTotaltime.display(winning_hand.compare_hand_strength()[0])
+        # display_final = winning_hand.compare_hand_strength()[0]
+        # display_final = QtCore.QString("foo")
+        display_final = "foo"
+        self.lcdTotaltime.display(display_final)
 
 if __name__ == "__main__":
 
