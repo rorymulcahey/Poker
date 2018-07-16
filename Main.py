@@ -20,6 +20,7 @@ constants = {
     'hand10': (0, 0)
     }
 
+
 class MyForm(QtGui.QMainWindow, Ui_Form):
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
@@ -85,11 +86,11 @@ class MyForm(QtGui.QMainWindow, Ui_Form):
             hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
             all_hand_details.append(hand_strengths[x].check_hand_strength())
         winning_hand = HandCompare(all_hand_details)
-        print("Winning hand is:", winning_hand.compare_hand_strength())
-        # display_final = winning_hand.compare_hand_strength()[0]
-        # display_final = QtCore.QString("foo")
-        display_final = "foo"
+        # print("Winning hand is:", winning_hand.compare_hand_strength())
+        display_final = winning_hand.get_winning_hand()
+        print(display_final)
         self.lcdTotaltime.display(display_final)
+
 
 if __name__ == "__main__":
 

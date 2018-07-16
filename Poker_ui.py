@@ -2,17 +2,18 @@ import sys
 from PyQt4 import QtCore, QtGui
 
 
-
 class MyForm(QtGui.QMainWindow):
     def __init__(self, parent=None):
         QtGui.QWidget.__init__(self, parent)
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
+
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
     _fromUtf8 = lambda s: s
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -119,6 +120,7 @@ class Ui_Form(object):
         self.label.setText(QtGui.QApplication.translate("Form", "Max Height ", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("Form", "Total Time ", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton.setText(QtGui.QApplication.translate("Form", "Calculate", None, QtGui.QApplication.UnicodeUTF8))
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
