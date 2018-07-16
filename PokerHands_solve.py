@@ -409,6 +409,8 @@ class HandCompare:
         self.tied_hands = []
         self.hand_position = [0] * 10
         self.name = []
+        self.best_hand = []
+        self.compare_hand_strength()
 
     def best_hand_strength(self):
         for x in range(0, len(self.hand_details)):
@@ -420,17 +422,17 @@ class HandCompare:
         possible_hands = ['High Card', 'Pair', 'Two Pair', 'Trips', 'Straight',
                           'Flush', 'Full House', 'Quads', 'Straight Flush']
         hand_occurrences = self.hand_strength_list.count(max(self.hand_strength_list))
-        best_hand = []
+        self.best_hand = []
         if hand_occurrences == 1:
             for x in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[x][0]:
-                    best_hand = self.hand_details[x][1]
+                    self.best_hand = self.hand_details[x][1]
         elif hand_occurrences >= 2:
             for y in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[y][0]:
                     self.tied_hands.append(self.hand_details[y][1])
-            best_hand = self.find_tie_break()
-        return possible_hands[self.hand_strength], best_hand
+            self.best_hand = self.find_tie_break()
+        self.name = possible_hands[self.hand_strength]
 
     def find_tie_break(self):
         best_hand = []
@@ -459,12 +461,22 @@ class HandCompare:
                     else:
                         pass
                 print("index incremented")
-        # return both hands if tie is not broken
+        # need a check to find tied hands
+            if len(self.tied_hands) > 1:
+                print("More than 1 winning hand")
+
         # could also consider using tie_broken_boolean
         # best_hand.append(self.tied_hands[0])
         # best_hand.append(self.tied_hands[1])
+
+        # return both hands if tie is not broken
         return best_hand
 
+    def get_winning_hand(self):
+        return self.name
 
-if __name__ == "__main__":
-    main()
+    def get_winning_cards(self):
+        return self.best_hand
+
+
+
