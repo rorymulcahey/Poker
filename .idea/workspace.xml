@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/InitializeGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InitializeGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/InitializeGame.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,7 @@
       <file leaf-file-name="PokerHands_solve.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokerHands_solve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="391">
               <caret line="209" selection-start-line="209" selection-end-line="210" />
             </state>
           </provider>
@@ -26,10 +25,10 @@
       <file leaf-file-name="InitializeGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/InitializeGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state relative-caret-position="663">
+              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
               <folding>
-                <marker date="1535574354628" expanded="true" signature="661:670" ph="..." />
+                <marker date="1535576122749" expanded="true" signature="1215:1222" ph="..." />
               </folding>
             </state>
           </provider>
@@ -455,17 +454,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerHands_solve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
+        <state relative-caret-position="391">
           <caret line="209" selection-start-line="209" selection-end-line="210" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/InitializeGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="663">
+          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
           <folding>
-            <marker date="1535574354628" expanded="true" signature="661:670" ph="..." />
+            <marker date="1535576122749" expanded="true" signature="1215:1222" ph="..." />
           </folding>
         </state>
       </provider>
