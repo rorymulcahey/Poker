@@ -12,21 +12,34 @@
 
 
 class InitializeGame:
-    def __init__(self, total_players, chip_counts):
-        self.players = total_players
-        self.c_counts = chip_counts
-        self.seats = self.occupied_seats(self.players)
+    def __init__(self, total_players, starting_chip_amount):
+        self.index = len(total_players)
+        # self.seats = total_players
+        self.st_chips = starting_chip_amount
+        self.ch_counts = []
+        self.seat_occupied = [1] * 10
+        # self.seats = self.occupied_seats(self.players)
         self.initialize()
 
     def initialize(self):
         # give out chips
-        # give out cards
-        # place button
-    
-    def occupied_seats:
-        array = []
         for y in range(0, self.index):
+            if self.seat_occupied[y]:
+                self.ch_counts[y].append(self.st_chips)
+                # give out cards
+                self.create_hand(y)
+
+        # place button
+
+    """
+    def occupied_seats(self):
+        array = [0] * self.index
+        for y in range(0, self.index):
+
         return array[]
+    """
+
+    def create_hand(self, seat):
 
 
     def setup_next_hand(self):
