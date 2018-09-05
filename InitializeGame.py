@@ -12,22 +12,23 @@
 
 
 class InitializeGame:
-    def __init__(self, total_players, starting_chip_amount):
-        self.index = len(total_players)
+    # takes in as parameters the total number of seats on the table and starting chip ammounts
+    def __init__(self, max_num_seats, starting_chip_amount):
         # self.seats = total_players
         self.st_chips = starting_chip_amount
         self.ch_counts = []
-        self.seat_occupied = [1] * 10
+        self.seat_occupied = [1] * max_num_seats
         # self.seats = self.occupied_seats(self.players)
         self.initialize()
 
+    # needs dynamic blind level allocation
     def initialize(self):
         # give out chips
-        for y in range(0, self.index):
-            if self.seat_occupied[y]:
-                self.ch_counts[y].append(self.st_chips)
+        for x in range(0, self.index):
+            if self.seat_occupied[x]:
+                self.ch_counts[x].append(self.st_chips)
                 # give out cards
-                self.create_hand(y)
+                self.create_hand(x)
 
         # place button
 
@@ -39,9 +40,26 @@ class InitializeGame:
         return array[]
     """
 
+    def setup_next_hand():
+     chipVal = ch_counts[seat_num]
+     create_hand(seat_num)
+     move_button_and_blinds()
+     get_antes()
+     place_blinds()
+     
+    
     def create_hand(self, seat):
-
-
+     
     def setup_next_hand(self):
+     
+    def move_button_and_blinds(self):
+     
+    def get_antes(self):
+     
+    def place_blinds(self):
+     # return BB seat
+     
+    def play_game(self):
+     # First action = BBseat
 
 
