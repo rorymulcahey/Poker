@@ -30,12 +30,10 @@ class SetupGame:
             if self.seats_occupied[x]:
                 self.chip_counts[x].append(self.starting_chip_count)
                 # give out cards
-                self.create_hand(x)
-        self.place_blinds()
 
-
-
-        # place button
+    # add a new player to the table after the game starts
+    def new_player(self):
+        pass
 
     """
     def occupied_seats(self):
@@ -45,40 +43,8 @@ class SetupGame:
         return array[]
     """
 
-    def setup_next_hand(self):
-     chipVal = ch_counts[seat_num]
-     self.create_hand(seat_num)
-     self.move_button_and_blinds()
-     self.get_antes()
-     self.place_blinds()
 
-    def create_hand(self, seat):
-        pass
 
-    def move_button_and_blinds(self):
-        pass
 
-    def get_antes(self):
-        pass
-
-    def place_blinds(self):
-        # subtract from the current chip counts the amount required for the blind
-
-    # return dealer seat position
-    # will produce an infinite loop if all seats_occupied = 0
-    def dealer_button(self):
-        while True:
-            self.button += 1
-            if self.button == len(self.seats_occupied)+1:
-                self.button = 1
-            if self.seats_occupied[self.button] == 0:
-                continue
-            else:
-                break
-        return self.button
-
-    def play_game(self):
-        pass
-    # First action = BBseat
 
 

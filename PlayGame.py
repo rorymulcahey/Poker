@@ -9,12 +9,16 @@
 
 
 """
-import SetupGame
+from SetupGame import *
 
 
 class PlayGame:
     # takes in as parameters the total number of seats on the table and starting chip amounts
     def __init__(self, chip_counts):
+        self.current_bet_counts = []
         self.current_chip_counts = chip_counts
+        game = SetupGame()
+
+
 
 

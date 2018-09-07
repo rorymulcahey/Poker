@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/PlayGame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SetupHand.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InitializeGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/SetupGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SetupGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/SetupGame.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,22 +16,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PokerHands_solve.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PokerHands_solve.py">
+      <file leaf-file-name="SetupGame.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SetupGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3553">
-              <caret line="209" selection-start-line="209" selection-end-line="210" />
+            <state relative-caret-position="391">
+              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetupGame.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SetupGame.py">
+      <file leaf-file-name="SetupHand.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SetupHand.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <marker date="1536247528197" expanded="true" signature="1762:1771" ph="..." />
+                <marker date="1536264091475" expanded="true" signature="583:590" ph="..." />
               </folding>
             </state>
           </provider>
@@ -39,8 +40,17 @@
       <file leaf-file-name="PlayGame.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlayGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokerHands_solve.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokerHands_solve.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1960">
+              <caret line="209" selection-start-line="209" selection-end-line="210" />
             </state>
           </provider>
         </entry>
@@ -48,8 +58,8 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="510">
+              <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -93,14 +103,15 @@
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/PokerHands_solve.py" />
         <option value="$PROJECT_DIR$/InitializeGame.py" />
-        <option value="$PROJECT_DIR$/SetupGame.py" />
         <option value="$PROJECT_DIR$/PlayGame.py" />
+        <option value="$PROJECT_DIR$/SetupHand.py" />
+        <option value="$PROJECT_DIR$/SetupGame.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="960" />
-    <option name="height" value="728" />
+    <option name="height" value="1160" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -186,7 +197,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="728" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1160" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
@@ -210,6 +221,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PokerHands_solve.py">
@@ -243,9 +259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <marker date="1536247528197" expanded="true" signature="1762:1771" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -434,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="510">
+          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -444,24 +457,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerHands_solve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
+        <state relative-caret-position="-1960">
           <caret line="209" selection-start-line="209" selection-end-line="210" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlayGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SetupGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="391">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SetupHand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <marker date="1536247528197" expanded="true" signature="1762:1771" ph="..." />
+            <marker date="1536264091475" expanded="true" signature="583:590" ph="..." />
           </folding>
         </state>
       </provider>
