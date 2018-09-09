@@ -9,15 +9,26 @@
 
 
 """
-from SetupGame import *
+from SetupHand import SetupHand
 
 
 class PlayGame:
-    # takes in as parameters the total number of seats on the table and starting chip amounts
-    def __init__(self, chip_counts):
+    def __init__(self, current_players):
+        self.current_players = current_players
+        # bets in front of the player, not yet into the pot
         self.current_bet_counts = []
-        self.current_chip_counts = chip_counts
-        game = SetupGame()
+        self.current_chip_counts = self.chip_counts()
+        self.main_pot = 0
+
+    def chip_counts(self):
+        chip_counts = []
+        for x in range(0, len(self.current_players)):
+            chip_counts.append(self.current_players[x][0])
+        return chip_counts
+
+    def main_pot(self):
+        return self.main_pot
+
 
 
 
