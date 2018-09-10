@@ -1,3 +1,11 @@
+"""
+
+ This  file will contain everything that entails a poker player.
+ That will include their current chip count, seat position at
+ the table, and their current table number(only 1 for now).
+
+
+"""
 
 
 class Player:
