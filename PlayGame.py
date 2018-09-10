@@ -29,6 +29,19 @@ class PlayGame:
     def main_pot(self):
         return self.main_pot
 
+    def player_raise(self):
+        pass
+
+    def player_fold(self):
+        pass
+
+    def player_check(self):
+        pass
+
+    def deal_card(self):
+        pass
+
+
 
 
 
