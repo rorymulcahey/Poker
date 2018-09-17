@@ -9,21 +9,21 @@
 
 
 """
-from SetupHand import SetupHand
+from CurrentHand import CurrentHand
 
 
 class PlayGame:
-    def __init__(self, current_players):
-        self.current_players = current_players
+    def __init__(self, max_num_seats, starting_chip_amount):
+        self.hand = CurrentHand(max_num_seats, starting_chip_amount)
         # bets in front of the player, not yet into the pot
         self.current_bet_counts = []
         self.current_chip_counts = self.chip_counts()
-        self.main_pot = 0
+        self.current_seat_turn = self.hand.next_seat(self.hand.button_seat)
 
     def chip_counts(self):
         chip_counts = []
-        for x in range(0, len(self.current_players)):
-            chip_counts.append(self.current_players[x][0])
+        for x in range(0, len(self.hand.current_table.active_player_info)):
+            chip_counts.append(self.hand.current_table.active_player_info[x].chip_count)
         return chip_counts
 
     def main_pot(self):
@@ -33,7 +33,7 @@ class PlayGame:
         pass
 
     def player_fold(self):
-        pass
+        self.hand.current_table.active_player_info[self.current_seat_turn] = None
 
     def player_check(self):
         pass

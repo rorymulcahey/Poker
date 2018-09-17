@@ -10,7 +10,7 @@
 
 class Player:
 
-    def __init__(self, current_chip_amount, seat_number, table_number):
+    def __init__(self, seat_number, current_chip_amount, table_number):
         self.chip_count = current_chip_amount
         self.seat_num = seat_number
         self.table_number = table_number
@@ -18,8 +18,8 @@ class Player:
 
 class NewPlayer(Player):
 
-    def __init__(self, starting_chip_amount, seat_number, table_number):
-        super().__init__(starting_chip_amount, seat_number, table_number)
+    def __init__(self, seat_number, starting_chip_amount, table_number):
+        super(Player, self).__init__()
         self.chip_count = starting_chip_amount
         self.seat_num = seat_number
         self.table_number = table_number
