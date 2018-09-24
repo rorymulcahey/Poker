@@ -19,7 +19,8 @@ class CurrentHand:
         self.current_table = Table(max_num_seats, starting_chip_amount)
         self.button_seat = self.current_table.button
         # need to manage side pots
-        self.chip_pot_size = 0
+        self.main_pot = 0
+        self.side_pots = []
         self.ante_size = 1
         self.small_blind_size = 25
         self.big_blind_size = 50
@@ -46,7 +47,7 @@ class CurrentHand:
         self.first_hand = False
 
     def move_dealer_button(self):
-        self.button_seat = self.next_seat(self.button_seat)
+        self.button_seat = self.next_seat(self.button_seat, 1)
 
     def ante_size(self):
         return self.ante_size
@@ -59,7 +60,7 @@ class CurrentHand:
 
     def get_antes(self, ante_size):
         for x in range(0, len(self.current_table.active_player_info)):
-            self.chip_pot_size += ante_size
+            self.main_pot += ante_size
             self.current_table.active_player_info[x].chip_count -= ante_size
 
     # need to add side pots
@@ -67,16 +68,16 @@ class CurrentHand:
     def place_blinds(self, sb, bb):
         # modified for heads up poker
         if self.current_table.active_num_players == 2:
-            self.chip_pot_size += bb
-            self.current_table.active_player_info[self.next_seat(self.button_seat)-1].chip_count -= bb
-            self.chip_pot_size += sb
-            self.current_table.active_player_info[self.next_seat(self.next_seat(self.button_seat))-1].chip_count -= sb
+            self.main_pot += bb
+            self.current_table.active_player_info[self.next_seat(self.button_seat, 1)-1].chip_count -= bb
+            self.main_pot += sb
+            self.current_table.active_player_info[self.next_seat(self.button_seat, 2)-1].chip_count -= sb
         # all other number of player setups
         else:
-            self.chip_pot_size += sb
-            self.current_table.active_player_info[self.next_seat(self.button_seat)-1].chip_count -= sb
-            self.chip_pot_size += bb
-            self.current_table.active_player_info[self.next_seat(self.next_seat(self.button_seat))-1].chip_count -= bb
+            self.main_pot += sb
+            self.current_table.active_player_info[self.next_seat(self.button_seat, 1)-1].chip_count -= sb
+            self.main_pot += bb
+            self.current_table.active_player_info[self.next_seat(self.button_seat, 2)-1].chip_count -= bb
 
     # loop until each player gets two cards
     # has texas hold'em format, dealing two cards to each player
@@ -94,22 +95,26 @@ class CurrentHand:
 
     # will produce an infinite loop if no players = 0
     # need button seat to circle around at 9 and 10, i think it does
-    def next_seat(self, current_seat):
+    def next_seat(self, current_seat, number_of_times):
         if all(v is None for v in self.current_table.active_player_info):
             return None
         while True:
             current_seat = current_seat % self.current_table.possible_seats + 1
             if self.current_table.active_player_info[current_seat-1] is None:
                 continue
+            elif number_of_times > 1:
+                number_of_times -= number_of_times
             else:
                 return current_seat
 
-
-a = CurrentHand(2, 2000)
-result = []
-for y in range(0, len(a.current_table.active_player_info)):
-    result.append(a.current_table.active_player_info[y].chip_count)
-print(result)
-print(a.button_seat)
-print(a.player_cards)
-print(a.deck.current_cards)
+    def current_player_count(self):
+        pass
+#
+# a = CurrentHand(10, 2000)
+# result = []
+# for y in range(0, len(a.current_table.active_player_info)):
+#     result.append(a.current_table.active_player_info[y].chip_count)
+# print(result)
+# print(a.button_seat)
+# print(a.player_cards)
+# print(a.deck.current_cards)

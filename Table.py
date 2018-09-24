@@ -24,7 +24,7 @@ class Table:
         self.active_num_players = 0
         # need a better way to organize seat layout
         self.possible_seats = max_num_seats
-        self.button = None
+        self.button = 1
         self.table_number = 1
         self.create_new_table()
 
@@ -43,9 +43,6 @@ class Table:
     # use high card to place button
     def place_button(self):
         self.button = random.randint(1, self.possible_seats)
-
-    def button(self):
-        return self.button
 
     def active_players(self):
         return self.active_player_info
