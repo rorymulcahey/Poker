@@ -19,7 +19,7 @@ class PlayGame:
         self.current_bet_amounts = []
         self.current_chip_counts = self.chip_counts()
         # why does this need to be +1
-        self.current_seat_turn = self.hand.next_seat(self.hand.button_seat, 3) + 1
+        self.current_seat_turn = self.hand.next_seat(self.hand.button_seat, 3)
         self.bet_amount = 0
 
     def chip_counts(self):
@@ -53,9 +53,9 @@ class PlayGame:
             return True
 
     def player_fold(self):
-        print(self.hand.current_table.active_player_info)
-        print([self.current_seat_turn - 1])
-        self.hand.current_table.active_player_info[self.current_seat_turn - 1] = None
+        # print(self.hand.current_table.active_player_info)
+        # print(self.current_seat_turn)
+        self.hand.current_table.active_player_info[(self.current_seat_turn - 1)] = None
         print("player folds")
 
     def player_check(self):
@@ -81,7 +81,7 @@ class PlayGame:
             }
             action[input("Would you like to:\n (R)aise\n (F)old\n (Ca)ll\n (Ch)eck\nEnter action: ").upper()]()
             self.current_seat_turn = self.hand.next_seat(self.current_seat_turn, 1)
-            if first_seat == self.current_seat_turn:
+            if first_seat == self.current_seat_turn or self.hand.current_player_count() == 1:
                 break
 
     def handle_game(self):
