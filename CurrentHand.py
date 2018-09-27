@@ -83,11 +83,8 @@ class CurrentHand:
     # has texas hold'em format, dealing two cards to each player
     def deal_cards(self):
         for x in range(0, len(self.current_table.active_player_info)):
-            if self.current_table.active_player_info[x] is None:
-                self.player_cards.append(None)
-            else:
-                self.player_cards.append([x + 1])
-                self.player_cards[x].append([self.get_card(), self.get_card()])
+            self.player_cards.append([x + 1])
+            self.player_cards[x].append([self.get_card(), self.get_card()])
 
     # used to deal cards, and community cards.
     def get_card(self):
@@ -108,8 +105,15 @@ class CurrentHand:
                 return current_seat
 
     def current_player_count(self):
-        pass
-#
+        counter = 0
+        print(len(self.current_table.active_player_info))
+        for x in range(0, len(self.current_table.active_player_info)):
+            if all(v is None for v in self.current_table.active_player_info):
+                pass
+            else:
+                counter += 1
+            return counter
+
 # a = CurrentHand(10, 2000)
 # result = []
 # for y in range(0, len(a.current_table.active_player_info)):

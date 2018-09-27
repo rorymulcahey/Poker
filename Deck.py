@@ -26,7 +26,8 @@ class Card:
         self.num = number
 
     def __repr__(self):
-        return self.suit + str(self.num)
+        # return self.suit + str(self.num)
+        return "Card('" + self.suit + "', " + str(self.num) + ")"
 
 
 if __name__ == "__main__":

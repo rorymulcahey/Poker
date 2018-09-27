@@ -295,17 +295,23 @@ class HandType:
                     if len(final_cards) == 5:
                         print(final_cards)
                         return final_cards
+        # does not return correct straight cards if one of them is paired
+        # this function checks each of the 7 playable cards and sees if the player has that number
+        # therefore it takes pairs when it looks for straights.
+        # better if we check the current hand_cards then find one that fits the criteria
         for z in range(0, self.index):
             for x in range(0, len(hand_cards)):
+                print(hand_cards)
                 if hand_cards[x] == 13:
                     hand_cards[x] = 0
                 if self.cards[z].num - 1 == hand_cards[x]:
+                    print(hand_cards[x])
                     final_cards.append(self.cards[z])
                 if len(final_cards) == 5:
                     print(final_cards)
                     return final_cards
             for y in range(0, len(high_cards)):
-                if self.hc_index == index:
+                if self.hc_index == 0:
                     break
                 # Ace is 1 in self.cards; Ace is 13 in high_cards.
                 if high_cards[y] == 13:
@@ -438,28 +444,33 @@ class HandCompare:
         best_hand = []
         # write the method to break ties of extreme examples
         # need to determine how to announce more than one tie breaking winner
-        # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
+        # function below only calculates hands with 5 determined cards without a high card tie break.
         if self.hand_strength != 1 and self.hand_strength != 2 and self.hand_strength != 3 and self.hand_strength != 7:
             print('tied breaker engaged')
-            index = 0
+            index = 1
+            # creates infinite loop if more than 1 winning hand
+            # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
             while index < len(self.tied_hands):
                 hand_to_compare1 = Hand.cards_number_array(self.tied_hands[0])
                 hand_to_compare2 = Hand.cards_number_array(self.tied_hands[1])
-                # print(index)
+                tie_broken = False
                 for x in range(13, 0, -1):
                     if hand_to_compare1[x] > hand_to_compare2[x]:
                         best_hand.append(self.tied_hands[0])
                         print(x)
                         del self.tied_hands[1]
-                        index += 1
+                        tie_broken = True
                         break
                     elif hand_to_compare2[x] > hand_to_compare1[x]:
                         best_hand.append(self.tied_hands[1])
                         del self.tied_hands[0]
-                        index += 1
+                        tie_broken = True
                         break
                     else:
                         pass
+                if not tie_broken:
+                    print("cannot break tie because hands are the same: infinite loop broken")
+                    break
                 print("index incremented")
         # need a check to find tied hands
             if len(self.tied_hands) > 1:
