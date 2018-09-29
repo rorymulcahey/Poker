@@ -53,11 +53,12 @@ def main():
         community_cards.append(currenthand.get_card())
     for x in range(0, len(currenthand.player_cards)):
         preflophands.append(currenthand.player_cards[x][1])
+        print('seat number: ' + str(x + 1) + '  ' + str(preflophands[x]))
     print(community_cards)
-    print(preflophands)
+    print('\n')
     # end of random test
 
-    # test hand bug (full house two winning hands)
+    # test hand bug (Gathers the tied hands, but cannot recover the old tied hand which should be winning)
     # preflophands = [[Card('h', 3), Card('c', 13)], [Card('s', 12), Card('s', 9)], [Card('d', 6), Card('d', 5)],
     #                 [Card('d', 13), Card('c', 2)], [Card('h', 4), Card('h', 9)], [Card('s', 1), Card('s', 6)],
     #                 [Card('c', 7), Card('s', 8)], [Card('h', 13), Card('d', 2)], [Card('d', 3), Card('c', 3)],
@@ -65,7 +66,7 @@ def main():
     # community_cards = [Card('c', 5), Card('d', 10), Card('c', 10), Card('c', 9), Card('h', 10)]
     # end of test
 
-    # test hand bug (Straight found but incorrect cards selected, probably from get_final_cards)
+    # test hand bug (Does not add any winning hand to best hand because all three are the same)
     preflophands = [[Card('d', 10), Card('h', 13)], [Card('d', 11), Card('s', 10)], [Card('d', 1), Card('s', 13)],
                     [Card('c', 12), Card('s', 7)], [Card('d', 5), Card('h', 12)], [Card('d', 3), Card('c', 4)],
                     [Card('h', 7), Card('c', 5)], [Card('c', 3), Card('c', 13)], [Card('h', 2), Card('s', 5)],
@@ -82,8 +83,9 @@ def main():
         all_hand_details.append(hand_strengths[x].check_hand_strength())
     winning_hand = HandCompare(all_hand_details)
     # print("Winning hand is:", winning_hand.compare_hand_strength())
-    display_final = [winning_hand.get_winning_hand(), winning_hand.get_winning_cards()]
-    print(all_hand_details)
+    display_final = ['seat number: ' + str(winning_hand.seat_position), winning_hand.get_winning_hand(),
+                     winning_hand.get_winning_cards()]
+    # print(all_hand_details)
     print(display_final)
     # self.lcdTotaltime.display(display_final)
 
