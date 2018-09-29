@@ -24,7 +24,7 @@ Format:
     suits are alphabetical
 
 Numbers Array:
-index - 1 = card number; Ace has two values
+card - 1 = card number; Ace has two values
 eg: Two = 1; Ace = 0 or 13
 
 =================================================================================
@@ -118,7 +118,7 @@ class HandType:
     def __init__(self, number_array, cards_array):
         self.num_array = number_array
         self.cards = cards_array
-        self.index = len(cards_array)
+        self.num_of_cards = len(cards_array)
         self.hc_index = 5
         self.name = "High Card"
         self.flush_suit = None
@@ -207,7 +207,7 @@ class HandType:
     def check_flush(self):
         array = [0] * 4
         suits = ['c', 'd', 'h', 's']
-        for y in range(0, self.index):
+        for y in range(0, self.num_of_cards):
             if self.cards[y].suit == 'c':
                 array[0] += 1
             elif self.cards[y].suit == 'd':
@@ -227,7 +227,7 @@ class HandType:
     # needs to actually return cards for the flush because its sending non flush cards to final hand
     def get_cards_flush(self, suit):
         suited_array = [0] * 14
-        for x in range(0, self.index):
+        for x in range(0, self.num_of_cards):
             if self.cards[x].suit == suit:
                 suited_array[self.cards[x].num - 1] = 1
                 if self.cards[x].num == 1:
@@ -273,57 +273,12 @@ class HandType:
 
     def check_straight_flush(self, suit):
         self.suited_array = [0]*14
-        for x in range(0, self.index):
+        for x in range(0, self.num_of_cards):
             if self.cards[x].suit == suit:
                 self.suited_array[self.cards[x].num - 1] = 1
                 if self.cards[x].num == 1:
                     self.suited_array[13] = 1
         return self.check_straight(self.suited_array)
-
-    # Return final 5 cards for the hand.
-    # get all cards : investigate why len() is used for the two nested loops
-    def get_final_cards(self, hand_cards, high_cards):
-        final_cards = []
-        index = 0
-        if self.name == 'Flush' or 'Straight Flush':
-            for z in range(0, self.index):
-                for x in range(0, len(hand_cards)):
-                    if hand_cards[x] == 13:
-                        hand_cards[x] = 0
-                    if self.cards[z].num - 1 == hand_cards[x] and self.cards[z].suit == self.flush_suit:
-                        final_cards.append(self.cards[z])
-                    if len(final_cards) == 5:
-                        print(final_cards)
-                        return final_cards
-        # does not return correct straight cards if one of them is paired
-        # this function checks each of the 7 playable cards and sees if the player has that number
-        # therefore it takes pairs when it looks for straights.
-        # better if we check the current hand_cards then find one that fits the criteria
-        for z in range(0, self.index):
-            for x in range(0, len(hand_cards)):
-                print(hand_cards)
-                if hand_cards[x] == 13:
-                    hand_cards[x] = 0
-                if self.cards[z].num - 1 == hand_cards[x]:
-                    print(hand_cards[x])
-                    final_cards.append(self.cards[z])
-                if len(final_cards) == 5:
-                    print(final_cards)
-                    return final_cards
-            for y in range(0, len(high_cards)):
-                if self.hc_index == 0:
-                    break
-                # Ace is 1 in self.cards; Ace is 13 in high_cards.
-                if high_cards[y] == 13:
-                    high_cards[y] = 0
-                if self.cards[z].num - 1 == high_cards[y] and high_cards:
-                    final_cards.append(self.cards[z])
-                    index += 1
-                if len(final_cards) == 5:
-                    print(final_cards)
-                    return final_cards
-        print("Error with get_all_cards")
-        return True
 
     # Check for all possible hands and return the current best possible
     def check_hand_strength(self):
@@ -398,10 +353,66 @@ class HandType:
         if self.name == possible_hands[0]:
             final_hand_cards = self.check_high_card(self.hc_index)
             final_high_cards = empty
-
         final_cards = self.get_final_cards(final_hand_cards, final_high_cards)
-        print(self.name)
+        print('^' + self.name)
         return current_hand_strength, final_cards
+
+    # Return final 5 cards for the hand.
+    # get all cards : investigate why len() is used for the two nested loops
+    def get_final_cards(self, hand_cards, high_cards):
+        final_cards = []
+        index = 0
+        if self.name == 'Flush' or 'Straight Flush':
+            for z in range(0, self.num_of_cards):
+                for x in range(0, len(hand_cards)):
+                    if hand_cards[x] == 13:
+                        hand_cards[x] = 0
+                    if self.cards[z].num - 1 == hand_cards[x] and self.cards[z].suit == self.flush_suit:
+                        final_cards.append(self.cards[z])
+                    if len(final_cards) == 5:
+                        print(final_cards)
+                        return final_cards
+
+        if self.name == 'Straight':
+            for x in range(0, len(hand_cards)):
+                for y in range(0, self.num_of_cards):
+                    if hand_cards[x] == 13:
+                        hand_cards[x] = 0
+                    if self.cards[y].num - 1 == hand_cards[x]:
+                        final_cards.append(self.cards[y])
+                        if len(final_cards) == 5:
+                            print(final_cards)
+                            return final_cards
+                        break
+
+        # does not return correct straight cards if one of them is paired
+        # this function checks each of the 7 playable cards and sees if the player has that number
+        # therefore it takes pairs when it looks for straights.
+        # better if we check the current hand_cards then find one that fits the criteria
+        for z in range(0, self.num_of_cards):
+            for x in range(0, len(hand_cards)):
+                if hand_cards[x] == 13:
+                    hand_cards[x] = 0
+                if self.cards[z].num - 1 == hand_cards[x]:
+                    final_cards.append(self.cards[z])
+                if len(final_cards) == 5:
+                    print(final_cards)
+                    return final_cards
+
+            for y in range(0, len(high_cards)):
+                if self.hc_index == 0:
+                    break
+                # Ace is 1 in self.cards; Ace is 13 in high_cards.
+                if high_cards[y] == 13:
+                    high_cards[y] = 0
+                if self.cards[z].num - 1 == high_cards[y] and high_cards:
+                    final_cards.append(self.cards[z])
+                    index += 1
+                if len(final_cards) == 5:
+                    print(final_cards)
+                    return final_cards
+        print("Error with get_all_cards")
+        return
 
     def get_hand_details(self):
         return self.check_hand_strength(), self.get_final_cards
@@ -412,10 +423,13 @@ class HandCompare:
         self.hand_details = hand_details
         self.hand_strength_list = []
         self.hand_strength = 0
-        self.tied_hands = []
-        self.hand_position = [0] * 10
+        self.test_tied_hands = []
+        self.seat_position = []
         self.name = []
         self.best_hand = []
+        self.multiple_tied_hands = False
+        self.tied_hands = []
+        self.tied_hand_seats = []
         self.compare_hand_strength()
 
     def best_hand_strength(self):
@@ -428,52 +442,68 @@ class HandCompare:
         possible_hands = ['High Card', 'Pair', 'Two Pair', 'Trips', 'Straight',
                           'Flush', 'Full House', 'Quads', 'Straight Flush']
         hand_occurrences = self.hand_strength_list.count(max(self.hand_strength_list))
+        self.name = possible_hands[self.hand_strength]
         self.best_hand = []
         if hand_occurrences == 1:
             for x in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[x][0]:
                     self.best_hand = self.hand_details[x][1]
-        elif hand_occurrences >= 2:
+                    self.seat_position[0] = x + 1
+        elif hand_occurrences == 2:
             for y in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[y][0]:
-                    self.tied_hands.append(self.hand_details[y][1])
+                    self.test_tied_hands.append(self.hand_details[y][1])
+                    self.seat_position.append(y+1)
             self.best_hand = self.find_tie_break()
-        self.name = possible_hands[self.hand_strength]
+        else:  # hand_occurrences > 2:
+            pass
 
     def find_tie_break(self):
         best_hand = []
-        # write the method to break ties of extreme examples
+        # really need to think about a way to implement this properly
         # need to determine how to announce more than one tie breaking winner
         # function below only calculates hands with 5 determined cards without a high card tie break.
         if self.hand_strength != 1 and self.hand_strength != 2 and self.hand_strength != 3 and self.hand_strength != 7:
             print('tied breaker engaged')
-            index = 1
-            # creates infinite loop if more than 1 winning hand
             # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
-            while index < len(self.tied_hands):
-                hand_to_compare1 = Hand.cards_number_array(self.tied_hands[0])
-                hand_to_compare2 = Hand.cards_number_array(self.tied_hands[1])
+            while 1 < len(self.test_tied_hands):
+                print(len(self.test_tied_hands))
+                hand_to_compare0 = Hand.cards_number_array(self.test_tied_hands[0])
+                print(hand_to_compare0)
+                hand_to_compare1 = Hand.cards_number_array(self.test_tied_hands[1])
+                print(hand_to_compare1)
                 tie_broken = False
                 for x in range(13, 0, -1):
-                    if hand_to_compare1[x] > hand_to_compare2[x]:
-                        best_hand.append(self.tied_hands[0])
-                        print(x)
-                        del self.tied_hands[1]
+                    if hand_to_compare0[x] > hand_to_compare1[x]:
+                        best_hand.append(self.test_tied_hands[0])
+                        del self.seat_position[1]
+                        del self.test_tied_hands[1]
+                        # required if a previous best hand was appended (3 or more uniques)
+                        if len(best_hand) > 1:
+                            del best_hand[1]
                         tie_broken = True
                         break
-                    elif hand_to_compare2[x] > hand_to_compare1[x]:
-                        best_hand.append(self.tied_hands[1])
-                        del self.tied_hands[0]
+                    elif hand_to_compare1[x] > hand_to_compare0[x]:
+                        best_hand.append(self.test_tied_hands[1])
+                        del self.seat_position[0]
+                        del self.test_tied_hands[0]
+                        # required if a previous best hand was appended (3 or more uniques)
+                        if len(best_hand) > 1:
+                            del best_hand[0]
                         tie_broken = True
                         break
                     else:
                         pass
+                # creates infinite loop if more than 1 winning hand
                 if not tie_broken:
-                    print("cannot break tie because hands are the same: infinite loop broken")
-                    break
-                print("index incremented")
+                    self.multiple_tied_hands = True
+                    self.tied_hands.append(self.test_tied_hands.pop(1))
+                    # self.tied_hand_seats.append(self.seat_position.pop(1))
+                    print(self.tied_hands)
+                    print("cannot break tie: infinite loop broken")
+                    # break
         # need a check to find tied hands
-            if len(self.tied_hands) > 1:
+            if len(self.test_tied_hands) > 1:
                 print("More than 1 winning hand")
 
         # could also consider using tie_broken_boolean
