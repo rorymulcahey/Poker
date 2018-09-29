@@ -56,9 +56,11 @@ def main():
         print('seat number: ' + str(x + 1) + '  ' + str(preflophands[x]))
     print(community_cards)
     print('\n')
+    print(preflophands)
+    print('\n')
     # end of random test
 
-    # test hand bug (Duplicates winning hand many times)
+    # test hand bug (Seat position is incorrect)
     # preflophands = [[Card('h', 3), Card('c', 13)], [Card('s', 12), Card('s', 9)], [Card('d', 6), Card('d', 5)],
     #                 [Card('d', 13), Card('c', 2)], [Card('h', 4), Card('h', 9)], [Card('s', 1), Card('s', 6)],
     #                 [Card('c', 7), Card('s', 8)], [Card('h', 13), Card('d', 2)], [Card('d', 3), Card('c', 3)],
@@ -66,14 +68,24 @@ def main():
     # community_cards = [Card('c', 5), Card('d', 10), Card('c', 10), Card('c', 9), Card('h', 10)]
     # end of test
 
-    # test hand bug (Solved. Keep just for testing against new bug solutions)
-    preflophands = [[Card('d', 10), Card('h', 13)], [Card('d', 11), Card('s', 10)], [Card('d', 1), Card('s', 13)],
-                    [Card('c', 12), Card('s', 7)], [Card('d', 5), Card('h', 12)], [Card('d', 3), Card('c', 4)],
-                    [Card('h', 7), Card('c', 5)], [Card('c', 3), Card('c', 13)], [Card('h', 2), Card('s', 5)],
-                    [Card('d', 7), Card('h', 11)]]
-    community_cards = [Card('h', 5), Card('h', 6), Card('c', 8), Card('s', 6), Card('c', 9)]
+    # Keep this bug. Very good for testing.
+    # **FIXED** test hand bug (Removes winning straight during tie break) **FIXED**
+    # This bug occurs because the num array always increments the highest value when an Ace is present, therefore
+    # an ace with on the low end because the 6 to 2 straight because it compares with the high end ace.
+    # preflophands = [[Card('h', 4), Card('s', 12)], [Card('h', 7), Card('d', 8)], [Card('c', 1), Card('s', 3)],
+    #                 [Card('s', 5), Card('s', 8)], [Card('h', 2), Card('d', 12)], [Card('s', 10), Card('d', 1)],
+    #                 [Card('h', 6), Card('d', 10)], [Card('s', 1), Card('s', 6)], [Card('h', 9), Card('c', 8)],
+    #                 [Card('h', 1), Card('s', 7)]]
+    # community_cards = [Card('c', 3), Card('h', 5), Card('c', 4), Card('h', 3), Card('c', 2)]
     # end of test
 
+    # Test quads
+    # preflophands = [[Card('h', 1), Card('c', 1)], [Card('d', 6), Card('c', 9)], [Card('c', 7), Card('s', 7)],
+    #                 [Card('h', 11), Card('h', 8)], [Card('s', 3), Card('h', 4)], [Card('d', 12), Card('h', 10)],
+    #                 [Card('c', 11), Card('h', 6)], [Card('d', 13), Card('c', 13)], [Card('s', 5), Card('h', 5)],
+    #                 [Card('h', 12), Card('s', 10)]]
+    # community_cards = [Card('d', 1), Card('d', 5), Card('s', 1), Card('d', 3), Card('c', 5)]
+    # end of test
     hands = []
     hand_strengths = []
     all_hand_details = []
