@@ -423,7 +423,6 @@ class HandCompare:
         self.hand_details = hand_details
         self.hand_strength_list = []
         self.hand_strength = 0
-        self.test_tied_hands = []
         self.seat_position = []
         self.name = []
         self.best_hand = []
@@ -449,69 +448,83 @@ class HandCompare:
                 if self.hand_strength == self.hand_details[x][0]:
                     self.best_hand = self.hand_details[x][1]
                     self.seat_position[0] = x + 1
-        elif hand_occurrences == 2:
+        else:
+            break_tied_hands = []
             for y in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[y][0]:
-                    self.test_tied_hands.append(self.hand_details[y][1])
+                    break_tied_hands.append(self.hand_details[y][1])
                     self.seat_position.append(y+1)
-            self.best_hand = self.find_tie_break()
-        else:  # hand_occurrences > 2:
-            pass
+            if hand_occurrences == 2:
+                self.best_hand = self.find_tie_break(break_tied_hands, self.seat_position)
+            else:  # hand_occurrences > 2:
+                # case 1: all hands tie
+                # case 2: 1 and 3 tie
+                # case 3: N/A
+                # solution: compare for loop forwards then backwards
+                # problem: need to store multiple winning hands
+                temp = []
+                first_correct_hand = self.find_tie_break([break_tied_hands[0], break_tied_hands[1]], self.seat_position)
+                if first_correct_hand is None:
+                    temp.extend([break_tied_hands[0], break_tied_hands[1]])
+                else:
+                    temp.append(first_correct_hand)
+                for y in range(1, len(break_tied_hands)-1):
+                    print(y)
+                    two_hands = []
+                    two_hands.extend((temp[-1], break_tied_hands[y+1]))
+                    # if first result is better, it returns itself causing a bug
+                    check_return = self.find_tie_break(two_hands, self.seat_position)
+                    if check_return is None:
+                        temp.append(break_tied_hands[y+1])
+                    else:
+                        if temp[-1] != check_return:
+                            print('testing inequality')
+                            temp.append(check_return)
+                self.best_hand.append(temp[len(temp)-1])
+                # best hand can be initialized here because its going to be correct
+                for z in range(len(temp)-1, 0, -1):
+                    print(z)
+                    two_hands = []
+                    two_hands.extend((temp[z], temp[z-1]))
+                    check_return = self.find_tie_break(two_hands, self.seat_position)
+                    if check_return is None:
+                        # self.best_hand.append(temp[len(temp) - z])
+                        self.best_hand.append(temp[z-1])
+                    else:
+                        self.best_hand.append(check_return)
+                    # seat position should be incorrect and we need to iterate backwards somehow
 
-    def find_tie_break(self):
+    # this function takes in two different hands of equal strength. it will break a tie and return the winning hand.
+    # if tie cannot be broken it will return None
+    # Need to implement seat_num
+    def find_tie_break(self, tied_hand_details, seat_num):
         best_hand = []
-        # really need to think about a way to implement this properly
-        # need to determine how to announce more than one tie breaking winner
         # function below only calculates hands with 5 determined cards without a high card tie break.
         if self.hand_strength != 1 and self.hand_strength != 2 and self.hand_strength != 3 and self.hand_strength != 7:
             print('tied breaker engaged')
-            # print(len(best_hand)) **this can be used to determine if we need to denote more than 1 winning hand
-            while 1 < len(self.test_tied_hands):
-                print(len(self.test_tied_hands))
-                hand_to_compare0 = Hand.cards_number_array(self.test_tied_hands[0])
-                print(hand_to_compare0)
-                hand_to_compare1 = Hand.cards_number_array(self.test_tied_hands[1])
-                print(hand_to_compare1)
-                tie_broken = False
-                for x in range(13, 0, -1):
-                    if hand_to_compare0[x] > hand_to_compare1[x]:
-                        best_hand.append(self.test_tied_hands[0])
-                        del self.seat_position[1]
-                        del self.test_tied_hands[1]
-                        # required if a previous best hand was appended (3 or more uniques)
-                        if len(best_hand) > 1:
-                            del best_hand[1]
-                        tie_broken = True
-                        break
-                    elif hand_to_compare1[x] > hand_to_compare0[x]:
-                        best_hand.append(self.test_tied_hands[1])
-                        del self.seat_position[0]
-                        del self.test_tied_hands[0]
-                        # required if a previous best hand was appended (3 or more uniques)
-                        if len(best_hand) > 1:
-                            del best_hand[0]
-                        tie_broken = True
-                        break
-                    else:
-                        pass
-                # creates infinite loop if more than 1 winning hand
-                if not tie_broken:
-                    self.multiple_tied_hands = True
-                    self.tied_hands.append(self.test_tied_hands.pop(1))
-                    # self.tied_hand_seats.append(self.seat_position.pop(1))
-                    print(self.tied_hands)
-                    print("cannot break tie: infinite loop broken")
-                    # break
-        # need a check to find tied hands
-            if len(self.test_tied_hands) > 1:
-                print("More than 1 winning hand")
-
-        # could also consider using tie_broken_boolean
-        # best_hand.append(self.tied_hands[0])
-        # best_hand.append(self.tied_hands[1])
-
-        # return both hands if tie is not broken
-        return best_hand
+            hand_to_compare0 = Hand.cards_number_array(tied_hand_details[0])
+            print(hand_to_compare0)
+            hand_to_compare1 = Hand.cards_number_array(tied_hand_details[1])
+            print(hand_to_compare1)
+            tie_broken = False
+            for x in range(13, 0, -1):
+                if hand_to_compare0[x] > hand_to_compare1[x]:
+                    print('delete2')
+                    best_hand.append(tied_hand_details[0])
+                    del self.seat_position[1]
+                    print(tied_hand_details[0])
+                    return tied_hand_details[0]
+                elif hand_to_compare1[x] > hand_to_compare0[x]:
+                    print('delete1')
+                    best_hand.append(tied_hand_details[1])
+                    del self.seat_position[0]
+                    return tied_hand_details[1]
+                else:
+                    pass
+            # return none if tie is not broken
+            if not tie_broken:
+                print("Hands are the same. Returning None")
+                return
 
     def get_winning_hand(self):
         return self.name
