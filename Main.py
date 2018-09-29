@@ -58,7 +58,7 @@ def main():
     print('\n')
     # end of random test
 
-    # test hand bug (Gathers the tied hands, but cannot recover the old tied hand which should be winning)
+    # test hand bug (Duplicates winning hand many times)
     # preflophands = [[Card('h', 3), Card('c', 13)], [Card('s', 12), Card('s', 9)], [Card('d', 6), Card('d', 5)],
     #                 [Card('d', 13), Card('c', 2)], [Card('h', 4), Card('h', 9)], [Card('s', 1), Card('s', 6)],
     #                 [Card('c', 7), Card('s', 8)], [Card('h', 13), Card('d', 2)], [Card('d', 3), Card('c', 3)],
@@ -66,7 +66,7 @@ def main():
     # community_cards = [Card('c', 5), Card('d', 10), Card('c', 10), Card('c', 9), Card('h', 10)]
     # end of test
 
-    # test hand bug (Does not add any winning hand to best hand because all three are the same)
+    # test hand bug (Solved. Keep just for testing against new bug solutions)
     preflophands = [[Card('d', 10), Card('h', 13)], [Card('d', 11), Card('s', 10)], [Card('d', 1), Card('s', 13)],
                     [Card('c', 12), Card('s', 7)], [Card('d', 5), Card('h', 12)], [Card('d', 3), Card('c', 4)],
                     [Card('h', 7), Card('c', 5)], [Card('c', 3), Card('c', 13)], [Card('h', 2), Card('s', 5)],
