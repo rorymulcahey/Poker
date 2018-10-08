@@ -10,7 +10,6 @@
 
 """
 import random
-from Player import *
 
 # to do:
 # need way to access player variables
@@ -49,3 +48,52 @@ class Table:
 
     def set_blind_levels(self):
         pass
+
+
+class Player:
+
+    def __init__(self, seat_number, current_chip_amount, table_number):
+        self.chip_count = current_chip_amount
+        self.seat_num = seat_number
+        self.table_number = table_number
+
+
+class NewPlayer(Player):
+
+    def __init__(self, seat_number, starting_chip_amount, table_number):
+        super(Player, self).__init__()
+        self.chip_count = starting_chip_amount
+        self.seat_num = seat_number
+        self.table_number = table_number
+
+    # add a new player to the table after the game starts
+    # def new_player(self):
+    #    pass
+
+
+class Deck:
+    def __init__(self):
+        self.current_cards = []
+        self.create_deck()
+
+    def create_deck(self):
+        self.current_cards = []
+        for x in ['c', 'd', 'h', 's']:
+            for y in range(1, 14):
+                self.current_cards.append(Card(x, y))
+
+
+class Card:
+    def __init__(self, suit, number):
+        # super().__init__()
+        self.suit = suit
+        self.num = number
+
+    def __repr__(self):
+        # return self.suit + str(self.num)
+        return "Card('" + self.suit + "', " + str(self.num) + ")"
+
+
+if __name__ == "__main__":
+    deck = Deck()
+    print(deck.current_cards)
