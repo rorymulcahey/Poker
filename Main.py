@@ -68,7 +68,7 @@ def main():
     # community_cards = [Card('c', 5), Card('d', 10), Card('c', 10), Card('c', 9), Card('h', 10)]
     # end of test
 
-    # Keep this bug. Very good for testing.
+    # Keep this bug. Very good for testing. Good way to test seat position
     # **FIXED** test hand bug (Removes winning straight during tie break) **FIXED**
     # This bug occurs because the num array always increments the highest value when an Ace is present, therefore
     # an ace with on the low end because the 6 to 2 straight because it compares with the high end ace.
@@ -79,13 +79,14 @@ def main():
     # community_cards = [Card('c', 3), Card('h', 5), Card('c', 4), Card('h', 3), Card('c', 2)]
     # end of test
 
-    # Test quads
+    # Test quads (Works)
     # preflophands = [[Card('h', 1), Card('c', 1)], [Card('d', 6), Card('c', 9)], [Card('c', 7), Card('s', 7)],
     #                 [Card('h', 11), Card('h', 8)], [Card('s', 3), Card('h', 4)], [Card('d', 12), Card('h', 10)],
     #                 [Card('c', 11), Card('h', 6)], [Card('d', 13), Card('c', 13)], [Card('s', 5), Card('h', 5)],
     #                 [Card('h', 12), Card('s', 10)]]
     # community_cards = [Card('d', 1), Card('d', 5), Card('s', 1), Card('d', 3), Card('c', 5)]
     # end of test
+
     hands = []
     hand_strengths = []
     all_hand_details = []
@@ -95,7 +96,7 @@ def main():
         all_hand_details.append(hand_strengths[x].check_hand_strength())
     winning_hand = HandCompare(all_hand_details)
     # print("Winning hand is:", winning_hand.compare_hand_strength())
-    display_final = ['seat number: ' + str(winning_hand.seat_position), winning_hand.get_winning_hand(),
+    display_final = ['tied hand(s): ' + str(winning_hand.seat_position), winning_hand.get_winning_hand(),
                      winning_hand.get_winning_cards()]
     # print(all_hand_details)
     print(display_final)

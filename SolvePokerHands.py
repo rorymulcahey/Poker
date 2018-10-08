@@ -452,7 +452,6 @@ class HandCompare:
                     self.seat_position.append(x+1)
         # tie breaks required
         else:
-            print(hand_occurrences)
             break_tied_hands = []
             # create list of tied hands
             for y in range(0, len(self.hand_details)):
