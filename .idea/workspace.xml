@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/PokerEval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Probabilty.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Poker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Poker.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolvePokerHands.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolvePokerHands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/PokerHands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/PokerHands_V2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/Readme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/SimpleGUI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/projectile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/projectile_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldFiles/puzzle.pyw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puzzle_rc2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puzzle_rc3.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,28 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Deck.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Deck.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Table.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="702">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayGame.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PlayGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
+            <state relative-caret-position="1638">
               <caret line="91" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
@@ -61,7 +60,7 @@
       <file leaf-file-name="SolvePokerHands.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1082">
+            <state relative-caret-position="2474">
               <caret line="454" selection-start-line="454" selection-end-line="454" />
             </state>
           </provider>
@@ -79,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Probabilty.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Probabilty.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Probabilty.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -91,8 +90,8 @@
       <file leaf-file-name="PokerEval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokerEval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="504">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#950#960#0" expanded="true" />
               </folding>
@@ -103,7 +102,7 @@
       <file leaf-file-name="UserInterface.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserInterface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
+            <state relative-caret-position="684">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -151,7 +150,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_13.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_14.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_15.py" />
-        <option value="$PROJECT_DIR$/Table.py" />
         <option value="$PROJECT_DIR$/UserInterface.py" />
         <option value="$PROJECT_DIR$/PlayGame.py" />
         <option value="$PROJECT_DIR$/CurrentHand.py" />
@@ -163,6 +161,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_16.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Recursion Bitonic Merge.py" />
         <option value="$PROJECT_DIR$/PokerEval.py" />
+        <option value="$PROJECT_DIR$/Table.py" />
       </list>
     </option>
   </component>
@@ -180,7 +179,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;CommandLine" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Table.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Player.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -200,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PokerEval">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Poker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -300,8 +299,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.PokerEval" />
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.PokerEval" />
         <item itemvalue="Python.pokereval (1)" />
         <item itemvalue="Python.pokereval" />
         <item itemvalue="Python.SolvePokerHands" />
@@ -323,18 +322,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="997" y="1" width="924" height="1160" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021796" side_tool="true" weight="0.29254302" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978204" visible="true" weight="0.3288719" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978204" weight="0.3288719" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -624,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-851935206/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -668,7 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UserInterface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
+        <state relative-caret-position="684">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -676,34 +667,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usr/lib/pyshared/python2.7/_pokereval_2_7.so">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usr/lib/python2.7/dist-packages/pokereval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usr/share/pyshared/pokereval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="63" lean-forward="true" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/usr/lib/pyshared/python2.7/_pokereval_2_7.so" />
+    <entry file="file://$PROJECT_DIR$/usr/lib/python2.7/dist-packages/pokereval.py" />
+    <entry file="file://$PROJECT_DIR$/usr/share/pyshared/pokereval.py" />
     <entry file="file://$PROJECT_DIR$/PokerEval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="504">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#950#960#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Probabilty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -717,34 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Deck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlayGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1082">
-          <caret line="454" selection-start-line="454" selection-end-line="454" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -755,10 +721,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Probabilty.py">
+    <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="2474">
+          <caret line="454" selection-start-line="454" selection-end-line="454" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>

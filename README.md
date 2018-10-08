@@ -2,7 +2,7 @@ Texas holdem Poker hand solver.
 ================================
 
 
-To run this program, download main.py, solvepokerhands.py, currentHand.py, table.py, deck.py, player.py
+To run this program, download: main.py, solvepokerhands.py, currentHand.py, table.py
 
 install python 3.4
 

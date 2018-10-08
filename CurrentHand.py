@@ -8,7 +8,6 @@ one indexed, vs the array being 0 indexed.
 
 """
 from Table import Table
-from Deck import *
 import random
 
 
