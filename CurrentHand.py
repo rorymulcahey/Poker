@@ -7,7 +7,7 @@ for current cards and active player info at index 0. Seat number is
 one indexed, vs the array being 0 indexed.
 
 """
-from Table import Table
+from Table import *
 import random
 
 
