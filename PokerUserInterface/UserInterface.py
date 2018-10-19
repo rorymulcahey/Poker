@@ -1,7 +1,7 @@
 from PyQt4 import QtCore, QtGui
 from Poker_ui import Ui_Form
 from SolvePokerHands import *
-import Main
+import __main__
 
 try:
     from PyQt4.QtCore import QString
