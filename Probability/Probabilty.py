@@ -4,21 +4,33 @@ from SolvePokerHands import *
 from CurrentHand import *
 
 
+# to do: modify cards from comm_cards to test out probability.
 class Probability:
-    def __init__(self, deck, preflop_cards, community_cards):
+    def __init__(self, deck, preflop_cards, comm_cards):
+        self.community_cards = comm_cards
         self.percentage = 100
         self.winning_hands = 1
         self.total_hands = 2
         self.num_of_players = 2
         self.cards_remaining = 1
         self.deck = deck
-        self.solve_hand = Hand(preflop_cards, community_cards)
+        self.current_cards_in_play = Hand(preflop_cards, self.community_cards)
         self.deck_num_array = []
         self.create_deck_num_array()
 
     def create_deck_num_array(self):
         # first need to create card number array from the remaining cards in the deck
-        self.deck_num_array = self.solve_hand.cards_number_array(self.deck)
+        self.deck_num_array = self.current_cards_in_play.cards_number_array(self.deck)
+
+    def number_of_cards_remaining(self):
+        if len(self.community_cards == 1):
+            self.one_card_remaining()
+        elif len(self.community_cards == 2):
+            self.two_cards_remaining()
+        elif len(self.community_cards == 5):
+            self.five_cards_remaining()
+        else:
+            print("bug with number of cards remaining")
 
     def calculate(self):
         if self.cards_remaining == 0:
@@ -31,11 +43,14 @@ class Probability:
         # Need to instantiate deck or currenthand to work independent from main
 
     def one_card_remaining(self):
-        # prints ou the number of cards in the deck
+        # prints out the number of cards in the deck
         for y in range(0, len(self.deck_num_array)):
             print(self.deck_num_array[y])
 
     def two_cards_remaining(self):
+        pass
+
+    def five_cards_remaining(self):
         pass
 
 

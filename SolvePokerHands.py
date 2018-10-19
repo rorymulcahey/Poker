@@ -420,8 +420,12 @@ class HandType:
 
 
 class HandCompare:
-    def __init__(self, hand_details):
-        self.hand_details = hand_details
+    # def __init__(self, hand_details):
+    def __init__(self, preflop_cards, community_cards):
+        self.preflop_cards = preflop_cards
+        self.community_cards = community_cards
+        # self.hand_details = hand_details
+        self.hand_details = self.create_hand_types()
         self.hand_strength_list = []
         self.hand_strength = 0
         self.seat_position = []
@@ -431,6 +435,17 @@ class HandCompare:
         self.tied_hands = []
         self.tied_hand_seats = []
         self.compare_hand_strength()
+
+    # loop through the preflop hands to prepare them for hand compare
+    def create_hand_types(self):
+        hands = []
+        hand_strengths = []
+        all_hand_details = []
+        for x in range(0, len(self.preflop_cards)):
+            hands.append(Hand(self.preflop_cards[x], self.community_cards))
+            hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
+            all_hand_details.append(hand_strengths[x].check_hand_strength())
+        return all_hand_details
 
     def best_hand_strength(self):
         for x in range(0, len(self.hand_details)):
