@@ -76,7 +76,7 @@ class Hand:
             if self.pre_cards[x] is None:
                 return None
             array.append(self.pre_cards[x])
-        for y in range(0, 5):
+        for y in range(0, len(self.comm_cards)):
             array.append(self.comm_cards[y])
         return array
 
@@ -85,6 +85,8 @@ class Hand:
         index = 0
         array_length = 7
         self.cards = self.create_player_hand()
+        return self.cards
+        len(self.cards)
         while index < array_length and self.cards:
             # if self.cards[index].suit is None or self.cards[index].num is None:
             if self.cards[index] is None:
@@ -540,9 +542,9 @@ class HandCompare:
                 return tied_hand_details[1]
         elif self.hand_strength == 2:  # 2pair
             two_pair_card0 = [i for i, x in enumerate(hand_to_compare0) if x > 1]
-            print(two_pair_card0)
+            # print(two_pair_card0)
             two_pair_card1 = [i for i, x in enumerate(hand_to_compare1) if x > 1]
-            print(two_pair_card1)
+            # print(two_pair_card1)
             for x in range(1, -1, -1):
                 if two_pair_card0[x] > two_pair_card1[x]:
                     return tied_hand_details[0]

@@ -26,7 +26,7 @@ def main():
         preflophands.append(currenthand.player_cards[x][1])
         print('seat number: ' + str(x + 1) + '  ' + str(preflophands[x]))
     remaining_deck = currenthand.deck.current_cards
-    calculateProbability = Probability(remaining_deck, preflophands, community_cards)
+    # calculateProbability = Probability(remaining_deck, preflophands, community_cards)
 
     print(community_cards)
     print('\n')
