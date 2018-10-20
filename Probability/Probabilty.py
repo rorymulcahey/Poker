@@ -56,7 +56,7 @@ class Probability:
                         print(self.community_cards)
                         print('\n\n')
                         winning_hand = HandCompare(preflophands, self.community_cards)
-                        display_final = ['tied hand(s): ' + str(winning_hand.seat_position),
+                        display_final = ['tied hand(s): ' + str(winning_hand.seat_position()),
                                          winning_hand.get_winning_hand(),
                                          winning_hand.get_winning_cards()]
                         print(display_final)

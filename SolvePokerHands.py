@@ -359,7 +359,7 @@ class HandType:
             final_high_cards = empty
         final_cards = self.get_final_cards(final_hand_cards, final_high_cards)
         print('^' + self.name)
-        return current_hand_strength, final_cards
+        return [current_hand_strength, final_cards]
 
     # Return final 5 cards for the hand.
     # get all cards : investigate why len() is used for the two nested loops
@@ -437,6 +437,7 @@ class HandCompare:
         self.tied_hands = []
         self.tied_hand_seats = []
         self.compare_hand_strength()
+        self.hand_and_seat = self.combine_hand_and_seat()
 
     # loop through the preflop hands to prepare them for hand compare
     def create_hand_types(self):
@@ -447,7 +448,7 @@ class HandCompare:
             hands.append(Hand(self.preflop_cards[x], self.community_cards))
             hand_strengths.append(HandType(hands[x].get_num_array(), hands[x].possible_cards()))
             all_hand_details.append(hand_strengths[x].check_hand_strength())
-        return all_hand_details
+        return all_hand_details  # all_hand_details = [(current hand strength, final_cards)]
 
     def best_hand_strength(self):
         for x in range(0, len(self.hand_details)):
@@ -460,7 +461,6 @@ class HandCompare:
                           'Flush', 'Full House', 'Quads', 'Straight Flush']
         hand_occurrences = self.hand_strength_list.count(max(self.hand_strength_list))
         self.name = possible_hands[self.hand_strength]
-        self.best_hand = []
         # no tie breaks required
         if hand_occurrences == 1:
             for x in range(0, len(self.hand_details)):
@@ -498,7 +498,10 @@ class HandCompare:
                     else:
                         if temp[-1] != check_return:
                             temp.append(check_return)
-                self.best_hand.append(temp[len(temp)-1])
+                if len(temp) == 1:
+                    self.best_hand = temp
+                else:
+                    self.best_hand.append(temp[len(temp)-1])
                 # best hand can be initialized here because its going to be correct
                 for z in range(len(temp)-1, 0, -1):
                     # print(z)
@@ -511,7 +514,11 @@ class HandCompare:
                     else:
                         if self.best_hand[-1] != check_return:
                             self.best_hand.append(check_return)
-                    # seat position should be incorrect and we need to iterate backwards somehow
+                if len(self.best_hand) == 1:
+                    self.best_hand = self.best_hand[0]
+        # flatten the list for best_hand if only 1 value
+        # if len(self.best_hand) == 1:
+        #     self.best_hand = self.best_hand[0]
 
     # this function takes in two different hands of equal strength. it will break a tie and return the winning hand.
     # if tie cannot be broken it will return None
@@ -550,9 +557,9 @@ class HandCompare:
                     return tied_hand_details[0]
                 if two_pair_card1[x] > two_pair_card0[x]:
                     return tied_hand_details[1]
-        elif self.hand_strength == 1:  # pair
-            pair_card0 = [i for i, x in enumerate([hand_to_compare0]) if x == 2]
-            pair_card1 = [i for i, x in enumerate([hand_to_compare1]) if x == 2]
+        elif self.hand_strength == 1:
+            pair_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 2]
+            pair_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 2]
             if pair_card0 > pair_card1:
                 return tied_hand_details[0]
             if pair_card1 > pair_card0:
@@ -583,7 +590,32 @@ class HandCompare:
         return self.name
 
     def get_winning_cards(self):
-        return self.best_hand
+        best_hand = []
+        if len(self.best_hand) == 1:
+            return self.best_hand
+        for x in range(0, len(self.best_hand)):
+            if self.best_hand[x] is not None:
+                best_hand.append(self.best_hand[x])
+        return best_hand  # returns 5 cards
 
+    # problems arise with the list nesting. sometimes it needs to be flattened other it does not
+    def get_winning_seat_position(self):
+        best_hand = self.get_winning_cards()
+        try:
+            if len(best_hand[0]) > 1:
+                self.seat_position = []
+                for x in range(len(best_hand)):  # needs to be nested inside of a list for iteration
+                    self.seat_position.append(self.hand_and_seat.get(str([best_hand[x]])))
+        except TypeError:
+            best_hand = [best_hand]  # needs to be nested inside of a list for dictionary lookup
+            self.seat_position = self.hand_and_seat.get(str(best_hand))
+        return self.seat_position
 
+    # Requires winning hand return to show all tied hands
+    # use a dictionary lookup on the cards to reveal the winning hand
+    def combine_hand_and_seat(self):
+        self.hand_and_seat = {}
+        for x in range(0, len(self.hand_details)):
+            self.hand_and_seat[str([self.hand_details[x][1]])] = x+1  # needs to best nested inside of a list
+        return self.hand_and_seat
 

@@ -71,12 +71,31 @@ def main():
     # community_cards = [Card('d', 12), Card('s', 10), Card('d', 5), Card('c', 7), Card('c', 12)]
     # end of test
 
+    # Test pair (Prefers kings over aces)
+    # **FIXED** the error was adding a nested list
+    # preflophands = [[Card('h', 5), Card('s', 11)], [Card('c', 12), Card('s', 8)], [Card('s', 5), Card('h', 8)],
+    # [Card('h', 13), Card('s', 3)], [Card('s', 1), Card('h', 9)], [Card('h', 1), Card('s', 4)],
+    # [Card('h', 10), Card('d', 11)], [Card('c', 4), Card('h', 12)], [Card('d', 6), Card('h', 2)],
+    # [Card('d', 2), Card('h', 4)]]
+    # community_cards = [Card('d', 5), Card('s', 13), Card('c', 7), Card('c', 2), Card('c', 1)]
+    # end of test
+
+    # Test multiple winner (not returning both seat positions)
+    # **FIXED**
+    # preflophands = [[Card('h', 9), Card('d', 3)], [Card('d', 5), Card('c', 3)], [Card('s', 5), Card('d', 9)],
+    # [Card('d', 6), Card('h', 2)], [Card('s', 6), Card('d', 7)], [Card('h', 6), Card('c', 5)],
+    # [Card('c', 4), Card('h', 8)], [Card('h', 7), Card('c', 8)], [Card('d', 4), Card('d', 1)],
+    # [Card('s', 1), Card('s', 4)]]
+    # community_cards = [Card('h', 1), Card('d', 10), Card('s', 7), Card('s', 13), Card('c', 9)]
     # end of specified tests
 
     winning_hand = HandCompare(preflophands, community_cards)
-    display_final = ['tied hand(s): ' + str(winning_hand.seat_position), winning_hand.get_winning_hand(),
-                     winning_hand.get_winning_cards()]
+    display_final = ['Winning hand seat(s): ' + str(winning_hand.get_winning_seat_position()),
+                     winning_hand.get_winning_hand(), winning_hand.get_winning_cards()]
     print(display_final)
+    # print(winning_hand.seat_position)
+    # print(winning_hand.combine_hand_and_seat())
+    print(winning_hand.get_winning_seat_position())
     # print("Winning hand is:", winning_hand.compare_hand_strength())
     # print(all_hand_details)
 
