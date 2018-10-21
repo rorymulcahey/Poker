@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurrentHand.py" beforeDir="false" afterPath="$PROJECT_DIR$/CurrentHand.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Probability/Probabilty.py" beforeDir="false" afterPath="$PROJECT_DIR$/Probability/Probabilty.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolvePokerHands.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolvePokerHands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Table.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,25 +20,13 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="Probabilty.py" pinned="false" current-in-tab="false">
+            <file leaf-file-name="Probabilty.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Probability/Probabilty.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="498">
-                    <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+                  <state relative-caret-position="-672">
+                    <caret line="91" selection-start-line="91" selection-end-line="91" />
                     <folding>
                       <element signature="e#2#31#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/__main__.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="810">
-                    <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-                    <folding>
-                      <element signature="e#224#270#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -53,8 +42,8 @@
       <file leaf-file-name="Table.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+            <state relative-caret-position="674">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
@@ -62,8 +51,8 @@
       <file leaf-file-name="CurrentHand.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CurrentHand.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="91" column="53" selection-start-line="91" selection-start-column="53" selection-end-line="91" selection-end-column="53" />
+            <state relative-caret-position="450">
+              <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
               <folding>
                 <element signature="e#337#356#0" expanded="true" />
               </folding>
@@ -83,8 +72,20 @@
       <file leaf-file-name="SolvePokerHands.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="620" lean-forward="true" selection-start-line="620" selection-end-line="620" />
+            <state relative-caret-position="3683">
+              <caret line="553" column="81" lean-forward="true" selection-start-line="553" selection-start-column="81" selection-end-line="553" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__main__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1764">
+              <caret line="107" column="18" lean-forward="true" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+              <folding>
+                <element signature="e#224#270#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,6 +107,7 @@
       <find>get_final_cards</find>
       <find>self.get_final_cards</find>
       <find>get_winning_se</find>
+      <find>possible_cards()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,14 +139,14 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_16.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Recursion Bitonic Merge.py" />
         <option value="$PROJECT_DIR$/PokerEval.py" />
-        <option value="$PROJECT_DIR$/Table.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/Main.py" />
-        <option value="$PROJECT_DIR$/CurrentHand.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_17.py" />
-        <option value="$PROJECT_DIR$/Probability/Probabilty.py" />
-        <option value="$PROJECT_DIR$/SolvePokerHands.py" />
         <option value="$PROJECT_DIR$/__main__.py" />
+        <option value="$PROJECT_DIR$/Table.py" />
+        <option value="$PROJECT_DIR$/CurrentHand.py" />
+        <option value="$PROJECT_DIR$/SolvePokerHands.py" />
+        <option value="$PROJECT_DIR$/Probability/Probabilty.py" />
       </list>
     </option>
   </component>
@@ -182,25 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.__main__">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Poker" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator.abodearchitectu\PycharmProjects\Poker\__main__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.Probabilty">
     <configuration name="Probabilty" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Poker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -232,6 +216,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SolvePokerHands.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Table" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Poker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Table.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,19 +276,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.Main" />
       <item itemvalue="Python.Probabilty" />
       <item itemvalue="Python.__main__" />
       <item itemvalue="Python.scratch_17" />
       <item itemvalue="Python.SolvePokerHands" />
+      <item itemvalue="Python.Table" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Probabilty" />
+        <item itemvalue="Python.Table" />
         <item itemvalue="Python.__main__" />
         <item itemvalue="Python.SolvePokerHands" />
         <item itemvalue="Python.scratch_17" />
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python.Probabilty" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +312,6 @@
       <window_info content_ui="combo" id="Project" order="0" weight="0.24920802" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021796" side_tool="true" weight="0.29254302" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3298279" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978204" visible="true" weight="0.2753346" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
@@ -324,6 +325,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298279" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -334,7 +336,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -502,23 +504,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Probabilty.py" />
-    <entry file="file://$PROJECT_DIR$/PlayGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CurrentHand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="91" column="53" selection-start-line="91" selection-start-column="53" selection-end-line="91" selection-end-column="53" />
-          <folding>
-            <element signature="e#337#356#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_17.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -526,37 +511,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Probability/Probabilty.py">
+    <entry file="file://$PROJECT_DIR$/Table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding>
-            <element signature="e#2#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="674">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Table.py">
+    <entry file="file://$PROJECT_DIR$/CurrentHand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+        <state relative-caret-position="450">
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <folding>
+            <element signature="e#337#356#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="1764">
+          <caret line="107" column="18" lean-forward="true" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
           <folding>
             <element signature="e#224#270#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PlayGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="620" lean-forward="true" selection-start-line="620" selection-end-line="620" />
+        <state relative-caret-position="3683">
+          <caret line="553" column="81" lean-forward="true" selection-start-line="553" selection-start-column="81" selection-end-line="553" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Probability/Probabilty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-672">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#2#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

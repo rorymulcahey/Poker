@@ -78,8 +78,8 @@ class Deck:
 
     def create_deck(self):
         self.current_cards = []
-        for x in ['c', 'd', 'h', 's']:
-            for y in range(1, 14):
+        for y in range(1, 14):
+            for x in ['c', 'd', 'h', 's']:
                 self.current_cards.append(Card(x, y))
 
 

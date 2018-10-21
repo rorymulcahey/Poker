@@ -23,7 +23,7 @@ class CurrentHand:
         self.ante_size = 1
         self.small_blind_size = 25
         self.big_blind_size = 50
-        self.player_cards = []
+        self.player_cards = []  # [seat number, [Card 1, Card2]]
         self.deck = Deck()
         self.setup_next_hand()
 

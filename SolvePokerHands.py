@@ -81,6 +81,7 @@ class Hand:
         return array
 
     # Remove None values from the card list
+    # currently suspending this function as these cards lists do not have None cards
     def possible_cards(self):
         index = 0
         array_length = 7
@@ -359,7 +360,7 @@ class HandType:
             final_high_cards = empty
         final_cards = self.get_final_cards(final_hand_cards, final_high_cards)
         print('^' + self.name)
-        return [current_hand_strength, final_cards]
+        return [current_hand_strength, final_cards]  # needs list designation or else becomes tuple
 
     # Return final 5 cards for the hand.
     # get all cards : investigate why len() is used for the two nested loops
@@ -413,14 +414,16 @@ class HandType:
                 if len(final_cards) == 5:
                     print(final_cards)
                     return final_cards
-        print(final_cards)
-        print("Error with get_final_cards")
+        # print(final_cards)
+        # print("Error with get_final_cards")
         return
 
     def get_hand_details(self):
         return self.check_hand_strength(), self.get_final_cards
 
 
+# Requires all preflop cards from the players on the table and the community cards
+# Compare the hands and returns the winner(s) hand(s) and seat(s) and announces the type of winning hand.
 class HandCompare:
     # def __init__(self, hand_details):
     def __init__(self, preflop_cards, community_cards):
@@ -524,7 +527,7 @@ class HandCompare:
     # if tie cannot be broken it will return None
     # Need to implement seat_num
     def find_tie_break(self, tied_hand_details, seat_num):
-        print('tied breaker engaged')
+        # print('tied breaker engaged')
         hand_to_compare0 = Hand.cards_number_array(tied_hand_details[0])
         # print(hand_to_compare0)
         hand_to_compare1 = Hand.cards_number_array(tied_hand_details[1])
@@ -570,14 +573,14 @@ class HandCompare:
         for x in range(13, 0, -1):
             if hand_to_compare0[x] > hand_to_compare1[x]:
                 # del self.seat_position[1]
-                print(tied_hand_details[0])
+                # print(tied_hand_details[0])
                 return tied_hand_details[0]
             elif hand_to_compare1[x] > hand_to_compare0[x]:
                 # del self.seat_position[0]
-                print(tied_hand_details[1])
+                # print(tied_hand_details[1])
                 return tied_hand_details[1]
         # return none if tie is not broken
-        print("Hands are the same. Returning None")
+        # print("Hands are the same. Returning None")
         return
 
     @staticmethod
@@ -608,7 +611,7 @@ class HandCompare:
                     self.seat_position.append(self.hand_and_seat.get(str([best_hand[x]])))
         except TypeError:
             best_hand = [best_hand]  # needs to be nested inside of a list for dictionary lookup
-            self.seat_position = self.hand_and_seat.get(str(best_hand))
+            self.seat_position = [self.hand_and_seat.get(str(best_hand))]
         return self.seat_position
 
     # Requires winning hand return to show all tied hands
