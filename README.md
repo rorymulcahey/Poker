@@ -12,3 +12,7 @@ The program currently generates random hands for a various number of players, co
 hands against eachother, displays hands of similar strengths, then finally announces
 the winning hand after breaking all ties.
 
+To test out probabilities, follow all the above steps, then download Probability/Probability.py
+
+execute Probability.py
+
