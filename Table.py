@@ -17,8 +17,8 @@ import random
 
 class Table:
     # takes in as parameters the total number of seats on the table and starting chip amounts
-    def __init__(self, max_num_seats, starting_chip_amount):
-        self.starting_chip_count = starting_chip_amount
+    def __init__(self, max_num_seats):
+        self.starting_chip_count = 2000
         self.active_player_info = []
         self.active_num_players = 0
         # need a better way to organize seat layout

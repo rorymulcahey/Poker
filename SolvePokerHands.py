@@ -27,26 +27,28 @@ Numbers Array:
 card - 1 = card number; Ace has two values
 eg: Two = 1; Ace = 0 or 13
 
-=================================================================================
+======================================================================================================
 To do list:
-    Announce more than one winner if needed, and match winning hand to seat position.
-    Build GUI to facilitate hand comparison
-    Include chance to win percentages to show hand strength from current community board
+    Build GUI to facilitate hand comparison.
+    Include chance to win percentages to show hand strength from current community board.
 
 Notes:
     Accept two hands as input and then compare the two** Done
-    - Need to accept multiple hands and store them.
-    - Consider using *args or **kwargs
-    - May want to store number of hands in play, use "If hand is None:" to eliminate empty seat position
+    - Need to accept multiple hands and store them.** Done
     Show the 5 best cards with the type of hand** Done
-    - Reference the original 7 cards for the final hand by reformatting get_all_cards function
-    - Work on straight flush func
+    - Reference the original 7 cards for the final hand by reformatting get_all_cards function** Done
+    - Work on straight flush func** Done
     Write "get" functions if check function is true**
     Consolidate cards_array** Done
     Use better return statements (like quads)** Done
     Remove None value from a list without removing the 0 value **Done
     Goal: Try to use any number of cards (preflop, flop, turn, river)** Done
-=================================================================================
+    Fix bug with community cards all being the best hand. It should attribute winning
+    seats to all players but currently chooses only one player.** Done
+    Announce more than one winner if needed, and match winning hand to seat position.** Done
+    Refactor possible cards. Remove if its not needed.
+
+========================================================================================================
 
 """
 import re
@@ -414,8 +416,6 @@ class HandType:
                 if len(final_cards) == 5:
                     print(final_cards)
                     return final_cards
-        # print(final_cards)
-        # print("Error with get_final_cards")
         return
 
     def get_hand_details(self):
@@ -440,9 +440,9 @@ class HandCompare:
         self.tied_hands = []
         self.tied_hand_seats = []
         self.compare_hand_strength()
-        self.hand_and_seat = self.combine_hand_and_seat()
+        # self.hand_and_seat = self.combine_hand_and_seat()
 
-    # loop through the preflop hands to prepare them for hand compare
+    # loop through the preflop and community cards to prepare them for hand compare
     def create_hand_types(self):
         hands = []
         hand_strengths = []
@@ -473,65 +473,73 @@ class HandCompare:
         # tie breaks required
         else:
             break_tied_hands = []
+            winning_seats = []
             # create list of tied hands
             for y in range(0, len(self.hand_details)):
                 if self.hand_strength == self.hand_details[y][0]:
                     break_tied_hands.append(self.hand_details[y][1])
-                    self.seat_position.append(y+1)
+                    winning_seats.append(y+1)
             if hand_occurrences == 2:  # simple case of only 2 tied hands
-                self.best_hand = self.find_tie_break(break_tied_hands, self.seat_position)
+                self.best_hand, self.seat_position = self.find_tie_break(break_tied_hands, winning_seats)
                 if self.best_hand is None:
                     self.best_hand = []
+                    self.seat_position = []
                     self.best_hand.extend([break_tied_hands[0], break_tied_hands[1]])
+                    self.seat_position.extend(winning_seats)
             else:  # hand_occurrences > 2:
                 temp = []
-                first_correct_hand = self.find_tie_break([break_tied_hands[0], break_tied_hands[1]], self.seat_position)
+                temp_seat = []
+                first_correct_hand, first_correct_seat = self.find_tie_break([break_tied_hands[0], break_tied_hands[1]],
+                                                                             winning_seats)
                 if first_correct_hand is None:
                     temp.extend([break_tied_hands[0], break_tied_hands[1]])
+                    temp_seat.extend([winning_seats[0], winning_seats[1]])
                 else:
                     temp.append(first_correct_hand)
+                    temp_seat.append(first_correct_seat)
                 for y in range(1, len(break_tied_hands)-1):
-                    # print(y)
                     two_hands = []
+                    two_seats = []
                     two_hands.extend((temp[-1], break_tied_hands[y+1]))
-                    # if first result is better, it returns itself causing a bug
-                    check_return = self.find_tie_break(two_hands, self.seat_position)
+                    two_seats.extend((temp_seat[-1], winning_seats[y+1]))
+                    check_return, check_seat = self.find_tie_break(two_hands, two_seats)
                     if check_return is None:
                         temp.append(break_tied_hands[y+1])
+                        temp_seat.append(winning_seats[y+1])
                     else:
                         if temp[-1] != check_return:
                             temp.append(check_return)
+                            temp_seat.append(check_seat)
                 if len(temp) == 1:
                     self.best_hand = temp
+                    self.seat_position = temp_seat
                 else:
                     self.best_hand.append(temp[len(temp)-1])
+                    self.seat_position.append(temp_seat[len(temp_seat)-1])
                 # best hand can be initialized here because its going to be correct
                 for z in range(len(temp)-1, 0, -1):
-                    # print(z)
                     two_hands = []
+                    two_seats = []
                     two_hands.extend((self.best_hand[-1], temp[z-1]))
-                    check_return = self.find_tie_break(two_hands, self.seat_position)
+                    two_seats.extend((self.seat_position[-1], temp_seat[z-1]))
+                    check_return, check_seat = self.find_tie_break(two_hands, two_seats)
                     if check_return is None:
-                        # self.best_hand.append(temp[len(temp) - z])
                         self.best_hand.append(temp[z-1])
+                        self.seat_position.append(temp_seat[z-1])
                     else:
                         if self.best_hand[-1] != check_return:
                             self.best_hand.append(check_return)
+                            self.seat_position.append(check_seat)
                 if len(self.best_hand) == 1:
                     self.best_hand = self.best_hand[0]
-        # flatten the list for best_hand if only 1 value
-        # if len(self.best_hand) == 1:
-        #     self.best_hand = self.best_hand[0]
+                    self.seat_position = self.seat_position[0]
 
     # this function takes in two different hands of equal strength. it will break a tie and return the winning hand.
     # if tie cannot be broken it will return None
     # Need to implement seat_num
     def find_tie_break(self, tied_hand_details, seat_num):
-        # print('tied breaker engaged')
         hand_to_compare0 = Hand.cards_number_array(tied_hand_details[0])
-        # print(hand_to_compare0)
         hand_to_compare1 = Hand.cards_number_array(tied_hand_details[1])
-        # print(hand_to_compare1)
         # straight needs to remove high end ace if straight is on the low end
         if self.hand_strength == 4:
             self.fix_straight(hand_to_compare0[0] == 1, hand_to_compare0)
@@ -540,48 +548,41 @@ class HandCompare:
             quad_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 4]
             quad_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 4]
             if quad_card0 > quad_card1:
-                return tied_hand_details[0]
+                return tied_hand_details[0], seat_num[0]
             if quad_card1 > quad_card0:
-                return tied_hand_details[1]
+                return tied_hand_details[1], seat_num[1]
         elif self.hand_strength == 3:  # trips
             trip_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 3]
             trip_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 3]
             if trip_card0 > trip_card1:
-                return tied_hand_details[0]
+                return tied_hand_details[0], seat_num[0]
             if trip_card1 > trip_card0:
-                return tied_hand_details[1]
+                return tied_hand_details[1], seat_num[1]
         elif self.hand_strength == 2:  # 2pair
             two_pair_card0 = [i for i, x in enumerate(hand_to_compare0) if x > 1]
-            # print(two_pair_card0)
             two_pair_card1 = [i for i, x in enumerate(hand_to_compare1) if x > 1]
-            # print(two_pair_card1)
             for x in range(1, -1, -1):
                 if two_pair_card0[x] > two_pair_card1[x]:
-                    return tied_hand_details[0]
+                    return tied_hand_details[0], seat_num[0]
                 if two_pair_card1[x] > two_pair_card0[x]:
-                    return tied_hand_details[1]
+                    return tied_hand_details[1], seat_num[1]
         elif self.hand_strength == 1:
             pair_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 2]
             pair_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 2]
             if pair_card0 > pair_card1:
-                return tied_hand_details[0]
+                return tied_hand_details[0], seat_num[0]
             if pair_card1 > pair_card0:
-                return tied_hand_details[1]
+                return tied_hand_details[1], seat_num[1]
         else:  # 5 card hand; self.hand_strength != 1,2,3,7
             pass
-        # Ace low straights return the wrong result
+        # Ace low straights return the wrong result (use fix_straight)
         for x in range(13, 0, -1):
             if hand_to_compare0[x] > hand_to_compare1[x]:
-                # del self.seat_position[1]
-                # print(tied_hand_details[0])
-                return tied_hand_details[0]
+                return tied_hand_details[0], seat_num[0]
             elif hand_to_compare1[x] > hand_to_compare0[x]:
-                # del self.seat_position[0]
-                # print(tied_hand_details[1])
-                return tied_hand_details[1]
+                return tied_hand_details[1], seat_num[1]
         # return none if tie is not broken
-        # print("Hands are the same. Returning None")
-        return
+        return None, None
 
     @staticmethod
     def fix_straight(ace_low_straight, cards):
@@ -594,6 +595,8 @@ class HandCompare:
 
     def get_winning_cards(self):
         best_hand = []
+        # creates an error with quads: if len(self.best_hand) == 1:
+        # TypeError: object of type 'NoneType' has no len()
         if len(self.best_hand) == 1:
             return self.best_hand
         for x in range(0, len(self.best_hand)):
@@ -601,6 +604,20 @@ class HandCompare:
                 best_hand.append(self.best_hand[x])
         return best_hand  # returns 5 cards
 
+    def get_winning_seat_position(self):
+        temp = []
+        # Converts seat position list to proper format. Certain tie breaks do not make a list.
+        # This is a very difficult bug to find. Consider fixing this work around later.
+        try:
+            for x in range(0, len(self.seat_position)):
+                temp.append(self.seat_position[x])
+        except TypeError:
+            return [self.seat_position]
+        return temp
+
+    '''
+    # this is old code that was used to find the winning hand. The method involved a dictionary
+    # lookup. 
     # problems arise with the list nesting. sometimes it needs to be flattened other it does not
     def get_winning_seat_position(self):
         best_hand = self.get_winning_cards()
@@ -609,9 +626,11 @@ class HandCompare:
                 self.seat_position = []
                 for x in range(len(best_hand)):  # needs to be nested inside of a list for iteration
                     self.seat_position.append(self.hand_and_seat.get(str([best_hand[x]])))
+                print(self.hand_and_seat)
+                print(self.seat_position)
         except TypeError:
             best_hand = [best_hand]  # needs to be nested inside of a list for dictionary lookup
-            self.seat_position = [self.hand_and_seat.get(str(best_hand))]
+            self.seat_position = self.hand_and_seat.get(str(best_hand))
         return self.seat_position
 
     # Requires winning hand return to show all tied hands
@@ -619,6 +638,10 @@ class HandCompare:
     def combine_hand_and_seat(self):
         self.hand_and_seat = {}
         for x in range(0, len(self.hand_details)):
-            self.hand_and_seat[str([self.hand_details[x][1]])] = x+1  # needs to best nested inside of a list
+            if str(self.hand_details[x][1]) in self.hand_and_seat:
+                self.hand_and_seat[str([self.hand_details[x][1]])].append(x+1)  # needs to best nested inside of a list
+            else:
+                self.hand_and_seat[str([self.hand_details[x][1]])] = [x+1]  # needs to best nested inside of a list
+        print(self.hand_and_seat)
         return self.hand_and_seat
-
+    '''

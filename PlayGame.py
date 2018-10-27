@@ -13,8 +13,8 @@ from CurrentHand import CurrentHand
 
 
 class PlayGame:
-    def __init__(self, max_num_seats, starting_chip_amount):
-        self.hand = CurrentHand(max_num_seats, starting_chip_amount)
+    def __init__(self, max_num_seats):
+        self.hand = CurrentHand(max_num_seats)
         # bets in front of the player, not yet into the pot
         self.current_bet_amounts = []
         self.current_chip_counts = self.chip_counts()

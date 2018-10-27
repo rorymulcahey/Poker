@@ -13,9 +13,9 @@ import random
 
 # move variables out of setup hand, like current_player_info, and manage them in table.py. Play game will use them
 class CurrentHand:
-    def __init__(self, max_num_seats, starting_chip_amount):
+    def __init__(self, max_num_seats):
         self.first_hand = True
-        self.current_table = Table(max_num_seats, starting_chip_amount)
+        self.current_table = Table(max_num_seats)
         self.button_seat = self.current_table.button
         # need to manage side pots
         self.main_pot = 0
