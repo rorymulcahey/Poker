@@ -90,7 +90,7 @@ class PlayGame:
             break
 
 
-game = PlayGame(2, 2000)
+game = PlayGame(2)
 game.handle_turn()
 result = []
 for y in range(0, len(game.hand.current_table.active_player_info)):

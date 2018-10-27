@@ -138,26 +138,18 @@ class HandType:
                 i += 1
                 if i > index:
                     break
-            # why does this search for a pair?
-            # possibly for full house?
-            # if index == 1:
-            #     if self.num_array[x] == 2:
-            #         high_cards.append(x)
-            #         break
         return high_cards
 
     def check_pair(self):
         pair = False
         pair_card = []
-        for x in range(1, 14):
+        for x in range(13, 1, -1):
             if self.num_array[x] == 2:
                 pair_card.append(x)
                 pair = True
                 self.num_of_high_cards = 3
                 break
         tie_breaker_cards = self.check_high_card(self.num_of_high_cards)
-        if pair:
-            pass
         return pair, pair_card, tie_breaker_cards
 
     def check_two_pair(self):
@@ -173,8 +165,6 @@ class HandType:
                 self.num_of_high_cards = 1
                 break
         tie_breaker_cards = self.check_high_card(self.num_of_high_cards)
-        if two_pair:
-            pass
         return two_pair, two_pair_cards, tie_breaker_cards
 
     def check_trips(self):
@@ -187,8 +177,6 @@ class HandType:
                 self.num_of_high_cards = 2
                 break
         tie_breaker_cards = self.check_high_card(self.num_of_high_cards)
-        if trips:
-            pass
         return trips, trips_card, tie_breaker_cards
 
     @staticmethod
@@ -429,7 +417,6 @@ class HandCompare:
     def __init__(self, preflop_cards, community_cards):
         self.preflop_cards = preflop_cards
         self.community_cards = community_cards
-        # self.hand_details = hand_details
         self.hand_details = self.create_hand_types()
         self.hand_strength_list = []
         self.hand_strength = 0
@@ -440,7 +427,6 @@ class HandCompare:
         self.tied_hands = []
         self.tied_hand_seats = []
         self.compare_hand_strength()
-        # self.hand_and_seat = self.combine_hand_and_seat()
 
     # loop through the preflop and community cards to prepare them for hand compare
     def create_hand_types(self):
@@ -615,33 +601,3 @@ class HandCompare:
             return [self.seat_position]
         return temp
 
-    '''
-    # this is old code that was used to find the winning hand. The method involved a dictionary
-    # lookup. 
-    # problems arise with the list nesting. sometimes it needs to be flattened other it does not
-    def get_winning_seat_position(self):
-        best_hand = self.get_winning_cards()
-        try:
-            if len(best_hand[0]) > 1:
-                self.seat_position = []
-                for x in range(len(best_hand)):  # needs to be nested inside of a list for iteration
-                    self.seat_position.append(self.hand_and_seat.get(str([best_hand[x]])))
-                print(self.hand_and_seat)
-                print(self.seat_position)
-        except TypeError:
-            best_hand = [best_hand]  # needs to be nested inside of a list for dictionary lookup
-            self.seat_position = self.hand_and_seat.get(str(best_hand))
-        return self.seat_position
-
-    # Requires winning hand return to show all tied hands
-    # use a dictionary lookup on the cards to reveal the winning hand
-    def combine_hand_and_seat(self):
-        self.hand_and_seat = {}
-        for x in range(0, len(self.hand_details)):
-            if str(self.hand_details[x][1]) in self.hand_and_seat:
-                self.hand_and_seat[str([self.hand_details[x][1]])].append(x+1)  # needs to best nested inside of a list
-            else:
-                self.hand_and_seat[str([self.hand_details[x][1]])] = [x+1]  # needs to best nested inside of a list
-        print(self.hand_and_seat)
-        return self.hand_and_seat
-    '''
