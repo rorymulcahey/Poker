@@ -29,24 +29,13 @@ eg: Two = 1; Ace = 0 or 13
 
 ======================================================================================================
 To do list:
+    Debug and test for hands that win when they should not.
     Build GUI to facilitate hand comparison.
-    Include chance to win percentages to show hand strength from current community board.
+    Add preflop probabilities
+    Refactor possible cards. Remove if its not needed.
 
 Notes:
-    Accept two hands as input and then compare the two** Done
-    - Need to accept multiple hands and store them.** Done
-    Show the 5 best cards with the type of hand** Done
-    - Reference the original 7 cards for the final hand by reformatting get_all_cards function** Done
-    - Work on straight flush func** Done
-    Write "get" functions if check function is true**
-    Consolidate cards_array** Done
-    Use better return statements (like quads)** Done
-    Remove None value from a list without removing the 0 value **Done
-    Goal: Try to use any number of cards (preflop, flop, turn, river)** Done
-    Fix bug with community cards all being the best hand. It should attribute winning
-    seats to all players but currently chooses only one player.** Done
-    Announce more than one winner if needed, and match winning hand to seat position.** Done
-    Refactor possible cards. Remove if its not needed.
+    Probabilities are close but not exact. (Probably bugs here)
 
 ========================================================================================================
 
@@ -128,6 +117,7 @@ class HandType:
         self.name = "High Card"
         self.flush_suit = None
         self.suited_array = None
+        self.final_cards = []
 
     def check_high_card(self, index):
         i = 1
@@ -348,9 +338,9 @@ class HandType:
         if self.name == possible_hands[0]:
             final_hand_cards = self.check_high_card(self.num_of_high_cards)
             final_high_cards = empty
-        final_cards = self.get_final_cards(final_hand_cards, final_high_cards)
-        print('^' + self.name)
-        return [current_hand_strength, final_cards]  # needs list designation or else becomes tuple
+        self.final_cards = self.get_final_cards(final_hand_cards, final_high_cards)
+        self.print_final_hand()
+        return [current_hand_strength, self.final_cards]  # needs list designation or else becomes tuple
 
     # Return final 5 cards for the hand.
     # get all cards : investigate why len() is used for the two nested loops
@@ -364,7 +354,6 @@ class HandType:
                     if self.cards[z].num - 1 == hand_cards[x] and self.cards[z].suit == self.flush_suit:
                         final_cards.append(self.cards[z])
                     if len(final_cards) == 5:
-                        print(final_cards)
                         return final_cards
 
         if self.name == 'Straight':
@@ -375,7 +364,6 @@ class HandType:
                     if self.cards[y].num - 1 == hand_cards[x]:
                         final_cards.append(self.cards[y])
                         if len(final_cards) == 5:
-                            print(final_cards)
                             return final_cards
                         break
 
@@ -390,7 +378,6 @@ class HandType:
                 if self.cards[z].num - 1 == hand_cards[x]:
                     final_cards.append(self.cards[z])
                 if len(final_cards) == 5:
-                    print(final_cards)
                     return final_cards
 
             for y in range(0, len(high_cards)):
@@ -402,12 +389,11 @@ class HandType:
                 if self.cards[z].num - 1 == high_cards[y] and high_cards:
                     final_cards.append(self.cards[z])
                 if len(final_cards) == 5:
-                    print(final_cards)
                     return final_cards
         return
 
-    def get_hand_details(self):
-        return self.check_hand_strength(), self.get_final_cards
+    def print_final_hand(self):
+        print(self.name + ": " + str(self.final_cards))
 
 
 # Requires all preflop cards from the players on the table and the community cards
@@ -601,3 +587,8 @@ class HandCompare:
             return [self.seat_position]
         return temp
 
+    def print_winning_hand(self):
+        display_final = ['Winning hand seat(s): ' + str(self.get_winning_seat_position()),
+                         self.get_winning_hand(), self.get_winning_cards()]
+        print(display_final)
+        print('\n')

@@ -35,8 +35,7 @@ class Probability:
             self.calculate_winning_chances(winning_hand, winning_seat, None)
         self.winning_chances[:] = [round(j * 100 / total, 2) for j in self.winning_chances]
         self.drawing_chances[:] = [round(k * 100 / total, 2) for k in self.drawing_chances]
-        print("Winning chances: " + str(self.winning_chances))
-        print("Drawing chances: " + str(self.drawing_chances))
+        self.print_probabilities()
 
     def one_card_remaining(self, current_deck):
         deck_cards = current_deck
@@ -64,9 +63,6 @@ class Probability:
                     length -= 1
                     y -= 1
                 y += 1
-        print('\n')
-        print("==================================================================")
-        print('\n')
 
         '''
         This portion uses a deck_cards number array, which increments the index of a list
@@ -88,8 +84,17 @@ class Probability:
                 self.calculate_winning_chances(winning_hand, winning_seat, y)
                 self.community_cards.pop()
 
+    '''
+    This function finds the probability of winning on the flop. It first loops through all
+    possible cards, appending it to the community cards one at a time. Then it calls
+    one_card_remaining to handle the rest of the calculating.
+    
+    Input: Is a copy of the deck, so as to the change the original (probably can be optimized).
+    
+    Output: Probability of winning hand when two cards need to be dealt.
+    '''
     def two_cards_remaining(self, current_deck):
-        # need a way to modify the the one community card and send the rest of the deck into one card remaining
+        # modifies one community card and send the rest of the deck into one card remaining
         for x in range(0, len(current_deck)):
             deck_cards = current_deck
             self.community_cards.append(deck_cards[x])
@@ -114,8 +119,8 @@ class Probability:
             else:  # drawing chances
                 for i in range(0, len(winning_seat)):
                     self.drawing_chances[winning_seat[i] - 1] += (1.0/len(winning_seat))
-        display_final = ['Winning hand seat(s): ' +
-                         str(winning_hand.get_winning_seat_position()),
-                         winning_hand.get_winning_hand(),
-                         winning_hand.get_winning_cards()]
-        print(display_final)
+        winning_hand.print_winning_hand()
+
+    def print_probabilities(self):
+        print("Winning chances: " + str(self.winning_chances))
+        print("Drawing chances: " + str(self.drawing_chances))

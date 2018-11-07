@@ -16,12 +16,16 @@ from CurrentHand import *
 import timeit
 
 
-# test random card configurations
 def main():
-    number_of_community_cards = 4
-    number_of_players = 5
-    currenthand = CurrentHand(number_of_players)
-    start = timeit.default_timer()
+    start = timeit.default_timer()  # test speed of program
+
+    # initialize the driving variables:
+    number_of_community_cards = 3  # can be: 3 (flop), 4 (turn), or 5 (river)
+    number_of_players = 5   # can be : 2-10 (players)
+    currenthand = CurrentHand(number_of_players)  # currently only uses get_card function
+
+    # Grab random cards from the deck and add them to the list
+    # test random card configurations
     preflophands = []
     community_cards = []
     for x in range(0, number_of_community_cards):
@@ -30,19 +34,18 @@ def main():
         preflophands.append(currenthand.player_cards[x][1])
         print('seat number: ' + str(x + 1) + '  ' + str(preflophands[x]))
     remaining_deck = currenthand.deck.current_cards
-
-    print(community_cards)
+    print("Community cards: " + str(community_cards))
     print('\n')
-    print(preflophands)
+    print("All preflop hands below")
+    print(preflophands)  # this is printed for debugging purposes. copy paste these results if incorrect.
     print('\n')
 
+    # Compare the hands and print the results
     # winning_hand = HandCompare(preflophands, community_cards)
-    # display_final = ['Winning hand seat(s): ' + str(winning_hand.get_winning_seat_position()),
-    #                  winning_hand.get_winning_hand(), winning_hand.get_winning_cards()]
-    # print(display_final)
-    # print(winning_hand.get_winning_seat_position())
-    calculateProbability = Probability(remaining_deck, preflophands, community_cards)
-    stop = timeit.default_timer()
+    # winning_hand.print_winning_hand()
+    Probability(remaining_deck, preflophands, community_cards)
+
+    stop = timeit.default_timer()  # end of speed test
     print('Time: ', stop - start, 'seconds')
 
 

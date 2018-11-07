@@ -13,7 +13,7 @@ import random
 
 # move variables out of setup hand, like current_player_info, and manage them in table.py. Play game will use them
 class CurrentHand:
-    def __init__(self, max_num_seats):
+    def __init__(self, max_num_seats, num_community_cards):
         self.first_hand = True
         self.current_table = Table(max_num_seats)
         self.button_seat = self.current_table.button
@@ -26,6 +26,9 @@ class CurrentHand:
         self.player_cards = []  # [seat number, [Card 1, Card2]]
         self.deck = Deck()
         self.setup_next_hand()
+        self.preflophands = []
+        self.num_community_cards = num_community_cards
+        self.community_cards = []
 
     def __eq__(self, other):
         if not isinstance(other, CurrentHand):
@@ -82,8 +85,8 @@ class CurrentHand:
     # has texas hold'em format, dealing two cards to each player
     def deal_cards(self):
         for x in range(0, len(self.current_table.active_player_info)):
-            self.player_cards.append([x + 1])
-            self.player_cards[x].append([self.get_card(), self.get_card()])
+            self.player_cards.append([x + 1])  # seat number
+            self.player_cards[x].append([self.get_card(), self.get_card()])  # cards
 
     # used to deal cards, and community cards.
     def get_card(self):
@@ -113,7 +116,23 @@ class CurrentHand:
                 counter += 1
             return counter
 
-# a = CurrentHand(10, 2000)
+    def create_hands(self):
+        # Grab random cards from the deck and add them to the list
+        # test random card configurations
+        for x in range(0, self.num_community_cards):
+            self.community_cards.append(self.get_card())
+        for x in range(0, len(self.player_cards)):
+            self.preflophands.append(self.player_cards[x][1])
+            print('seat number: ' + str(x + 1) + '  ' + str(self.preflophands[x]))
+        remaining_deck = self.deck.current_cards
+        print("Community cards: " + str(self.community_cards))
+        print('\n')
+        print("All preflop hands below")
+        print(self.preflophands)  # this is printed for debugging purposes. copy paste these results if incorrect.
+        print('\n')
+
+# Test CurrentHand.py
+# a = CurrentHand(10)
 # result = []
 # for y in range(0, len(a.current_table.active_player_info)):
 #     result.append(a.current_table.active_player_info[y].chip_count)
