@@ -1,10 +1,8 @@
 
-
 from SolvePokerHands import *
 from collections import Counter
 
 
-# to do: modify cards from comm_cards to test out probability.
 class Probability:
     def __init__(self, remaining_deck, preflop_hands, comm_cards):
         self.community_cards = comm_cards
@@ -19,6 +17,11 @@ class Probability:
     def create_deck_num_array(self, cards):
         return self.current_cards_in_play.cards_number_array(cards)
 
+    '''
+    Driver function that calls the appropriate starter function. Here there are currently three working, and one
+    still needing to be made, functions. Based on the number of community cards, a specific function will be called
+    to find the probability of a winning hand.  
+    '''
     def number_of_cards_remaining(self):
         total = len(self.current_deck)
         if len(self.community_cards) == 4:
@@ -37,7 +40,20 @@ class Probability:
         self.drawing_chances[:] = [round(k * 100 / total, 2) for k in self.drawing_chances]
         self.print_probabilities()
 
+    '''
+    Here the function will first check if a flush is possible,
+    meaning that there is at least 2 community cards of the same suit. If so it will iterate through each of those
+    cards in the remaining deck. There cards are popped off a copy of the remaining deck of cards. If this condition 
+    is not true then we go directly to the number array choice (section 2). This portion uses a deck_cards number 
+    array, which increments the index of a list for each occurrence of a specific number of card. Very similar to the 
+    card number array that exists in the SolvePokerHands.py except this array looks for every card that is remaining in 
+    the deck_cards and only those cards. The function uses that deck_cards number array to iterate through all the 
+    possible hands that a user can make. Then it multiplies the outcome of the hand by the number of card occurrences 
+    that happen in the deck_cards. This reduces the number of times the SolvePokerHands.py needs to run by 
+    approximately a factor of 3.
+    '''
     def one_card_remaining(self, current_deck):
+        # section 1 using flush suit
         deck_cards = current_deck
         self.deck_num_array = self.create_deck_num_array(current_deck)
         flush_suit = []
@@ -64,16 +80,7 @@ class Probability:
                     y -= 1
                 y += 1
 
-        '''
-        This portion uses a deck_cards number array, which increments the index of a list
-        for each occurrence of a specific number of card. Very similar to the card
-        number array that exists in the SolvePokerHands.py except this array looks
-        for every card that is remaining in the deck_cards and only those cards. The function
-        uses that deck_cards number array to iterate through all the possible hands that a 
-        user can make. Then it multiplies the outcome of the hand by the number of 
-        card occurrences that happen in the deck_cards. This reduces the number of times 
-        the SolvePokerHands.py needs to run by approximately a factor of 3.
-        '''
+        # section 2 using number array
         w = -1  # increases the speed by immediately picking a card
         for y in range(0, len(self.deck_num_array)-1):
             w += self.deck_num_array[y]  # relies on numerically sorted deck_cards
@@ -105,6 +112,13 @@ class Probability:
     def five_cards_remaining(self):
         pass
 
+    '''
+    This function does the math required to add percentage probabilities to the final output. The function handles
+    two types of input. One cases where the final probabilities being assigned to the winning seats will be multiplied
+    by the number of cards that have the two, three, ... , king, ace value and the other cases where we analyze flush
+    cards and do not need to multiply (or multiply by 1) the output probability. This reduces the number of times
+    that HandCompare needs to be called and speeds up the function. Ideally this concept can be optimized.
+    '''
     def calculate_winning_chances(self, winning_hand, winning_seat, card_number):
         if card_number is not None:
             if len(winning_seat) == 1:
@@ -113,7 +127,7 @@ class Probability:
                 for i in range(0, len(winning_seat)):
                     self.drawing_chances[winning_seat[i] - 1] += \
                         float(self.deck_num_array[card_number])/len(winning_seat)
-        else:
+        else:  # card_number is None
             if len(winning_seat) == 1:
                 self.winning_chances[winning_seat[0] - 1] += 1
             else:  # drawing chances

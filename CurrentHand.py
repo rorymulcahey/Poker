@@ -6,6 +6,7 @@ antes. Then dealing cards to each player. Seat number is key identifier
 for current cards and active player info at index 0. Seat number is
 one indexed, vs the array being 0 indexed.
 
+Note: This class currently only uses get_card, create_hands and print functions
 """
 from Table import *
 import random
@@ -26,9 +27,10 @@ class CurrentHand:
         self.player_cards = []  # [seat number, [Card 1, Card2]]
         self.deck = Deck()
         self.setup_next_hand()
-        self.preflophands = []
+        self.preflop_cards = []
         self.num_community_cards = num_community_cards
         self.community_cards = []
+        self.create_hands()
 
     def __eq__(self, other):
         if not isinstance(other, CurrentHand):
@@ -122,14 +124,22 @@ class CurrentHand:
         for x in range(0, self.num_community_cards):
             self.community_cards.append(self.get_card())
         for x in range(0, len(self.player_cards)):
-            self.preflophands.append(self.player_cards[x][1])
-            print('seat number: ' + str(x + 1) + '  ' + str(self.preflophands[x]))
-        remaining_deck = self.deck.current_cards
+            self.preflop_cards.append(self.player_cards[x][1])
+
+    def print_preflop_cards(self):
+        for x in range(0, len(self.player_cards)):
+            print('seat number: ' + str(x + 1) + '  ' + str(self.preflop_cards[x]))
+
+    def print_community_cards(self):
         print("Community cards: " + str(self.community_cards))
+
+    # this is printed for debugging purposes. Copy/paste these results if incorrect.
+    def print_debug_cards(self):
         print('\n')
-        print("All preflop hands below")
-        print(self.preflophands)  # this is printed for debugging purposes. copy paste these results if incorrect.
+        print("All preflop cards below")
+        print(self.preflop_cards)
         print('\n')
+
 
 # Test CurrentHand.py
 # a = CurrentHand(10)
