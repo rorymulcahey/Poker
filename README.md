@@ -16,7 +16,7 @@ The program currently generates random hands for a various number of players, co
 hands against eachother, displays hands of similar strengths, then finally announces
 the winning hand after breaking all ties.
 OR
-If the hand is not is not complete and has less than 5 community cards, it program will calculate
+If the hand is not complete and has less than 5 community cards, it program will calculate
 the odds of the hand winning. Then it displays each hand's chance of winning.
 
 
