@@ -1,7 +1,15 @@
-from SolvePokerHands import *
+# from SolvePokerHands import *
+# from Probability.Probability import Probability
+# from Table import Deck
 
-# __main__.py
-# start of specified tests
+# import sys
+# sys.stdout = open('DebugTests.txt', 'w')
+
+# ===============================================================
+# ===============================================================
+# start of specified tests in # HandCompare.py
+# ===============================================================
+# ===============================================================
 
 # test hand bug (Seat position is incorrect)
 # preflop_cards = [[Card('h', 3), Card('c', 13)], [Card('s', 12), Card('s', 9)], [Card('d', 6), Card('d', 5)],
@@ -36,7 +44,7 @@ from SolvePokerHands import *
 # [Card('c', 4), Card('h', 8)], [Card('h', 7), Card('c', 8)], [Card('d', 4), Card('d', 1)],
 # [Card('s', 1), Card('s', 4)]]
 # community_cards = [Card('h', 1), Card('d', 10), Card('s', 7), Card('s', 13), Card('c', 9)]
-# end of tests
+# end of test
 
 # Bug: Returns incorrect winning hand
 # Fix: card number array needs to remove ace from the low end unless the hand is a straight (Ace-5)
@@ -44,7 +52,7 @@ from SolvePokerHands import *
 # preflop_cards = [[Card('h', 1), Card('s', 1)], [Card('s', 13), Card('c', 9)], [Card('d', 5), Card('c', 6)],
 # [Card('s', 2), Card('d', 11)], [Card('d', 6), Card('h', 11)]]
 # community_cards = [Card('c', 2), Card('d', 8), Card('h', 7)]
-# end of tests
+# end of test
 
 # Keep this bug. Very good for testing. Good way to test seat position
 # Bug: test hand bug (Removes winning straight during tie break)
@@ -57,29 +65,49 @@ from SolvePokerHands import *
 # community_cards = [Card('c', 3), Card('h', 5), Card('c', 4), Card('h', 3), Card('c', 2)]
 # end of test
 
+# =================
 # code to test bugs
+# =================
+
 # print("Preflop cards: " + str(preflop_cards))
 # print("Community cards: " + str(community_cards))
 # winning_hand = HandCompare(preflop_cards, community_cards)
 # winning_hand.print_winning_hand()
 
+# ===============================================================
+# ===============================================================
+# start of specified tests in # Probability.py
+# ===============================================================
+# ===============================================================
 
-# Probability.py
-# start = timeit.default_timer()
-# ch = CurrentHand(3)
-# pre = []
-# dck = []
-# community_cards = []
-# for g in range(0, 5):
-#     community_cards.append(ch.get_card())
-# for g in range(0, len(ch.player_cards)):
-#     pre.append(ch.player_cards[g][1])
-# for x in range(0, len(ch.deck.current_cards)):
-#     dck.append(ch.get_card())
-# calculateProbability = Probability(ch.deck.current_cards, pre, community_cards)
-# calculateProbability.number_of_cards_remaining()
-# stop = timeit.default_timer()
-# print('Time: ', stop - start)
-# calculateProbability.one_card_remaining()
+# Bug: Incorrect odds; Disagrees with two other calculators (which also happen to disagree with each other)
+# preflop_cards = [[Card('s', 10), Card('s', 1)], [Card('h', 7), Card('c', 11)], [Card('c', 13), Card('h', 1)],
+# [Card('s', 6), Card('h', 2)], [Card('d', 11), Card('h', 11)]]
+# community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
+# end of test
 
+# =================
+# code to test bugs
+# =================
 
+# deck = Deck()
+# current_cards = deck.current_cards
+# deck_length = len(current_cards)
+# for x in range(0, len(preflop_cards)):
+#     index = 0
+#     while deck_length > index:
+#         if preflop_cards[x] == current_cards[index]:
+#             current_cards.pop(index)
+#             deck_length -= 1
+#             break
+#         index += 1
+# for y in range(0, len(community_cards)):
+#     index = 0
+#     while deck_length > index:
+#         if preflop_cards[y] == current_cards[index]:
+#             current_cards.pop(index)
+#             deck_length -= 1
+#             break
+#         index += 1
+# Probability(current_cards, preflop_cards, community_cards)
+# print(preflop_cards)

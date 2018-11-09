@@ -11,7 +11,7 @@
 
 # sys.stdout = open('text.txt', 'w')
 
-from Probability.Probabilty import Probability
+from Probability.Probability import Probability
 from CurrentHand import *
 # from SolvePokerHands import *
 import timeit
