@@ -32,11 +32,13 @@ class CurrentHand:
         self.community_cards = []
         self.create_hands()
 
+    # check hand equality
     def __eq__(self, other):
         if not isinstance(other, CurrentHand):
             # Delegate comparison to the other instance's __eq__.
             return NotImplemented
 
+    # check hand inequality
     def __ne__(self, other):
         # By using the == operator, the returned NotImplemented is handled correctly.
         return not self == other

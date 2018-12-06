@@ -1,6 +1,6 @@
-from SolvePokerHands import *
+# from SolvePokerHands import *
 from Probability.Probability import Probability
-from Table import Deck
+from Table import Deck, Card
 
 # import sys
 # sys.stdout = open('DebugTests.txt', 'w')
@@ -12,6 +12,7 @@ from Table import Deck
 # ===============================================================
 
 # test hand bug (Seat position is incorrect)
+# **FIXED**
 # preflop_cards = [[Card('h', 3), Card('c', 13)], [Card('s', 12), Card('s', 9)], [Card('d', 6), Card('d', 5)],
 #                 [Card('d', 13), Card('c', 2)], [Card('h', 4), Card('h', 9)], [Card('s', 1), Card('s', 6)],
 #                 [Card('c', 7), Card('s', 8)], [Card('h', 13), Card('d', 2)], [Card('d', 3), Card('c', 3)],
@@ -80,43 +81,52 @@ from Table import Deck
 # ===============================================================
 # ===============================================================
 
-# Bug: Incorrect odds; Disagrees with two other calculators (which also happen to disagree with each other)
-# preflop_cards = [[Card('s', 10), Card('s', 1)], [Card('h', 7), Card('c', 11)], [Card('c', 13), Card('h', 1)],
-# [Card('s', 6), Card('h', 2)], [Card('d', 11), Card('h', 11)]]
-# community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
+# Bug: Returns the incorrect percentages
+# **FIXED**
+# Bug: Does not credit 6 high straight to win vs wheel
+# **FIXED**
+preflop_cards = [[Card('s', 10), Card('s', 1)], [Card('h', 7), Card('c', 11)], [Card('c', 13), Card('h', 1)],
+[Card('s', 6), Card('h', 2)], [Card('d', 11), Card('h', 11)]]
+community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
 # end of test
 
-# Bug: Incorrect odds; Full house 10s full aces beats Ks full of tens
-# Solution: need to compare the trips cards first
-# Bug (new): Quads returns the wrong winning seat and deletes other hand
-# Expected : 0.40 for ace ten hand. Currently is 1.36
-# error is not in tiebreaks
-preflop_cards = [[Card('h', 10), Card('s', 1)], [Card('c', 13), Card('h', 11)]]
-community_cards = [Card('h', 13), Card('s', 13), Card('c', 10)]
-# end of test
 # =================
 # code to test bugs
 # =================
 
+# initialize deck with all 52 cards
 deck = Deck()
 current_cards = deck.current_cards
 deck_length = len(current_cards)
+
+# remove preflop_cards from deck
 for x in range(0, len(preflop_cards)):
     index = 0
+    second_card = 0
     while deck_length > index:
-        if preflop_cards[x] == current_cards[index]:
-            current_cards.pop(index)
+        if preflop_cards[x][second_card] == current_cards[index]:
+            return_value = current_cards.pop(index)
+            print("Card removed from deck: ", return_value)
             deck_length -= 1
-            break
+            index = -1  # reset to front of deck
+            if second_card:  # end of current hand
+                break
+            second_card = 1  # cycle to second preflop card
         index += 1
+
+# remove community_cards from deck
 for y in range(0, len(community_cards)):
     index = 0
     while deck_length > index:
         if community_cards[y] == current_cards[index]:
-            current_cards.pop(index)
+            return_value = current_cards.pop(index)
+            print("Card removed from deck: ", return_value)
             deck_length -= 1
             break
         index += 1
+print('\n')
+
+# Run Probability on the current cards
 Probability(current_cards, preflop_cards, community_cards)
 print(preflop_cards)
 print(community_cards)

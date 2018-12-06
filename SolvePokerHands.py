@@ -451,14 +451,18 @@ class HandCompare:
                 if self.hand_strength == self.hand_details[y][0]:
                     break_tied_hands.append(self.hand_details[y][1])
                     winning_seats.append(y+1)
-            if hand_occurrences == 2:  # simple case of only 2 tied hands
+
+            # simple case of only 2 tied hands
+            if hand_occurrences == 2:
                 self.best_hand, self.seat_position = self.find_tie_break(break_tied_hands, winning_seats)
                 if self.best_hand is None:
                     self.best_hand = []
                     self.seat_position = []
                     self.best_hand.extend([break_tied_hands[0], break_tied_hands[1]])
                     self.seat_position.extend(winning_seats)
-            else:  # hand_occurrences > 2:
+
+            # hand_occurrences > 2:
+            else:
                 temp = []
                 temp_seat = []
                 first_correct_hand, first_correct_seat = self.find_tie_break([break_tied_hands[0], break_tied_hands[1]],
@@ -514,12 +518,13 @@ class HandCompare:
         hand_to_compare1 = Hand.cards_number_array(tied_hand_details[1])
 
         # cards number array needs to remove high end ace if straight is on the low end
-        if self.hand_strength != 4 or self.hand_strength != 8:  # not straight
+        if self.hand_strength == 4 or self.hand_strength == 8:  # straight or straight flush
+            self.fix_straight(hand_to_compare0[0] == 1 and hand_to_compare0[1] == 1, hand_to_compare0)
+            self.fix_straight(hand_to_compare1[0] == 1 and hand_to_compare0[1] == 1, hand_to_compare1)
+
+        else:  # cards number array needs to remove low end ace if not low end straight
             hand_to_compare0[0] = 0
             hand_to_compare1[0] = 0
-        else:  # cards number array needs to remove low end ace if not low end straight
-            self.fix_straight(hand_to_compare0[0] == 1, hand_to_compare0)
-            self.fix_straight(hand_to_compare1[0] == 1, hand_to_compare1)
 
         # break ties using cards_number_array
         if self.hand_strength == 7:  # quads
@@ -564,9 +569,10 @@ class HandCompare:
                 return tied_hand_details[0], seat_num[0]
             if pair_card1 > pair_card0:
                 return tied_hand_details[1], seat_num[1]
-        else:  # 5 card hand; self.hand_strength != 1,2,3
+        else:  # 5 card hand; self.hand_strength == 4, 5 or 8
             pass
-        # Ace low straights return the wrong result (use fix_straight)
+
+        # Compare high cards
         for x in range(13, 0, -1):
             if hand_to_compare0[x] > hand_to_compare1[x]:
                 return tied_hand_details[0], seat_num[0]
@@ -578,7 +584,9 @@ class HandCompare:
     @staticmethod
     def fix_straight(ace_low_straight, cards):
         if ace_low_straight:
-            cards[13] = 0
+            cards[13] = 0  # remove high end ace
+        else:
+            cards[0] = 0  # remove low end ace
 
     def get_winning_hand(self):
         return self.name

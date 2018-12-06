@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurrentHand.py" beforeDir="false" afterPath="$PROJECT_DIR$/CurrentHand.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DebugTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/DebugTests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DebugTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DebugTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolvePokerHands.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolvePokerHands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Table.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +30,8 @@
       <file leaf-file-name="Table.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-6">
+              <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -35,8 +39,8 @@
       <file leaf-file-name="CurrentHand.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CurrentHand.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="702">
+              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -44,8 +48,8 @@
       <file leaf-file-name="SolvePokerHands.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="460" column="42" lean-forward="true" selection-start-line="460" selection-start-column="42" selection-end-line="460" selection-end-column="42" />
+            <state relative-caret-position="2304">
+              <caret line="579" column="56" lean-forward="true" selection-start-line="579" selection-start-column="56" selection-end-line="579" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -53,8 +57,8 @@
       <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-231">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="-90">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -62,10 +66,12 @@
       <file leaf-file-name="DebugTests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DebugTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="-117">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#32#79#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +80,7 @@
       <file leaf-file-name="Probability.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Probability/Probability.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
+            <state relative-caret-position="2016">
               <caret line="113" selection-start-line="113" selection-end-line="113" />
             </state>
           </provider>
@@ -148,23 +154,23 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_19.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_18.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_20.py" />
-        <option value="$PROJECT_DIR$/Table.py" />
         <option value="$PROJECT_DIR$/HandDict.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_22.py" />
         <option value="$PROJECT_DIR$/PlayGame.py" />
         <option value="$PROJECT_DIR$/Probability/Probabilty.py" />
-        <option value="$PROJECT_DIR$/CurrentHand.py" />
         <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/Probability/Probability.py" />
-        <option value="$PROJECT_DIR$/SolvePokerHands.py" />
+        <option value="$PROJECT_DIR$/Table.py" />
+        <option value="$PROJECT_DIR$/CurrentHand.py" />
         <option value="$PROJECT_DIR$/DebugTests.py" />
+        <option value="$PROJECT_DIR$/SolvePokerHands.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="y" value="7" />
-    <option name="width" value="1026" />
+    <option name="width" value="1051" />
     <option name="height" value="1157" />
   </component>
   <component name="ProjectView">
@@ -176,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;CommandLine" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -319,7 +325,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="7" width="1026" height="1157" extended-state="0" />
+    <frame x="-10" y="7" width="1051" height="1157" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24920802" />
@@ -342,22 +348,22 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4970179" visible="true" weight="0.39022052" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24920802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.5094162" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4970179" visible="true" weight="0.39022052" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5029821" side_tool="true" weight="0.2753346" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5094162" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -555,48 +561,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Probability/Probability.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
+        <state relative-caret-position="2016">
           <caret line="113" selection-start-line="113" selection-end-line="113" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CurrentHand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="702">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__main__.py">
+    <entry file="file://$PROJECT_DIR$/Table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="-6">
+          <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DebugTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+        <state relative-caret-position="-117">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#32#79#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="460" column="42" lean-forward="true" selection-start-line="460" selection-start-column="42" selection-end-line="460" selection-end-column="42" />
+        <state relative-caret-position="2304">
+          <caret line="579" column="56" lean-forward="true" selection-start-line="579" selection-start-column="56" selection-end-line="579" selection-end-column="56" />
         </state>
       </provider>
     </entry>

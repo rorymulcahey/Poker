@@ -83,7 +83,7 @@ class Deck:
                 self.current_cards.append(Card(x, y))
 
 
-class Card:
+class Card(object):
     def __init__(self, suit, number):
         # super().__init__()
         self.suit = suit
@@ -91,7 +91,15 @@ class Card:
 
     def __repr__(self):
         # return self.suit + str(self.num)
+        # return str(self.__dict__)
         return "Card('" + self.suit + "', " + str(self.num) + ")"
+
+    # def __str__(self):
+        # return str(self.__dict__)
+
+    def __eq__(self, other):
+        # return self.__dict__ == other.__dict__
+        return self.num == other.num and self.suit == other.suit
 
 
 if __name__ == "__main__":
