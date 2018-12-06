@@ -1,13 +1,13 @@
-# from SolvePokerHands import *
-# from Probability.Probability import Probability
-# from Table import Deck
+from SolvePokerHands import *
+from Probability.Probability import Probability
+from Table import Deck
 
 # import sys
 # sys.stdout = open('DebugTests.txt', 'w')
 
 # ===============================================================
 # ===============================================================
-# start of specified tests in # HandCompare.py
+# start of specified tests in HandCompare.py
 # ===============================================================
 # ===============================================================
 
@@ -86,28 +86,35 @@
 # community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
 # end of test
 
+# Bug: Incorrect odds; Full house 10s full aces beats Ks full of tens
+# Solution: need to compare the trips cards first
+# Bug (new): Quads returns the wrong winning seat and deletes other hand
+preflop_cards = [[Card('h', 10), Card('s', 1)], [Card('c', 13), Card('h', 11)]]
+community_cards = [Card('h', 13), Card('s', 13), Card('c', 10)]
+# end of test
 # =================
 # code to test bugs
 # =================
 
-# deck = Deck()
-# current_cards = deck.current_cards
-# deck_length = len(current_cards)
-# for x in range(0, len(preflop_cards)):
-#     index = 0
-#     while deck_length > index:
-#         if preflop_cards[x] == current_cards[index]:
-#             current_cards.pop(index)
-#             deck_length -= 1
-#             break
-#         index += 1
-# for y in range(0, len(community_cards)):
-#     index = 0
-#     while deck_length > index:
-#         if preflop_cards[y] == current_cards[index]:
-#             current_cards.pop(index)
-#             deck_length -= 1
-#             break
-#         index += 1
-# Probability(current_cards, preflop_cards, community_cards)
-# print(preflop_cards)
+deck = Deck()
+current_cards = deck.current_cards
+deck_length = len(current_cards)
+for x in range(0, len(preflop_cards)):
+    index = 0
+    while deck_length > index:
+        if preflop_cards[x] == current_cards[index]:
+            current_cards.pop(index)
+            deck_length -= 1
+            break
+        index += 1
+for y in range(0, len(community_cards)):
+    index = 0
+    while deck_length > index:
+        if community_cards[y] == current_cards[index]:
+            current_cards.pop(index)
+            deck_length -= 1
+            break
+        index += 1
+Probability(current_cards, preflop_cards, community_cards)
+print(preflop_cards)
+print(community_cards)

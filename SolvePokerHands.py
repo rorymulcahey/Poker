@@ -512,19 +512,38 @@ class HandCompare:
     def find_tie_break(self, tied_hand_details, seat_num):
         hand_to_compare0 = Hand.cards_number_array(tied_hand_details[0])
         hand_to_compare1 = Hand.cards_number_array(tied_hand_details[1])
+
         # cards number array needs to remove high end ace if straight is on the low end
-        if self.hand_strength == 4:  # straight
-            self.fix_straight(hand_to_compare0[0] == 1, hand_to_compare0)
-            self.fix_straight(hand_to_compare1[0] == 1, hand_to_compare1)
-        else:  # cards number array needs to remove low end ace if not low end straight
+        if self.hand_strength != 4 or self.hand_strength != 8:  # not straight
             hand_to_compare0[0] = 0
             hand_to_compare1[0] = 0
+        else:  # cards number array needs to remove low end ace if not low end straight
+            self.fix_straight(hand_to_compare0[0] == 1, hand_to_compare0)
+            self.fix_straight(hand_to_compare1[0] == 1, hand_to_compare1)
+
+        # break ties using cards_number_array
         if self.hand_strength == 7:  # quads
             quad_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 4]
             quad_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 4]
+            print(quad_card1)
+            print(quad_card0)
             if quad_card0 > quad_card1:
                 return tied_hand_details[0], seat_num[0]
             if quad_card1 > quad_card0:
+                return tied_hand_details[1], seat_num[1]
+            print("Error here")
+        elif self.hand_strength == 6:  # full house
+            trip_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 3]
+            trip_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 3]
+            if trip_card0 > trip_card1:
+                return tied_hand_details[0], seat_num[0]
+            if trip_card1 > trip_card0:
+                return tied_hand_details[1], seat_num[1]
+            pair_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 2]
+            pair_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 2]
+            if pair_card0 > pair_card1:
+                return tied_hand_details[0], seat_num[0]
+            if pair_card1 > pair_card0:
                 return tied_hand_details[1], seat_num[1]
         elif self.hand_strength == 3:  # trips
             trip_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 3]
@@ -548,7 +567,7 @@ class HandCompare:
                 return tied_hand_details[0], seat_num[0]
             if pair_card1 > pair_card0:
                 return tied_hand_details[1], seat_num[1]
-        else:  # 5 card hand; self.hand_strength != 1,2,3,7
+        else:  # 5 card hand; self.hand_strength != 1,2,3
             pass
         # Ace low straights return the wrong result (use fix_straight)
         for x in range(13, 0, -1):

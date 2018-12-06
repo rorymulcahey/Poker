@@ -1,0 +1,5724 @@
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 2)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 3)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 4)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 5)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 6)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 7)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 8)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 9)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Full House: [h10, s1, c10, Card('c', 1), Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 11)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('c', 12)]
+Straight: [Card('c', 1), c13, Card('c', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('c', 1), c13, Card('c', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('c', 1), Card('c', 13)]
+Quads: [c13, h13, s13, Card('c', 1), Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 1), Card('c', 13)]]
+
+
+Full House: [s1, h13, s13, Card('c', 1), Card('s', 1)]
+Full House: [c13, h13, s13, Card('c', 1), Card('s', 1)]
+['Winning hand seat(s): [1]', 'Full House', [s1, h13, s13, Card('c', 1), Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 2)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 3)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 4)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 5)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 6)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 7)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 8)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 9)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Full House: [h10, s1, c10, Card('c', 1), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 1), Card('s', 12)]
+Straight: [Card('c', 1), c13, Card('s', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('c', 1), c13, Card('s', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('c', 1), Card('s', 13)]
+Quads: [c13, h13, s13, Card('c', 1), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 1), Card('s', 13)]]
+
+
+Full House: [s1, h13, s13, Card('d', 1), Card('s', 1)]
+Full House: [c13, h13, s13, Card('d', 1), Card('s', 1)]
+['Winning hand seat(s): [1]', 'Full House', [s1, h13, s13, Card('d', 1), Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 2)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 3)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 4)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 5)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 6)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 7)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 8)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 9)]
+Trips: [c13, h11, h13, s13, Card('d', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 1)]]
+
+
+Full House: [h10, s1, c10, Card('d', 1), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 1), Card('s', 12)]
+Straight: [Card('d', 1), c13, Card('s', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('d', 1), c13, Card('s', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('d', 1), Card('s', 13)]
+Quads: [c13, h13, s13, Card('d', 1), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('d', 1), Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 2)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 3)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 4)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 5)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 6)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 7)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 8)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 9)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Full House: [h10, s1, c10, Card('h', 1), Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 11)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('h', 12)]
+Straight: [Card('h', 1), c13, Card('h', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('h', 1), c13, Card('h', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('h', 1), Card('h', 13)]
+Quads: [c13, h13, s13, Card('h', 1), Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 1), Card('h', 13)]]
+
+
+Full House: [s1, h13, s13, Card('h', 1), Card('s', 1)]
+Full House: [c13, h13, s13, Card('h', 1), Card('s', 1)]
+['Winning hand seat(s): [1]', 'Full House', [s1, h13, s13, Card('h', 1), Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 2)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 3)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 4)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 5)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 6)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 7)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 8)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 9)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Full House: [h10, s1, c10, Card('h', 1), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 1), Card('s', 12)]
+Straight: [Card('h', 1), c13, Card('s', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('h', 1), c13, Card('s', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('h', 1), Card('s', 13)]
+Quads: [c13, h13, s13, Card('h', 1), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 1), Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 2)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 3)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 4)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 5)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 6)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 7)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 8)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 9)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Full House: [h10, s1, c10, Card('s', 1), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('s', 12)]
+Straight: [Card('s', 1), c13, Card('s', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('s', 1), c13, Card('s', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('s', 1), Card('s', 13)]
+Quads: [c13, h13, s13, Card('s', 1), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 1), Card('s', 13)]]
+
+
+Full House: [s1, h13, s13, Card('s', 1), Card('h', 1)]
+Full House: [c13, h13, s13, Card('s', 1), Card('h', 1)]
+['Winning hand seat(s): [1]', 'Full House', [s1, h13, s13, Card('s', 1), Card('h', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 2)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 3)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 4)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 5)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 6)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 7)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 8)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 9)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Full House: [h10, s1, c10, Card('s', 1), Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 11)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 1), Card('h', 12)]
+Straight: [Card('s', 1), c13, Card('h', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('s', 1), c13, Card('h', 12), h11, c10]]
+
+
+Full House: [s1, h13, s13, Card('s', 1), Card('h', 13)]
+Quads: [c13, h13, s13, Card('s', 1), Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 1), Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 2), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 2), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 2), Card('s', 2)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 2), Card('s', 2)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 2), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 2), Card('s', 2)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 2), Card('s', 2)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 2), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 2), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 2), Card('s', 2)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 2), Card('s', 2)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 2), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 2), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 2), Card('h', 2)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 2), Card('h', 2)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 3), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 3), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 3), Card('s', 3)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 3), Card('s', 3)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 3), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 3), Card('s', 3)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 3), Card('s', 3)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 3), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 3), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 3), Card('s', 3)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 3), Card('s', 3)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 3), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 3), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 3), Card('h', 3)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 3), Card('h', 3)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 4), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 4), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 4), Card('s', 4)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 4), Card('s', 4)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 4), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 4), Card('s', 4)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 4), Card('s', 4)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 4), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 4), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 4), Card('s', 4)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 4), Card('s', 4)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 4), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 4), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 4), Card('h', 4)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 4), Card('h', 4)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 5), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 5), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 5), Card('s', 5)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 5), Card('s', 5)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 5), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 5), Card('s', 5)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 5), Card('s', 5)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 5), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 5), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 5), Card('s', 5)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 5), Card('s', 5)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 5), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 5), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 5), Card('h', 5)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 5), Card('h', 5)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 6), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 6), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 6), Card('s', 6)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 6), Card('s', 6)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 6), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 6), Card('s', 6)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 6), Card('s', 6)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 6), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 6), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 6), Card('s', 6)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 6), Card('s', 6)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 6), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 6), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 6), Card('h', 6)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 6), Card('h', 6)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 7), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 7), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 7), Card('s', 7)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 7), Card('s', 7)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 7), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 7), Card('s', 7)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 7), Card('s', 7)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 7), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 7), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 7), Card('s', 7)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 7), Card('s', 7)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 7), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 7), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 7), Card('h', 7)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 7), Card('h', 7)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 8), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 8), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 8), Card('s', 8)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 8), Card('s', 8)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 8), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 8), Card('s', 8)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 8), Card('s', 8)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 8), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 8), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 8), Card('s', 8)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 8), Card('s', 8)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 8), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 8), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 8), Card('h', 8)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 8), Card('h', 8)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 9), Card('c', 1)]
+Trips: [c13, h11, h13, s13, Card('c', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('c', 12), h11, c10, Card('c', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('c', 12), h11, c10, Card('c', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 9), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('c', 9), Card('s', 9)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 9), Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('s', 12), h11, c10, Card('c', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('s', 12), h11, c10, Card('c', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 9), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('d', 9), Card('s', 9)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 9), Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('s', 12), h11, c10, Card('d', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('s', 12), h11, c10, Card('d', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 9), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('h', 12), h11, c10, Card('h', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('h', 12), h11, c10, Card('h', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 9), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('h', 9), Card('s', 9)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 9), Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('s', 12), h11, c10, Card('h', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('s', 12), h11, c10, Card('h', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 9), Card('s', 1)]
+Trips: [c13, h11, h13, s13, Card('s', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('s', 12), h11, c10, Card('s', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('s', 12), h11, c10, Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 9), Card('h', 1)]
+Trips: [c13, h11, h13, s13, Card('h', 1)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 1)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, c10]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h13, s13, Card('s', 9), Card('h', 9)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 9), Card('h', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('h', 12), h11, c10, Card('s', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('h', 12), h11, c10, Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, s1, c10, Card('c', 10), Card('c', 1)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, s1, c10, Card('c', 10), Card('s', 1)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Quads: [h10, s1, c10, Card('c', 10), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [1]', 'Quads', [h10, s1, c10, Card('c', 10), Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, s1, c10, Card('d', 10), Card('s', 1)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Quads: [h10, s1, c10, Card('d', 10), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [1]', 'Quads', [h10, s1, c10, Card('d', 10), Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Full House: [c13, h13, s13, c10, Card('d', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('d', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 10)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, s1, c10, Card('h', 10), Card('h', 1)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, s1, c10, Card('h', 10), Card('s', 1)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Quads: [h10, s1, c10, Card('h', 10), Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [1]', 'Quads', [h10, s1, c10, Card('h', 10), Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, s1, c10, Card('s', 10), Card('s', 1)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, s1, c10, Card('s', 10), Card('h', 1)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Quads: [h10, s1, c10, Card('s', 10), Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [1]', 'Quads', [h10, s1, c10, Card('s', 10), Card('h', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 11), Card('c', 1)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Straight: [s1, h13, Card('c', 12), Card('c', 11), h10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h13, s13, c10, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 11), Card('s', 1)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 11), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Straight: [s1, h13, Card('s', 12), Card('c', 11), h10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, c10, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 11), Card('s', 1)]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 11), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Straight: [s1, h13, Card('s', 12), Card('d', 11), h10]
+Full House: [c13, h11, h13, s13, Card('d', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('d', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, c10, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 11), Card('h', 1)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Straight: [s1, h13, Card('h', 12), Card('h', 11), h10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, c10, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 11), Card('s', 1)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 11), Card('s', 11)]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Straight: [s1, h13, Card('s', 12), Card('h', 11), h10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, c10, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 11), Card('s', 1)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Straight: [s1, h13, Card('s', 12), Card('s', 11), h10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, c10, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 11), Card('h', 1)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 11), Card('h', 11)]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Straight: [s1, h13, Card('h', 12), Card('s', 11), h10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, c10, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 12), Card('c', 1)]
+Straight: [Card('c', 1), c13, Card('c', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('c', 1), c13, Card('c', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('c', 12), h11, c10, Card('c', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('c', 12), h11, c10, Card('c', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 10)]
+Full House: [c13, h13, s13, c10, Card('c', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('c', 10)]]
+
+
+Straight: [s1, h13, Card('c', 12), Card('c', 11), h10]
+Full House: [c13, h11, h13, s13, Card('c', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('c', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h13, s13, Card('c', 12), Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 12), Card('c', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 12), Card('s', 1)]
+Straight: [Card('s', 1), c13, Card('c', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('s', 1), c13, Card('c', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('c', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('c', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('c', 12), h11, c10, Card('s', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('c', 12), h11, c10, Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Straight: [s1, h13, Card('c', 12), Card('s', 11), h10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('c', 12), Card('s', 12)]
+Full House: [c13, h13, s13, Card('c', 12), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('c', 12), Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, Card('c', 12), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 12), Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 12), Card('s', 1)]
+Straight: [Card('s', 1), c13, Card('d', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('s', 1), c13, Card('d', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('d', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('d', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('d', 12), h11, c10, Card('s', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('d', 12), h11, c10, Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Straight: [s1, h13, Card('d', 12), Card('s', 11), h10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('d', 12), Card('s', 12)]
+Full House: [c13, h13, s13, Card('d', 12), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('d', 12), Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, Card('d', 12), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('d', 12), Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 12), Card('h', 1)]
+Straight: [Card('h', 1), c13, Card('h', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('h', 1), c13, Card('h', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('h', 12), h11, c10, Card('h', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('h', 12), h11, c10, Card('h', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Straight: [s1, h13, Card('h', 12), Card('h', 11), h10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, Card('h', 12), Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 12), Card('h', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 12), Card('s', 1)]
+Straight: [Card('s', 1), c13, Card('h', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('s', 1), c13, Card('h', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('h', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('h', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('h', 12), h11, c10, Card('s', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('h', 12), h11, c10, Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Straight: [s1, h13, Card('h', 12), Card('s', 11), h10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('h', 12), Card('s', 12)]
+Full House: [c13, h13, s13, Card('h', 12), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('h', 12), Card('s', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, Card('h', 12), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 12), Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 12), Card('s', 1)]
+Straight: [Card('s', 1), c13, Card('s', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('s', 1), c13, Card('s', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('s', 12), h11, c10, Card('s', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('s', 12), h11, c10, Card('s', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 10)]
+Full House: [c13, h13, s13, c10, Card('s', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('s', 10)]]
+
+
+Straight: [s1, h13, Card('s', 12), Card('s', 11), h10]
+Full House: [c13, h11, h13, s13, Card('s', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('s', 11)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, Card('s', 12), Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 12), Card('s', 13)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 12), Card('h', 1)]
+Straight: [Card('h', 1), c13, Card('s', 12), h11, c10]
+['Winning hand seat(s): [2]', 'Straight', [Card('h', 1), c13, Card('s', 12), h11, c10]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Trips: [c13, h11, h13, s13, Card('s', 12)]
+['Winning hand seat(s): [2]', 'Trips', [c13, h11, h13, s13, Card('s', 12)]]
+
+
+Two Pair: [h10, s1, h13, s13, c10]
+Straight: [c13, Card('s', 12), h11, c10, Card('h', 9)]
+['Winning hand seat(s): [2]', 'Straight', [c13, Card('s', 12), h11, c10, Card('h', 9)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 10)]
+Full House: [c13, h13, s13, c10, Card('h', 10)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, c10, Card('h', 10)]]
+
+
+Straight: [s1, h13, Card('s', 12), Card('h', 11), h10]
+Full House: [c13, h11, h13, s13, Card('h', 11)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h11, h13, s13, Card('h', 11)]]
+
+
+Two Pair: [s1, h13, s13, Card('s', 12), Card('h', 12)]
+Full House: [c13, h13, s13, Card('s', 12), Card('h', 12)]
+['Winning hand seat(s): [2]', 'Full House', [c13, h13, s13, Card('s', 12), Card('h', 12)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, Card('s', 12), Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 12), Card('h', 13)]]
+
+
+Full House: [s1, h13, s13, Card('c', 13), Card('c', 1)]
+Quads: [c13, h13, s13, Card('c', 13), Card('c', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 13), Card('c', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h13, s13, c10, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h13, s13, Card('c', 13), Card('c', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 13), Card('c', 12)]]
+
+
+Full House: [s1, h13, s13, Card('c', 13), Card('s', 1)]
+Quads: [c13, h13, s13, Card('c', 13), Card('s', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 13), Card('s', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h11, h13, s13, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h13, s13, c10, Card('c', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('c', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('c', 13)]
+Quads: [c13, h13, s13, Card('c', 13), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('c', 13), Card('s', 12)]]
+
+
+Quads: [s1, h13, s13, Card('c', 13), Card('s', 13)]
+High Card: None
+['Winning hand seat(s): [1]', 'Quads', [s1, h13, s13, Card('c', 13), Card('s', 13)]]
+
+
+Full House: [s1, h13, s13, Card('d', 13), Card('s', 1)]
+Quads: [c13, h13, s13, Card('d', 13), Card('s', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('d', 13), Card('s', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h11, h13, s13, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h13, s13, c10, Card('d', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('d', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('d', 13)]
+Quads: [c13, h13, s13, Card('d', 13), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('d', 13), Card('s', 12)]]
+
+
+Quads: [s1, h13, s13, Card('d', 13), Card('s', 13)]
+High Card: None
+['Winning hand seat(s): [1]', 'Quads', [s1, h13, s13, Card('d', 13), Card('s', 13)]]
+
+
+Full House: [s1, h13, s13, Card('h', 13), Card('h', 1)]
+Quads: [c13, h13, s13, Card('h', 13), Card('h', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 13), Card('h', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, c10, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, Card('h', 13), Card('h', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 13), Card('h', 12)]]
+
+
+Full House: [s1, h13, s13, Card('h', 13), Card('s', 1)]
+Quads: [c13, h13, s13, Card('h', 13), Card('s', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 13), Card('s', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h11, h13, s13, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, c10, Card('h', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('h', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('h', 13)]
+Quads: [c13, h13, s13, Card('h', 13), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('h', 13), Card('s', 12)]]
+
+
+Quads: [s1, h13, s13, Card('h', 13), Card('s', 13)]
+High Card: None
+['Winning hand seat(s): [1]', 'Quads', [s1, h13, s13, Card('h', 13), Card('s', 13)]]
+
+
+Full House: [s1, h13, s13, Card('s', 13), Card('s', 1)]
+Quads: [c13, h13, s13, Card('s', 13), Card('s', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 13), Card('s', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, c10, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, Card('s', 13), Card('s', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 13), Card('s', 12)]]
+
+
+Full House: [s1, h13, s13, Card('s', 13), Card('h', 1)]
+Quads: [c13, h13, s13, Card('s', 13), Card('h', 1)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 13), Card('h', 1)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h11, h13, s13, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h11, h13, s13, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, c10, Card('s', 13)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, c10, Card('s', 13)]]
+
+
+Full House: [h10, h13, s13, c10, Card('s', 13)]
+Quads: [c13, h13, s13, Card('s', 13), Card('h', 12)]
+['Winning hand seat(s): [2]', 'Quads', [c13, h13, s13, Card('s', 13), Card('h', 12)]]
+
+
+Quads: [s1, h13, s13, Card('s', 13), Card('h', 13)]
+High Card: None
+['Winning hand seat(s): [1]', 'Quads', [s1, h13, s13, Card('s', 13), Card('h', 13)]]
+
+
+Winning chances: [1.36, 98.64]
+Drawing chances: [0.0, 0.0]
+[[h10, s1], [c13, h11]]
+[h13, s13, c10]
