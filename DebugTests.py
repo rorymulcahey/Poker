@@ -89,6 +89,8 @@ from Table import Deck
 # Bug: Incorrect odds; Full house 10s full aces beats Ks full of tens
 # Solution: need to compare the trips cards first
 # Bug (new): Quads returns the wrong winning seat and deletes other hand
+# Expected : 0.40 for ace ten hand. Currently is 1.36
+# error is not in tiebreaks
 preflop_cards = [[Card('h', 10), Card('s', 1)], [Card('c', 13), Card('h', 11)]]
 community_cards = [Card('h', 13), Card('s', 13), Card('c', 10)]
 # end of test

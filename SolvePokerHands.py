@@ -525,13 +525,10 @@ class HandCompare:
         if self.hand_strength == 7:  # quads
             quad_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 4]
             quad_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 4]
-            print(quad_card1)
-            print(quad_card0)
             if quad_card0 > quad_card1:
                 return tied_hand_details[0], seat_num[0]
             if quad_card1 > quad_card0:
                 return tied_hand_details[1], seat_num[1]
-            print("Error here")
         elif self.hand_strength == 6:  # full house
             trip_card0 = [i for i, x in enumerate(hand_to_compare0) if x == 3]
             trip_card1 = [i for i, x in enumerate(hand_to_compare1) if x == 3]
