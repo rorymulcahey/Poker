@@ -9,13 +9,14 @@
 import sys
 from PyQt4 import QtCore, QtGui
 from Table import Deck, Card
-
+from DebugTests import Debug
 
 class MyApp(QtGui.QMainWindow):
     def __init__(self, parent=None):
         QtGui.QWidget.__init__(self, parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.listify_comboboxes()
 
 
 try:
@@ -39,9 +40,59 @@ class Ui_MainWindow(object):
         self.deck = Deck()
         self.cards = self.deck.current_cards
         self.current_cards = self.deck.card_to_string(self.cards)
+        self.debug = Debug()
+        self.has_hand = [None] * 20
+        self.comboboxes = []
+
+    def listify_comboboxes(self):
+        self.comboboxes.append(self.Hand1_Card1)
+        self.comboboxes.append(self.Hand1_Card2)
+        self.comboboxes.append(self.Hand2_Card1)
+        self.comboboxes.append(self.Hand2_Card2)
+        self.comboboxes.append(self.Hand3_Card1)
+        self.comboboxes.append(self.Hand3_Card2)
+        self.comboboxes.append(self.Hand4_Card1)
+        self.comboboxes.append(self.Hand4_Card2)
+        self.comboboxes.append(self.Hand5_Card1)
+        self.comboboxes.append(self.Hand5_Card2)
+        self.comboboxes.append(self.Hand6_Card1)
+        self.comboboxes.append(self.Hand6_Card2)
+        self.comboboxes.append(self.Hand7_Card1)
+        self.comboboxes.append(self.Hand7_Card2)
+        self.comboboxes.append(self.Hand8_Card1)
+        self.comboboxes.append(self.Hand8_Card2)
+        self.comboboxes.append(self.Hand9_Card1)
+        self.comboboxes.append(self.Hand9_Card2)
+        self.comboboxes.append(self.Hand10_Card1)
+        self.comboboxes.append(self.Hand10_Card2)
+        self.comboboxes.append(self.Flop_Card1)
+        self.comboboxes.append(self.Flop_Card2)
+        self.comboboxes.append(self.Flop_Card3)
+        self.comboboxes.append(self.Turn_Card)
+        self.comboboxes.append(self.River_Card)
+        self.setup_comboboxes()
 
     def print_combobox_value(self, index):
         print(self.cards[index])
+
+    def import_data(self):
+        for x in range(0, 10):
+            if self.has_hand[2*x] and self.has_hand[2*x + 1]:
+                pass  # insert cards
+        print(self.debug.current_cards)
+
+    def setup_comboboxes(self):
+        for cb in self.comboboxes:
+            cb.addItems(self.current_cards)
+            cb.currentIndexChanged.connect(self.print_combobox_value)  # index of combobox
+
+    def update_comboboxes(self):
+        pass
+
+    def clear_comboboxes(self):
+        for cb in self.comboboxes:
+            cb.clear()
+        self.setup_comboboxes()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -80,16 +131,19 @@ class Ui_MainWindow(object):
 
         self.Hand1_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand1_Card1.setObjectName(_fromUtf8("Hand1_Card1"))
-        self.Hand1_Card1.addItems(self.current_cards)
-        self.Hand1_Card1.itemData(1)  # returns Qvariant obj; returns data for the item in the combobox
-        self.Hand1_Card1.currentIndexChanged.connect(self.print_combobox_value)
-        print(self.Hand1_Card1.itemText(1))  # print second (c2) item in list
+        # self.Hand1_Card1.addItems(self.current_cards)
+        # self.Hand1_Card1.itemData(1)  # returns Qvariant obj; returns data for the item in the combobox
+        # self.Hand1_Card1.currentIndexChanged.connect(self.print_combobox_value)
+        if self.Hand1_Card1.activated:
+            self.has_hand[0] = 1
+            print(self.has_hand)
+        print(self.Hand1_Card1.itemText(11))  # print second (c2) item in list
         self.horizontalLayout.addWidget(self.Hand1_Card1)
 
 
         self.Hand1_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand1_Card2.setObjectName(_fromUtf8("Hand1_Card2"))
-        self.Hand1_Card2.addItems(self.current_cards)
+        # self.Hand1_Card2.addItems(self.current_cards)
         self.horizontalLayout.addWidget(self.Hand1_Card2)
 
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -330,7 +384,7 @@ class Ui_MainWindow(object):
         self.groupBox_4.setGeometry(QtCore.QRect(20, 180, 161, 71))
         self.groupBox_4.setObjectName(_fromUtf8("groupBox_4"))
         self.horizontalLayoutWidget_16 = QtGui.QWidget(self.groupBox_4)
-        self.horizontalLayoutWidget_16.setGeometry(QtCore.QRect(70, 20, 81, 21))
+        self.horizontalLayoutWidget_16.setGeometry(QtCore.QRect(70, 10, 81, 30))
         self.horizontalLayoutWidget_16.setObjectName(_fromUtf8("horizontalLayoutWidget_16"))
         self.horizontalLayout_26 = QtGui.QHBoxLayout(self.horizontalLayoutWidget_16)
         self.horizontalLayout_26.setObjectName(_fromUtf8("horizontalLayout_26"))
@@ -338,7 +392,7 @@ class Ui_MainWindow(object):
         self.label_19.setObjectName(_fromUtf8("label_19"))
         self.horizontalLayout_26.addWidget(self.label_19)
         self.layoutWidget_2 = QtGui.QWidget(self.groupBox_4)
-        self.layoutWidget_2.setGeometry(QtCore.QRect(60, 40, 91, 31))
+        self.layoutWidget_2.setGeometry(QtCore.QRect(60, 30, 91, 40))
         self.layoutWidget_2.setObjectName(_fromUtf8("layoutWidget_2"))
         self.horizontalLayout_14 = QtGui.QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_14.setObjectName(_fromUtf8("horizontalLayout_14"))
@@ -350,14 +404,12 @@ class Ui_MainWindow(object):
         self.horizontalLayoutWidget_17.setObjectName(_fromUtf8("horizontalLayoutWidget_17"))
         self.horizontalLayout_27 = QtGui.QHBoxLayout(self.horizontalLayoutWidget_17)
         self.horizontalLayout_27.setObjectName(_fromUtf8("horizontalLayout_27"))
-        self.label_22 = QtGui.QLabel(self.horizontalLayoutWidget_17)
-        self.label_22.setObjectName(_fromUtf8("label_22"))
-        self.horizontalLayout_27.addWidget(self.label_22)
+
         self.groupBox_3 = QtGui.QGroupBox(self.groupBox_5)
         self.groupBox_3.setGeometry(QtCore.QRect(20, 100, 161, 71))
         self.groupBox_3.setObjectName(_fromUtf8("groupBox_3"))
         self.horizontalLayoutWidget_14 = QtGui.QWidget(self.groupBox_3)
-        self.horizontalLayoutWidget_14.setGeometry(QtCore.QRect(70, 20, 81, 21))
+        self.horizontalLayoutWidget_14.setGeometry(QtCore.QRect(70, 10, 81, 30))
         self.horizontalLayoutWidget_14.setObjectName(_fromUtf8("horizontalLayoutWidget_14"))
         self.horizontalLayout_24 = QtGui.QHBoxLayout(self.horizontalLayoutWidget_14)
         self.horizontalLayout_24.setObjectName(_fromUtf8("horizontalLayout_24"))
@@ -365,7 +417,7 @@ class Ui_MainWindow(object):
         self.label_18.setObjectName(_fromUtf8("label_18"))
         self.horizontalLayout_24.addWidget(self.label_18)
         self.layoutWidget = QtGui.QWidget(self.groupBox_3)
-        self.layoutWidget.setGeometry(QtCore.QRect(60, 40, 91, 31))
+        self.layoutWidget.setGeometry(QtCore.QRect(60, 30, 91, 40))
         self.layoutWidget.setObjectName(_fromUtf8("layoutWidget"))
         self.horizontalLayout_13 = QtGui.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_13.setObjectName(_fromUtf8("horizontalLayout_13"))
@@ -377,9 +429,6 @@ class Ui_MainWindow(object):
         self.horizontalLayoutWidget_15.setObjectName(_fromUtf8("horizontalLayoutWidget_15"))
         self.horizontalLayout_25 = QtGui.QHBoxLayout(self.horizontalLayoutWidget_15)
         self.horizontalLayout_25.setObjectName(_fromUtf8("horizontalLayout_25"))
-        self.label_21 = QtGui.QLabel(self.horizontalLayoutWidget_15)
-        self.label_21.setObjectName(_fromUtf8("label_21"))
-        self.horizontalLayout_25.addWidget(self.label_21)
         self.layoutWidget.raise_()
         self.horizontalLayoutWidget_15.raise_()
         self.horizontalLayoutWidget_14.raise_()
@@ -401,7 +450,7 @@ class Ui_MainWindow(object):
         self.label_14.setObjectName(_fromUtf8("label_14"))
         self.horizontalLayout_22.addWidget(self.label_14)
         self.layoutWidget_3 = QtGui.QWidget(self.groupBox_2)
-        self.layoutWidget_3.setGeometry(QtCore.QRect(60, 40, 281, 31))
+        self.layoutWidget_3.setGeometry(QtCore.QRect(60, 30, 281, 38))
         self.layoutWidget_3.setObjectName(_fromUtf8("layoutWidget_3"))
         self.horizontalLayout_12 = QtGui.QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_12.setObjectName(_fromUtf8("horizontalLayout_12"))
@@ -419,20 +468,22 @@ class Ui_MainWindow(object):
         self.horizontalLayoutWidget_13.setObjectName(_fromUtf8("horizontalLayoutWidget_13"))
         self.horizontalLayout_23 = QtGui.QHBoxLayout(self.horizontalLayoutWidget_13)
         self.horizontalLayout_23.setObjectName(_fromUtf8("horizontalLayout_23"))
-        self.label_17 = QtGui.QLabel(self.horizontalLayoutWidget_13)
-        self.label_17.setObjectName(_fromUtf8("label_17"))
-        self.horizontalLayout_23.addWidget(self.label_17)
         self.horizontalLayoutWidget = QtGui.QWidget(self.centralwidget)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(570, 400, 160, 40))
         self.horizontalLayoutWidget.setObjectName(_fromUtf8("horizontalLayoutWidget"))
         self.horizontalLayout_15 = QtGui.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout_15.setObjectName(_fromUtf8("horizontalLayout_15"))
+
         self.Run = QtGui.QPushButton(self.horizontalLayoutWidget)
         self.Run.setObjectName(_fromUtf8("Run"))
         self.horizontalLayout_15.addWidget(self.Run)
+        self.Run.clicked.connect(self.debug.run_tests)  # runs DebugTests.py
+
         self.Clear = QtGui.QPushButton(self.horizontalLayoutWidget)
         self.Clear.setObjectName(_fromUtf8("Clear"))
         self.horizontalLayout_15.addWidget(self.Clear)
+        self.Clear.clicked.connect(self.clear_comboboxes)  # runs DebugTests.py
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 758, 21))
@@ -444,6 +495,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
@@ -466,15 +518,12 @@ class Ui_MainWindow(object):
         self.groupBox_5.setTitle(_translate("MainWindow", "Community Cards", None))
         self.groupBox_4.setTitle(_translate("MainWindow", "River", None))
         self.label_19.setText(_translate("MainWindow", "Card ", None))
-        self.label_22.setText(_translate("MainWindow", "River", None))
         self.groupBox_3.setTitle(_translate("MainWindow", "Turn", None))
         self.label_18.setText(_translate("MainWindow", "Card ", None))
-        self.label_21.setText(_translate("MainWindow", "Turn", None))
         self.groupBox_2.setTitle(_translate("MainWindow", "Flop", None))
         self.label_15.setText(_translate("MainWindow", "Card 1", None))
         self.label_16.setText(_translate("MainWindow", "Card 2", None))
         self.label_14.setText(_translate("MainWindow", "Card 3", None))
-        self.label_17.setText(_translate("MainWindow", "Flop", None))
         self.Run.setText(_translate("MainWindow", "Run", None))
         self.Clear.setText(_translate("MainWindow", "Clear", None))
 

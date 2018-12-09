@@ -1,7 +1,6 @@
 # from SolvePokerHands import *
 from Probability.Probability import Probability
 from Table import Deck, Card
-from PokerUserInterface.pokerUI import Ui_MainWindow
 
 # import sys
 # sys.stdout = open('DebugTests.txt', 'w')
@@ -97,39 +96,62 @@ community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
 # code to test bugs
 # =================
 
-# initialize deck with all 52 cards
-deck = Deck()
-current_cards = deck.current_cards
-deck_length = len(current_cards)
 
-# remove preflop_cards from deck
-for x in range(0, len(preflop_cards)):
-    index = 0
-    second_card = 0
-    while deck_length > index:
-        if preflop_cards[x][second_card] == current_cards[index]:
-            return_value = current_cards.pop(index)
-            print("Card removed from deck: ", return_value)
-            deck_length -= 1
-            index = -1  # reset to front of deck
-            if second_card:  # end of current hand
-                break
-            second_card = 1  # cycle to second preflop card
-        index += 1
+# To do:
+# on button click, collect all the preflop and community cards
+# need a way to only
+# preflop_cards = get_preflop_cards()
+# community_cards = get_community_cards()
+# self.Run.clicked.connect(self.debug.run_tests)  # runs pokerUI.py
 
-# remove community_cards from deck
-for y in range(0, len(community_cards)):
-    index = 0
-    while deck_length > index:
-        if community_cards[y] == current_cards[index]:
-            return_value = current_cards.pop(index)
-            print("Card removed from deck: ", return_value)
-            deck_length -= 1
-            break
-        index += 1
-print('\n')
+
+class Debug:
+    def __init__(self):
+        # initialize deck with all 52 cards
+        self.deck = Deck()
+        self.current_cards = self.deck.current_cards
+        self.deck_length = len(self.current_cards)
+        self.preflop_cards = []
+        self.community_cards = []
+
+    def run_debug_tests(self):
+        self.preflop_cards = preflop_cards
+        self.community_cards = community_cards
+        self.run_tests()
+
+    def run_tests(self):
+
+        # remove preflop_cards from deck
+        for x in range(0, len(self.preflop_cards)):
+            index = 0
+            second_card = 0
+            while self.deck_length > index:
+                if self.preflop_cards[x][second_card] == self.current_cards[index]:
+                    return_value = self.current_cards.pop(index)
+                    print("Card removed from deck: ", return_value)
+                    self.deck_length -= 1
+                    index = -1  # reset to front of deck
+                    if second_card:  # end of current hand
+                        break
+                    second_card = 1  # cycle to second preflop card
+                index += 1
+
+        # remove community_cards from deck
+        for y in range(0, len(self.community_cards)):
+            index = 0
+            while self.deck_length > index:
+                if self.community_cards[y] == self.current_cards[index]:
+                    return_value = self.current_cards.pop(index)
+                    print("Card removed from deck: ", return_value)
+                    self.deck_length -= 1
+                    break
+                index += 1
+        print('\n')
+        Probability(self.current_cards, self.preflop_cards, self.community_cards)
+        print(self.preflop_cards)
+        print(self.community_cards)
+
 
 # Run Probability on the current cards
-Probability(current_cards, preflop_cards, community_cards)
-print(preflop_cards)
-print(community_cards)
+# dbug = Debug()
+# dbug.run_debug_tests()
