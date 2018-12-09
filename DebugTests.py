@@ -1,7 +1,8 @@
 # from SolvePokerHands import *
 from Probability.Probability import Probability
 from Table import Deck, Card
-from PokerUserInterface.pokerUI import
+from PokerUserInterface.pokerUI import Ui_MainWindow
+
 # import sys
 # sys.stdout = open('DebugTests.txt', 'w')
 

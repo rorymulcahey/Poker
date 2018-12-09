@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DebugTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/DebugTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokerUserInterface/SimpleGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/SimpleGUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Table.py" afterDir="false" />
-    </list>
+    <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,14 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DebugTests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DebugTests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DebugTests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-              <folding>
-                <element signature="e#32#79#0" expanded="true" />
-              </folding>
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -85,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PokerUI-2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PokerUI-2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokerUserInterface/PokerUI-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="476">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
               <folding>
                 <element signature="e#196#206#0" expanded="true" />
               </folding>
@@ -639,23 +631,20 @@
         <state relative-caret-position="-1607" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DebugTests.py">
+    <entry file="file://$PROJECT_DIR$/PokerUserInterface/PokerUI-2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        <state relative-caret-position="476">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
           <folding>
-            <element signature="e#32#79#0" expanded="true" />
+            <element signature="e#196#206#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokerUserInterface/PokerUI-2.py">
+    <entry file="file://$PROJECT_DIR$/DebugTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="19" />
-          <folding>
-            <element signature="e#196#206#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
