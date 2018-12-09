@@ -1,6 +1,6 @@
 import sys
 from PyQt4 import QtGui, QtCore
-from PokerHands_V2 import *
+from __main__ import *
 # from PokerHands import *
 
 
@@ -51,7 +51,7 @@ class Window(QtGui.QMainWindow):
         # btn.move(450, 270)
 
         btn = QtGui.QPushButton("Run", self)
-        btn.clicked.connect(main)
+        btn.clicked.connect(self.close_application)
         btn.resize(btn.minimumSizeHint())
         btn.move(450, 270)
 

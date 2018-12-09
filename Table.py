@@ -78,9 +78,19 @@ class Deck:
 
     def create_deck(self):
         self.current_cards = []
-        for y in range(1, 14):
-            for x in ['c', 'd', 'h', 's']:
+        # for y in range(1, 14):
+        #     for x in ['c', 'd', 'h', 's']:
+        #         self.current_cards.append(Card(x, y))
+        for x in ['c', 'd', 'h', 's']:
+            for y in range(1, 14):
                 self.current_cards.append(Card(x, y))
+
+    def card_to_string(self, cards):
+        # self.current_cards = []
+        string_cards = []
+        for x in range(0, len(cards)):
+            string_cards.append(str(cards[x].suit) + str(cards[x].num))
+        return string_cards
 
 
 class Card(object):

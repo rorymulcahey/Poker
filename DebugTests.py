@@ -1,7 +1,7 @@
 # from SolvePokerHands import *
 from Probability.Probability import Probability
 from Table import Deck, Card
-
+from PokerUserInterface.pokerUI import
 # import sys
 # sys.stdout = open('DebugTests.txt', 'w')
 
@@ -81,6 +81,7 @@ from Table import Deck, Card
 # ===============================================================
 # ===============================================================
 
+# Keep for tough tests
 # Bug: Returns the incorrect percentages
 # **FIXED**
 # Bug: Does not credit 6 high straight to win vs wheel
@@ -88,6 +89,7 @@ from Table import Deck, Card
 preflop_cards = [[Card('s', 10), Card('s', 1)], [Card('h', 7), Card('c', 11)], [Card('c', 13), Card('h', 1)],
 [Card('s', 6), Card('h', 2)], [Card('d', 11), Card('h', 11)]]
 community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
+# expected-- Winning chances: [5.8, 5.26, 19.3, 20.51, 49.12]
 # end of test
 
 # =================
