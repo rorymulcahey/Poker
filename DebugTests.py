@@ -113,14 +113,20 @@ class Debug:
         self.deck_length = len(self.current_cards)
         self.preflop_cards = []
         self.community_cards = []
+        self.stats = None
 
     def run_debug_tests(self):
         self.preflop_cards = preflop_cards
         self.community_cards = community_cards
         self.run_tests()
 
-    def run_tests(self):
+    def new_deck(self):
+        self.deck = Deck()
+        self.current_cards = self.deck.current_cards
+        self.deck_length = len(self.current_cards)
 
+    def run_tests(self):
+        self.new_deck()
         # remove preflop_cards from deck
         for x in range(0, len(self.preflop_cards)):
             index = 0
@@ -147,7 +153,7 @@ class Debug:
                     break
                 index += 1
         print('\n')
-        Probability(self.current_cards, self.preflop_cards, self.community_cards)
+        self.stats = Probability(self.current_cards, self.preflop_cards, self.community_cards)
         print(self.preflop_cards)
         print(self.community_cards)
 

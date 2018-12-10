@@ -6,10 +6,16 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+# To do list:
+# 1- finish run button by sending cards to debugtests
+# 2- update comboboxes to not have duplicate results
+# 3-
+
 import sys
 from PyQt4 import QtCore, QtGui
 from Table import Deck, Card
 from DebugTests import Debug
+
 
 class MyApp(QtGui.QMainWindow):
     def __init__(self, parent=None):
@@ -27,6 +33,7 @@ except AttributeError:
 
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
@@ -43,6 +50,9 @@ class Ui_MainWindow(object):
         self.debug = Debug()
         self.has_hand = [None] * 20
         self.comboboxes = []
+        self.user_input_cards = []
+        self.seat_numbers = []
+        self.probs = []
 
     def listify_comboboxes(self):
         self.comboboxes.append(self.Hand1_Card1)
@@ -73,26 +83,66 @@ class Ui_MainWindow(object):
         self.setup_comboboxes()
 
     def print_combobox_value(self, index):
-        print(self.cards[index])
+        if index != 0:
+            print(self.cards[index-1])
+            # print(cb.itemData(2, 0)) # first arg: index of cb list, second arg: use 0 for string return value
 
     def import_data(self):
+        self.debug.preflop_cards = []
+        self.debug.community_cards = []
         for x in range(0, 10):
-            if self.has_hand[2*x] and self.has_hand[2*x + 1]:
-                pass  # insert cards
-        print(self.debug.current_cards)
+            if self.user_input_cards[2*x] != 0 and self.user_input_cards[2*x + 1] != 0:
+                # print(self.comboboxes[2*x].currentIndex() - 1)
+                self.debug.preflop_cards.append([self.cards[self.user_input_cards[2*x] - 1],
+                                                self.cards[self.user_input_cards[2*x + 1] - 1]])  # insert cards
+                self.seat_numbers.append(x + 1)
+        for y in range(20, 25):  # loop all 5 cards
+            if self.user_input_cards[y] != 0:
+                self.debug.community_cards.append(self.cards[self.user_input_cards[y] - 1])
 
     def setup_comboboxes(self):
         for cb in self.comboboxes:
+            cb.addItems(' ')
             cb.addItems(self.current_cards)
             cb.currentIndexChanged.connect(self.print_combobox_value)  # index of combobox
+            # to send currentIndexChanged as a string
+            # https://stackoverflow.com/questions/23116763/pyqt-how-to-connect-qcombobox-to-function-with-arguments
 
-    def update_comboboxes(self):
-        pass
+            # cb.setDuplicatesEnabled(False)  # dont know how this works
+
+        # print(self.Hand1_Card1.itemText(1))  # print second (c1) item in list
+
+    def update_comboboxes(self, hand_card):
+        cb.removeItem(1)  # could be used to update the combobox but requires grabbing string; might be
+        cb.setItemData(1, 'c1', 0)  # tricky bringing back items that have been removed as well.
+        self.get_user_cards()
+        if hand_card.activated:
+            self.has_hand[0] = 1
+            print(self.has_hand)
+
+    def get_user_cards(self):
+        self.user_input_cards = []
+        for cb in self.comboboxes:
+            self.user_input_cards.append(cb.currentIndex())
+        print(self.user_input_cards)
 
     def clear_comboboxes(self):
         for cb in self.comboboxes:
-            cb.clear()
-        self.setup_comboboxes()
+            cb.setCurrentIndex(0)
+        self.Hand1_Prob.clear()
+            # cb.clear()  # Bug: Creates an extra combobox val for every click
+        # self.setup_comboboxes()
+
+    def set_probabilities(self):
+        self.probs = self.debug.stats.winning_chances
+        self.Hand1_Prob.setText(str(self.probs[0]) + ' %')
+
+    def run_program(self):
+        self.get_user_cards()
+        self.import_data()
+        self.debug.run_tests()
+        self.set_probabilities()
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -110,6 +160,7 @@ class Ui_MainWindow(object):
         self.groupBox_6 = QtGui.QGroupBox(self.centralwidget)
         self.groupBox_6.setGeometry(QtCore.QRect(370, 350, 171, 80))
         self.groupBox_6.setObjectName(_fromUtf8("groupBox_6"))
+
         self.ErrorMsg = QtGui.QTextBrowser(self.groupBox_6)
         self.ErrorMsg.setGeometry(QtCore.QRect(10, 20, 151, 51))
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -118,6 +169,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.ErrorMsg.sizePolicy().hasHeightForWidth())
         self.ErrorMsg.setSizePolicy(sizePolicy)
         self.ErrorMsg.setObjectName(_fromUtf8("ErrorMsg"))
+
         self.groupBox = QtGui.QGroupBox(self.centralwidget)
         self.groupBox.setGeometry(QtCore.QRect(10, 70, 351, 361))
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
@@ -134,10 +186,6 @@ class Ui_MainWindow(object):
         # self.Hand1_Card1.addItems(self.current_cards)
         # self.Hand1_Card1.itemData(1)  # returns Qvariant obj; returns data for the item in the combobox
         # self.Hand1_Card1.currentIndexChanged.connect(self.print_combobox_value)
-        if self.Hand1_Card1.activated:
-            self.has_hand[0] = 1
-            print(self.has_hand)
-        print(self.Hand1_Card1.itemText(11))  # print second (c2) item in list
         self.horizontalLayout.addWidget(self.Hand1_Card1)
 
 
@@ -149,10 +197,11 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.horizontalLayout_5 = QtGui.QHBoxLayout()
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
+
         self.Hand2_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand2_Card1.setObjectName(_fromUtf8("Hand2_Card1"))
-
         self.horizontalLayout_5.addWidget(self.Hand2_Card1)
+
         self.Hand2_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand2_Card2.setObjectName(_fromUtf8("Hand2_Card2"))
         self.horizontalLayout_5.addWidget(self.Hand2_Card2)
@@ -172,72 +221,94 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout_3)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+
         self.Hand4_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand4_Card1.setObjectName(_fromUtf8("Hand4_Card1"))
         self.horizontalLayout_2.addWidget(self.Hand4_Card1)
+
         self.Hand4_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand4_Card2.setObjectName(_fromUtf8("Hand4_Card2"))
         self.horizontalLayout_2.addWidget(self.Hand4_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.horizontalLayout_9 = QtGui.QHBoxLayout()
         self.horizontalLayout_9.setObjectName(_fromUtf8("horizontalLayout_9"))
+
         self.Hand5_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand5_Card1.setObjectName(_fromUtf8("Hand5_Card1"))
         self.horizontalLayout_9.addWidget(self.Hand5_Card1)
+
         self.Hand5_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand5_Card2.setObjectName(_fromUtf8("Hand5_Card2"))
         self.horizontalLayout_9.addWidget(self.Hand5_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_9)
         self.horizontalLayout_10 = QtGui.QHBoxLayout()
         self.horizontalLayout_10.setObjectName(_fromUtf8("horizontalLayout_10"))
+
         self.Hand6_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand6_Card1.setObjectName(_fromUtf8("Hand6_Card1"))
         self.horizontalLayout_10.addWidget(self.Hand6_Card1)
+
         self.Hand6_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand6_Card2.setObjectName(_fromUtf8("Hand6_Card2"))
         self.horizontalLayout_10.addWidget(self.Hand6_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_10)
         self.horizontalLayout_11 = QtGui.QHBoxLayout()
         self.horizontalLayout_11.setObjectName(_fromUtf8("horizontalLayout_11"))
+
         self.Hand7_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand7_Card1.setObjectName(_fromUtf8("Hand7_Card1"))
         self.horizontalLayout_11.addWidget(self.Hand7_Card1)
+
         self.Hand7_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand7_Card2.setObjectName(_fromUtf8("Hand7_Card2"))
         self.horizontalLayout_11.addWidget(self.Hand7_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_11)
         self.horizontalLayout_4 = QtGui.QHBoxLayout()
         self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
+
         self.Hand8_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand8_Card1.setObjectName(_fromUtf8("Hand8_Card1"))
         self.horizontalLayout_4.addWidget(self.Hand8_Card1)
+
         self.Hand8_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand8_Card2.setObjectName(_fromUtf8("Hand8_Card2"))
         self.horizontalLayout_4.addWidget(self.Hand8_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_4)
         self.horizontalLayout_6 = QtGui.QHBoxLayout()
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
+
         self.Hand9_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand9_Card1.setObjectName(_fromUtf8("Hand9_Card1"))
         self.horizontalLayout_6.addWidget(self.Hand9_Card1)
+
         self.Hand9_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand9_Card2.setObjectName(_fromUtf8("Hand9_Card2"))
         self.horizontalLayout_6.addWidget(self.Hand9_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_6)
         self.horizontalLayout_8 = QtGui.QHBoxLayout()
         self.horizontalLayout_8.setObjectName(_fromUtf8("horizontalLayout_8"))
+
         self.Hand10_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand10_Card1.setObjectName(_fromUtf8("Hand10_Card1"))
         self.horizontalLayout_8.addWidget(self.Hand10_Card1)
+
         self.Hand10_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
         self.Hand10_Card2.setObjectName(_fromUtf8("Hand10_Card2"))
         self.horizontalLayout_8.addWidget(self.Hand10_Card2)
+
         self.verticalLayout.addLayout(self.horizontalLayout_8)
         self.verticalLayoutWidget_2 = QtGui.QWidget(self.groupBox)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(260, 40, 73, 306))
         self.verticalLayoutWidget_2.setObjectName(_fromUtf8("verticalLayoutWidget_2"))
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+
         self.Hand1_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -247,6 +318,7 @@ class Ui_MainWindow(object):
         self.Hand1_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand1_Prob.setObjectName(_fromUtf8("Hand1_Prob"))
         self.verticalLayout_2.addWidget(self.Hand1_Prob)
+
         self.Hand2_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -256,6 +328,7 @@ class Ui_MainWindow(object):
         self.Hand2_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand2_Prob.setObjectName(_fromUtf8("Hand2_Prob"))
         self.verticalLayout_2.addWidget(self.Hand2_Prob)
+
         self.Hand3_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -265,6 +338,7 @@ class Ui_MainWindow(object):
         self.Hand3_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand3_Prob.setObjectName(_fromUtf8("Hand3_Prob"))
         self.verticalLayout_2.addWidget(self.Hand3_Prob)
+
         self.Hand4_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -274,6 +348,7 @@ class Ui_MainWindow(object):
         self.Hand4_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand4_Prob.setObjectName(_fromUtf8("Hand4_Prob"))
         self.verticalLayout_2.addWidget(self.Hand4_Prob)
+
         self.Hand5_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -283,6 +358,7 @@ class Ui_MainWindow(object):
         self.Hand5_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand5_Prob.setObjectName(_fromUtf8("Hand5_Prob"))
         self.verticalLayout_2.addWidget(self.Hand5_Prob)
+
         self.Hand6_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -292,6 +368,7 @@ class Ui_MainWindow(object):
         self.Hand6_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand6_Prob.setObjectName(_fromUtf8("Hand6_Prob"))
         self.verticalLayout_2.addWidget(self.Hand6_Prob)
+
         self.Hand7_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -301,6 +378,7 @@ class Ui_MainWindow(object):
         self.Hand7_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand7_Prob.setObjectName(_fromUtf8("Hand7_Prob"))
         self.verticalLayout_2.addWidget(self.Hand7_Prob)
+
         self.Hand8_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -310,6 +388,7 @@ class Ui_MainWindow(object):
         self.Hand8_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand8_Prob.setObjectName(_fromUtf8("Hand8_Prob"))
         self.verticalLayout_2.addWidget(self.Hand8_Prob)
+
         self.Hand9_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -319,6 +398,7 @@ class Ui_MainWindow(object):
         self.Hand9_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand9_Prob.setObjectName(_fromUtf8("Hand9_Prob"))
         self.verticalLayout_2.addWidget(self.Hand9_Prob)
+
         self.Hand10_Prob = QtGui.QTextBrowser(self.verticalLayoutWidget_2)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -328,6 +408,7 @@ class Ui_MainWindow(object):
         self.Hand10_Prob.setMaximumSize(QtCore.QSize(16777215, 25))
         self.Hand10_Prob.setObjectName(_fromUtf8("Hand10_Prob"))
         self.verticalLayout_2.addWidget(self.Hand10_Prob)
+
         self.horizontalLayoutWidget_7 = QtGui.QWidget(self.groupBox)
         self.horizontalLayoutWidget_7.setGeometry(QtCore.QRect(90, 20, 261, 30))
         self.horizontalLayoutWidget_7.setObjectName(_fromUtf8("horizontalLayoutWidget_7"))
@@ -477,7 +558,7 @@ class Ui_MainWindow(object):
         self.Run = QtGui.QPushButton(self.horizontalLayoutWidget)
         self.Run.setObjectName(_fromUtf8("Run"))
         self.horizontalLayout_15.addWidget(self.Run)
-        self.Run.clicked.connect(self.debug.run_tests)  # runs DebugTests.py
+        self.Run.clicked.connect(self.run_program)  # runs DebugTests.py
 
         self.Clear = QtGui.QPushButton(self.horizontalLayoutWidget)
         self.Clear.setObjectName(_fromUtf8("Clear"))
