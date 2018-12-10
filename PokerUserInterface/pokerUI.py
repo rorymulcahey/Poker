@@ -41,18 +41,33 @@ except AttributeError:
         return QtGui.QApplication.translate(context, text, disambig)
 
 
+class ComboBox(QtGui.QComboBox):
+    new_signal = QtCore.pyqtSignal(int, int, QtGui.QComboBox)
+
+    def __init__(self, parent=None):
+        super(ComboBox, self).__init__(parent)
+        self.lastSelected = 0
+        self.activated[int].connect(self.onActivated)
+
+    def onActivated(self, index):
+        self.new_signal.emit(self.lastSelected, index, self)
+        self.lastSelected = index
+
+
 class Ui_MainWindow(object):
     def __init__(self):
         # initialize deck with all 52 cards
         self.deck = Deck()
         self.cards = self.deck.current_cards
-        self.current_cards = self.deck.card_to_string(self.cards)
-        self.debug = Debug()
-        self.has_hand = [None] * 20
+        self.str_cards = self.deck.card_to_string(self.cards)
+        self.debug = None
         self.comboboxes = []
         self.user_input_cards = []
         self.seat_numbers = []
+        self.hand_probs = []
         self.probs = []
+        self.current_cb = None
+        self.error_msg = ' '
 
     def listify_comboboxes(self):
         self.comboboxes.append(self.Hand1_Card1)
@@ -82,67 +97,143 @@ class Ui_MainWindow(object):
         self.comboboxes.append(self.River_Card)
         self.setup_comboboxes()
 
-    def print_combobox_value(self, index):
-        if index != 0:
-            print(self.cards[index-1])
-            # print(cb.itemData(2, 0)) # first arg: index of cb list, second arg: use 0 for string return value
+    def listify_probabilities(self):
+        self.hand_probs.append(self.Hand1_Prob)
+        self.hand_probs.append(self.Hand2_Prob)
+        self.hand_probs.append(self.Hand3_Prob)
+        self.hand_probs.append(self.Hand4_Prob)
+        self.hand_probs.append(self.Hand5_Prob)
+        self.hand_probs.append(self.Hand6_Prob)
+        self.hand_probs.append(self.Hand7_Prob)
+        self.hand_probs.append(self.Hand8_Prob)
+        self.hand_probs.append(self.Hand9_Prob)
+        self.hand_probs.append(self.Hand10_Prob)
+
+    @staticmethod
+    def print_combobox_value(prev_index, curr_index, current_cb):
+
+        # test to see index values
+        print("Prev card: " + current_cb.itemText(prev_index))  # print prev item in list
+        print("Curr card: " + current_cb.itemText(curr_index))  # print current item in list
+
+    def get_user_cards(self):
+
+        # loop through comboboxes and gather index values
+        self.user_input_cards = []
+        for cb in self.comboboxes:
+            self.user_input_cards.append(cb.currentIndex())
 
     def import_data(self):
+
+        # reset data
+        self.debug = Debug()
         self.debug.preflop_cards = []
         self.debug.community_cards = []
+        self.seat_numbers = []
+
+        # loops through all cards selected in comboboxes
         for x in range(0, 10):
             if self.user_input_cards[2*x] != 0 and self.user_input_cards[2*x + 1] != 0:
-                # print(self.comboboxes[2*x].currentIndex() - 1)
                 self.debug.preflop_cards.append([self.cards[self.user_input_cards[2*x] - 1],
                                                 self.cards[self.user_input_cards[2*x + 1] - 1]])  # insert cards
-                self.seat_numbers.append(x + 1)
-        for y in range(20, 25):  # loop all 5 cards
+                self.seat_numbers.append(x)
+
+        for y in range(20, 23):  # loop all flop cards
+            if self.user_input_cards[y] != 0:
+                self.debug.community_cards.append(self.cards[self.user_input_cards[y] - 1])
+
+        # make sure flop is full or produce error
+        if len(self.debug.community_cards) < 3:
+            return
+
+        print(self.debug.community_cards)
+        for y in range(23, 25):  # loop remaining community cards
             if self.user_input_cards[y] != 0:
                 self.debug.community_cards.append(self.cards[self.user_input_cards[y] - 1])
 
     def setup_comboboxes(self):
+
+        # initialize comboboxes
         for cb in self.comboboxes:
             cb.addItems(' ')
-            cb.addItems(self.current_cards)
-            cb.currentIndexChanged.connect(self.print_combobox_value)  # index of combobox
-            # to send currentIndexChanged as a string
-            # https://stackoverflow.com/questions/23116763/pyqt-how-to-connect-qcombobox-to-function-with-arguments
+            cb.addItems(self.str_cards)
+            cb.new_signal.connect(self.update_comboboxes)
 
-            # cb.setDuplicatesEnabled(False)  # dont know how this works
+    def update_comboboxes(self, prev_index, curr_index, current_cb):
 
-        # print(self.Hand1_Card1.itemText(1))  # print second (c1) item in list
+        # card is not available in deck so set to empty and return
+        if self.cards[curr_index - 1].in_deck == 0 and curr_index != 0:
+            current_cb.setCurrentIndex(0)
+            return
 
-    def update_comboboxes(self, hand_card):
-        cb.removeItem(1)  # could be used to update the combobox but requires grabbing string; might be
-        cb.setItemData(1, 'c1', 0)  # tricky bringing back items that have been removed as well.
-        self.get_user_cards()
-        if hand_card.activated:
-            self.has_hand[0] = 1
-            print(self.has_hand)
-
-    def get_user_cards(self):
-        self.user_input_cards = []
+        # card is available
         for cb in self.comboboxes:
-            self.user_input_cards.append(cb.currentIndex())
-        print(self.user_input_cards)
+
+            # do not edit current cb
+            if cb == current_cb:
+                continue
+
+            # 3 states involving initial empty cb (index == 0)
+            if curr_index == 0 and prev_index == 0:
+                # do nothing
+                pass
+
+            # restore old value and reinsert card into deck
+            elif curr_index == 0 and prev_index != 0:
+                cb.setItemData(prev_index, self.str_cards[prev_index - 1], 0)
+                self.cards[prev_index - 1].in_deck = 1
+
+            # currently in initial state and only update new comboboxes
+            # and removes card from deck
+            elif curr_index != 0 and prev_index == 0:
+                cb.setItemData(curr_index, ' ', 0)
+                self.cards[curr_index - 1].in_deck = 0
+
+            # last state without initial empty cb (index != 0)
+            else:  # curr_index != 0 and prev_index != 0:
+                cb.setItemData(prev_index, self.str_cards[prev_index - 1], 0)  # restore old value
+                self.cards[prev_index - 1].in_deck = 1  # reinsert card into deck
+                cb.setItemData(curr_index, ' ', 0)  # update new comboboxes
+                self.cards[curr_index - 1].in_deck = 0  # removes card from deck
 
     def clear_comboboxes(self):
         for cb in self.comboboxes:
             cb.setCurrentIndex(0)
-        self.Hand1_Prob.clear()
             # cb.clear()  # Bug: Creates an extra combobox val for every click
-        # self.setup_comboboxes()
+
+    def clear_text(self):
+        for hb in self.hand_probs:
+            hb.setText(' ')
+        self.ErrorMsg.setText(' ')
 
     def set_probabilities(self):
+        self.clear_text()
+        self.listify_probabilities()
         self.probs = self.debug.stats.winning_chances
-        self.Hand1_Prob.setText(str(self.probs[0]) + ' %')
+        for x in range(0, len(self.seat_numbers)):
+            self.hand_probs[self.seat_numbers[x]].setText(str(self.probs[x]) + ' %')
+
+    def fail_error_check(self):
+        if len(self.debug.preflop_cards) < 2:
+            self.error_msg = "Must have at least 2 players..."
+            return True
+        if len(self.debug.community_cards) < 3:
+            self.error_msg = "Must have at least 3 flop cards..."
+            return True
+        return False
 
     def run_program(self):
         self.get_user_cards()
         self.import_data()
+        if self.fail_error_check():
+            self.ErrorMsg.setText(self.error_msg)
+            return
         self.debug.run_tests()
         self.set_probabilities()
 
+    def clear(self):
+        self.clear_comboboxes()
+        self.clear_text()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -181,28 +272,24 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
 
-        self.Hand1_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand1_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand1_Card1.setObjectName(_fromUtf8("Hand1_Card1"))
-        # self.Hand1_Card1.addItems(self.current_cards)
-        # self.Hand1_Card1.itemData(1)  # returns Qvariant obj; returns data for the item in the combobox
-        # self.Hand1_Card1.currentIndexChanged.connect(self.print_combobox_value)
         self.horizontalLayout.addWidget(self.Hand1_Card1)
 
 
-        self.Hand1_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand1_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand1_Card2.setObjectName(_fromUtf8("Hand1_Card2"))
-        # self.Hand1_Card2.addItems(self.current_cards)
         self.horizontalLayout.addWidget(self.Hand1_Card2)
 
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.horizontalLayout_5 = QtGui.QHBoxLayout()
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
 
-        self.Hand2_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand2_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand2_Card1.setObjectName(_fromUtf8("Hand2_Card1"))
         self.horizontalLayout_5.addWidget(self.Hand2_Card1)
 
-        self.Hand2_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand2_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand2_Card2.setObjectName(_fromUtf8("Hand2_Card2"))
         self.horizontalLayout_5.addWidget(self.Hand2_Card2)
 
@@ -210,11 +297,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
         self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
 
-        self.Hand3_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand3_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand3_Card1.setObjectName(_fromUtf8("Hand3_Card1"))
         self.horizontalLayout_3.addWidget(self.Hand3_Card1)
 
-        self.Hand3_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand3_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand3_Card2.setObjectName(_fromUtf8("Hand3_Card2"))
         self.horizontalLayout_3.addWidget(self.Hand3_Card2)
 
@@ -222,11 +309,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
 
-        self.Hand4_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand4_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand4_Card1.setObjectName(_fromUtf8("Hand4_Card1"))
         self.horizontalLayout_2.addWidget(self.Hand4_Card1)
 
-        self.Hand4_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand4_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand4_Card2.setObjectName(_fromUtf8("Hand4_Card2"))
         self.horizontalLayout_2.addWidget(self.Hand4_Card2)
 
@@ -234,11 +321,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9 = QtGui.QHBoxLayout()
         self.horizontalLayout_9.setObjectName(_fromUtf8("horizontalLayout_9"))
 
-        self.Hand5_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand5_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand5_Card1.setObjectName(_fromUtf8("Hand5_Card1"))
         self.horizontalLayout_9.addWidget(self.Hand5_Card1)
 
-        self.Hand5_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand5_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand5_Card2.setObjectName(_fromUtf8("Hand5_Card2"))
         self.horizontalLayout_9.addWidget(self.Hand5_Card2)
 
@@ -246,11 +333,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10 = QtGui.QHBoxLayout()
         self.horizontalLayout_10.setObjectName(_fromUtf8("horizontalLayout_10"))
 
-        self.Hand6_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand6_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand6_Card1.setObjectName(_fromUtf8("Hand6_Card1"))
         self.horizontalLayout_10.addWidget(self.Hand6_Card1)
 
-        self.Hand6_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand6_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand6_Card2.setObjectName(_fromUtf8("Hand6_Card2"))
         self.horizontalLayout_10.addWidget(self.Hand6_Card2)
 
@@ -258,11 +345,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11 = QtGui.QHBoxLayout()
         self.horizontalLayout_11.setObjectName(_fromUtf8("horizontalLayout_11"))
 
-        self.Hand7_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand7_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand7_Card1.setObjectName(_fromUtf8("Hand7_Card1"))
         self.horizontalLayout_11.addWidget(self.Hand7_Card1)
 
-        self.Hand7_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand7_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand7_Card2.setObjectName(_fromUtf8("Hand7_Card2"))
         self.horizontalLayout_11.addWidget(self.Hand7_Card2)
 
@@ -270,11 +357,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4 = QtGui.QHBoxLayout()
         self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
 
-        self.Hand8_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand8_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand8_Card1.setObjectName(_fromUtf8("Hand8_Card1"))
         self.horizontalLayout_4.addWidget(self.Hand8_Card1)
 
-        self.Hand8_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand8_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand8_Card2.setObjectName(_fromUtf8("Hand8_Card2"))
         self.horizontalLayout_4.addWidget(self.Hand8_Card2)
 
@@ -282,11 +369,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6 = QtGui.QHBoxLayout()
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
 
-        self.Hand9_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand9_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand9_Card1.setObjectName(_fromUtf8("Hand9_Card1"))
         self.horizontalLayout_6.addWidget(self.Hand9_Card1)
 
-        self.Hand9_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand9_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand9_Card2.setObjectName(_fromUtf8("Hand9_Card2"))
         self.horizontalLayout_6.addWidget(self.Hand9_Card2)
 
@@ -294,11 +381,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8 = QtGui.QHBoxLayout()
         self.horizontalLayout_8.setObjectName(_fromUtf8("horizontalLayout_8"))
 
-        self.Hand10_Card1 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand10_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand10_Card1.setObjectName(_fromUtf8("Hand10_Card1"))
         self.horizontalLayout_8.addWidget(self.Hand10_Card1)
 
-        self.Hand10_Card2 = QtGui.QComboBox(self.verticalLayoutWidget)
+        self.Hand10_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand10_Card2.setObjectName(_fromUtf8("Hand10_Card2"))
         self.horizontalLayout_8.addWidget(self.Hand10_Card2)
 
@@ -477,7 +564,7 @@ class Ui_MainWindow(object):
         self.layoutWidget_2.setObjectName(_fromUtf8("layoutWidget_2"))
         self.horizontalLayout_14 = QtGui.QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_14.setObjectName(_fromUtf8("horizontalLayout_14"))
-        self.River_Card = QtGui.QComboBox(self.layoutWidget_2)
+        self.River_Card = ComboBox(self.layoutWidget_2)
         self.River_Card.setObjectName(_fromUtf8("River_Card"))
         self.horizontalLayout_14.addWidget(self.River_Card)
         self.horizontalLayoutWidget_17 = QtGui.QWidget(self.groupBox_4)
@@ -502,7 +589,7 @@ class Ui_MainWindow(object):
         self.layoutWidget.setObjectName(_fromUtf8("layoutWidget"))
         self.horizontalLayout_13 = QtGui.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_13.setObjectName(_fromUtf8("horizontalLayout_13"))
-        self.Turn_Card = QtGui.QComboBox(self.layoutWidget)
+        self.Turn_Card = ComboBox(self.layoutWidget)
         self.Turn_Card.setObjectName(_fromUtf8("Turn_Card"))
         self.horizontalLayout_13.addWidget(self.Turn_Card)
         self.horizontalLayoutWidget_15 = QtGui.QWidget(self.groupBox_3)
@@ -535,13 +622,13 @@ class Ui_MainWindow(object):
         self.layoutWidget_3.setObjectName(_fromUtf8("layoutWidget_3"))
         self.horizontalLayout_12 = QtGui.QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_12.setObjectName(_fromUtf8("horizontalLayout_12"))
-        self.Flop_Card1 = QtGui.QComboBox(self.layoutWidget_3)
+        self.Flop_Card1 = ComboBox(self.layoutWidget_3)
         self.Flop_Card1.setObjectName(_fromUtf8("Flop_Card1"))
         self.horizontalLayout_12.addWidget(self.Flop_Card1)
-        self.Flop_Card2 = QtGui.QComboBox(self.layoutWidget_3)
+        self.Flop_Card2 = ComboBox(self.layoutWidget_3)
         self.Flop_Card2.setObjectName(_fromUtf8("Flop_Card2"))
         self.horizontalLayout_12.addWidget(self.Flop_Card2)
-        self.Flop_Card3 = QtGui.QComboBox(self.layoutWidget_3)
+        self.Flop_Card3 = ComboBox(self.layoutWidget_3)
         self.Flop_Card3.setObjectName(_fromUtf8("Flop_Card3"))
         self.horizontalLayout_12.addWidget(self.Flop_Card3)
         self.horizontalLayoutWidget_13 = QtGui.QWidget(self.groupBox_2)
@@ -563,7 +650,7 @@ class Ui_MainWindow(object):
         self.Clear = QtGui.QPushButton(self.horizontalLayoutWidget)
         self.Clear.setObjectName(_fromUtf8("Clear"))
         self.horizontalLayout_15.addWidget(self.Clear)
-        self.Clear.clicked.connect(self.clear_comboboxes)  # runs DebugTests.py
+        self.Clear.clicked.connect(self.clear)  # runs DebugTests.py
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)

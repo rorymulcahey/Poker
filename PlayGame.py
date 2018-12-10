@@ -103,5 +103,5 @@ for y in range(0, len(game.hand.current_table.active_player_info)):
 # print(result)
 # print(game.hand.button_seat)
 # print(game.hand.player_cards)
-# print(game.hand.deck.current_cards)
+# print(game.hand.deck.str_cards)
 # print(game.current_seat_turn)

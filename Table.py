@@ -80,13 +80,13 @@ class Deck:
         self.current_cards = []
         # for y in range(1, 14):
         #     for x in ['c', 'd', 'h', 's']:
-        #         self.current_cards.append(Card(x, y))
+        #         self.str_cards.append(Card(x, y))
         for x in ['c', 'd', 'h', 's']:
             for y in range(1, 14):
                 self.current_cards.append(Card(x, y))
 
     def card_to_string(self, cards):
-        # self.current_cards = []
+        # self.str_cards = []
         string_cards = []
         for x in range(0, len(cards)):
             string_cards.append(str(cards[x].suit) + str(cards[x].num))
@@ -98,6 +98,7 @@ class Card(object):
         # super().__init__()
         self.suit = suit
         self.num = number
+        self.in_deck = 1
 
     def __repr__(self):
         # return self.suit + str(self.num)

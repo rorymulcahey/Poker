@@ -151,4 +151,4 @@ class CurrentHand:
 # print(result)
 # print(a.button_seat)
 # print(a.player_cards)
-# print(a.deck.current_cards)
+# print(a.deck.str_cards)
