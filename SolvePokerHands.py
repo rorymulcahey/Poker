@@ -43,13 +43,13 @@ Notes:
 import re
 
 
-class Card:
-    def __init__(self, suit, number):
-        self.suit = suit
-        self.num = number
-
-    def __repr__(self):
-        return self.suit + str(self.num)
+# class Card:
+#     def __init__(self, suit, number):
+#         self.suit = suit
+#         self.num = number
+#
+#     def __repr__(self):
+#         return self.suit + str(self.num)
 
 
 class Hand:

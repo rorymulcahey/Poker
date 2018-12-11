@@ -7,9 +7,10 @@
 # WARNING! All changes made in this file will be lost!
 
 # To do list:
-# 1- finish run button by sending cards to debugtests
-# 2- update comboboxes to not have duplicate results
-# 3-
+# 1- finish run button by sending cards to debugtests **DONE
+# 2- update comboboxes to not have duplicate results **DONE
+# 3- Add button to randomly generate flop
+# 4- Remove cards from deck when only 1 is in a hand
 
 import sys
 from PyQt4 import QtCore, QtGui
@@ -46,12 +47,13 @@ class ComboBox(QtGui.QComboBox):
 
     def __init__(self, parent=None):
         super(ComboBox, self).__init__(parent)
-        self.lastSelected = 0
-        self.activated[int].connect(self.onActivated)
+        # super(ComboBox, self).currentIndexChanged[int].connect(self.onActivated)
+        self.last_index = 0
+        self.currentIndexChanged[int].connect(self.onActivated)
 
     def onActivated(self, index):
-        self.new_signal.emit(self.lastSelected, index, self)
-        self.lastSelected = index
+        self.new_signal.emit(self.last_index, index, self)
+        self.last_index = index
 
 
 class Ui_MainWindow(object):
@@ -161,19 +163,19 @@ class Ui_MainWindow(object):
 
     def update_comboboxes(self, prev_index, curr_index, current_cb):
 
-        # card is not available in deck so set to empty and return
-        if self.cards[curr_index - 1].in_deck == 0 and curr_index != 0:
-            current_cb.setCurrentIndex(0)
-            return
-
-        # card is available
+        # loop through all comboboxes except current one
         for cb in self.comboboxes:
 
             # do not edit current cb
             if cb == current_cb:
                 continue
 
-            # 3 states involving initial empty cb (index == 0)
+            # allow previous index and disable current index from being selected
+            cb.model().item(prev_index).setEnabled(True)
+            if curr_index != 0:
+                cb.model().item(curr_index).setEnabled(False)
+
+            # initial empty cb set to itself
             if curr_index == 0 and prev_index == 0:
                 # do nothing
                 pass
@@ -200,6 +202,7 @@ class Ui_MainWindow(object):
         for cb in self.comboboxes:
             cb.setCurrentIndex(0)
             # cb.clear()  # Bug: Creates an extra combobox val for every click
+        # self.setup_comboboxes()
 
     def clear_text(self):
         for hb in self.hand_probs:
@@ -275,7 +278,6 @@ class Ui_MainWindow(object):
         self.Hand1_Card1 = ComboBox(self.verticalLayoutWidget)
         self.Hand1_Card1.setObjectName(_fromUtf8("Hand1_Card1"))
         self.horizontalLayout.addWidget(self.Hand1_Card1)
-
 
         self.Hand1_Card2 = ComboBox(self.verticalLayoutWidget)
         self.Hand1_Card2.setObjectName(_fromUtf8("Hand1_Card2"))
@@ -699,5 +701,6 @@ class Ui_MainWindow(object):
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     window = MyApp()
+    window.setWindowTitle("Texas Hold'em Solver")
     window.show()
     sys.exit(app.exec_())
