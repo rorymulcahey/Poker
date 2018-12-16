@@ -191,7 +191,7 @@ class Ui_MainWindow(object):
                 cb.setItemData(curr_index, ' ', 0)
                 self.cards[curr_index - 1].in_deck = 0
 
-            # last state without initial empty cb (index != 0)
+            # last state without initial empty cb
             else:  # curr_index != 0 and prev_index != 0:
                 cb.setItemData(prev_index, self.str_cards[prev_index - 1], 0)  # restore old value
                 self.cards[prev_index - 1].in_deck = 1  # reinsert card into deck
@@ -701,6 +701,6 @@ class Ui_MainWindow(object):
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     window = MyApp()
-    window.setWindowTitle("Texas Hold'em Solver")
+    window.setWindowTitle("Texas Hold'em")
     window.show()
     sys.exit(app.exec_())
