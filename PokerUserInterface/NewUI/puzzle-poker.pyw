@@ -42,34 +42,42 @@
 
 
 # This is only needed for Python v2 but is harmless for Python v3.
-import sip
+# import sip
 import random
 from PyQt4 import QtCore, QtGui
+from Table import Deck
+from contextlib import contextmanager
 
-sip.setapi('QVariant', 2)
-try:
-    import puzzle_rc3
-except ImportError:
-    import puzzle_rc2
+# sip.setapi('QVariant', 2)
+# try:
+#     import puzzle_rc3
+# except ImportError:
+#     import puzzle_rc2
 
 
-class PuzzleWidget(QtGui.QWidget):
+class PokerHands(QtGui.QWidget):
 
-    puzzleCompleted = QtCore.pyqtSignal()
+    # SolvePokerHands = QtCore.pyqtSignal()
+    solvePokerHands = QtCore.pyqtSignal()
 
     def __init__(self, parent=None):
-        super(PuzzleWidget, self).__init__(parent)
+        super(PokerHands, self).__init__(parent)
 
         self.piecePixmaps = []
         self.pieceRects = []
         self.pieceLocations = []
         self.highlightedRect = QtCore.QRect()
         self.inPlace = 0
+        self.deck = Deck(pixmap=True)
+        self.cards = self.deck.current_cards
+        self.currentHand = []
 
-        # pixel dimensions of cards image to be used
+        # pixel dimensions card placement map
         self.setAcceptDrops(True)
-        self.setMinimumSize(665, 281)
-        self.setMaximumSize(665, 281)
+        #self.setMinimumSize(572, 256)
+        #self.setMaximumSize(572, 256)
+        self.setMinimumSize(88, 64)
+        self.setMaximumSize(88, 64)
 
     def clear(self):
         self.pieceLocations = []
@@ -80,19 +88,29 @@ class PuzzleWidget(QtGui.QWidget):
         self.update()
 
     def dragEnterEvent(self, event):
+        # print(event)
         if event.mimeData().hasFormat('image/x-puzzle-piece'):
             event.accept()
         else:
             event.ignore()
 
     def dragLeaveEvent(self, event):
+        # print(event)
         updateRect = self.highlightedRect
         self.highlightedRect = QtCore.QRect()
         self.update(updateRect)
         event.accept()
 
+    @contextmanager
+    def wait_cursor(function):
+        try:
+            QtGui.QApplication.setOverrideCursor(QtGui.QCursor(QtCore.Qt.WaitCursor))
+            yield
+        finally:
+            QtGui.QApplication.restoreOverrideCursor()
+
     def dragMoveEvent(self, event):
-        updateRect = self.highlightedRect.unite(self.targetSquare(event.pos()))
+        updateRect = self.highlightedRect.united(self.targetSquare(event.pos()))
 
         if event.mimeData().hasFormat('image/x-puzzle-piece') and self.findPiece(self.targetSquare(event.pos())) == -1:
             self.highlightedRect = self.targetSquare(event.pos())
@@ -109,9 +127,15 @@ class PuzzleWidget(QtGui.QWidget):
             pieceData = event.mimeData().data('image/x-puzzle-piece')
             stream = QtCore.QDataStream(pieceData, QtCore.QIODevice.ReadOnly)
             square = self.targetSquare(event.pos())
-            pixmap = QtGui.QPixmap()
+            pixmap = PixMapCard()
             location = QtCore.QPoint()
             stream >> pixmap >> location
+            pixmap = self.getPixmapCard(pixmap, location)
+
+            # needs removal
+            # needs picking up and dropping same card
+            self.currentHand.append(pixmap.card_value)
+            print(pixmap.card_value)
 
             self.pieceLocations.append(location)
             self.piecePixmaps.append(pixmap)
@@ -123,68 +147,77 @@ class PuzzleWidget(QtGui.QWidget):
             event.setDropAction(QtCore.Qt.MoveAction)
             event.accept()
 
-            # not needed for poker
-            if location == QtCore.QPoint(square.x() / 80, square.y() / 80):
+            # solves the "puzzle" (useful for identifying cards)
+            # for poker: replace with cards values
+            if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
                 self.inPlace += 1
-                if self.inPlace == 25:
-                    self.puzzleCompleted.emit()
+                if self.inPlace == 5:
+                    self.solvePokerHands.emit()
+            self.highlightedRect = QtCore.QRect()
         else:
             self.highlightedRect = QtCore.QRect()
             event.ignore()
 
     def findPiece(self, pieceRect):
         try:
+            # print(pieceRect)
+            # print(self.pieceRect.index(pieceRect))
             return self.pieceRects.index(pieceRect)
         except ValueError:
             return -1
 
     def mousePressEvent(self, event):
-        square = self.targetSquare(event.pos())
-        found = self.findPiece(square)
+        with self.wait_cursor():
+            square = self.targetSquare(event.pos())
+            found = self.findPiece(square)
+            # print(found)
 
-        if found == -1:
-            return
+            if found == -1:
+                return
 
-        location = self.pieceLocations[found]
-        pixmap = self.piecePixmaps[found]
+            location = self.pieceLocations[found]
+            # print(location)
+            pixmap = self.piecePixmaps[found]
 
-        del self.pieceLocations[found]
-        del self.piecePixmaps[found]
-        del self.pieceRects[found]
+            del self.pieceLocations[found]
+            del self.piecePixmaps[found]
+            del self.pieceRects[found]
 
-        # not needed for poker
-        if location == QtCore.QPoint(square.x() + 80, square.y() + 80):
-            self.inPlace -= 1
+            # for poker: replace with cards values
+            if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
+                self.inPlace -= 1
 
-        self.update(square)
+            self.update(square)
 
-        itemData = QtCore.QByteArray()
-        dataStream = QtCore.QDataStream(itemData, QtCore.QIODevice.WriteOnly)
+            itemData = QtCore.QByteArray()
+            dataStream = QtCore.QDataStream(itemData, QtCore.QIODevice.WriteOnly)
 
-        dataStream << pixmap << location
+            dataStream << pixmap << location
 
-        mimeData = QtCore.QMimeData()
-        mimeData.setData('image/x-puzzle-piece', itemData)
+            mimeData = QtCore.QMimeData()
+            mimeData.setData('image/x-puzzle-piece', itemData)
 
-        drag = QtGui.QDrag(self)
-        drag.setMimeData(mimeData)
-        drag.setHotSpot(event.pos() - square.topLeft())
-        drag.setPixmap(pixmap)
+            drag = QtGui.QDrag(self)
+            drag.setMimeData(mimeData)
+            drag.setHotSpot(event.pos() - square.topLeft())
+            drag.setPixmap(pixmap)
 
-        if drag.start(QtCore.Qt.MoveAction) == 0:
-            self.pieceLocations.insert(found, location)
-            self.piecePixmaps.insert(found, pixmap)
-            self.pieceRects.insert(found, square)
-            self.update(self.targetSquare(event.pos()))
+            if drag.start(QtCore.Qt.MoveAction) == 0:
+                self.pieceLocations.insert(found, location)
+                self.piecePixmaps.insert(found, pixmap)
+                self.pieceRects.insert(found, square)
+                self.update(self.targetSquare(event.pos()))
 
-            # not needed for poker
-            if location == QtCore.QPoint(square.x() / 80, square.y() / 80):
-                self.inPlace += 1
+                # identify card
+                if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
+                    self.inPlace += 1
 
+    # draws red background behind the future card placement
     def paintEvent(self, event):
         painter = QtGui.QPainter()
         painter.begin(self)
         painter.fillRect(event.rect(), QtCore.Qt.white)
+        # print(self.highlightedRect)
 
         if self.highlightedRect.isValid():
             painter.setBrush(QtGui.QColor("#ffcccc"))
@@ -196,19 +229,31 @@ class PuzzleWidget(QtGui.QWidget):
 
         painter.end()
 
-    # creates dropping grid of correct size
+    # creates dropping grid of individual card cell
     def targetSquare(self, position):
-        return QtCore.QRect(position.x() // 51 * 51, position.y() // 72 * 72, 51, 72)
+        return QtCore.QRect(position.x() // 44 * 44, position.y() // 64 * 64, 44, 64)
+
+    # adds the card value to the pixmap
+    def getPixmapCard(self, pixmap, location):
+        pixmap.card_value = self.cards[location.x() + location.y() * 13]
+        return pixmap
 
 
-class PiecesModel(QtCore.QAbstractListModel):
+class PixMapCard(QtGui.QPixmap):
     def __init__(self, parent=None):
-        super(PiecesModel, self).__init__(parent)
+        super(PixMapCard, self).__init__(parent)
+        self.card_value = None
 
+
+class PokerCards(QtCore.QAbstractListModel):
+    def __init__(self, parent=None):
+        super(PokerCards, self).__init__(parent)
         self.locations = []
         self.pixmaps = []
+        self.qmodel_index = QtCore.QModelIndex()
 
     def data(self, index, role=QtCore.Qt.DisplayRole):
+        # print(role)
         if not index.isValid():
             return None
 
@@ -218,32 +263,27 @@ class PiecesModel(QtCore.QAbstractListModel):
                     QtCore.Qt.SmoothTransformation))
 
         if role == QtCore.Qt.UserRole:
+            # print(self.pixmaps[index.row()].card_value)
             return self.pixmaps[index.row()]
 
         if role == QtCore.Qt.UserRole + 1:
+            #print(self.locations[index.row()])
             return self.locations[index.row()]
 
         return None
 
-    def addPiece(self, pixmap, location):
-        if random.random() < 0.5:
-            row = 0
-        else:
-            row = len(self.pixmaps)
 
-        self.beginInsertRows(QtCore.QModelIndex(), row, row)
-        self.pixmaps.insert(row, pixmap)
-        self.locations.insert(row, location)
-        self.endInsertRows()
-
-    def flags(self,index):
+    # http://pyqt.sourceforge.net/Docs/PyQt4/qt.html#ItemFlag-enum
+    def flags(self, index):
         if index.isValid():
             return (QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable |
                     QtCore.Qt.ItemIsDragEnabled)
+            # return (QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable |
+            #         QtCore.Qt.ItemIsDragEnabled)
+        return QtCore.Qt.NoItemFlags
+        #return QtCore.Qt.ItemIsDropEnabled
 
-        return QtCore.Qt.ItemIsDropEnabled
-
-    def removeRows(self,row, count, parent):
+    def removeRows(self, row, count, parent):
         if parent.isValid():
             return False
 
@@ -272,7 +312,7 @@ class PiecesModel(QtCore.QAbstractListModel):
 
         for index in indexes:
             if index.isValid():
-                pixmap = QtGui.QPixmap(self.data(index, QtCore.Qt.UserRole))
+                pixmap = PixMapCard(self.data(index, QtCore.Qt.UserRole))
                 location = self.data(index, QtCore.Qt.UserRole + 1)
                 stream << pixmap << location
 
@@ -301,7 +341,7 @@ class PiecesModel(QtCore.QAbstractListModel):
         stream = QtCore.QDataStream(encodedData, QtCore.QIODevice.ReadOnly)
 
         while not stream.atEnd():
-            pixmap = QtGui.QPixmap()
+            pixmap = PixMapCard()
             location = QtGui.QPoint()
             stream >> pixmap >> location
 
@@ -315,6 +355,7 @@ class PiecesModel(QtCore.QAbstractListModel):
         return True
 
     def rowCount(self, parent):
+        # print(parent)
         if parent.isValid():
             return 0
         else:
@@ -323,25 +364,35 @@ class PiecesModel(QtCore.QAbstractListModel):
     def supportedDropActions(self):
         return QtCore.Qt.CopyAction | QtCore.Qt.MoveAction
 
-    def addPieces(self, pixmap):
-        self.beginRemoveRows(QtCore.QModelIndex(), 0, 24)
+    def addCards(self, pixmap):
+        # print(isinstance(self, QtCore.QAbstractListModel))
+        self.beginRemoveRows(QtCore.QModelIndex(), 0, 51)
         self.pixmaps = []
         self.locations = []
         self.endRemoveRows()
 
         # creates 52 cards that can be selected on the left
-        # important** probably used to create variable assignments
         for y in range(4):
             for x in range(13):
-                pieceImage = pixmap.copy(x*(43+8.25), y*(64+8), (43+8.25), (64+8))
-                self.addPiece(pieceImage, QtCore.QPoint(x, y))
+                cardImage = pixmap.copy(x*(44+7.75), y*(64+8.34), 44, 64)
+                self.addCard(cardImage, QtCore.QPoint(x, y))
+                # cardImage.card_value = self.cards[x+y*13]  # used to create card assignments
+                # cardImage.row_number = x+y*13  # assign row location
+                # print(cardImage.card_value)
+
+    def addCard(self, pixmap, location):
+        row = len(self.pixmaps)
+        self.beginInsertRows(QtCore.QModelIndex(), row, row)
+        self.pixmaps.insert(row, pixmap)
+        self.locations.insert(row, location)
+        self.endInsertRows()
 
 
 class MainWindow(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
 
-        self.puzzleImage = QtGui.QPixmap()
+        self.deckImage = PixMapCard()
 
         self.setupMenus()
         self.setupWidgets()
@@ -356,14 +407,14 @@ class MainWindow(QtGui.QMainWindow):
                     "Image Files (*.png *.jpg *.bmp)")
 
         if path:
-            newImage = QtGui.QPixmap()
+            newImage = PixMapCard()
             if not newImage.load(path):
                 QtGui.QMessageBox.warning(self, "Open Image",
                         "The image file could not be loaded.",
                         QtGui.QMessageBox.Cancel)
                 return
 
-            self.puzzleImage = newImage
+            self.deckImage = newImage
             self.setupPuzzle()
 
     def setCompleted(self):
@@ -375,20 +426,11 @@ class MainWindow(QtGui.QMainWindow):
         self.setupPuzzle()
 
     def setupPuzzle(self):
-        # size = min(self.deckImage.width(), self.deckImage.height())
-        # self.deckImage = self.deckImage.copy((self.deckImage.width()-size)/2,
-        #         (self.deckImage.height() - size)/2, size, size).scaled(400,
-        #                 400, QtCore.Qt.IgnoreAspectRatio,
-        #                 QtCore.Qt.SmoothTransformation)
 
-        size = min(self.puzzleImage.width(), self.puzzleImage.height())
-        self.puzzleImage = self.puzzleImage.copy(0,
-                0, 665, 281)
-
-        random.seed(QtGui.QCursor.pos().x() ^ QtGui.QCursor.pos().y())
-
-        self.model.addPieces(self.puzzleImage)
-        self.puzzleWidget.clear()
+        self.model.addCards(self.deckImage)
+        # print([pm.card_value for pm in self.model.pixmaps])
+        for hands in self.all_hands:
+            hands.clear()
 
     def setupMenus(self):
         fileMenu = self.menuBar().addMenu("&File")
@@ -416,21 +458,24 @@ class MainWindow(QtGui.QMainWindow):
         self.piecesList.setViewMode(QtGui.QListView.IconMode)
         self.piecesList.setIconSize(QtCore.QSize(43, 64))
         self.piecesList.setGridSize(QtCore.QSize(43, 64))
-        self.piecesList.setSpacing(1)
+        self.piecesList.setSpacing(10)
         self.piecesList.setMovement(QtGui.QListView.Snap)
         self.piecesList.setAcceptDrops(True)
         self.piecesList.setDropIndicatorShown(True)
 
-        self.model = PiecesModel(self)
+        self.model = PokerCards(self)
         self.piecesList.setModel(self.model)
-
-        self.puzzleWidget = PuzzleWidget()
-
-        self.puzzleWidget.puzzleCompleted.connect(self.setCompleted,
-                QtCore.Qt.QueuedConnection)
-
         frameLayout.addWidget(self.piecesList)
-        frameLayout.addWidget(self.puzzleWidget)
+
+        self.all_hands = []
+        for x in range(10):
+            self.handsWidget = PokerHands()
+            self.handsWidget.solvePokerHands.connect(self.setCompleted,
+                                                     QtCore.Qt.QueuedConnection)
+            frameLayout.addWidget(self.handsWidget)
+            self.all_hands.append(self.handsWidget)
+        print(self.all_hands)
+
         self.setCentralWidget(frame)
 
 
@@ -441,6 +486,6 @@ if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
     window = MainWindow()
     # window.openImage('c:/Users/rmulcahey/PycharmProjects/puzzle/example.png')
-    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/example.png')
+    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/PokerUserInterface/cards.png')
     window.show()
     sys.exit(app.exec_())

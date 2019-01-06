@@ -72,18 +72,19 @@ class NewPlayer(Player):
 
 
 class Deck:
-    def __init__(self):
+    def __init__(self, pixmap=False):
         self.current_cards = []
+        if not pixmap:
+            self.suits = ['c', 'd', 'h', 's']
+        else:
+            self.suits = ['d', 'h', 's', 'c']
         self.create_deck()
 
     def create_deck(self):
         self.current_cards = []
-        # for y in range(1, 14):
-        #     for x in ['c', 'd', 'h', 's']:
-        #         self.str_cards.append(Card(x, y))
-        for x in ['c', 'd', 'h', 's']:
+        for x in range(len(self.suits)):
             for y in range(1, 14):
-                self.current_cards.append(Card(x, y))
+                self.current_cards.append(Card(self.suits[x], y))
 
     def card_to_string(self, cards):
         # self.str_cards = []

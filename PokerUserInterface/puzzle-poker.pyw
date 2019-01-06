@@ -42,15 +42,15 @@
 
 
 # This is only needed for Python v2 but is harmless for Python v3.
-import sip
+# import sip
 import random
 from PyQt4 import QtCore, QtGui
 
-sip.setapi('QVariant', 2)
-try:
-    import puzzle_rc3
-except ImportError:
-    import puzzle_rc2
+# sip.setapi('QVariant', 2)
+# try:
+#     import puzzle_rc3
+# except ImportError:
+#     import puzzle_rc2
 
 
 class PuzzleWidget(QtGui.QWidget):
@@ -243,7 +243,7 @@ class PiecesModel(QtCore.QAbstractListModel):
 
         return QtCore.Qt.ItemIsDropEnabled
 
-    def removeRows(self,row, count, parent):
+    def removeRows(self, row, count, parent):
         if parent.isValid():
             return False
 
@@ -441,6 +441,6 @@ if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
     window = MainWindow()
     # window.openImage('c:/Users/rmulcahey/PycharmProjects/puzzle/example.png')
-    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/example.png')
+    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/PokerUserInterface/cards.png')
     window.show()
     sys.exit(app.exec_())
