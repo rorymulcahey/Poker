@@ -123,6 +123,7 @@ class Ui_MainWindow(object):
         # loop through comboboxes and gather index values
         self.user_input_cards = []
         for cb in self.comboboxes:
+            print(self.user_input_cards)
             self.user_input_cards.append(cb.currentIndex())
 
     def import_data(self):
@@ -135,6 +136,7 @@ class Ui_MainWindow(object):
 
         # loops through all cards selected in comboboxes
         for x in range(0, 10):
+            # must contain 2 cards for player hands: [2*x] and [2*x + 1]
             if self.user_input_cards[2*x] != 0 and self.user_input_cards[2*x + 1] != 0:
                 self.debug.preflop_cards.append([self.cards[self.user_input_cards[2*x] - 1],
                                                 self.cards[self.user_input_cards[2*x + 1] - 1]])  # insert cards
@@ -245,18 +247,20 @@ class Ui_MainWindow(object):
         MainWindow.setMaximumSize(QtCore.QSize(758, 474))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        
         self.label_20 = QtGui.QLabel(self.centralwidget)
         self.label_20.setGeometry(QtCore.QRect(180, 10, 401, 41))
         font = QtGui.QFont()
         font.setPointSize(36)
         self.label_20.setFont(font)
-        self.label_20.setObjectName(_fromUtf8("label_1"))
+        self.label_20.setObjectName(_fromUtf8("label_20"))
+
         self.groupBox_6 = QtGui.QGroupBox(self.centralwidget)
         self.groupBox_6.setGeometry(QtCore.QRect(370, 350, 171, 80))
-        self.groupBox_6.setObjectName(_fromUtf8("groupBox"))
-
+        self.groupBox_6.setObjectName(_fromUtf8("groupBox_6"))
         self.ErrorMsg = QtGui.QTextBrowser(self.groupBox_6)
         self.ErrorMsg.setGeometry(QtCore.QRect(10, 20, 151, 51))
+
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
