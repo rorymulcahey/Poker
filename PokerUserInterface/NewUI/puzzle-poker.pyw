@@ -48,16 +48,15 @@ from PyQt4 import QtCore, QtGui
 from Table import Deck
 from contextlib import contextmanager
 
-# sip.setapi('QVariant', 2)
-# try:
-#     import puzzle_rc3
-# except ImportError:
-#     import puzzle_rc2
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
 
 
 class PokerHands(QtGui.QWidget):
 
-    # SolvePokerHands = QtCore.pyqtSignal()
     solvePokerHands = QtCore.pyqtSignal()
 
     def __init__(self, parent=None):
@@ -74,8 +73,6 @@ class PokerHands(QtGui.QWidget):
 
         # pixel dimensions card placement map
         self.setAcceptDrops(True)
-        #self.setMinimumSize(572, 256)
-        #self.setMaximumSize(572, 256)
         self.setMinimumSize(88, 64)
         self.setMaximumSize(88, 64)
 
@@ -238,6 +235,9 @@ class PokerHands(QtGui.QWidget):
         pixmap.card_value = self.cards[location.x() + location.y() * 13]
         return pixmap
 
+    def updateTable(self):
+        pass
+
 
 class PixMapCard(QtGui.QPixmap):
     def __init__(self, parent=None):
@@ -391,6 +391,9 @@ class PokerCards(QtCore.QAbstractListModel):
 class MainWindow(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
+        self.resize(1125, 475)
+        self.setMinimumSize(QtCore.QSize(1125, 475))
+        self.setMaximumSize(QtCore.QSize(1125, 475))
 
         self.deckImage = PixMapCard()
 
@@ -399,7 +402,7 @@ class MainWindow(QtGui.QMainWindow):
 
         self.setSizePolicy(QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed,
                 QtGui.QSizePolicy.Fixed))
-        self.setWindowTitle("Puzzle")
+        self.setWindowTitle("Poker Hand Solver")
 
     def openImage(self, path=None):
         if not path:
@@ -450,33 +453,68 @@ class MainWindow(QtGui.QMainWindow):
         restartAction.triggered.connect(self.setupPuzzle)
 
     def setupWidgets(self):
-        frame = QtGui.QFrame()
+        # qframe should probably inherit the groupBox
+
+        self.centralwidget = QtGui.QWidget(self)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+
+        # self.label_1 = QtGui.QLabel(self.centralwidget)
+        # self.label_1.setGeometry(QtCore.QRect(180, 100, 401, 41))
+        # font = QtGui.QFont()
+        # font.setPointSize(36)
+        # self.label_1.setFont(font)
+        # self.label_1.setObjectName(_fromUtf8("label_1"))
+        # self.groupBox = QtGui.QGroupBox(self.centralwidget)
+        # self.groupBox.setGeometry(QtCore.QRect(370, 350, 171, 80))
+        # self.groupBox.setObjectName(_fromUtf8("groupBox"))
+        # self.groupBox.setStyleSheet("background-image: url(FILENAME); background-attachment: fixed")
+
+        frame = QtGui.QFrame(self.centralwidget)
         frameLayout = QtGui.QHBoxLayout(frame)
+        frame.setGeometry(QtCore.QRect(0, 0, 300, 450))
+        frame2 = QtGui.QFrame(self.centralwidget)
+        frame2.setGeometry(QtCore.QRect(310, 0, 800, 450))
+        frame2.setStyleSheet("background-image: url('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/"
+                             "PokerUserInterface/NewUI/PokerTable.png'); background-attachment: fixed")
+        frameLayout2 = QtGui.QHBoxLayout(frame2)
 
         self.piecesList = QtGui.QListView()
         self.piecesList.setDragEnabled(True)
         self.piecesList.setViewMode(QtGui.QListView.IconMode)
-        self.piecesList.setIconSize(QtCore.QSize(43, 64))
+        self.piecesList.setIconSize(QtCore.QSize(44, 64))
         self.piecesList.setGridSize(QtCore.QSize(43, 64))
         self.piecesList.setSpacing(10)
         self.piecesList.setMovement(QtGui.QListView.Snap)
         self.piecesList.setAcceptDrops(True)
         self.piecesList.setDropIndicatorShown(True)
 
-        self.model = PokerCards(self)
+        self.model = PokerCards()
         self.piecesList.setModel(self.model)
         frameLayout.addWidget(self.piecesList)
 
         self.all_hands = []
+        self.all_hands_placement = []
         for x in range(10):
-            self.handsWidget = PokerHands()
+            self.handsWidget = PokerHands(frame2)
             self.handsWidget.solvePokerHands.connect(self.setCompleted,
                                                      QtCore.Qt.QueuedConnection)
-            frameLayout.addWidget(self.handsWidget)
+            # frameLayout2.addWidget(self.handsWidget)
+            # self.all_hands_placement.append(frameLayout2)
             self.all_hands.append(self.handsWidget)
         print(self.all_hands)
 
-        self.setCentralWidget(frame)
+        self.all_hands[0].setGeometry(QtCore.QRect(350, 30, 88, 64))
+        self.all_hands[1].setGeometry(QtCore.QRect(500, 50, 88, 64))
+        self.all_hands[2].setGeometry(QtCore.QRect(625, 125, 88, 64))
+        self.all_hands[3].setGeometry(QtCore.QRect(625, 250, 88, 64))
+        self.all_hands[4].setGeometry(QtCore.QRect(500, 330, 88, 64))
+        self.all_hands[5].setGeometry(QtCore.QRect(350, 350, 88, 64))
+        self.all_hands[6].setGeometry(QtCore.QRect(200, 330, 88, 64))
+        self.all_hands[7].setGeometry(QtCore.QRect(80, 250, 88, 64))
+        self.all_hands[8].setGeometry(QtCore.QRect(80, 125, 88, 64))
+        self.all_hands[9].setGeometry(QtCore.QRect(200, 50, 88, 64))
+
+        self.setCentralWidget(self.centralwidget)
 
 
 if __name__ == '__main__':
@@ -486,6 +524,6 @@ if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
     window = MainWindow()
     # window.openImage('c:/Users/rmulcahey/PycharmProjects/puzzle/example.png')
-    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/PokerUserInterface/cards.png')
+    window.openImage('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/PokerUserInterface/NewUI/cards.png')
     window.show()
     sys.exit(app.exec_())

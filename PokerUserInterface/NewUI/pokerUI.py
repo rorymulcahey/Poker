@@ -250,10 +250,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(36)
         self.label_20.setFont(font)
-        self.label_20.setObjectName(_fromUtf8("label_20"))
+        self.label_20.setObjectName(_fromUtf8("label_1"))
         self.groupBox_6 = QtGui.QGroupBox(self.centralwidget)
         self.groupBox_6.setGeometry(QtCore.QRect(370, 350, 171, 80))
-        self.groupBox_6.setObjectName(_fromUtf8("groupBox_6"))
+        self.groupBox_6.setObjectName(_fromUtf8("groupBox"))
 
         self.ErrorMsg = QtGui.QTextBrowser(self.groupBox_6)
         self.ErrorMsg.setGeometry(QtCore.QRect(10, 20, 151, 51))
