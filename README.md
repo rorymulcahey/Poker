@@ -1,4 +1,3 @@
-================================
 Texas holdem Poker Hand Solver.
 ================================
 
@@ -7,7 +6,6 @@ Executing the GUI
 Through an IDE or python's command line
 
 
-====================================
 Method 1, Graphical User Interface:
 ====================================
 
@@ -23,7 +21,6 @@ Run pokerUI
 A hand must have two cards to be played. Currently requires a flop as well.
 Follow the error msg's if the program does not run.
 
-===========================
 Method 2, Cout statements:
 ===========================
 
@@ -39,7 +36,6 @@ At the beginning of main, two variables can be modified.
 The number of players can be anywhere from 2-10. Change the input of number of players to test it.
 The number of cards shown can range from 3-5 (Flop-River). Change the input of number of community cards to test.
 
-========
 Summary:
 ========
 
