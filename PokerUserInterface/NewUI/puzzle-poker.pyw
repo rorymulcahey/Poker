@@ -49,6 +49,11 @@ from Table import Deck
 from DebugTests import Debug
 from contextlib import contextmanager
 
+'''
+Bugs to fix:
+Restart does not reset debug.preflop and debug.communitycards
+'''
+
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -109,7 +114,6 @@ class PokerHands(QtGui.QWidget):
             event.ignore()
 
     def dragLeaveEvent(self, event):
-        # print(event)
         updateRect = self.highlightedRect
         self.highlightedRect = QtCore.QRect()
         self.update(updateRect)
@@ -161,7 +165,7 @@ class PokerHands(QtGui.QWidget):
             event.setDropAction(QtCore.Qt.MoveAction)
             event.accept()
 
-            self.probabilityObj.updateTable(self.card_location, pixmap.card_value, self.main_window)
+            self.probabilityObj.update_card(self.card_location, pixmap.card_value, self.main_window)
             # solves the "puzzle" (useful for identifying cards)
             # for poker: replace with cards values
             if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
@@ -265,12 +269,16 @@ class HandProbabilities:
         self.seat_numbers = []
         self.error_msg = ' '
         self.main_window = None
+        self.debug = Debug()
+        self.debug.preflop_cards = []
+        self.debug.community_cards = []
+        self.seat_numbers = []
 
-    def updateTable(self, seat_num, card, main_window):
+    def update_card(self, seat_num, card, main_window):
         self.main_window = main_window
-        card += 1
+        card += 1  # convert zero based to one based index
         if seat_num == 10:
-            seat_num = 20
+            seat_num = 20  # data structure for community cards starts at 20
             for x in range(5):
                 if self.user_input_cards[seat_num + x] == 0:
                     self.user_input_cards[seat_num + x] = card
@@ -279,6 +287,30 @@ class HandProbabilities:
             self.user_input_cards[seat_num*2] = card
         elif self.user_input_cards[seat_num*2+1] == 0:
             self.user_input_cards[seat_num*2+1] = card
+        self.update_table()
+
+    def removecard(self, seat_num, card):
+        if seat_num < 10:
+            print("Seat number:", seat_num + 1)
+        else:
+            print("Community Card")
+        print("Card's index", card)
+
+        card += 1  # convert zero based to one based index
+        if seat_num == 10:
+            seat_num = 20  # data structure for community cards starts at 20
+            for x in range(5):
+                if self.user_input_cards[seat_num + x] == card:
+                    self.user_input_cards[seat_num + x] = 0
+                    break
+        elif self.user_input_cards[seat_num*2] == card:
+            self.user_input_cards[seat_num*2] = 0
+        elif self.user_input_cards[seat_num*2+1] == card:
+            self.user_input_cards[seat_num*2+1] = 0
+        self.update_table()
+
+    def update_table(self):
+        print(self.user_input_cards)
         self.import_data()
         if self.fail_error_check():
             self.main_window.ErrorMsg.setText(self.error_msg)
@@ -286,17 +318,11 @@ class HandProbabilities:
         self.debug.run_tests()
         self.set_probabilities()
 
-    def removecard(self, seat_num, card):
-        if seat_num < 10:
-            print("Seat number:", seat_num + 1)
-        else:
-            print("Community Card")
-        print(card)
-
     def set_probabilities(self):
         self.clear_text()
         self.listify_probabilities()
         self.probs = self.debug.stats.winning_chances
+        print(self.seat_numbers)
         for x in range(0, len(self.seat_numbers)):
             self.hand_probs[self.seat_numbers[x]].setText(str(self.probs[x]) + ' %')
 
@@ -312,7 +338,6 @@ class HandProbabilities:
     def import_data(self):
 
         # reset data
-        self.debug = Debug()
         self.debug.preflop_cards = []
         self.debug.community_cards = []
         self.seat_numbers = []
@@ -343,6 +368,13 @@ class HandProbabilities:
         for hp in self.hand_probs:
             hp.setText(' ')
         self.main_window.ErrorMsg.setText(' ')
+
+    def reset_data(self):
+        self.debug.preflop_cards = []
+        self.debug.community_cards = []
+        self.seat_numbers = []
+        self.user_input_cards = [0] * 25
+        self.hand_probs = []
 
 
 class PixMapCard(QtGui.QPixmap):
@@ -383,10 +415,7 @@ class PokerCards(QtCore.QAbstractListModel):
         if index.isValid():
             return (QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable |
                     QtCore.Qt.ItemIsDragEnabled)
-            # return (QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable |
-            #         QtCore.Qt.ItemIsDragEnabled)
-        return QtCore.Qt.NoItemFlags
-        #return QtCore.Qt.ItemIsDropEnabled
+        return QtCore.Qt.ItemIsDropEnabled
 
     def removeRows(self, row, count, parent):
         if parent.isValid():
@@ -447,7 +476,7 @@ class PokerCards(QtCore.QAbstractListModel):
 
         while not stream.atEnd():
             pixmap = PixMapCard()
-            location = QtGui.QPoint()
+            location = QtCore.QPoint()
             stream >> pixmap >> location
 
             self.beginInsertRows(QtCore.QModelIndex(), endRow, endRow)
@@ -546,12 +575,13 @@ class MainWindow(QtGui.QMainWindow):
         for hands in self.all_hands:
             hands.clear()
         self.clearLabels()
+        self.probabilities.reset_data()
 
     def setupMenus(self):
         fileMenu = self.menuBar().addMenu("&File")
 
-        openAction = fileMenu.addAction("&Open...")
-        openAction.setShortcut("Ctrl+O")
+        # openAction = fileMenu.addAction("&Open...")
+        # openAction.setShortcut("Ctrl+O")
 
         exitAction = fileMenu.addAction("E&xit")
         exitAction.setShortcut("Ctrl+Q")
@@ -560,7 +590,7 @@ class MainWindow(QtGui.QMainWindow):
 
         restartAction = gameMenu.addAction("&Restart")
 
-        openAction.triggered.connect(self.openImage)
+        # openAction.triggered.connect(self.openImage)
         exitAction.triggered.connect(QtGui.qApp.quit)
         restartAction.triggered.connect(self.setupPuzzle)
 

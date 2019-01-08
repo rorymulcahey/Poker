@@ -89,7 +89,7 @@ class Ui_Form(object):
         self.label.setObjectName(_fromUtf8("label"))
         self.label_2 = QtGui.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(230, 232, 181, 21))
-        self.label_2.setObjectName(_fromUtf8("hand_prob_2"))
+        self.label_2.setObjectName(_fromUtf8("label_2"))
         self.pushButton = QtGui.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(230, 50, 181, 61))
         self.pushButton.setAutoFillBackground(False)

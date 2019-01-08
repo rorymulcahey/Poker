@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4824cc-b8e6-4d0b-bce3-143c1b525bc2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DebugTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/DebugTests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PokerUserInterface/ExampleFile/projectile_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/ExampleFile/projectile_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokerUserInterface/NewUI/pokerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/NewUI/pokerUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PokerUserInterface/NewUI/puzzle-poker.pyw" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/NewUI/puzzle-poker.pyw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/Poker_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/Poker_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokerUserInterface/pokerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/pokerUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolvePokerHands.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolvePokerHands.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,16 +22,70 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="pokerUI.py" pinned="false" current-in-tab="true">
+            <file leaf-file-name="pokerUI.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/PokerUserInterface/pokerUI.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="331">
-                    <caret line="140" column="33" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="33" />
+                  <state relative-caret-position="180">
+                    <caret line="10" column="59" lean-forward="true" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
                     <folding>
                       <element signature="e#427#437#0" expanded="true" />
+                      <element signature="e#566#744#0" />
+                      <element signature="e#607#744#0" />
+                      <element signature="e#819#853#0" />
+                      <element signature="e#845#853#0" />
+                      <element signature="e#864#1032#0" />
+                      <element signature="e#961#1032#0" />
+                      <element signature="e#1109#1169#0" />
+                      <element signature="e#1209#1652#0" />
+                      <element signature="e#1313#1526#0" />
+                      <element signature="e#1570#1652#0" />
+                      <element signature="e#1688#35521#0" />
+                      <element signature="e#1716#2119#0" />
                       <element signature="e#2163#3407#0" />
                       <element signature="e#3454#3926#0" />
                       <element signature="e#4021#4230#0" />
+                      <element signature="e#4270#4453#0" />
+                      <element signature="e#4491#5700#0" />
+                      <element signature="e#4743#5141#0" />
+                      <element signature="e#4908#5141#0" />
+                      <element signature="e#4940#5080#0" />
+                      <element signature="e#5210#5335#0" />
+                      <element signature="e#5575#5700#0" />
+                      <element signature="e#5743#5928#0" />
+                      <element signature="e#5814#5928#0" />
+                      <element signature="e#6008#7537#0" />
+                      <element signature="e#6105#7537#0" />
+                      <element signature="e#6535#6568#0" />
+                      <element signature="e#6700#6816#0" />
+                      <element signature="e#6830#6889#0" />
+                      <element signature="e#7001#7090#0" />
+                      <element signature="e#7216#7537#0" />
+                      <element signature="e#7579#7752#0" />
+                      <element signature="e#7618#7718#0" />
+                      <element signature="e#7788#7877#0" />
+                      <element signature="e#7920#8164#0" />
+                      <element signature="e#8206#8489#0" />
+                      <element signature="e#8256#8330#0" />
+                      <element signature="e#8391#8468#0" />
+                      <element signature="e#8526#8743#0" />
+                      <element signature="e#8623#8679#0" />
+                      <element signature="e#8774#8823#0" />
+                      <element signature="e#8868#33438#0" />
+                      <element signature="e#33490#35521#0" />
+                      <element signature="e#35555#35697#0" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="puzzle.pyw" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-3435">
+                    <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+                    <folding>
+                      <element signature="e#10918#14088#0" />
+                      <element signature="e#14123#14288#0" />
                     </folding>
                   </state>
                 </provider>
@@ -48,17 +101,152 @@
       <file leaf-file-name="Table.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="385">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SolvePokerHands.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SolvePokerHands.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="482">
+              <caret line="412" selection-start-line="412" selection-end-line="412" />
+              <folding>
+                <element signature="e#859#872#0" />
+                <element signature="e#1057#2997#0" />
+                <element signature="e#1117#1298#0" />
+                <element signature="e#1414#1683#0" />
+                <element signature="e#1467#1568#0" />
+                <element signature="e#1689#1728#0" />
+                <element signature="e#1852#2306#0" />
+                <element signature="e#2047#2280#0" />
+                <element signature="e#2175#2257#0" />
+                <element signature="e#2462#2851#0" />
+                <element signature="e#2615#2826#0" />
+                <element signature="e#2890#2997#0" />
+                <element signature="e#3320#14628#0" />
+                <element signature="e#3075#3343#0" />
+                <element signature="e#3691#3936#0" />
+                <element signature="e#3468#3610#0" />
+                <element signature="e#3511#3610#0" />
+                <element signature="e#3672#4033#0" />
+                <element signature="e#3755#3910#0" />
+                <element signature="e#3798#3910#0" />
+                <element signature="e#4073#4536#0" />
+                <element signature="e#4184#4404#0" />
+                <element signature="e#4227#4279#0" />
+                <element signature="e#4324#4404#0" />
+                <element signature="e#4573#4936#0" />
+                <element signature="e#4654#4811#0" />
+                <element signature="e#4697#4811#0" />
+                <element signature="e#4995#5566#0" />
+                <element signature="e#5087#5526#0" />
+                <element signature="e#5121#5526#0" />
+                <element signature="e#5190#5370#0" />
+                <element signature="e#5252#5314#0" />
+                <element signature="e#5423#5464#0" />
+                <element signature="e#5603#6224#0" />
+                <element signature="e#5714#5995#0" />
+                <element signature="e#6038#6197#0" />
+                <element signature="e#6072#6197#0" />
+                <element signature="e#6230#6263#0" />
+                <element signature="e#6410#6913#0" />
+                <element signature="e#6492#6662#0" />
+                <element signature="e#6539#6662#0" />
+                <element signature="e#6749#6886#0" />
+                <element signature="e#6790#6886#0" />
+                <element signature="e#6955#7482#0" />
+                <element signature="e#7094#7213#0" />
+                <element signature="e#7137#7213#0" />
+                <element signature="e#7261#7419#0" />
+                <element signature="e#7345#7419#0" />
+                <element signature="e#7519#7882#0" />
+                <element signature="e#7600#7757#0" />
+                <element signature="e#7643#7757#0" />
+                <element signature="e#8129#8241#0" />
+                <element signature="e#8199#8241#0" />
+                <element signature="e#7934#8253#0" />
+                <element signature="e#8019#8199#0" />
+                <element signature="e#8066#8199#0" />
+                <element signature="e#8370#11529#0" />
+                <element signature="e#8414#8544#0" />
+                <element signature="e#8900#9057#0" />
+                <element signature="e#9201#9368#0" />
+                <element signature="e#9493#9650#0" />
+                <element signature="e#9772#9922#0" />
+                <element signature="e#10025#10231#0" />
+                <element signature="e#10364#10514#0" />
+                <element signature="e#10772#11022#0" />
+                <element signature="e#11110#11418#0" />
+                <element signature="e#11250#11418#0" />
+                <element signature="e#11475#11575#0" />
+                <element signature="e#11535#11571#0" />
+                <element signature="e#11712#13879#0" />
+                <element signature="e#11794#12221#0" />
+                <element signature="e#11848#12221#0" />
+                <element signature="e#11904#12221#0" />
+                <element signature="e#12271#12694#0" />
+                <element signature="e#12323#12694#0" />
+                <element signature="e#12381#12694#0" />
+                <element signature="e#12534#12694#0" />
+                <element signature="e#12704#12769#0" />
+                <element signature="e#13080#13864#0" />
+                <element signature="e#13132#13387#0" />
+                <element signature="e#13453#13864#0" />
+                <element signature="e#13921#13968#0" />
+                <element signature="e#13971#14053#0" />
+                <element signature="e#14183#24980#0" />
+                <element signature="e#14283#14709#0" />
+                <element signature="e#14985#15448#0" />
+                <element signature="e#15407#15678#0" />
+                <element signature="e#15343#15511#0" />
+                <element signature="e#15558#19686#0" />
+                <element signature="e#15609#15739#0" />
+                <element signature="e#15961#16181#0" />
+                <element signature="e#16020#16181#0" />
+                <element signature="e#16528#16619#0" />
+                <element signature="e#16238#19686#0" />
+                <element signature="e#16402#16566#0" />
+                <element signature="e#16472#16566#0" />
+                <element signature="e#16669#17032#0" />
+                <element signature="e#16822#17032#0" />
+                <element signature="e#17104#19686#0" />
+                <element signature="e#17425#17555#0" />
+                <element signature="e#17598#17686#0" />
+                <element signature="e#17767#18406#0" />
+                <element signature="e#18121#18216#0" />
+                <element signature="e#18267#18406#0" />
+                <element signature="e#18324#18406#0" />
+                <element signature="e#18462#18534#0" />
+                <element signature="e#18577#18692#0" />
+                <element signature="e#18849#19523#0" />
+                <element signature="e#19206#19304#0" />
+                <element signature="e#19355#19523#0" />
+                <element signature="e#19422#19523#0" />
+                <element signature="e#19589#19686#0" />
+                <element signature="e#19692#19804#0" />
+                <element signature="e#19955#23571#0" />
+                <element signature="e#20287#20480#0" />
+                <element signature="e#20582#20641#0" />
+                <element signature="e#20746#21085#0" />
+                <element signature="e#21150#21841#0" />
+                <element signature="e#21901#22240#0" />
+                <element signature="e#22300#22728#0" />
+                <element signature="e#22507#22728#0" />
+                <element signature="e#22787#23126#0" />
+                <element signature="e#23283#23502#0" />
+                <element signature="e#23646#23776#0" />
+                <element signature="e#23818#23834#0" />
+                <element signature="e#23877#24280#0" />
+                <element signature="e#23900#23959#0" />
+                <element signature="e#24151#24236#0" />
+                <element signature="e#24331#24729#0" />
+                <element signature="e#24349#24435#0" />
+                <element signature="e#24549#24643#0" />
+                <element signature="e#24773#24980#0" />
+                <element signature="e#24789#24931#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +263,8 @@
       <file leaf-file-name="Probability.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Probability/Probability.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+            <state relative-caret-position="18">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#1#30#0" expanded="true" />
               </folding>
@@ -87,8 +275,9 @@
       <file leaf-file-name="DebugTests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DebugTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2232">
-              <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+            <state relative-caret-position="2043">
+              <caret line="169" column="2" selection-start-line="169" selection-start-column="2" selection-end-line="169" selection-end-column="2" />
+              <caret line="170" column="2" selection-start-line="170" selection-start-column="2" selection-end-line="170" selection-end-column="2" />
               <folding>
                 <element signature="e#32#79#0" expanded="true" />
               </folding>
@@ -96,75 +285,94 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="puzzle-poker.pyw" pinned="false" current-in-tab="true">
+      <file leaf-file-name="puzzle-poker.pyw" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokerUserInterface/NewUI/puzzle-poker.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="1086">
+              <caret line="311" column="27" lean-forward="true" selection-start-line="311" selection-start-column="27" selection-end-line="311" selection-end-column="27" />
               <folding>
-                <element signature="e#2311#2345#0" />
-                <element signature="e#2356#2524#0" />
-                <element signature="e#2453#2524#0" />
-                <element signature="e#2552#2661#0" />
-                <element signature="e#2601#2661#0" />
-                <element signature="e#2731#9358#0" />
-                <element signature="e#2865#3549#0" />
-                <element signature="e#2972#3149#0" />
-                <element signature="e#3196#3341#0" />
-                <element signature="e#3388#3545#0" />
-                <element signature="e#3606#3786#0" />
-                <element signature="e#3832#4296#0" />
-                <element signature="e#4338#5754#0" />
-                <element signature="e#5800#5989#0" />
-                <element signature="e#6037#7567#0" />
-                <element signature="e#8259#8836#0" />
-                <element signature="e#8936#9024#0" />
-                <element signature="e#9288#9362#0" />
-                <element signature="e#9418#13933#0" />
-                <element signature="e#9483#9732#0" />
-                <element signature="e#9781#10683#0" />
-                <element signature="e#10538#10673#0" />
-                <element signature="e#10520#10768#0" />
-                <element signature="e#10423#10706#0" />
-                <element signature="e#11328#12504#0" />
-                <element signature="e#12511#12592#0" />
-                <element signature="e#10227#10316#0" />
-                <element signature="e#13289#13587#0" />
-                <element signature="e#11040#15632#0" />
-                <element signature="e#11081#11224#0" />
-                <element signature="e#9032#9623#0" />
-                <element signature="e#11943#12295#0" />
-                <element signature="e#10137#10559#0" />
-                <element signature="e#10594#10625#0" />
-                <element signature="e#10668#11154#0" />
-                <element signature="e#11227#12169#0" />
-                <element signature="e#12211#12327#0" />
-                <element signature="e#14630#14680#0" />
-                <element signature="e#12465#13125#0" />
-                <element signature="e#13176#13375#0" />
-                <element signature="e#17576#24989#0" />
-                <element signature="e#18962#19849#0" />
-                <element signature="e#13939#14445#0" />
-                <element signature="e#14483#14716#0" />
-                <element signature="e#19950#20137#0" />
-                <element signature="e#14950#15451#0" />
-                <element signature="e#18032#21206#0" />
-                <element signature="e#21234#21742#0" />
-                <element signature="e#21800#22521#0" />
-                <element signature="e#22477#23104#0" />
-                <element signature="e#22683#23963#0" />
-                <element signature="e#29258#29437#0" />
-                <element signature="e#18631#18952#0" />
+                <element signature="n#!!doc" />
+                <element signature="e#2131#2144#0" expanded="true" />
+                <element signature="e#2340#2374#0" />
+                <element signature="e#2366#2374#0" />
+                <element signature="e#2385#2553#0" />
+                <element signature="e#2482#2553#0" />
+                <element signature="e#2581#2690#0" />
+                <element signature="e#2630#2690#0" />
+                <element signature="e#2786#9430#0" />
+                <element signature="e#2920#3614#0" />
+                <element signature="e#3492#3559#0" />
+                <element signature="e#3645#3822#0" />
+                <element signature="e#3869#4014#0" />
+                <element signature="e#4145#4279#0" />
+                <element signature="e#4279#4459#0" />
+                <element signature="e#4296#4387#0" />
+                <element signature="e#4503#4967#0" />
+                <element signature="e#4711#4845#0" />
+                <element signature="e#4872#4936#0" />
+                <element signature="e#5011#6531#0" />
+                <element signature="e#5135#6440#0" />
+                <element signature="e#5508#5523#0" />
+                <element signature="e#6091#6143#0" />
+                <element signature="e#6287#6390#0" />
+                <element signature="e#6467#6531#0" />
+                <element signature="e#6577#6766#0" />
+                <element signature="e#6594#6717#0" />
+                <element signature="e#6594#6612#0" />
+                <element signature="e#6814#8445#0" />
+                <element signature="e#6851#8445#0" />
+                <element signature="e#8062#8445#0" />
+                <element signature="e#8488#9065#0" />
+                <element signature="e#8762#8921#0" />
+                <element signature="e#9113#9250#0" />
+                <element signature="e#9307#9430#0" />
+                <element signature="e#12866#12978#0" />
+                <element signature="e#12907#12978#0" />
+                <element signature="e#13030#17629#0" />
+                <element signature="e#13071#13214#0" />
+                <element signature="e#13279#13870#0" />
+                <element signature="e#13407#13567#0" />
+                <element signature="e#13620#13710#0" />
+                <element signature="e#13767#13849#0" />
+                <element signature="e#14016#14405#0" />
+                <element signature="e#14123#14234#0" />
+                <element signature="e#14391#14813#0" />
+                <element signature="e#14848#14879#0" />
+                <element signature="e#14922#15408#0" />
+                <element signature="e#15115#15321#0" />
+                <element signature="e#15151#15321#0" />
+                <element signature="e#15481#16423#0" />
+                <element signature="e#15718#15843#0" />
+                <element signature="e#16072#16402#0" />
+                <element signature="e#16465#16581#0" />
+                <element signature="e#16627#16677#0" />
+                <element signature="e#16719#17379#0" />
+                <element signature="e#17013#17379#0" />
+                <element signature="e#17049#17379#0" />
+                <element signature="e#17184#17262#0" />
+                <element signature="e#17430#17629#0" />
+                <element signature="e#17714#18433#0" />
+                <element signature="e#17764#17850#0" />
+                <element signature="e#18479#18985#0" />
+                <element signature="e#18504#18623#0" />
+                <element signature="e#18654#18985#0" />
+                <element signature="e#18734#18915#0" />
+                <element signature="e#19023#19256#0" />
+                <element signature="e#19095#19189#0" />
+                <element signature="e#19516#20017#0" />
+                <element signature="e#19511#19556#0" />
+                <element signature="e#20055#21306#0" />
+                <element signature="e#20575#20764#0" />
+                <element signature="e#21344#21852#0" />
+                <element signature="e#21902#23415#0" />
+                <element signature="e#22005#22283#0" />
+                <element signature="e#23461#24087#0" />
+                <element signature="e#24131#25411#0" />
+                <element signature="e#24196#24662#0" />
+                <element signature="e#25448#25629#0" />
+                <element signature="e#25491#25562#0" />
+                <element signature="e#25664#25984#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="puzzle.pyw" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -180,14 +388,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getpixmap</find>
-      <find>openimage</find>
-      <find>ui_main</find>
-      <find>setcentral</find>
-      <find>update</find>
-      <find>qrect</find>
       <find>stylesheet</find>
-      <find>qpoint</find>
       <find>pokerhands</find>
       <find>puzzle</find>
       <find>myapp</find>
@@ -198,18 +399,25 @@
       <find>stream</find>
       <find>targetSquare</find>
       <find>piecepixmaps</find>
-      <find>dropevent</find>
       <find>import_data</find>
-      <find>hand_probs</find>
       <find>errormsg</find>
       <find>seat_number</find>
       <find>seat_numbers</find>
       <find>clear_text</find>
       <find>setupPuzzle</find>
       <find>restart</find>
-      <find>setuppuzzle</find>
-      <find>print</find>
       <find>card_location</find>
+      <find>dropevent</find>
+      <find>read</find>
+      <find>qiodevice</find>
+      <find>qpoint</find>
+      <find>setuppuzzle</find>
+      <find>handpro</find>
+      <find>setupwidget</find>
+      <find>del</find>
+      <find>self.best_hand</find>
+      <find>print</find>
+      <find>hand_probs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,8 +426,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_9.py" />
-        <option value="$PROJECT_DIR$/SetupTable.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch..cmdline" />
         <option value="$PROJECT_DIR$/SetupHand.py" />
@@ -254,28 +460,30 @@
         <option value="$PROJECT_DIR$/PokerUserInterface/PokerUI-2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_23.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_24.py" />
-        <option value="$PROJECT_DIR$/DebugTests.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_25.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/FindPi.py" />
         <option value="$PROJECT_DIR$/../FindPi.py" />
         <option value="$PROJECT_DIR$/../Leisure/FindPi.py" />
         <option value="$PROJECT_DIR$/../Leisure/FindPi/FindPi.py" />
-        <option value="$PROJECT_DIR$/SolvePokerHands.py" />
         <option value="$PROJECT_DIR$/PokerUserInterface/puzzle-poker.pyw" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_26.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_27.py" />
         <option value="$PROJECT_DIR$/PokerUserInterface/NewUI/sample.py" />
-        <option value="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw" />
         <option value="$PROJECT_DIR$/Table.py" />
         <option value="$PROJECT_DIR$/PokerUserInterface/pokerUI.py" />
+        <option value="$PROJECT_DIR$/PokerUserInterface/ExampleFile/projectile_ui.py" />
+        <option value="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/Poker_ui.py" />
+        <option value="$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw" />
         <option value="$PROJECT_DIR$/PokerUserInterface/NewUI/puzzle-poker.pyw" />
+        <option value="$PROJECT_DIR$/SolvePokerHands.py" />
+        <option value="$PROJECT_DIR$/DebugTests.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="867" />
+    <option name="x" value="757" />
     <option name="y" value="2" />
-    <option name="width" value="1048" />
+    <option name="width" value="1158" />
     <option name="height" value="1151" />
   </component>
   <component name="ProjectView">
@@ -309,6 +517,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.puzzle-poker.pyw (1)">
+    <configuration name="DebugTests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Poker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DebugTests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="pokerUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Poker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -381,38 +607,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="scratch_27" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Poker" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_27.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
       <item itemvalue="Python.puzzle-poker.pyw (1)" />
-      <item itemvalue="Python.scratch_27" />
       <item itemvalue="Python.sample" />
       <item itemvalue="Python.pokerUI" />
       <item itemvalue="Python.puzzle.pyw" />
+      <item itemvalue="Python.DebugTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.puzzle-poker.pyw (1)" />
+        <item itemvalue="Python.DebugTests" />
         <item itemvalue="Python.puzzle.pyw" />
         <item itemvalue="Python.pokerUI" />
         <item itemvalue="Python.sample" />
-        <item itemvalue="Python.scratch_27" />
       </list>
     </recent_temporary>
   </component>
@@ -430,7 +638,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="867" y="2" width="1048" height="1151" extended-state="0" />
+    <frame x="757" y="2" width="1158" height="1151" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24920802" />
@@ -442,7 +650,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3992467" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39922854" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -454,21 +662,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24920802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4970179" visible="true" weight="0.39022052" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5094162" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5029821" side_tool="true" weight="0.2753346" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.5094162" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -496,11 +704,10 @@
           <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="57" />
+      <option name="time" value="59" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UserInterface.py" />
     <entry file="file://$PROJECT_DIR$/usr/lib/pyshared/python2.7/_pokereval_2_7.so" />
     <entry file="file://$PROJECT_DIR$/usr/lib/python2.7/dist-packages/pokereval.py" />
     <entry file="file://$PROJECT_DIR$/usr/share/pyshared/pokereval.py" />
@@ -562,13 +769,6 @@
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/UserInterface.py" />
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/Poker_ui.py" />
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/PokerUI-2.py" />
-    <entry file="file://$PROJECT_DIR$/PokerUserInterface/ExampleFile/projectile_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/ExampleFile/projectile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -666,30 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Probability/Probability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-          <folding>
-            <element signature="e#1#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-851935206/PyQt4/QtGui/QWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -718,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DebugTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
-          <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
-          <folding>
-            <element signature="e#32#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_27.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -736,91 +902,348 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/NewUI/sample.py" />
-    <entry file="file://$PROJECT_DIR$/Table.py">
+    <entry file="file://$PROJECT_DIR$/PokerUserInterface/ExampleFile/projectile_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state>
+          <caret line="1" column="31" selection-end-line="1" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw">
+    <entry file="file://$PROJECT_DIR$/PokerUserInterface/PracticeExamples/Poker_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+        <state relative-caret-position="18">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/pokerUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="140" column="33" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="10" column="59" lean-forward="true" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
           <folding>
             <element signature="e#427#437#0" expanded="true" />
+            <element signature="e#566#744#0" />
+            <element signature="e#607#744#0" />
+            <element signature="e#819#853#0" />
+            <element signature="e#845#853#0" />
+            <element signature="e#864#1032#0" />
+            <element signature="e#961#1032#0" />
+            <element signature="e#1109#1169#0" />
+            <element signature="e#1209#1652#0" />
+            <element signature="e#1313#1526#0" />
+            <element signature="e#1570#1652#0" />
+            <element signature="e#1688#35521#0" />
+            <element signature="e#1716#2119#0" />
             <element signature="e#2163#3407#0" />
             <element signature="e#3454#3926#0" />
             <element signature="e#4021#4230#0" />
+            <element signature="e#4270#4453#0" />
+            <element signature="e#4491#5700#0" />
+            <element signature="e#4743#5141#0" />
+            <element signature="e#4908#5141#0" />
+            <element signature="e#4940#5080#0" />
+            <element signature="e#5210#5335#0" />
+            <element signature="e#5575#5700#0" />
+            <element signature="e#5743#5928#0" />
+            <element signature="e#5814#5928#0" />
+            <element signature="e#6008#7537#0" />
+            <element signature="e#6105#7537#0" />
+            <element signature="e#6535#6568#0" />
+            <element signature="e#6700#6816#0" />
+            <element signature="e#6830#6889#0" />
+            <element signature="e#7001#7090#0" />
+            <element signature="e#7216#7537#0" />
+            <element signature="e#7579#7752#0" />
+            <element signature="e#7618#7718#0" />
+            <element signature="e#7788#7877#0" />
+            <element signature="e#7920#8164#0" />
+            <element signature="e#8206#8489#0" />
+            <element signature="e#8256#8330#0" />
+            <element signature="e#8391#8468#0" />
+            <element signature="e#8526#8743#0" />
+            <element signature="e#8623#8679#0" />
+            <element signature="e#8774#8823#0" />
+            <element signature="e#8868#33438#0" />
+            <element signature="e#33490#35521#0" />
+            <element signature="e#35555#35697#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokerUserInterface/PracticeExamples/puzzle.pyw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3435">
+          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="e#10918#14088#0" />
+            <element signature="e#14123#14288#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Probability/Probability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#1#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerUserInterface/NewUI/puzzle-poker.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="1086">
+          <caret line="311" column="27" lean-forward="true" selection-start-line="311" selection-start-column="27" selection-end-line="311" selection-end-column="27" />
           <folding>
-            <element signature="e#2311#2345#0" />
-            <element signature="e#2356#2524#0" />
-            <element signature="e#2453#2524#0" />
-            <element signature="e#2552#2661#0" />
-            <element signature="e#2601#2661#0" />
-            <element signature="e#2731#9358#0" />
-            <element signature="e#2865#3549#0" />
-            <element signature="e#2972#3149#0" />
-            <element signature="e#3196#3341#0" />
-            <element signature="e#3388#3545#0" />
-            <element signature="e#3606#3786#0" />
-            <element signature="e#3832#4296#0" />
-            <element signature="e#4338#5754#0" />
-            <element signature="e#5800#5989#0" />
-            <element signature="e#6037#7567#0" />
-            <element signature="e#8259#8836#0" />
-            <element signature="e#8936#9024#0" />
-            <element signature="e#9288#9362#0" />
-            <element signature="e#9418#13933#0" />
-            <element signature="e#9483#9732#0" />
-            <element signature="e#9781#10683#0" />
-            <element signature="e#10538#10673#0" />
-            <element signature="e#10520#10768#0" />
-            <element signature="e#10423#10706#0" />
-            <element signature="e#11328#12504#0" />
-            <element signature="e#12511#12592#0" />
-            <element signature="e#10227#10316#0" />
-            <element signature="e#13289#13587#0" />
-            <element signature="e#11040#15632#0" />
-            <element signature="e#11081#11224#0" />
-            <element signature="e#9032#9623#0" />
-            <element signature="e#11943#12295#0" />
-            <element signature="e#10137#10559#0" />
-            <element signature="e#10594#10625#0" />
-            <element signature="e#10668#11154#0" />
-            <element signature="e#11227#12169#0" />
-            <element signature="e#12211#12327#0" />
-            <element signature="e#14630#14680#0" />
-            <element signature="e#12465#13125#0" />
-            <element signature="e#13176#13375#0" />
-            <element signature="e#17576#24989#0" />
-            <element signature="e#18962#19849#0" />
-            <element signature="e#13939#14445#0" />
-            <element signature="e#14483#14716#0" />
-            <element signature="e#19950#20137#0" />
-            <element signature="e#14950#15451#0" />
-            <element signature="e#18032#21206#0" />
-            <element signature="e#21234#21742#0" />
-            <element signature="e#21800#22521#0" />
-            <element signature="e#22477#23104#0" />
-            <element signature="e#22683#23963#0" />
-            <element signature="e#29258#29437#0" />
-            <element signature="e#18631#18952#0" />
+            <element signature="n#!!doc" />
+            <element signature="e#2131#2144#0" expanded="true" />
+            <element signature="e#2340#2374#0" />
+            <element signature="e#2366#2374#0" />
+            <element signature="e#2385#2553#0" />
+            <element signature="e#2482#2553#0" />
+            <element signature="e#2581#2690#0" />
+            <element signature="e#2630#2690#0" />
+            <element signature="e#2786#9430#0" />
+            <element signature="e#2920#3614#0" />
+            <element signature="e#3492#3559#0" />
+            <element signature="e#3645#3822#0" />
+            <element signature="e#3869#4014#0" />
+            <element signature="e#4145#4279#0" />
+            <element signature="e#4279#4459#0" />
+            <element signature="e#4296#4387#0" />
+            <element signature="e#4503#4967#0" />
+            <element signature="e#4711#4845#0" />
+            <element signature="e#4872#4936#0" />
+            <element signature="e#5011#6531#0" />
+            <element signature="e#5135#6440#0" />
+            <element signature="e#5508#5523#0" />
+            <element signature="e#6091#6143#0" />
+            <element signature="e#6287#6390#0" />
+            <element signature="e#6467#6531#0" />
+            <element signature="e#6577#6766#0" />
+            <element signature="e#6594#6717#0" />
+            <element signature="e#6594#6612#0" />
+            <element signature="e#6814#8445#0" />
+            <element signature="e#6851#8445#0" />
+            <element signature="e#8062#8445#0" />
+            <element signature="e#8488#9065#0" />
+            <element signature="e#8762#8921#0" />
+            <element signature="e#9113#9250#0" />
+            <element signature="e#9307#9430#0" />
+            <element signature="e#12866#12978#0" />
+            <element signature="e#12907#12978#0" />
+            <element signature="e#13030#17629#0" />
+            <element signature="e#13071#13214#0" />
+            <element signature="e#13279#13870#0" />
+            <element signature="e#13407#13567#0" />
+            <element signature="e#13620#13710#0" />
+            <element signature="e#13767#13849#0" />
+            <element signature="e#14016#14405#0" />
+            <element signature="e#14123#14234#0" />
+            <element signature="e#14391#14813#0" />
+            <element signature="e#14848#14879#0" />
+            <element signature="e#14922#15408#0" />
+            <element signature="e#15115#15321#0" />
+            <element signature="e#15151#15321#0" />
+            <element signature="e#15481#16423#0" />
+            <element signature="e#15718#15843#0" />
+            <element signature="e#16072#16402#0" />
+            <element signature="e#16465#16581#0" />
+            <element signature="e#16627#16677#0" />
+            <element signature="e#16719#17379#0" />
+            <element signature="e#17013#17379#0" />
+            <element signature="e#17049#17379#0" />
+            <element signature="e#17184#17262#0" />
+            <element signature="e#17430#17629#0" />
+            <element signature="e#17714#18433#0" />
+            <element signature="e#17764#17850#0" />
+            <element signature="e#18479#18985#0" />
+            <element signature="e#18504#18623#0" />
+            <element signature="e#18654#18985#0" />
+            <element signature="e#18734#18915#0" />
+            <element signature="e#19023#19256#0" />
+            <element signature="e#19095#19189#0" />
+            <element signature="e#19516#20017#0" />
+            <element signature="e#19511#19556#0" />
+            <element signature="e#20055#21306#0" />
+            <element signature="e#20575#20764#0" />
+            <element signature="e#21344#21852#0" />
+            <element signature="e#21902#23415#0" />
+            <element signature="e#22005#22283#0" />
+            <element signature="e#23461#24087#0" />
+            <element signature="e#24131#25411#0" />
+            <element signature="e#24196#24662#0" />
+            <element signature="e#25448#25629#0" />
+            <element signature="e#25491#25562#0" />
+            <element signature="e#25664#25984#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DebugTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2043">
+          <caret line="169" column="2" selection-start-line="169" selection-start-column="2" selection-end-line="169" selection-end-column="2" />
+          <caret line="170" column="2" selection-start-line="170" selection-start-column="2" selection-end-line="170" selection-end-column="2" />
+          <folding>
+            <element signature="e#32#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolvePokerHands.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="412" selection-start-line="412" selection-end-line="412" />
+          <folding>
+            <element signature="e#859#872#0" />
+            <element signature="e#1057#2997#0" />
+            <element signature="e#1117#1298#0" />
+            <element signature="e#1414#1683#0" />
+            <element signature="e#1467#1568#0" />
+            <element signature="e#1689#1728#0" />
+            <element signature="e#1852#2306#0" />
+            <element signature="e#2047#2280#0" />
+            <element signature="e#2175#2257#0" />
+            <element signature="e#2462#2851#0" />
+            <element signature="e#2615#2826#0" />
+            <element signature="e#2890#2997#0" />
+            <element signature="e#3320#14628#0" />
+            <element signature="e#3075#3343#0" />
+            <element signature="e#3691#3936#0" />
+            <element signature="e#3468#3610#0" />
+            <element signature="e#3511#3610#0" />
+            <element signature="e#3672#4033#0" />
+            <element signature="e#3755#3910#0" />
+            <element signature="e#3798#3910#0" />
+            <element signature="e#4073#4536#0" />
+            <element signature="e#4184#4404#0" />
+            <element signature="e#4227#4279#0" />
+            <element signature="e#4324#4404#0" />
+            <element signature="e#4573#4936#0" />
+            <element signature="e#4654#4811#0" />
+            <element signature="e#4697#4811#0" />
+            <element signature="e#4995#5566#0" />
+            <element signature="e#5087#5526#0" />
+            <element signature="e#5121#5526#0" />
+            <element signature="e#5190#5370#0" />
+            <element signature="e#5252#5314#0" />
+            <element signature="e#5423#5464#0" />
+            <element signature="e#5603#6224#0" />
+            <element signature="e#5714#5995#0" />
+            <element signature="e#6038#6197#0" />
+            <element signature="e#6072#6197#0" />
+            <element signature="e#6230#6263#0" />
+            <element signature="e#6410#6913#0" />
+            <element signature="e#6492#6662#0" />
+            <element signature="e#6539#6662#0" />
+            <element signature="e#6749#6886#0" />
+            <element signature="e#6790#6886#0" />
+            <element signature="e#6955#7482#0" />
+            <element signature="e#7094#7213#0" />
+            <element signature="e#7137#7213#0" />
+            <element signature="e#7261#7419#0" />
+            <element signature="e#7345#7419#0" />
+            <element signature="e#7519#7882#0" />
+            <element signature="e#7600#7757#0" />
+            <element signature="e#7643#7757#0" />
+            <element signature="e#8129#8241#0" />
+            <element signature="e#8199#8241#0" />
+            <element signature="e#7934#8253#0" />
+            <element signature="e#8019#8199#0" />
+            <element signature="e#8066#8199#0" />
+            <element signature="e#8370#11529#0" />
+            <element signature="e#8414#8544#0" />
+            <element signature="e#8900#9057#0" />
+            <element signature="e#9201#9368#0" />
+            <element signature="e#9493#9650#0" />
+            <element signature="e#9772#9922#0" />
+            <element signature="e#10025#10231#0" />
+            <element signature="e#10364#10514#0" />
+            <element signature="e#10772#11022#0" />
+            <element signature="e#11110#11418#0" />
+            <element signature="e#11250#11418#0" />
+            <element signature="e#11475#11575#0" />
+            <element signature="e#11535#11571#0" />
+            <element signature="e#11712#13879#0" />
+            <element signature="e#11794#12221#0" />
+            <element signature="e#11848#12221#0" />
+            <element signature="e#11904#12221#0" />
+            <element signature="e#12271#12694#0" />
+            <element signature="e#12323#12694#0" />
+            <element signature="e#12381#12694#0" />
+            <element signature="e#12534#12694#0" />
+            <element signature="e#12704#12769#0" />
+            <element signature="e#13080#13864#0" />
+            <element signature="e#13132#13387#0" />
+            <element signature="e#13453#13864#0" />
+            <element signature="e#13921#13968#0" />
+            <element signature="e#13971#14053#0" />
+            <element signature="e#14183#24980#0" />
+            <element signature="e#14283#14709#0" />
+            <element signature="e#14985#15448#0" />
+            <element signature="e#15407#15678#0" />
+            <element signature="e#15343#15511#0" />
+            <element signature="e#15558#19686#0" />
+            <element signature="e#15609#15739#0" />
+            <element signature="e#15961#16181#0" />
+            <element signature="e#16020#16181#0" />
+            <element signature="e#16528#16619#0" />
+            <element signature="e#16238#19686#0" />
+            <element signature="e#16402#16566#0" />
+            <element signature="e#16472#16566#0" />
+            <element signature="e#16669#17032#0" />
+            <element signature="e#16822#17032#0" />
+            <element signature="e#17104#19686#0" />
+            <element signature="e#17425#17555#0" />
+            <element signature="e#17598#17686#0" />
+            <element signature="e#17767#18406#0" />
+            <element signature="e#18121#18216#0" />
+            <element signature="e#18267#18406#0" />
+            <element signature="e#18324#18406#0" />
+            <element signature="e#18462#18534#0" />
+            <element signature="e#18577#18692#0" />
+            <element signature="e#18849#19523#0" />
+            <element signature="e#19206#19304#0" />
+            <element signature="e#19355#19523#0" />
+            <element signature="e#19422#19523#0" />
+            <element signature="e#19589#19686#0" />
+            <element signature="e#19692#19804#0" />
+            <element signature="e#19955#23571#0" />
+            <element signature="e#20287#20480#0" />
+            <element signature="e#20582#20641#0" />
+            <element signature="e#20746#21085#0" />
+            <element signature="e#21150#21841#0" />
+            <element signature="e#21901#22240#0" />
+            <element signature="e#22300#22728#0" />
+            <element signature="e#22507#22728#0" />
+            <element signature="e#22787#23126#0" />
+            <element signature="e#23283#23502#0" />
+            <element signature="e#23646#23776#0" />
+            <element signature="e#23818#23834#0" />
+            <element signature="e#23877#24280#0" />
+            <element signature="e#23900#23959#0" />
+            <element signature="e#24151#24236#0" />
+            <element signature="e#24331#24729#0" />
+            <element signature="e#24349#24435#0" />
+            <element signature="e#24549#24643#0" />
+            <element signature="e#24773#24980#0" />
+            <element signature="e#24789#24931#0" />
           </folding>
         </state>
       </provider>
