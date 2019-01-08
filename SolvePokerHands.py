@@ -34,6 +34,12 @@ To do list:
     Add preflop probabilities
     Refactor possible cards. Remove if its not needed.
 
+Bug:
+preflop = [[Card('c', 13), Card('c', 12)], [Card('h', 6), Card('d', 6)]]
+community cards = [Card('s', 6), Card('c', 6), Card('c', 7)]
+Problem: Check high card only appends instances of 1 card.
+Solution: Check high card should append a card of 7 even though there is more than 1 instance of it.
+
 Notes:
     Probabilities are close but not exact. (Probably bugs here)
 
@@ -247,14 +253,18 @@ class HandType:
     def check_quads(self):
         quads = False
         quads_card = []
+        tie_breaker_card = []
         for x in range(1, 14):
             if self.num_array[x] == 4:
                 quads = True
                 quads_card.append(x)
                 self.num_of_high_cards = 1
                 break
-        tie_breaker_cards = self.check_high_card(self.num_of_high_cards)
-        return quads, quads_card, tie_breaker_cards
+        for x in range(13, 0, -1):
+            if self.num_array[x] >= 1 and self.num_array[x] != 4:
+                tie_breaker_card.append(x)
+                break
+        return quads, quads_card, tie_breaker_card
 
     def check_straight_flush(self, suit):
         self.suited_array = [0]*14
@@ -323,7 +333,9 @@ class HandType:
         check_quads_boolean, quads_card, high_card = self.check_quads()
         if check_quads_boolean:
             final_hand_cards = quads_card
+            print("quads_card", quads_card)
             final_high_cards = high_card
+            print("final_high_cards", final_high_cards)
             self.name = possible_hands[7]
             current_hand_strength = 7
 
@@ -414,8 +426,8 @@ class HandCompare:
         self.tied_hand_seats = []
         self.compare_hand_strength()
 
-    # loop through the preflop and community cards to prepare them for hand compare
     def create_hand_types(self):
+        """Loop through the preflop and community cards to prepare them for hand compare"""
         hands = []
         hand_strengths = []
         all_hand_details = []
