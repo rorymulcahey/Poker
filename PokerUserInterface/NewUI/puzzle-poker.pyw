@@ -46,6 +46,7 @@
 import random
 from PyQt4 import QtCore, QtGui
 from Table import Deck
+from DebugTests import Debug
 from contextlib import contextmanager
 
 try:
@@ -54,14 +55,27 @@ except AttributeError:
     def _fromUtf8(s):
         return s
 
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
 
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+
+# need to add remove card functionalities with streams
 class PokerHands(QtGui.QWidget):
 
     solvePokerHands = QtCore.pyqtSignal()
 
-    def __init__(self, parent=None):
+    def __init__(self, card_location, main_window, parent=None, probability_obj=None):
         super(PokerHands, self).__init__(parent)
 
+        self.main_window = main_window
+        self.card_location = card_location
+        self.probabilityObj = probability_obj
         self.piecePixmaps = []
         self.pieceRects = []
         self.pieceLocations = []
@@ -69,12 +83,15 @@ class PokerHands(QtGui.QWidget):
         self.inPlace = 0
         self.deck = Deck(pixmap=True)
         self.cards = self.deck.current_cards
-        self.currentHand = []
+        self.currentCards = []
 
         # pixel dimensions card placement map
         self.setAcceptDrops(True)
-        self.setMinimumSize(88, 64)
-        self.setMaximumSize(88, 64)
+        if card_location < 10:
+            self.setMinimumSize(88, 64)
+            self.setMaximumSize(88, 64)
+        else:
+            self.setMinimumSize(220, 64)
 
     def clear(self):
         self.pieceLocations = []
@@ -131,8 +148,8 @@ class PokerHands(QtGui.QWidget):
 
             # needs removal
             # needs picking up and dropping same card
-            self.currentHand.append(pixmap.card_value)
-            print(pixmap.card_value)
+            self.currentCards.append(pixmap.card_value)
+            # print(pixmap.card_value)
 
             self.pieceLocations.append(location)
             self.piecePixmaps.append(pixmap)
@@ -144,6 +161,7 @@ class PokerHands(QtGui.QWidget):
             event.setDropAction(QtCore.Qt.MoveAction)
             event.accept()
 
+            self.probabilityObj.updateTable(self.card_location, pixmap.card_value, self.main_window)
             # solves the "puzzle" (useful for identifying cards)
             # for poker: replace with cards values
             if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
@@ -179,6 +197,7 @@ class PokerHands(QtGui.QWidget):
             del self.pieceLocations[found]
             del self.piecePixmaps[found]
             del self.pieceRects[found]
+            self.probabilityObj.removecard(self.card_location, pixmap.card_value)
 
             # for poker: replace with cards values
             if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
@@ -205,12 +224,12 @@ class PokerHands(QtGui.QWidget):
                 self.pieceRects.insert(found, square)
                 self.update(self.targetSquare(event.pos()))
 
-                # identify card
+                # identify card here with new code
                 if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
                     self.inPlace += 1
 
-    # draws red background behind the future card placement
     def paintEvent(self, event):
+        """Draws red background behind the future card placement."""
         painter = QtGui.QPainter()
         painter.begin(self)
         painter.fillRect(event.rect(), QtCore.Qt.white)
@@ -226,17 +245,104 @@ class PokerHands(QtGui.QWidget):
 
         painter.end()
 
-    # creates dropping grid of individual card cell
     def targetSquare(self, position):
+        """creates dropping grid of individual card cell"""
         return QtCore.QRect(position.x() // 44 * 44, position.y() // 64 * 64, 44, 64)
 
-    # adds the card value to the pixmap
     def getPixmapCard(self, pixmap, location):
-        pixmap.card_value = self.cards[location.x() + location.y() * 13]
+        """ adds the card value to the pixmap"""
+        pixmap.card_value = location.x() + location.y() * 13
         return pixmap
 
-    def updateTable(self):
-        pass
+
+# need to add remove card functionalities
+class HandProbabilities:
+    def __init__(self):
+        self.user_input_cards = [0] * 25
+        self.deck = Deck(pixmap=True)  # consider making cards a global variable
+        self.cards = self.deck.current_cards
+        self.hand_probs = []
+        self.seat_numbers = []
+        self.error_msg = ' '
+        self.main_window = None
+
+    def updateTable(self, seat_num, card, main_window):
+        self.main_window = main_window
+        card += 1
+        if seat_num == 10:
+            seat_num = 20
+            for x in range(5):
+                if self.user_input_cards[seat_num + x] == 0:
+                    self.user_input_cards[seat_num + x] = card
+                    break
+        elif self.user_input_cards[seat_num*2] == 0:
+            self.user_input_cards[seat_num*2] = card
+        elif self.user_input_cards[seat_num*2+1] == 0:
+            self.user_input_cards[seat_num*2+1] = card
+        self.import_data()
+        if self.fail_error_check():
+            self.main_window.ErrorMsg.setText(self.error_msg)
+            return
+        self.debug.run_tests()
+        self.set_probabilities()
+
+    def removecard(self, seat_num, card):
+        if seat_num < 10:
+            print("Seat number:", seat_num + 1)
+        else:
+            print("Community Card")
+        print(card)
+
+    def set_probabilities(self):
+        self.clear_text()
+        self.listify_probabilities()
+        self.probs = self.debug.stats.winning_chances
+        for x in range(0, len(self.seat_numbers)):
+            self.hand_probs[self.seat_numbers[x]].setText(str(self.probs[x]) + ' %')
+
+    def fail_error_check(self):
+        if len(self.debug.preflop_cards) < 2:
+            self.error_msg = "Must have at least 2 players..."
+            return True
+        if len(self.debug.community_cards) < 3:
+            self.error_msg = "Must have at least 3 community cards..."
+            return True
+        return False
+
+    def import_data(self):
+
+        # reset data
+        self.debug = Debug()
+        self.debug.preflop_cards = []
+        self.debug.community_cards = []
+        self.seat_numbers = []
+
+        # loops through all cards selected in cardwidgets
+        for x in range(0, 10):
+            # must contain 2 cards for player hands: [2*x] and [2*x + 1]
+            if self.user_input_cards[2*x] != 0 and self.user_input_cards[2*x + 1] != 0:
+                self.debug.preflop_cards.append([self.cards[self.user_input_cards[2*x] - 1],
+                                                self.cards[self.user_input_cards[2*x + 1] - 1]])  # insert cards
+                self.seat_numbers.append(x)
+
+        for y in range(20, 23):  # loop all flop cards
+            if self.user_input_cards[y] != 0:
+                self.debug.community_cards.append(self.cards[self.user_input_cards[y] - 1])
+
+        for y in range(23, 25):  # loop remaining community cards
+            if self.user_input_cards[y] != 0:
+                self.debug.community_cards.append(self.cards[self.user_input_cards[y] - 1])
+        # print(self.debug.community_cards)
+        # print(self.debug.preflop_cards)
+
+    def listify_probabilities(self):
+        for hp in self.main_window.all_hand_probs:
+            self.hand_probs.append(hp)
+
+    def clear_text(self):
+        for hp in self.hand_probs:
+            hp.setText(' ')
+        self.main_window.ErrorMsg.setText(' ')
 
 
 class PixMapCard(QtGui.QPixmap):
@@ -272,9 +378,8 @@ class PokerCards(QtCore.QAbstractListModel):
 
         return None
 
-
-    # http://pyqt.sourceforge.net/Docs/PyQt4/qt.html#ItemFlag-enum
     def flags(self, index):
+        """http://pyqt.sourceforge.net/Docs/PyQt4/qt.html#ItemFlag-enum"""
         if index.isValid():
             return (QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable |
                     QtCore.Qt.ItemIsDragEnabled)
@@ -391,15 +496,22 @@ class PokerCards(QtCore.QAbstractListModel):
 class MainWindow(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
+
+        # bug : QObject::startTimer: QTimer can only be used with threads started with QThread
+        # solved with setAttribute:
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+
+        # main window sizing
         self.resize(1125, 475)
         self.setMinimumSize(QtCore.QSize(1125, 475))
         self.setMaximumSize(QtCore.QSize(1125, 475))
 
+        # initializer function calls
         self.deckImage = PixMapCard()
-
         self.setupMenus()
         self.setupWidgets()
 
+        # window properties
         self.setSizePolicy(QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed,
                 QtGui.QSizePolicy.Fixed))
         self.setWindowTitle("Poker Hand Solver")
@@ -429,11 +541,11 @@ class MainWindow(QtGui.QMainWindow):
         self.setupPuzzle()
 
     def setupPuzzle(self):
-
         self.model.addCards(self.deckImage)
         # print([pm.card_value for pm in self.model.pixmaps])
         for hands in self.all_hands:
             hands.clear()
+        self.clearLabels()
 
     def setupMenus(self):
         fileMenu = self.menuBar().addMenu("&File")
@@ -453,68 +565,116 @@ class MainWindow(QtGui.QMainWindow):
         restartAction.triggered.connect(self.setupPuzzle)
 
     def setupWidgets(self):
-        # qframe should probably inherit the groupBox
-
+        # required initializer for all frames
         self.centralwidget = QtGui.QWidget(self)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
 
-        # self.label_1 = QtGui.QLabel(self.centralwidget)
-        # self.label_1.setGeometry(QtCore.QRect(180, 100, 401, 41))
-        # font = QtGui.QFont()
-        # font.setPointSize(36)
-        # self.label_1.setFont(font)
-        # self.label_1.setObjectName(_fromUtf8("label_1"))
-        # self.groupBox = QtGui.QGroupBox(self.centralwidget)
-        # self.groupBox.setGeometry(QtCore.QRect(370, 350, 171, 80))
-        # self.groupBox.setObjectName(_fromUtf8("groupBox"))
-        # self.groupBox.setStyleSheet("background-image: url(FILENAME); background-attachment: fixed")
-
+        # two main containers, one for cards and the other for the table
         frame = QtGui.QFrame(self.centralwidget)
         frameLayout = QtGui.QHBoxLayout(frame)
-        frame.setGeometry(QtCore.QRect(0, 0, 300, 450))
+        frame.setGeometry(QtCore.QRect(5, 0, 300, 450))
         frame2 = QtGui.QFrame(self.centralwidget)
         frame2.setGeometry(QtCore.QRect(310, 0, 800, 450))
         frame2.setStyleSheet("background-image: url('C:/Users/Administrator.abodearchitectu/PycharmProjects/Poker/"
                              "PokerUserInterface/NewUI/PokerTable.png'); background-attachment: fixed")
-        frameLayout2 = QtGui.QHBoxLayout(frame2)
 
-        self.piecesList = QtGui.QListView()
-        self.piecesList.setDragEnabled(True)
-        self.piecesList.setViewMode(QtGui.QListView.IconMode)
-        self.piecesList.setIconSize(QtCore.QSize(44, 64))
-        self.piecesList.setGridSize(QtCore.QSize(43, 64))
-        self.piecesList.setSpacing(10)
-        self.piecesList.setMovement(QtGui.QListView.Snap)
-        self.piecesList.setAcceptDrops(True)
-        self.piecesList.setDropIndicatorShown(True)
-
+        # creates pyqt list view and model object that stores card values (and Qpoint)
+        self.setCardLists()
         self.model = PokerCards()
-        self.piecesList.setModel(self.model)
-        frameLayout.addWidget(self.piecesList)
+        self.cardsList.setModel(self.model)
+        frameLayout.addWidget(self.cardsList)
 
+        # initialize settings for hands and labels
+        self.probabilities = HandProbabilities()
+        self.setupHandsWidgets(frame2)
+        self.setupLabels(frame2)
+        self.setupErrorMsg(frame2)
+
+        # required initializer for frames
+        self.setCentralWidget(self.centralwidget)
+
+    def setCardLists(self):
+        # creates pyqt list object that will contain card models
+        self.cardsList = QtGui.QListView()
+        self.cardsList.setDragEnabled(True)
+        self.cardsList.setViewMode(QtGui.QListView.IconMode)
+        self.cardsList.setIconSize(QtCore.QSize(44, 64))
+        self.cardsList.setGridSize(QtCore.QSize(43, 64))
+        self.cardsList.setSpacing(10)
+        self.cardsList.setMovement(QtGui.QListView.Snap)
+        self.cardsList.setAcceptDrops(True)
+        self.cardsList.setDropIndicatorShown(True)
+
+    def setupHandsWidgets(self, frame):
+        # initializes 10 hands into a list
         self.all_hands = []
-        self.all_hands_placement = []
         for x in range(10):
-            self.handsWidget = PokerHands(frame2)
-            self.handsWidget.solvePokerHands.connect(self.setCompleted,
+            handsWidget = PokerHands(x, self, parent=frame, probability_obj=self.probabilities)
+            handsWidget.solvePokerHands.connect(self.setCompleted,
                                                      QtCore.Qt.QueuedConnection)
-            # frameLayout2.addWidget(self.handsWidget)
-            # self.all_hands_placement.append(frameLayout2)
-            self.all_hands.append(self.handsWidget)
-        print(self.all_hands)
+            self.all_hands.append(handsWidget)
+        handsWidget = PokerHands(10, self, parent=frame, probability_obj=self.probabilities)
+        handsWidget.solvePokerHands.connect(self.setCompleted,
+                                                 QtCore.Qt.QueuedConnection)
+        self.all_hands.append(handsWidget)
 
+        # positions the hands around the poker table
         self.all_hands[0].setGeometry(QtCore.QRect(350, 30, 88, 64))
         self.all_hands[1].setGeometry(QtCore.QRect(500, 50, 88, 64))
-        self.all_hands[2].setGeometry(QtCore.QRect(625, 125, 88, 64))
-        self.all_hands[3].setGeometry(QtCore.QRect(625, 250, 88, 64))
+        self.all_hands[2].setGeometry(QtCore.QRect(625, 115, 88, 64))
+        self.all_hands[3].setGeometry(QtCore.QRect(625, 260, 88, 64))
         self.all_hands[4].setGeometry(QtCore.QRect(500, 330, 88, 64))
         self.all_hands[5].setGeometry(QtCore.QRect(350, 350, 88, 64))
         self.all_hands[6].setGeometry(QtCore.QRect(200, 330, 88, 64))
-        self.all_hands[7].setGeometry(QtCore.QRect(80, 250, 88, 64))
-        self.all_hands[8].setGeometry(QtCore.QRect(80, 125, 88, 64))
+        self.all_hands[7].setGeometry(QtCore.QRect(80, 260, 88, 64))
+        self.all_hands[8].setGeometry(QtCore.QRect(80, 115, 88, 64))
         self.all_hands[9].setGeometry(QtCore.QRect(200, 50, 88, 64))
+        self.all_hands[10].setGeometry(QtCore.QRect(290, 187.5, 220, 64))
 
-        self.setCentralWidget(self.centralwidget)
+        # print(self.all_hands)
+
+    def setupErrorMsg(self, frame):
+        # error msg instantiation
+        self.ErrorMsg = QtGui.QTextBrowser(frame)
+        self.ErrorMsg.setGeometry(QtCore.QRect(290, 260, 220, 25))
+        self.ErrorMsg.setStyleSheet('color: white')
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.ErrorMsg.sizePolicy().hasHeightForWidth())
+        self.ErrorMsg.setSizePolicy(sizePolicy)
+        self.ErrorMsg.setObjectName(_fromUtf8("ErrorMsg"))
+        self.ErrorMsg.setText(_translate("MainWindow", " ", None))
+
+    def setupLabels(self, frame):
+        self.all_hand_probs = []
+        for x in range(10):
+            self.hand_prob = QtGui.QLabel(frame)
+            font = QtGui.QFont()
+            font.setPointSize(12)
+            self.hand_prob.setFont(font)
+            self.hand_prob.setStyleSheet('color: white')
+            self.hand_prob.setAlignment(QtCore.Qt.AlignCenter)
+            self.hand_prob.setObjectName(_fromUtf8("hand_prob_" + str(x)))
+            self.hand_prob.setText(_translate("MainWindow", " ", None))
+            self.all_hand_probs.append(self.hand_prob)
+
+        self.all_hand_probs[0].setGeometry(QtCore.QRect(350, 100, 88, 20))
+        self.all_hand_probs[1].setGeometry(QtCore.QRect(500, 120, 88, 20))
+        self.all_hand_probs[2].setGeometry(QtCore.QRect(625, 185, 88, 20))
+        self.all_hand_probs[3].setGeometry(QtCore.QRect(625, 235, 88, 20))
+        self.all_hand_probs[4].setGeometry(QtCore.QRect(500, 305, 88, 20))
+        self.all_hand_probs[5].setGeometry(QtCore.QRect(350, 325, 88, 20))
+        self.all_hand_probs[6].setGeometry(QtCore.QRect(200, 305, 88, 20))
+        self.all_hand_probs[7].setGeometry(QtCore.QRect(80, 235, 88, 20))
+        self.all_hand_probs[8].setGeometry(QtCore.QRect(80, 185, 88, 20))
+        self.all_hand_probs[9].setGeometry(QtCore.QRect(200, 120, 88, 20))
+
+    def clearLabels(self):
+        for hp in self.all_hand_probs:
+            # print(hp)
+            hp.setText(_translate("MainWindow", " ", None))
+        self.ErrorMsg.setText(_translate("MainWindow", " ", None))
 
 
 if __name__ == '__main__':

@@ -111,7 +111,10 @@ class Card(object):
 
     def __eq__(self, other):
         # return self.__dict__ == other.__dict__
-        return self.num == other.num and self.suit == other.suit
+        if isinstance(other, Card):
+            return self.num == other.num and self.suit == other.suit
+        else:
+            return other  # returns False if compared with None or 0
 
 
 if __name__ == "__main__":

@@ -119,11 +119,9 @@ class Ui_MainWindow(object):
         print("Curr card: " + current_cb.itemText(curr_index))  # print current item in list
 
     def get_user_cards(self):
-
-        # loop through comboboxes and gather index values
+        """loop through comboboxes and gather index values"""
         self.user_input_cards = []
         for cb in self.comboboxes:
-            print(self.user_input_cards)
             self.user_input_cards.append(cb.currentIndex())
 
     def import_data(self):
@@ -247,7 +245,7 @@ class Ui_MainWindow(object):
         MainWindow.setMaximumSize(QtCore.QSize(758, 474))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        
+
         self.label_20 = QtGui.QLabel(self.centralwidget)
         self.label_20.setGeometry(QtCore.QRect(180, 10, 401, 41))
         font = QtGui.QFont()
