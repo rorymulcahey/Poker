@@ -66,6 +66,13 @@ from Table import Deck, Card
 # community_cards = [Card('c', 3), Card('h', 5), Card('c', 4), Card('h', 3), Card('c', 2)]
 # end of test
 
+# Bug: creates an error when the board shows a full house. quads does not show.
+# preflop_cards = [[Card('c', 13), Card('c', 12)], [Card('h', 6), Card('d', 6)]]
+# community_cards = [Card('s', 6), Card('c', 6), Card('c', 7)]
+# Problem: Check high card only appends instances of 1 card.
+# **FIXED** Check high card should append a card of 7 even though there is more than 1 instance of it.
+# Solution: added special case high card search for quads
+
 # =================
 # code to test bugs
 # =================
@@ -86,9 +93,10 @@ from Table import Deck, Card
 # **FIXED**
 # Bug: Does not credit 6 high straight to win vs wheel
 # **FIXED**
-preflop_cards = [[Card('s', 10), Card('s', 1)], [Card('h', 7), Card('c', 11)], [Card('c', 13), Card('h', 1)],
-[Card('s', 6), Card('h', 2)], [Card('d', 11), Card('h', 11)]]
-community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
+# Bug: unknown
+# preflop_cards = [[Card('s', 10), Card('s', 1)], [Card('h', 7), Card('c', 11)], [Card('c', 13), Card('h', 1)],
+# [Card('s', 6), Card('h', 2)], [Card('d', 11), Card('h', 11)]]
+# community_cards = [Card('h', 9), Card('s', 3), Card('c', 5)]
 # expected-- Winning chances: [5.8, 5.26, 19.3, 20.51, 49.12]
 # end of test
 
