@@ -674,7 +674,7 @@ class MainWindow(QtGui.QMainWindow):
         sizePolicy.setHeightForWidth(self.ErrorMsg.sizePolicy().hasHeightForWidth())
         self.ErrorMsg.setSizePolicy(sizePolicy)
         self.ErrorMsg.setObjectName(_fromUtf8("ErrorMsg"))
-        self.ErrorMsg.setText(_translate("MainWindow", " ", None))
+        self.ErrorMsg.setText(_translate("MainWindow", "Drag a card to white space", None))
 
     def setupLabels(self, frame):
         self.all_hand_probs = []
@@ -704,7 +704,7 @@ class MainWindow(QtGui.QMainWindow):
         for hp in self.all_hand_probs:
             # print(hp)
             hp.setText(_translate("MainWindow", " ", None))
-        self.ErrorMsg.setText(_translate("MainWindow", " ", None))
+        self.ErrorMsg.setText(_translate("MainWindow", "Drag a card to white space", None))
 
 
 if __name__ == '__main__':
