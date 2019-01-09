@@ -152,6 +152,7 @@ class HandType:
         two_pair = False
         number = 0
         two_pair_cards = []
+        tie_breaker_cards = []
         for x in range(13, 0, -1):
             if self.num_array[x] == 2:
                 number += 1
@@ -160,7 +161,11 @@ class HandType:
                 two_pair = True
                 self.num_of_high_cards = 1
                 break
-        tie_breaker_cards = self.check_high_card(self.num_of_high_cards)
+        if two_pair:
+            for x in range(13, 0, -1):
+                if self.num_array[x] > 0 and x not in two_pair_cards:
+                    tie_breaker_cards.append(x)
+                    break
         return two_pair, two_pair_cards, tie_breaker_cards
 
     def check_trips(self):
@@ -214,8 +219,6 @@ class HandType:
                 return True, self.flush_suit
         return False, None
 
-    # returns the cards for the flush
-    # needs to actually return cards for the flush because its sending non flush cards to final hand
     def get_cards_flush(self, suit):
         suited_array = [0] * 14
         for x in range(0, self.num_of_cards):
@@ -275,8 +278,8 @@ class HandType:
                     self.suited_array[13] = 1
         return self.check_straight(self.suited_array)
 
-    # Check for all possible hands and return the current best possible
     def check_hand_strength(self):
+        """Check for all possible hands and return the current best possible"""
         # 9 possible hands
         possible_hands = ['High Card', 'Pair', 'Two Pair', 'Trips', 'Straight', 'Flush', 'Full House', 'Quads',
                           'Straight Flush']
