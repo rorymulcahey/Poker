@@ -52,10 +52,9 @@ class Probability:
     that happen in the deck_cards. This reduces the number of times the SolvePokerHands.py needs to run by 
     approximately a factor of 3.
     '''
-    def one_card_remaining(self, current_deck):
+    def one_card_remaining(self, deck_cards):
         # section 1 using flush suit
-        deck_cards = current_deck
-        self.deck_num_array = self.create_deck_num_array(current_deck)
+        self.deck_num_array = self.create_deck_num_array(deck_cards)
         flush_suit = []
         for z in range(0, 4):
             flush_suit.append(self.community_cards[z].suit)
@@ -81,11 +80,12 @@ class Probability:
                 y += 1
 
         # section 2 using number array
+        numerically_sorted_deck = self.numerical_deck_sort(deck_cards)
         w = -1  # increases the speed by immediately picking a card
         for y in range(0, len(self.deck_num_array)-1):
             w += self.deck_num_array[y]  # relies on numerically sorted deck_cards
             if self.deck_num_array[y] > 0:
-                self.community_cards.append(deck_cards[w])
+                self.community_cards.append(numerically_sorted_deck[w])
                 winning_hand = HandCompare(self.preflop_hands, self.community_cards)
                 winning_seat = winning_hand.get_winning_seat_position()  # needs hand list
                 self.calculate_winning_chances(winning_hand, winning_seat, y)
@@ -134,6 +134,19 @@ class Probability:
                 for i in range(0, len(winning_seat)):
                     self.drawing_chances[winning_seat[i] - 1] += (1.0/len(winning_seat))
         winning_hand.print_winning_hand()
+
+    def numerical_deck_sort(self, cards):
+        new_cards = [None] * len(cards)
+        card_start_index = [0] * 13
+        card_start_index[0] = 0
+        for x in range(1, len(card_start_index)):
+            card_start_index[x] = card_start_index[x-1] + self.deck_num_array[x-1]
+        for y in range(len(cards)):
+            next_slot = 0
+            while new_cards[card_start_index[cards[y].num - 1]+next_slot] is not None:
+                next_slot += 1
+            new_cards[card_start_index[cards[y].num - 1]+next_slot] = cards[y]
+        return new_cards
 
     def print_probabilities(self):
         print("Winning chances: " + str(self.winning_chances))
