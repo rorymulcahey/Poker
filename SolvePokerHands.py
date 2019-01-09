@@ -411,9 +411,9 @@ class HandType:
         print(self.name + ": " + str(self.final_cards))
 
 
-# Requires all preflop cards from the players on the table and the community cards
-# Compare the hands and returns the winner(s) hand(s) and seat(s) and announces the type of winning hand.
 class HandCompare:
+    """Compare the hands and returns the winner(s) hand(s) and seat(s) and announces the type of winning hand.
+       Requires all preflop cards from the players on the table and the community cards"""
     # def __init__(self, hand_details):
     def __init__(self, preflop_cards, community_cards):
         self.preflop_cards = preflop_cards
