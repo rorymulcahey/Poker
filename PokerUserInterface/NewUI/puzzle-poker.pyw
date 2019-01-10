@@ -50,7 +50,8 @@ from contextlib import contextmanager
 import threading
 
 '''
-Bugs to fix:
+Bugs to fix or Items to add:
+Drawing percentages with a bigger table.
 
 '''
 
@@ -275,9 +276,9 @@ class PokerHands(QtGui.QWidget):
         return pixmap
 
 
-class HandProbabilities(threading.Thread):
+class HandProbabilities:
     def __init__(self):
-        super(HandProbabilities, self).__init__()
+        # super(HandProbabilities, self).__init__()
         self.user_input_cards = [0] * 25
         self.deck = Deck(pixmap=True)  # consider making cards a global variable
         self.cards = self.deck.current_cards
@@ -397,21 +398,6 @@ class PixMapCard(QtGui.QPixmap):
     def __init__(self, parent=None):
         super(PixMapCard, self).__init__(parent)
         self.card_value = None
-
-
-class FuncThread(threading.Thread):
-    def __init__(self, target, *args):
-        self._target = target
-        self._args = args
-        threading.Thread.__init__(self)
-
-    def run(self):
-        self._target(*self._args)
-# Example usage
-# def someOtherFunc(data, key):
-#    print
-#   "someOtherFunc was called : data=%s; key=%s" % (str(data), str(key))
-# t1 = FuncThread(someOtherFunc, [1, 2], 6)
 
 
 class PokerCards(QtCore.QAbstractListModel):
