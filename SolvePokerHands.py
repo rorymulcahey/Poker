@@ -336,9 +336,7 @@ class HandType:
         check_quads_boolean, quads_card, high_card = self.check_quads()
         if check_quads_boolean:
             final_hand_cards = quads_card
-            print("quads_card", quads_card)
             final_high_cards = high_card
-            print("final_high_cards", final_high_cards)
             self.name = possible_hands[7]
             current_hand_strength = 7
 
@@ -361,6 +359,17 @@ class HandType:
     # get all cards : investigate why len() is used for the two nested loops
     def get_final_cards(self, hand_cards, high_cards):
         final_cards = []
+        if hand_cards[0] == 13:
+            hand_cards[0] = 0
+        if self.name == 'Quads':
+            for x in range(self.num_of_cards):
+                if self.cards[x].num - 1 == hand_cards[0]:
+                    final_cards.append(self.cards[x])
+            for y in range(self.num_of_cards):
+                if self.cards[y].num - 1 == high_cards[0]:
+                    final_cards.append(self.cards[y])
+                    return final_cards
+
         if self.name == 'Flush' or 'Straight Flush':
             for z in range(0, self.num_of_cards):
                 for x in range(0, len(hand_cards)):
@@ -632,4 +641,5 @@ class HandCompare:
         display_final = ['Winning hand seat(s): ' + str(self.get_winning_seat_position()),
                          self.get_winning_hand(), self.get_winning_cards()]
         print(display_final)
+        print('community cards', self.community_cards)
         print('\n')
