@@ -43,15 +43,15 @@
 
 # This is only needed for Python v2 but is harmless for Python v3.
 # import sip
-import random
 from PyQt4 import QtCore, QtGui
 from Table import Deck
 from DebugTests import Debug
 from contextlib import contextmanager
+import threading
 
 '''
 Bugs to fix:
-Restart does not reset debug.preflop and debug.communitycards
+
 '''
 
 try:
@@ -70,7 +70,6 @@ except AttributeError:
         return QtGui.QApplication.translate(context, text, disambig)
 
 
-# need to add remove card functionalities with streams
 class PokerHands(QtGui.QWidget):
 
     solvePokerHands = QtCore.pyqtSignal()
@@ -141,41 +140,48 @@ class PokerHands(QtGui.QWidget):
         self.update(updateRect)
 
     def dropEvent(self, event):
-        if event.mimeData().hasFormat('image/x-puzzle-piece') and self.findPiece(self.targetSquare(event.pos())) == -1:
-            pieceData = event.mimeData().data('image/x-puzzle-piece')
-            stream = QtCore.QDataStream(pieceData, QtCore.QIODevice.ReadOnly)
-            square = self.targetSquare(event.pos())
-            pixmap = PixMapCard()
-            location = QtCore.QPoint()
-            stream >> pixmap >> location
-            pixmap = self.getPixmapCard(pixmap, location)
+        with self.wait_cursor():
+            if event.mimeData().hasFormat('image/x-puzzle-piece') and self.findPiece(self.targetSquare(event.pos())) == -1:
+                pieceData = event.mimeData().data('image/x-puzzle-piece')
+                stream = QtCore.QDataStream(pieceData, QtCore.QIODevice.ReadOnly)
+                square = self.targetSquare(event.pos())
+                pixmap = PixMapCard()
+                location = QtCore.QPoint()
+                stream >> pixmap >> location
+                pixmap = self.getPixmapCard(pixmap, location)
 
-            # needs removal
-            # needs picking up and dropping same card
-            self.currentCards.append(pixmap.card_value)
-            # print(pixmap.card_value)
+                # needs removal
+                # needs picking up and dropping same card
+                self.currentCards.append(pixmap.card_value)
+                # print(pixmap.card_value)
 
-            self.pieceLocations.append(location)
-            self.piecePixmaps.append(pixmap)
-            self.pieceRects.append(square)
+                self.pieceLocations.append(location)
+                self.piecePixmaps.append(pixmap)
+                self.pieceRects.append(square)
 
-            self.hightlightedRect = QtCore.QRect()
-            self.update(square)
+                self.hightlightedRect = QtCore.QRect()
+                self.update(square)
 
-            event.setDropAction(QtCore.Qt.MoveAction)
-            event.accept()
+                event.setDropAction(QtCore.Qt.MoveAction)
+                event.accept()
 
-            self.probabilityObj.update_card(self.card_location, pixmap.card_value, self.main_window)
-            # solves the "puzzle" (useful for identifying cards)
-            # for poker: replace with cards values
-            if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
-                self.inPlace += 1
-                if self.inPlace == 5:
-                    self.solvePokerHands.emit()
-            self.highlightedRect = QtCore.QRect()
-        else:
-            self.highlightedRect = QtCore.QRect()
-            event.ignore()
+                # solves the "puzzle" (useful for identifying cards)
+                # for poker: replace with cards values
+
+                # self.probabilityObj.update_card(self.card_location, pixmap.card_value, self.main_window)
+                t1 = threading.Thread(target=self.probabilityObj.update_card,
+                                      args=(self.card_location, pixmap.card_value, self.main_window))
+                t1.start()
+
+                if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
+                    self.inPlace += 1
+                    if self.inPlace == 5:
+                        self.solvePokerHands.emit()
+                self.highlightedRect = QtCore.QRect()
+            else:
+                print("dropEvent else")
+                self.highlightedRect = QtCore.QRect()
+                event.ignore()
 
     def findPiece(self, pieceRect):
         try:
@@ -184,6 +190,9 @@ class PokerHands(QtGui.QWidget):
             return self.pieceRects.index(pieceRect)
         except ValueError:
             return -1
+
+    def mouseReleaseEvent(self, QMouseEvent):
+        print("hello")
 
     def mousePressEvent(self, event):
         with self.wait_cursor():
@@ -201,7 +210,9 @@ class PokerHands(QtGui.QWidget):
             del self.pieceLocations[found]
             del self.piecePixmaps[found]
             del self.pieceRects[found]
-            self.probabilityObj.removecard(self.card_location, pixmap.card_value)
+            t2 = threading.Thread(target=self.probabilityObj.removecard,
+                                  args=(self.card_location, pixmap.card_value))
+            t2.start()
 
             # for poker: replace with cards values
             if location == QtCore.QPoint(square.x() / 48, square.y() / 64):
@@ -222,7 +233,12 @@ class PokerHands(QtGui.QWidget):
             drag.setHotSpot(event.pos() - square.topLeft())
             drag.setPixmap(pixmap)
 
-            if drag.start(QtCore.Qt.MoveAction) == 0:
+            # the code waits here to see where the card is placed.
+            if drag.start(QtCore.Qt.MoveAction) == 0:  # enter if block when card is not placed on a widget
+                # self.probabilityObj.update_card(self.card_location, pixmap.card_value, self.main_window)
+                t3 = threading.Thread(target=self.probabilityObj.update_card,
+                                      args=(self.card_location, pixmap.card_value, self.main_window))
+                t3.start()
                 self.pieceLocations.insert(found, location)
                 self.piecePixmaps.insert(found, pixmap)
                 self.pieceRects.insert(found, square)
@@ -259,9 +275,9 @@ class PokerHands(QtGui.QWidget):
         return pixmap
 
 
-# need to add remove card functionalities
-class HandProbabilities:
+class HandProbabilities(threading.Thread):
     def __init__(self):
+        super(HandProbabilities, self).__init__()
         self.user_input_cards = [0] * 25
         self.deck = Deck(pixmap=True)  # consider making cards a global variable
         self.cards = self.deck.current_cards
@@ -290,11 +306,11 @@ class HandProbabilities:
         self.update_table()
 
     def removecard(self, seat_num, card):
-        if seat_num < 10:
-            print("Seat number:", seat_num + 1)
-        else:
-            print("Community Card")
-        print("Card's index", card)
+        # if seat_num < 10:
+        #     print("Seat number:", seat_num + 1)
+        # else:
+        #     print("Community Card")
+        # print("Card's index", card)
 
         card += 1  # convert zero based to one based index
         if seat_num == 10:
@@ -310,7 +326,7 @@ class HandProbabilities:
         self.update_table()
 
     def update_table(self):
-        print(self.user_input_cards)
+        # print(self.user_input_cards)
         self.import_data()
         if self.fail_error_check():
             self.main_window.ErrorMsg.setText(self.error_msg)
@@ -322,7 +338,7 @@ class HandProbabilities:
         self.clear_text()
         self.listify_probabilities()
         self.probs = self.debug.stats.winning_chances
-        print(self.seat_numbers)
+        # print(self.seat_numbers)
         for x in range(0, len(self.seat_numbers)):
             self.hand_probs[self.seat_numbers[x]].setText(str(self.probs[x]) + ' %')
 
@@ -381,6 +397,21 @@ class PixMapCard(QtGui.QPixmap):
     def __init__(self, parent=None):
         super(PixMapCard, self).__init__(parent)
         self.card_value = None
+
+
+class FuncThread(threading.Thread):
+    def __init__(self, target, *args):
+        self._target = target
+        self._args = args
+        threading.Thread.__init__(self)
+
+    def run(self):
+        self._target(*self._args)
+# Example usage
+# def someOtherFunc(data, key):
+#    print
+#   "someOtherFunc was called : data=%s; key=%s" % (str(data), str(key))
+# t1 = FuncThread(someOtherFunc, [1, 2], 6)
 
 
 class PokerCards(QtCore.QAbstractListModel):
@@ -665,7 +696,7 @@ class MainWindow(QtGui.QMainWindow):
 
     def setupErrorMsg(self, frame):
         # error msg instantiation
-        self.ErrorMsg = QtGui.QTextBrowser(frame)
+        self.ErrorMsg = QtGui.QLabel(frame)
         self.ErrorMsg.setGeometry(QtCore.QRect(290, 260, 220, 25))
         self.ErrorMsg.setStyleSheet('color: white')
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -673,6 +704,7 @@ class MainWindow(QtGui.QMainWindow):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.ErrorMsg.sizePolicy().hasHeightForWidth())
         self.ErrorMsg.setSizePolicy(sizePolicy)
+        self.ErrorMsg.setAlignment(QtCore.Qt.AlignCenter)
         self.ErrorMsg.setObjectName(_fromUtf8("ErrorMsg"))
         self.ErrorMsg.setText(_translate("MainWindow", "Drag a card to white space", None))
 
