@@ -21,6 +21,8 @@ Run pokerUI
 A hand must have two cards to be played. Currently requires a flop as well.
 Follow the error msg's if the program does not run.
 
+
+
 Method 2, Cout statements:
 ===========================
 
@@ -35,6 +37,17 @@ Run main.py
 At the beginning of main, two variables can be modified.
 The number of players can be anywhere from 2-10. Change the input of number of players to test it.
 The number of cards shown can range from 3-5 (Flop-River). Change the input of number of community cards to test.
+
+
+
+Method 3, Run EXE file:
+========================
+
+This is the best method I have been able to use thus far. Ideally, this will be put in a web browser.
+Until then, you can simply download the texasHoldemPoker.exe in this directory, and run the file from your desktop.
+I promise there is nothing malicious in the file.
+
+
 
 Summary:
 ========
