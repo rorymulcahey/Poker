@@ -1,5 +1,9 @@
 Texas holdem Poker Hand Solver.
 ================================
+Watch the intro to see the program in action:
+https://youtu.be/DUYfo6UiYMU
+
+================================
 
 Currently this program can be run two different ways:
 Executing the GUI
